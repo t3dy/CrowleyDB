@@ -1,59 +1,118 @@
-# CrowleyDB: The Aleister Crowley Knowledge Portal
+# CrowleyDB
 
 [![Website Viewer](https://img.shields.io/badge/Website-Live_Viewer-blue?style=for-the-badge)](https://t3dy.github.io/CrowleyDB/)
 
-Welcome to **CrowleyDB**, a Digital Humanities project designed to chart the works, life, and complex occult systems of Aleister Crowley. You can view the live portal here: **[https://t3dy.github.io/CrowleyDB/](https://t3dy.github.io/CrowleyDB/)**
+**Live database viewer:** [https://t3dy.github.io/CrowleyDB/](https://t3dy.github.io/CrowleyDB/)
 
-## Overview
+CrowleyDB is a digital humanities project for organizing, cross-referencing, and exploring the works, life, associates, travels, and symbolic system of Aleister Crowley. The goal is not just to collect information, but to make the material browsable, traceable, and transparent about what is documented versus what is interpretive.
 
-This project bridges the gap between secular academic research and the internal logic of a ceremonial magick practitioner. It achieves this by creating a highly structured, relational database that catalogues Crowley's works (the Libri), his associates, a Thelemic dictionary, his biographical timeline, map of his travels, and an interactive Qabalistic Tree of Life featuring his specific modifications (like the Thoth Tarot Tzaddi/Heh swap).
+## Project Goals
+
+- Build a structured research portal around Crowley's texts, biography, and occult framework.
+- Keep source attribution visible so users can distinguish primary records, scholarship, autobiography, and later practitioner interpretation.
+- Provide a fast, static, GitHub Pages-friendly viewer that is easy to maintain and deploy.
+- Support both historical study and symbolic exploration without collapsing the two into one unsupported narrative.
+
+## Why This Architecture
+
+We chose a mostly static architecture because it gives the project reliability, speed, and low operational overhead.
+
+- The database is the source of truth, which keeps the content model normalized and easier to reason about.
+- Static JSON export lets the frontend stay lightweight while still consuming rich structured data.
+- GitHub Pages hosting keeps the viewer simple to deploy and easy to share.
+- A React + Vite frontend gives us a responsive interface without requiring a backend service.
 
 ## Technology Stack
 
-The project operates on an automated, zero-backend deployment model:
+### Data and Storage
 
-* **Database Generation (`sqlite3`)**: Python scripts parse raw PDFs and manual data objects to build `crowley_unified.sqlite`.
-* **Static JSON Pipeline**: A build script (`scripts/build_site.py`) exports tables from the SQLite database into optimized, static JSON files in the frontend's public directory.
-* **Frontend Viewer**: A high-performance, purely static **React 19 + Vite** single-page application.
-* **Routing & UI**: 
-  * `react-router-dom` (HashRouter for GitHub Pages compatibility).
-  * `react-leaflet` with Leaflet.js for interactive mapping.
-  * Custom CSS modules utilizing a "Dark Occult" aesthetic (Glassmorphism, Google Fonts: Cinzel, Inter, Frank Ruhl Libre).
-* **Deployment**: Automated via GitHub Actions (`.github/workflows/deploy.yml`), which builds the React app and deploys it to GitHub Pages on every push to the `main` branch.
+- `SQLite` for the unified research database.
+- Python ingestion scripts to parse source material and build the database.
+- Export scripts that convert database tables into frontend-ready JSON.
 
-## Methodologies
+### Frontend
 
-### The 5-Lane Evidentiary System
-To accurately capture the life of a figure as heavily self-mythologized as Crowley, we utilize a 5-Lane Evidentiary tagging system. This allows the UI to filter out unverified claims from historical consensus:
-* **[A] Primary Record**: Crowley's diaries, magical records, and the primary Libri (e.g., The Book of the Law).
-* **[B] Autobiography**: His unverified self-report and self-mythology (e.g., *The Confessions of Aleister Crowley*).
-* **[C] Scholarship**: Rigorous, consensus-based academic biography (e.g., Richard Kaczynski, Tobias Churton, Marco Pasi).
-* **[D] Practitioners**: Later interpretations by occult disciples and esoteric practitioners (e.g., Kenneth Grant, James Eshelman).
-* **[E] Historical/Documentary**: Verified historical, legal, and documentary records.
+- `React 19` for the UI layer.
+- `Vite` for fast builds and local development.
+- `react-router-dom` with `HashRouter` so routing works cleanly on GitHub Pages.
+- `react-leaflet` and `Leaflet` for map-based exploration.
+- Custom CSS for the project's dark, archival visual style.
 
-### Dual-Perspective Tone
-The writing maintains *Academic Detachment with Practitioner Empathy*. It does not dismiss the metaphysical mechanics of Crowley's rituals; rather, it describes their internal logic meticulously and objectively while utilizing precise attribution (e.g., "According to his magical record...").
+### Deployment
+
+- GitHub Actions for automated build and publish.
+- GitHub Pages for hosting the static viewer.
+
+## Design Choices
+
+### Evidence-Lane Model
+
+The project uses a 5-lane evidentiary model to keep interpretation honest.
+
+- `A` Primary Record: diaries, magical records, and original texts.
+- `B` Autobiography: Crowley's self-reporting and self-mythology.
+- `C` Scholarship: modern academic biography and historical analysis.
+- `D` Practitioners: later occult and esoteric interpretation.
+- `E` Historical/Documentary: verifiable legal, archival, and contextual records.
+
+This matters because Crowley's life is heavily mediated by self-narration, later mythmaking, and competing esoteric readings. The model lets us surface that complexity instead of flattening it.
+
+### Tone and Presentation
+
+The writing style is meant to be academically careful while still respecting the internal logic of the material. That means:
+
+- factual claims are attributed where possible,
+- speculation is labeled,
+- practitioner language is preserved when it is part of the source context,
+- the interface stays clear about what is evidence and what is interpretation.
+
+### Static-First Delivery
+
+We intentionally avoid a backend API for the public viewer. That choice keeps deployment simple, reduces breakage points, and makes the project more sustainable as a long-term research reference.
+
+## What's In the Database
+
+The current model is designed to hold:
+
+- texts and Libri,
+- people and associates,
+- timeline events,
+- locations and travel data,
+- dictionary terms,
+- initiatory grades,
+- Tree of Life correspondences,
+- tarot and Qabalistic relationships.
+
+## Current Status
+
+Completed work includes:
+
+- unified database schema,
+- ingestion and export scripts,
+- the frontend viewer,
+- map and timeline exploration,
+- automated build and deployment to GitHub Pages.
+
+## Next Steps
+
+Planned improvements are focused on depth, search, and richer navigation:
+
+- build a gematria and isopsephy search experience,
+- add a full Tarot explorer for the Thoth deck,
+- expand PDF ingestion toward full-text extraction and OCR,
+- add relational breadcrumbs so users can trace associative paths,
+- continue manual data entry for associates, workings, and supporting metadata,
+- improve source coverage and verification as new material is added.
 
 ## Data Sources
 
-Our data is aggregated from a variety of foundational texts, which our Python scripts ingest:
-* **Primary Libri**: Liber AL vel Legis, Liber ABA, The Vision and the Voice.
-* **Biographies**: *Perdurabo* by Richard Kaczynski, *The Beast in Berlin* by Tobias Churton.
-* **Tarot & Qabalah**: *The Book of Thoth*, *777 and Other Qabalistic Writings*.
-* **Digital Repositories**: Hermetic.com, Keep Silence, and various scholarly papers on the history of Western Esotericism.
+The project draws from primary texts, biographies, reference works, and digital repositories, including:
 
-## Current Architecture & Plans
+- `Liber AL vel Legis`, `Liber ABA`, and `The Vision and the Voice`,
+- major biographies such as *Perdurabo* and *The Beast in Berlin*,
+- *The Book of Thoth* and *777 and Other Qabalistic Writings*,
+- scholarly and archival web resources relevant to Western esotericism and Crowley studies.
 
-### What is Completed
-- [x] **Database Schema**: Fully defined `schema.sql` capable of tracking texts, people, timeline events, map locations, initiatory grades, dictionary terms, and Tree of Life paths.
-- [x] **Data Ingestion Scripts**: Python logic to populate the SQLite database and export it to JSON.
-- [x] **Thelemic Tree of Life Viewer**: Interactive React component that maps Crowley's specific tarot swaps (Tzaddi/Heh), Golden Dawn color scales, Archangels, and God Names.
-- [x] **Biographical Map & Timeline**: Leaflet integration mapping Crowley's travels to specific timeline events.
-- [x] **Automated Build/Deploy CI**: GitHub Actions workflow deploying directly to GitHub Pages.
+## Repository Notes
 
-### What is Left to Do (Future Plans)
-- [ ] **Gematria Engine**: Build a Fuse.js powered search bar that allows users to type numbers (e.g., "93", "156") and returns all dictionary terms, works, and concepts that sum to that number via Hebrew or Greek Isopsephy.
-- [ ] **Tarot Explorer**: Implement a grid view of the 78 cards of the Thoth Tarot with high-res scans and sorting capabilities (by Element, Suit, Decan).
-- [ ] **Expanded PDF Parsing**: Enhance `scripts/ingest_pdfs.py` to extract actual full-text content via OCR/PyPDF2 for deep semantic searching, rather than just file metadata.
-- [ ] **Relational Breadcrumbs**: Implement a UI feature that tracks associative paths as users browse (e.g., `The Book of Thoth > Atu IV: The Emperor > Tzaddi > Thelema`).
-- [ ] **Expanded Data Entry**: Manually input the hundreds of minor associates, additional dictionary terms, and all specific magical workings from his diaries into the seed scripts.
+The live viewer is deployed automatically from the `main` branch. The source of truth for the portal is the repository itself, with the frontend consuming exported data generated from the database build pipeline.
