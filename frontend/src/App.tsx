@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
 import type { ReactNode } from 'react';
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { fetchJSON } from './api';
@@ -207,7 +207,9 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/works" element={<Works />} />
               <Route path="/tree" element={<TreeOfLife />} />
+              <Route path="/grades" element={<Grades />} />
               <Route path="/biography" element={<BiographyAndMap />} />
+              <Route path="/saints" element={<Saints />} />
               <Route path="/dictionary" element={<Dictionary />} />
             </Routes>
           </main>

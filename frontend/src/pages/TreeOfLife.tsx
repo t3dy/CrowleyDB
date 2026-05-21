@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { fetchJSON } from '../api';
 
 const TreeOfLife = () => {
@@ -9,9 +9,6 @@ const TreeOfLife = () => {
   useEffect(() => {
     fetchJSON('thelemic_tree').then(setNodes);
   }, []);
-
-  const sephiroth = nodes.filter(n => n.path_number <= 10);
-  const paths = nodes.filter(n => n.path_number > 10);
 
   const renderAttribution = (node: any) => {
     switch (attributionMode) {
