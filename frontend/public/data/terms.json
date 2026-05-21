@@ -1,0 +1,29 @@
+[
+  {
+    "id": "TRM_001",
+    "term": "Thelema",
+    "gematria_value": 93,
+    "etymology": "From Greek θέλημα (will).",
+    "definition": "The central philosophy of Aleister Crowley, dictating that one must discover and accomplish their True Will.",
+    "thelemic_significance": "It is the Word of the Law, equating to Agape (Love) in Gematria.",
+    "evidentiary_lane": "A"
+  },
+  {
+    "id": "TRM_002",
+    "term": "Aiwass",
+    "gematria_value": 93,
+    "etymology": "Unknown origin, possibly dictated.",
+    "definition": "The praeterhuman intelligence that dictated the Book of the Law to Crowley.",
+    "thelemic_significance": "Considered by Crowley as his Holy Guardian Angel and the minister of Hoor-Paar-Kraat.",
+    "evidentiary_lane": "A"
+  },
+  {
+    "id": "TRM_003",
+    "term": "Abramelin",
+    "gematria_value": null,
+    "etymology": "From the Book of Abramelin.",
+    "definition": "A rigorous magical operation lasting 6 to 18 months to contact one's Holy Guardian Angel.",
+    "thelemic_significance": "Crowley attempted this at Boleskine but abandoned it midway, leading to supposed magical blowback.",
+    "evidentiary_lane": "A"
+  }
+]

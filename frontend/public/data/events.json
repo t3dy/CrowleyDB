@@ -1,0 +1,62 @@
+[
+  {
+    "id": "EVT_001",
+    "date_start": "1875",
+    "date_end": null,
+    "title": "Birth of Edward Alexander Crowley",
+    "description": "Born in Royal Leamington Spa to Plymouth Brethren parents.",
+    "location_id": "Unknown",
+    "evidentiary_lane": "E",
+    "document_id": null
+  },
+  {
+    "id": "EVT_002",
+    "date_start": "1899",
+    "date_end": "1900",
+    "title": "The Abramelin Working",
+    "description": "Attempted the rigorous Abramelin operation at Boleskine to attain the Knowledge and Conversation of his Holy Guardian Angel.",
+    "location_id": "LOC_001",
+    "evidentiary_lane": "A",
+    "document_id": null
+  },
+  {
+    "id": "EVT_003",
+    "date_start": "1904-04-08",
+    "date_end": "1904-04-10",
+    "title": "Reception of Liber AL vel Legis",
+    "description": "Dictation of the Book of the Law by Aiwass in Cairo. Marks the beginning of the Aeon of Horus.",
+    "location_id": "LOC_002",
+    "evidentiary_lane": "A",
+    "document_id": null
+  },
+  {
+    "id": "EVT_004",
+    "date_start": "1909-11",
+    "date_end": "1909-12",
+    "title": "The Vision and the Voice",
+    "description": "Scrying of the 30 Enochian Aethyrs with Victor Neuburg in the Algerian desert.",
+    "location_id": "LOC_004",
+    "evidentiary_lane": "A",
+    "document_id": null
+  },
+  {
+    "id": "EVT_005",
+    "date_start": "1920",
+    "date_end": "1923",
+    "title": "Abbey of Thelema",
+    "description": "Established a commune based on Thelemic principles. Ended with Mussolini expelling Crowley from Italy.",
+    "location_id": "LOC_003",
+    "evidentiary_lane": "E",
+    "document_id": null
+  },
+  {
+    "id": "EVT_006",
+    "date_start": "1947-12-01",
+    "date_end": null,
+    "title": "Death of Aleister Crowley",
+    "description": "Died in Netherwood, Hastings. His ashes were buried near a tree in Hampton, New Jersey.",
+    "location_id": "Unknown",
+    "evidentiary_lane": "E",
+    "document_id": null
+  }
+]

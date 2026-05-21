@@ -1,0 +1,47 @@
+[
+  {
+    "id": "PRS_S001",
+    "name": "Michael Maier",
+    "magical_motto": "Unknown",
+    "role_category": "Thelemic Saint",
+    "birth_year": 1568,
+    "death_year": 1622,
+    "biography": "A German physician, counselor to Rudolf II Habsburg, and a learned alchemist and Rosicrucian apologist."
+  },
+  {
+    "id": "PRS_S002",
+    "name": "Jacques de Molay",
+    "magical_motto": "Unknown",
+    "role_category": "Thelemic Saint",
+    "birth_year": 1243,
+    "death_year": 1314,
+    "biography": "The 23rd and last Grand Master of the Knights Templar."
+  },
+  {
+    "id": "PRS_S003",
+    "name": "Christian Rosenkreuz",
+    "magical_motto": "Frater C.R.C.",
+    "role_category": "Thelemic Saint",
+    "birth_year": 1378,
+    "death_year": 1484,
+    "biography": "Legendary founder of the Rosicrucian Order."
+  },
+  {
+    "id": "PRS_S004",
+    "name": "Paracelsus",
+    "magical_motto": "Unknown",
+    "role_category": "Thelemic Saint",
+    "birth_year": 1493,
+    "death_year": 1541,
+    "biography": "Swiss physician, alchemist, and astrologer of the German Renaissance."
+  },
+  {
+    "id": "PRS_S005",
+    "name": "Apollonius of Tyana",
+    "magical_motto": "Unknown",
+    "role_category": "Thelemic Saint",
+    "birth_year": 15,
+    "death_year": 100,
+    "biography": "Greek Neopythagorean philosopher."
+  }
+]

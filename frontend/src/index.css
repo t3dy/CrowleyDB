@@ -1,0 +1,60 @@
+:root {
+  /* Colors */
+  --bg-obsidian: #0f0f11;
+  --bg-panel: rgba(25, 25, 30, 0.85);
+  --accent-gold: #d4af37;
+  --accent-crimson: #8b0000;
+  --text-parchment: #e6e2d3;
+  --text-muted: #8c887d;
+  
+  /* Lane Colors */
+  --lane-a: #c0392b; /* Red */
+  --lane-b: #d35400; /* Orange/Gold */
+  --lane-c: #2980b9; /* Blue */
+  --lane-d: #8e44ad; /* Purple */
+  --lane-e: #7f8c8d; /* Gray */
+
+  /* Typography */
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-hebrew: 'Frank Ruhl Libre', serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-obsidian);
+  color: var(--text-parchment);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--accent-gold);
+}
+
+a {
+  color: var(--accent-gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--text-parchment);
+}
+
+/* Glassmorphism Panel Utility */
+.glass-panel {
+  background: var(--bg-panel);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.glass-panel:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}

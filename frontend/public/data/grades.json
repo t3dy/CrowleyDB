@@ -1,0 +1,86 @@
+[
+  {
+    "id": "GRD_001",
+    "name": "Neophyte (1=10)",
+    "system": "A.'.A.'.",
+    "tree_path_number": 10,
+    "description": "The grade associated with Malkuth. The task is to obtain control of the astral plane."
+  },
+  {
+    "id": "GRD_002",
+    "name": "Zelator (2=9)",
+    "system": "A.'.A.'.",
+    "tree_path_number": 9,
+    "description": "Associated with Yesod. The task is to master the foundations of yoga and the physical body."
+  },
+  {
+    "id": "GRD_003",
+    "name": "Practicus (3=8)",
+    "system": "A.'.A.'.",
+    "tree_path_number": 8,
+    "description": "Associated with Hod. The task is to master the intellect and the Qabalah."
+  },
+  {
+    "id": "GRD_004",
+    "name": "Philosophus (4=7)",
+    "system": "A.'.A.'.",
+    "tree_path_number": 7,
+    "description": "Associated with Netzach. The task is to master the emotions and moral nature."
+  },
+  {
+    "id": "GRD_005",
+    "name": "Adeptus Minor (5=6)",
+    "system": "A.'.A.'.",
+    "tree_path_number": 6,
+    "description": "Associated with Tiphareth. The task is to attain the Knowledge and Conversation of the Holy Guardian Angel."
+  },
+  {
+    "id": "GRD_006",
+    "name": "Adeptus Major (6=5)",
+    "system": "A.'.A.'.",
+    "tree_path_number": 5,
+    "description": "Associated with Geburah. The task is to learn the practical application of Magick."
+  },
+  {
+    "id": "GRD_007",
+    "name": "Adeptus Exemptus (7=4)",
+    "system": "A.'.A.'.",
+    "tree_path_number": 4,
+    "description": "Associated with Chesed. The task is to write a thesis setting forth a complete system of the universe."
+  },
+  {
+    "id": "GRD_008",
+    "name": "Magister Templi (8=3)",
+    "system": "A.'.A.'.",
+    "tree_path_number": 3,
+    "description": "Associated with Binah. The task is the crossing of the Abyss and the destruction of the ego."
+  },
+  {
+    "id": "GRD_009",
+    "name": "Magus (9=2)",
+    "system": "A.'.A.'.",
+    "tree_path_number": 2,
+    "description": "Associated with Chokmah. The task is to declare a new Word (Logos) to humanity."
+  },
+  {
+    "id": "GRD_010",
+    "name": "Ipsissimus (10=1)",
+    "system": "A.'.A.'.",
+    "tree_path_number": 1,
+    "description": "Associated with Kether. The highest grade, utterly beyond comprehension."
+  },
+  {
+    "id": "GRD_011",
+    "name": "Zelator (1=10)",
+    "system": "Golden Dawn",
+    "tree_path_number": 10,
+    "description": "Golden Dawn grade in Malkuth."
+  },
+  {
+    "id": "GRD_012",
+    "name": "Theoricus (2=9)",
+    "system": "Golden Dawn",
+    "tree_path_number": 9,
+    "description": "Golden Dawn grade in Yesod."
+  }
+]

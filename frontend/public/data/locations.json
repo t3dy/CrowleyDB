@@ -1,0 +1,30 @@
+[
+  {
+    "id": "LOC_001",
+    "name": "Boleskine House, Loch Ness",
+    "latitude": 57.266,
+    "longitude": -4.471,
+    "significance": "Site of the incomplete Abramelin working, considered the focal point of Crowley's magical system in the early 1900s."
+  },
+  {
+    "id": "LOC_002",
+    "name": "Cairo, Egypt",
+    "latitude": 30.044,
+    "longitude": 31.235,
+    "significance": "The Boulaq Museum and the apartment where the Book of the Law was received in 1904."
+  },
+  {
+    "id": "LOC_003",
+    "name": "Abbey of Thelema, Cefalù",
+    "latitude": 38.033,
+    "longitude": 14.016,
+    "significance": "Crowley's magical commune in Sicily (1920-1923), infamous for the death of Raoul Loveday."
+  },
+  {
+    "id": "LOC_004",
+    "name": "Bou Saâda, Algeria",
+    "latitude": 35.212,
+    "longitude": 4.181,
+    "significance": "Where Crowley and Victor Neuburg scried the Enochian Aethyrs (The Vision and the Voice) in 1909."
+  }
+]
