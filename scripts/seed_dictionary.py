@@ -27,7 +27,7 @@ TERMS = [
         93,
         "Name recorded by Crowley; etymology is uncertain.",
         "The voice or intelligence who dictated Liber AL vel Legis to Crowley in Cairo.",
-        "Aiwass anchors the Cairo Working and Crowley's account of the opening of the new Aeon.",
+        "Aiwass anchors the Cairo Working and Crowley's account of the opening of the new Aeon, even though later readers disagree about how to interpret the experience.",
         "A",
     ),
     (
@@ -126,7 +126,7 @@ TERMS = [
         None,
         "Ordo Templi Orientis.",
         "An initiatory order tied to ritual, law, and the public spread of Thelema.",
-        "The O.T.O. becomes one of the most visible institutional afterlives of Crowley's work.",
+        "The O.T.O. became one of the most visible institutional afterlives of Crowley's work.",
         "E",
     ),
     (

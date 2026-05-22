@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import type { ReactNode } from 'react';
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { fetchJSON } from './api';
@@ -25,7 +25,7 @@ const LaneContext = createContext<LaneContextType>({ currentLane: 'All', setLane
 
 export const useLane = () => useContext(LaneContext);
 
-export const LaneProvider: React.FC<{children: ReactNode}> = ({ children }) => {
+export const LaneProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [currentLane, setLane] = useState<Lane>('All');
   return (
     <LaneContext.Provider value={{ currentLane, setLane }}>
@@ -43,42 +43,51 @@ import People from './pages/People';
 
 const Navbar = () => {
   const { currentLane, setLane } = useLane();
-  
-  const lanes: { id: Lane, label: string, color: string }[] = [
-    { id: 'All', label: 'All Evidence', color: 'var(--text-parchment)' },
-    { id: 'A', label: 'Primary Record', color: 'var(--lane-a)' },
-    { id: 'B', label: 'Autobiography', color: 'var(--lane-b)' },
-    { id: 'C', label: 'Scholarship', color: 'var(--lane-c)' },
-    { id: 'D', label: 'Practitioners', color: 'var(--lane-d)' },
-    { id: 'E', label: 'History', color: 'var(--lane-e)' }
+
+  const lanes: { id: Lane; label: string }[] = [
+    { id: 'All', label: 'All Evidence' },
+    { id: 'A', label: 'Primary Record' },
+    { id: 'B', label: 'Autobiography' },
+    { id: 'C', label: 'Scholarship' },
+    { id: 'D', label: 'Practitioners' },
+    { id: 'E', label: 'History' },
   ];
 
   return (
-    <nav style={{ padding: '1rem', background: 'var(--bg-panel)', borderBottom: '1px solid var(--accent-gold)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-      <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', color: 'var(--accent-gold)' }}>
-        Crowley Knowledge Portal
-      </div>
-      <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap' }}>
-        <Link to="/">Home</Link>
-        <Link to="/works">Works</Link>
-        <Link to="/tree">Tree of Life</Link>
-        <Link to="/grades">Grades</Link>
-        <Link to="/biography">Biography & Map</Link>
-        <Link to="/people">People</Link>
-        <Link to="/saints">Saints</Link>
-        <Link to="/dictionary">Dictionary</Link>
-        
-        <select 
-          value={currentLane} 
-          onChange={(e) => setLane(e.target.value as Lane)}
-          style={{ background: 'var(--bg-obsidian)', color: 'var(--text-parchment)', padding: '0.5rem', border: '1px solid var(--accent-gold)', borderRadius: '4px' }}
-        >
-          {lanes.map(l => (
-            <option key={l.id} value={l.id} style={{ color: l.color }}>
-              [{l.id === 'All' ? '*' : l.id}] {l.label}
-            </option>
-          ))}
-        </select>
+    <nav className="site-header">
+      <div className="site-header__inner">
+        <div className="site-brand">
+          <Link to="/" className="site-brand__title">
+            Crowley Knowledge Portal
+          </Link>
+          <p className="site-brand__subtitle">
+            A structured research viewer for Crowley&apos;s works, associates, and symbolic system.
+          </p>
+        </div>
+
+        <div className="site-nav">
+          <div className="site-nav__links">
+            <Link to="/">Home</Link>
+            <Link to="/works">Works</Link>
+            <Link to="/tree">Tree of Life</Link>
+            <Link to="/grades">Grades</Link>
+            <Link to="/biography">Biography &amp; Map</Link>
+            <Link to="/people">People</Link>
+            <Link to="/saints">Saints</Link>
+            <Link to="/dictionary">Dictionary</Link>
+          </div>
+
+          <label className="site-nav__lane">
+            <span>Evidence lane</span>
+            <select value={currentLane} onChange={event => setLane(event.target.value as Lane)}>
+              {lanes.map(lane => (
+                <option key={lane.id} value={lane.id}>
+                  [{lane.id === 'All' ? '*' : lane.id}] {lane.label}
+                </option>
+              ))}
+            </select>
+          </label>
+        </div>
       </div>
     </nav>
   );
@@ -101,89 +110,99 @@ const BiographyAndMap = () => {
     fetchJSON('event_topics').then(setEventTopics);
   }, []);
 
-  const topicById = Object.fromEntries(topics.map((topic: any) => [topic.id, topic]));
-  const topicsByEventId = eventTopics.reduce((acc: Record<string, string[]>, link: any) => {
-    const topic = topicById[link.topic_id];
-    if (!topic) return acc;
-    acc[link.event_id] = acc[link.event_id] || [];
-    acc[link.event_id].push(topic.label);
-    return acc;
-  }, {});
+  const topicById = useMemo(() => Object.fromEntries(topics.map((topic: any) => [topic.id, topic])), [topics]);
+  const topicsByEventId = useMemo(
+    () =>
+      eventTopics.reduce((acc: Record<string, string[]>, link: any) => {
+        const topic = topicById[link.topic_id];
+        if (!topic) return acc;
+        acc[link.event_id] = acc[link.event_id] || [];
+        acc[link.event_id].push(topic.label);
+        return acc;
+      }, {}),
+    [eventTopics, topicById],
+  );
 
-  const filteredEvents = events.filter(e => {
-    if (currentLane !== 'All' && e.evidentiary_lane !== currentLane) return false;
+  const filteredEvents = events.filter(event => {
+    if (currentLane !== 'All' && event.evidentiary_lane !== currentLane) return false;
     if (selectedTopic === 'All') return true;
-    return (topicsByEventId[e.id] || []).includes(selectedTopic);
+    return (topicsByEventId[event.id] || []).includes(selectedTopic);
   });
 
   return (
-    <div style={{ display: 'flex', height: 'calc(100vh - 73px)' }}>
-      {/* Sidebar Timeline */}
-      <div style={{ width: '400px', overflowY: 'auto', padding: '2rem', borderRight: '1px solid var(--accent-gold)' }}>
-        <h1 style={{ marginTop: 0 }}>Timeline</h1>
-        <label style={{ display: 'grid', gap: '0.4rem', marginBottom: '1rem' }}>
-          Topic
-          <select
-            value={selectedTopic}
-            onChange={event => setSelectedTopic(event.target.value)}
-            style={{ background: 'var(--bg-obsidian)', color: 'var(--text-parchment)', padding: '0.5rem', border: '1px solid var(--accent-gold)', borderRadius: '4px' }}
-          >
-            <option value="All">All topics</option>
-            {topics.map((topic: any) => (
-              <option key={topic.id} value={topic.label}>
-                {topic.label}
-              </option>
-            ))}
-          </select>
-        </label>
-        {filteredEvents.map(event => (
-          <div key={event.id} className="glass-panel" style={{ marginBottom: '1rem' }}>
-            <div style={{ fontSize: '0.8rem', color: 'var(--accent-gold)' }}>
-              {event.date_start} {event.date_end ? `- ${event.date_end}` : ''}
-            </div>
-            <h3 style={{ margin: '0.5rem 0' }}>{event.title}</h3>
-            <p style={{ fontSize: '0.9rem', lineHeight: 1.5, margin: 0 }}>{event.description}</p>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginTop: '0.65rem' }}>
-              {(topicsByEventId[event.id] || []).slice(0, 5).map((topic: string) => (
-                <span key={topic} style={{ fontSize: '0.7rem', padding: '0.18rem 0.45rem', borderRadius: '999px', border: '1px solid rgba(212,175,55,0.35)', color: 'var(--text-parchment)' }}>
-                  {topic}
-                </span>
+    <div className="page-shell page-shell--fullbleed biography-layout">
+      <section className="glass-panel page-hero">
+        <div>
+          <p className="page-kicker">CrowleyDB biography lane</p>
+          <h1>Timeline</h1>
+          <p className="page-intro">
+            Browse the chronology with topic and evidence filters. The left panel keeps the narrative compact while
+            the map anchors the events to place.
+          </p>
+        </div>
+        <div className="page-stat">
+          <span>Visible events</span>
+          <strong>{filteredEvents.length}</strong>
+        </div>
+      </section>
+
+      <div className="biography-layout__split">
+        <aside className="glass-panel biography-layout__sidebar">
+          <label className="stacked-field">
+            <span>Topic</span>
+            <select value={selectedTopic} onChange={event => setSelectedTopic(event.target.value)}>
+              <option value="All">All topics</option>
+              {topics.map((topic: any) => (
+                <option key={topic.id} value={topic.label}>
+                  {topic.label}
+                </option>
               ))}
-            </div>
-            <div style={{ marginTop: '0.5rem' }}>
-              <span style={{ 
-                display: 'inline-block', 
-                padding: '0.2rem 0.5rem', 
-                borderRadius: '4px',
-                fontSize: '0.75rem',
-                background: `var(--lane-${event.evidentiary_lane.toLowerCase()})`,
-                color: '#fff'
-              }}>
-                Lane {event.evidentiary_lane}
-              </span>
-            </div>
-          </div>
-        ))}
-      </div>
-      
-      {/* Map Area */}
-      <div style={{ flex: 1, position: 'relative' }}>
-        <MapContainer center={[40.0, 10.0]} zoom={4} style={{ height: '100%', width: '100%', backgroundColor: '#222' }}>
-          <TileLayer
-            attribution='&copy; <a href="https://carto.com/">Carto</a>'
-            url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
-          />
-          {locations.map(loc => (
-            <Marker key={loc.id} position={[loc.latitude, loc.longitude]}>
-              <Popup>
-                <div style={{ color: '#333' }}>
-                  <strong style={{ display: 'block', fontSize: '1.1em', marginBottom: '4px' }}>{loc.name}</strong>
-                  <p style={{ margin: 0, fontSize: '0.9em' }}>{loc.significance}</p>
+            </select>
+          </label>
+
+          <div className="timeline-stack">
+            {filteredEvents.map(event => (
+              <article key={event.id} className="glass-panel timeline-card">
+                <div className="timeline-card__meta">
+                  <span>
+                    {event.date_start} {event.date_end ? `- ${event.date_end}` : ''}
+                  </span>
+                  <span className={`lane-pill lane-pill--${String(event.evidentiary_lane).toLowerCase()}`}>
+                    Lane {event.evidentiary_lane}
+                  </span>
                 </div>
-              </Popup>
-            </Marker>
-          ))}
-        </MapContainer>
+                <h3>{event.title}</h3>
+                <p>{event.description}</p>
+                <div className="topic-chip-row">
+                  {(topicsByEventId[event.id] || []).slice(0, 5).map((topic: string) => (
+                    <span key={topic} className="topic-chip">
+                      {topic}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </aside>
+
+        <section className="biography-layout__map">
+          <MapContainer center={[40.0, 10.0]} zoom={4} style={{ height: '100%', width: '100%', backgroundColor: '#222' }}>
+            <TileLayer
+              attribution='&copy; <a href="https://carto.com/">Carto</a>'
+              url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+            />
+            {locations.map(loc => (
+              <Marker key={loc.id} position={[loc.latitude, loc.longitude]}>
+                <Popup>
+                  <div style={{ color: '#333' }}>
+                    <strong style={{ display: 'block', fontSize: '1.1em', marginBottom: '4px' }}>{loc.name}</strong>
+                    <p style={{ margin: 0, fontSize: '0.9em' }}>{loc.significance}</p>
+                  </div>
+                </Popup>
+              </Marker>
+            ))}
+          </MapContainer>
+        </section>
       </div>
     </div>
   );
@@ -197,38 +216,41 @@ const Dictionary = () => {
     fetchJSON('terms').then(setTerms);
   }, []);
 
-  const filteredTerms = terms.filter(t => {
+  const filteredTerms = terms.filter(term => {
     if (currentLane === 'All') return true;
-    return t.evidentiary_lane === currentLane;
+    return term.evidentiary_lane === currentLane;
   });
 
   return (
-    <div style={{ padding: '2rem' }}>
-      <h1>Thelemic Dictionary</h1>
-      <p>Lexicon and Qabalistic terms of the Aeon of Horus.</p>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '2rem' }}>
+    <div className="page-shell">
+      <section className="glass-panel page-hero">
+        <div>
+          <p className="page-kicker">Reference terms</p>
+          <h1>Thelemic Dictionary</h1>
+          <p className="page-intro">Lexicon and Qabalistic terms of the Aeon of Horus.</p>
+        </div>
+        <div className="page-stat">
+          <span>Entries</span>
+          <strong>{filteredTerms.length}</strong>
+        </div>
+      </section>
+
+      <div className="page-grid page-grid--cards">
         {filteredTerms.map(term => (
-          <div key={term.id} className="glass-panel">
-            <h3 style={{ margin: '0 0 0.5rem 0', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-              {term.term} 
-              {term.gematria_value && <span style={{ fontSize: '0.9rem', color: 'var(--accent-gold)' }}>[{term.gematria_value}]</span>}
+          <article key={term.id} className="glass-panel term-card">
+            <h3 className="term-card__title">
+              {term.term}
+              {term.gematria_value && <span className="term-card__value">[{term.gematria_value}]</span>}
             </h3>
-            <p style={{ margin: 0, fontStyle: 'italic', fontSize: '0.9rem', color: 'var(--text-muted)' }}>{term.etymology}</p>
-            <p style={{ margin: '0.5rem 0' }}><strong>Definition:</strong> {term.definition}</p>
-            <p style={{ margin: '0.5rem 0' }}><strong>Significance:</strong> {term.thelemic_significance}</p>
-            <div style={{ marginTop: '0.5rem' }}>
-              <span style={{ 
-                display: 'inline-block', 
-                padding: '0.2rem 0.5rem', 
-                borderRadius: '4px',
-                fontSize: '0.75rem',
-                background: `var(--lane-${term.evidentiary_lane.toLowerCase()})`,
-                color: '#fff'
-              }}>
-                Lane {term.evidentiary_lane}
-              </span>
-            </div>
-          </div>
+            <p className="term-card__etymology">{term.etymology}</p>
+            <p>
+              <strong>Definition:</strong> {term.definition}
+            </p>
+            <p>
+              <strong>Significance:</strong> {term.thelemic_significance}
+            </p>
+            <span className={`lane-pill lane-pill--${term.evidentiary_lane.toLowerCase()}`}>Lane {term.evidentiary_lane}</span>
+          </article>
         ))}
       </div>
     </div>
@@ -239,9 +261,9 @@ function App() {
   return (
     <LaneProvider>
       <Router>
-        <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+        <div className="app-shell">
           <Navbar />
-          <main style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+          <main className="site-main">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/works" element={<Works />} />

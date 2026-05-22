@@ -11,16 +11,27 @@ const Saints = () => {
   }, []);
 
   return (
-    <div style={{ padding: '2rem' }}>
-      <h1>The Thelemic Saints</h1>
-      <p>The Gnostic Saints invoked in Liber XV, The Gnostic Mass, and honored in the Thelemic tradition.</p>
+    <div className="page-shell">
+      <section className="glass-panel page-hero">
+        <div>
+          <p className="page-kicker">Saints</p>
+          <h1>The Thelemic Saints</h1>
+          <p className="page-intro">
+            The Gnostic Saints invoked in Liber XV, The Gnostic Mass, and honored in the Thelemic tradition.
+          </p>
+        </div>
+        <div className="page-stat">
+          <span>Figures</span>
+          <strong>{saints.length}</strong>
+        </div>
+      </section>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.5rem', marginTop: '2rem' }}>
+      <div className="page-grid page-grid--cards">
         {saints.map(saint => (
-          <div key={saint.id} className="glass-panel">
-            <h2 style={{ margin: '0 0 0.5rem 0' }}>{saint.name}</h2>
+          <article key={saint.id} className="glass-panel term-card">
+            <h3>{saint.name}</h3>
             {saint.magical_motto !== 'Unknown' && (
-              <p style={{ margin: 0, fontStyle: 'italic', color: 'var(--accent-gold)' }}>
+              <p className="term-card__etymology">
                 {saint.magical_motto}
               </p>
             )}
@@ -28,10 +39,10 @@ const Saints = () => {
               {saint.birth_year ? `${saint.birth_year} - ` : ''}{saint.death_year || 'Unknown'}
             </p>
             
-            <p style={{ marginTop: '1rem', lineHeight: 1.5 }}>
+            <p>
               {saint.biography}
             </p>
-          </div>
+          </article>
         ))}
       </div>
     </div>

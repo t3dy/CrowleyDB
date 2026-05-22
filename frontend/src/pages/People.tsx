@@ -68,34 +68,29 @@ const People = () => {
   }, [people, query, roleFilter]);
 
   return (
-    <div style={{ padding: '1.5rem' }}>
-      <div className="glass-panel" style={{ display: 'grid', gap: '1rem', marginBottom: '1rem' }}>
+    <div className="page-shell">
+      <div className="glass-panel page-hero">
         <div>
-          <p style={{ margin: 0, textTransform: 'uppercase', letterSpacing: '0.18em', color: 'var(--text-muted)', fontSize: '0.75rem' }}>
-            People
-          </p>
-          <h1 style={{ margin: '0.25rem 0 0' }}>Crowley Associates, Scholars, and Followers</h1>
-          <p style={{ margin: '0.5rem 0 0', lineHeight: 1.6 }}>
+          <p className="page-kicker">People</p>
+          <h1>Crowley Associates, Scholars, and Followers</h1>
+          <p className="page-intro">
             Use this page to browse the people around Crowley by role: associates, rivals, disciples, scholars, saints,
             and Crowley himself. The cards are written to support both biography and interpretive context.
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'minmax(240px, 1fr) auto', gap: '0.75rem', alignItems: 'end' }}>
-          <label style={{ display: 'grid', gap: '0.4rem' }}>
-            Search
+        <div className="page-stat">
+          <span>Profiles</span>
+          <strong>{filteredPeople.length}</strong>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'minmax(240px, 1fr) auto', gap: '0.75rem', alignItems: 'end', gridColumn: '1 / -1' }}>
+          <label className="stacked-field">
+            <span>Search</span>
             <input
               value={query}
               onChange={event => setQuery(event.target.value)}
               placeholder="Search by name, motto, or biography"
-              style={{
-                width: '100%',
-                padding: '0.8rem 0.9rem',
-                borderRadius: '10px',
-                border: '1px solid rgba(212, 175, 55, 0.2)',
-                background: 'rgba(0, 0, 0, 0.25)',
-                color: 'var(--text-parchment)',
-              }}
             />
           </label>
 
@@ -104,13 +99,7 @@ const People = () => {
               <button
                 key={role}
                 onClick={() => setRoleFilter(role)}
-                style={{
-                  padding: '0.7rem 0.9rem',
-                  borderRadius: '999px',
-                  border: '1px solid rgba(212, 175, 55, 0.2)',
-                  background: roleFilter === role ? 'rgba(212, 175, 55, 0.14)' : 'rgba(0, 0, 0, 0.25)',
-                  color: 'var(--text-parchment)',
-                }}
+                className={roleFilter === role ? 'tree-chip is-active' : 'tree-chip'}
               >
                 {role}
               </button>
@@ -119,13 +108,7 @@ const People = () => {
         </div>
       </div>
 
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
-          gap: '1rem',
-        }}
-      >
+      <div className="page-grid page-grid--cards">
         {filteredPeople.map(person => {
           const yearRange =
             person.birth_year || person.death_year
@@ -133,24 +116,15 @@ const People = () => {
               : 'Dates unknown';
 
           return (
-            <article key={person.id} className="glass-panel" style={{ display: 'grid', gap: '0.7rem' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', alignItems: 'start' }}>
+            <article key={person.id} className="glass-panel term-card">
+              <div className="timeline-card__meta">
                 <div>
-                  <h2 style={{ margin: '0 0 0.2rem' }}>{person.name}</h2>
+                  <h3>{person.name}</h3>
                   {person.magical_motto && person.magical_motto !== 'Unknown' && (
-                    <p style={{ margin: 0, fontStyle: 'italic', color: 'var(--accent-gold)' }}>{person.magical_motto}</p>
+                    <p className="term-card__etymology">{person.magical_motto}</p>
                   )}
                 </div>
-                <span
-                  style={{
-                    padding: '0.35rem 0.65rem',
-                    borderRadius: '999px',
-                    border: '1px solid rgba(212, 175, 55, 0.25)',
-                    fontSize: '0.78rem',
-                    color: 'var(--text-parchment)',
-                    whiteSpace: 'nowrap',
-                  }}
-                >
+                <span className="lane-pill lane-pill--e" style={{ whiteSpace: 'nowrap' }}>
                   {person.role_category || 'Uncategorized'}
                 </span>
               </div>
@@ -160,7 +134,7 @@ const People = () => {
                 <span>{eventCounts[person.id] || 0} linked events</span>
               </div>
 
-              <p style={{ margin: 0, lineHeight: 1.55 }}>{person.biography}</p>
+              <p>{person.biography}</p>
             </article>
           );
         })}

@@ -1,113 +1,5 @@
 [
   {
-    "id": "DOC_WKS_001",
-    "title": "Liber AL vel Legis",
-    "author": "Aleister Crowley",
-    "publication_year": 1904,
-    "evidentiary_lane": "A",
-    "file_path": null,
-    "description": "The received text that opens Crowley's Thelemic system."
-  },
-  {
-    "id": "DOC_WKS_002",
-    "title": "Book 4 / Liber ABA",
-    "author": "Aleister Crowley",
-    "publication_year": 1909,
-    "evidentiary_lane": "A",
-    "file_path": null,
-    "description": "Crowley's instructional manual on yoga, magick, and the training life."
-  },
-  {
-    "id": "DOC_WKS_003",
-    "title": "The Vision and the Voice",
-    "author": "Aleister Crowley",
-    "publication_year": 1909,
-    "evidentiary_lane": "A",
-    "file_path": null,
-    "description": "Record of the thirty Enochian Aethyrs worked in Algeria."
-  },
-  {
-    "id": "DOC_WKS_004",
-    "title": "777 and Other Qabalistic Writings",
-    "author": "Aleister Crowley",
-    "publication_year": 1909,
-    "evidentiary_lane": "A",
-    "file_path": null,
-    "description": "Crowley's correspondence tables and Qabalistic reference work."
-  },
-  {
-    "id": "DOC_WKS_005",
-    "title": "The Book of Thoth",
-    "author": "Aleister Crowley",
-    "publication_year": 1944,
-    "evidentiary_lane": "B",
-    "file_path": null,
-    "description": "Crowley's tarot manual for the Thoth deck."
-  },
-  {
-    "id": "DOC_WKS_006",
-    "title": "The Equinox, Vol. I, No. 1",
-    "author": "Aleister Crowley",
-    "publication_year": 1909,
-    "evidentiary_lane": "A",
-    "file_path": null,
-    "description": "The first issue of Crowley's magical journal."
-  },
-  {
-    "id": "DOC_WKS_007",
-    "title": "The Book of Lies",
-    "author": "Aleister Crowley",
-    "publication_year": 1912,
-    "evidentiary_lane": "A",
-    "file_path": null,
-    "description": "Short symbolic chapters and aphorisms."
-  },
-  {
-    "id": "DOC_WKS_008",
-    "title": "Liber Aleph vel CXI",
-    "author": "Aleister Crowley",
-    "publication_year": 1911,
-    "evidentiary_lane": "A",
-    "file_path": null,
-    "description": "Crowley's letter-form work of magical instruction."
-  },
-  {
-    "id": "DOC_WKS_009",
-    "title": "The Blue Equinox",
-    "author": "Aleister Crowley",
-    "publication_year": 1919,
-    "evidentiary_lane": "A",
-    "file_path": null,
-    "description": "Later issue of The Equinox and a major manifesto volume."
-  },
-  {
-    "id": "DOC_WKS_010",
-    "title": "Magick in Theory and Practice",
-    "author": "Aleister Crowley",
-    "publication_year": 1929,
-    "evidentiary_lane": "A",
-    "file_path": null,
-    "description": "A major statement of Crowley's magical theory."
-  },
-  {
-    "id": "DOC_WKS_011",
-    "title": "The Confessions of Aleister Crowley",
-    "author": "Aleister Crowley",
-    "publication_year": 1929,
-    "evidentiary_lane": "B",
-    "file_path": null,
-    "description": "Crowley's autobiographical life story."
-  },
-  {
-    "id": "DOC_WKS_012",
-    "title": "Diary of a Drug Fiend",
-    "author": "Aleister Crowley",
-    "publication_year": 1922,
-    "evidentiary_lane": "B",
-    "file_path": null,
-    "description": "Crowley's famous novel of discipline, addiction, and transformation."
-  },
-  {
     "id": "ARC_PERDURABO",
     "title": "Perdurabo: The Life of Aleister Crowley",
     "author": "Richard Kaczynski",
@@ -133,5 +25,113 @@
     "evidentiary_lane": "B",
     "file_path": "C:\\Dev\\CROWLEYDB\\archive_markdown\\confessions.md",
     "description": "Markdown companion extracted from Crowley's autobiography for archive browsing and event indexing."
+  },
+  {
+    "id": "DOC_WKS_001",
+    "title": "Liber AL vel Legis",
+    "author": "Aleister Crowley",
+    "publication_year": 1904,
+    "evidentiary_lane": "A",
+    "file_path": null,
+    "description": "The received text that opens Crowley's Thelemic system and frames the Cairo Working."
+  },
+  {
+    "id": "DOC_WKS_002",
+    "title": "Book 4 / Liber ABA",
+    "author": "Aleister Crowley",
+    "publication_year": 1909,
+    "evidentiary_lane": "A",
+    "file_path": null,
+    "description": "Crowley's instructional manual on yoga, magick, and the disciplined training life."
+  },
+  {
+    "id": "DOC_WKS_003",
+    "title": "The Vision and the Voice",
+    "author": "Aleister Crowley",
+    "publication_year": 1909,
+    "evidentiary_lane": "A",
+    "file_path": null,
+    "description": "Record of the thirty Enochian Aethyrs worked in Algeria with Victor Neuburg."
+  },
+  {
+    "id": "DOC_WKS_004",
+    "title": "777 and Other Qabalistic Writings",
+    "author": "Aleister Crowley",
+    "publication_year": 1909,
+    "evidentiary_lane": "A",
+    "file_path": null,
+    "description": "Crowley's correspondence tables and Qabalistic reference work."
+  },
+  {
+    "id": "DOC_WKS_005",
+    "title": "The Book of Thoth",
+    "author": "Aleister Crowley",
+    "publication_year": 1944,
+    "evidentiary_lane": "B",
+    "file_path": null,
+    "description": "Crowley's late tarot manual for the Thoth deck and its symbolic revisions."
+  },
+  {
+    "id": "DOC_WKS_006",
+    "title": "The Equinox, Vol. I, No. 1",
+    "author": "Aleister Crowley",
+    "publication_year": 1909,
+    "evidentiary_lane": "A",
+    "file_path": null,
+    "description": "The first issue of Crowley's magical journal, with instruction, ritual, and polemic."
+  },
+  {
+    "id": "DOC_WKS_007",
+    "title": "The Book of Lies",
+    "author": "Aleister Crowley",
+    "publication_year": 1912,
+    "evidentiary_lane": "A",
+    "file_path": null,
+    "description": "Short symbolic chapters, jokes, aphorisms, and doctrinal reversals."
+  },
+  {
+    "id": "DOC_WKS_008",
+    "title": "Liber Aleph vel CXI",
+    "author": "Aleister Crowley",
+    "publication_year": 1911,
+    "evidentiary_lane": "A",
+    "file_path": null,
+    "description": "Crowley's letter-form work of magical instruction addressed to his magical son."
+  },
+  {
+    "id": "DOC_WKS_009",
+    "title": "The Blue Equinox",
+    "author": "Aleister Crowley",
+    "publication_year": 1919,
+    "evidentiary_lane": "A",
+    "file_path": null,
+    "description": "Later issue of The Equinox and a major post-war manifesto volume."
+  },
+  {
+    "id": "DOC_WKS_010",
+    "title": "Magick in Theory and Practice",
+    "author": "Aleister Crowley",
+    "publication_year": 1929,
+    "evidentiary_lane": "A",
+    "file_path": null,
+    "description": "A major statement of Crowley's magical theory and practical method."
+  },
+  {
+    "id": "DOC_WKS_011",
+    "title": "The Confessions of Aleister Crowley",
+    "author": "Aleister Crowley",
+    "publication_year": 1929,
+    "evidentiary_lane": "B",
+    "file_path": null,
+    "description": "Crowley's autobiographical life story, written as a self-interpreting narrative."
+  },
+  {
+    "id": "DOC_WKS_012",
+    "title": "Diary of a Drug Fiend",
+    "author": "Aleister Crowley",
+    "publication_year": 1922,
+    "evidentiary_lane": "B",
+    "file_path": null,
+    "description": "Crowley's famous novel of discipline, addiction, and transformation."
   }
 ]

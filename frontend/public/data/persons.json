@@ -6,7 +6,7 @@
     "role_category": "Self",
     "birth_year": 1875,
     "death_year": 1947,
-    "biography": "The central figure of the portal: poet, occultist, magician, controversial public writer, and the architect of the Thelemic system."
+    "biography": "Poet, occultist, mountaineer, and polemical writer whose self-authored mythos and ritual corpus define the portal's core subject."
   },
   {
     "id": "PRS_001",
@@ -15,7 +15,7 @@
     "role_category": "Major Associate",
     "birth_year": 1874,
     "death_year": 1932,
-    "biography": "Crowley's first wife and an important figure in the Cairo Working narrative. Her life after the early Thelemic years is often flattened in hostile accounts, so the portal keeps her biography explicit."
+    "biography": "Crowley's first wife and an important figure in the Cairo Working narrative. Her later life is often flattened by hostile or sensational accounts, so the portal keeps her biography explicit."
   },
   {
     "id": "PRS_002",
@@ -24,7 +24,7 @@
     "role_category": "Major Associate",
     "birth_year": 1883,
     "death_year": 1940,
-    "biography": "Poet and magical partner who worked with Crowley in the desert Aethyr work and appears throughout the early Thelemic orbit."
+    "biography": "Poet and magical collaborator who worked with Crowley in the desert Aethyr work and appears throughout the early Thelemic orbit."
   },
   {
     "id": "PRS_003",
@@ -33,7 +33,7 @@
     "role_category": "Major Associate",
     "birth_year": 1883,
     "death_year": 1975,
-    "biography": "Crowley's 'scarlet woman' during the Abbey of Thelema years and one of the most important figures in his middle period."
+    "biography": "Crowley's major partner during the Abbey of Thelema years and one of the most important figures in his middle period."
   },
   {
     "id": "PRS_004",
@@ -42,7 +42,7 @@
     "role_category": "Major Associate",
     "birth_year": 1871,
     "death_year": 1931,
-    "biography": "A close companion and collaborator whose presence helps anchor the Paris and New York phases of Crowley's life."
+    "biography": "A close companion and collaborator whose presence helps anchor the Paris and New York phases of Crowley's American years."
   },
   {
     "id": "PRS_005",
@@ -51,7 +51,7 @@
     "role_category": "Major Associate",
     "birth_year": 1872,
     "death_year": 1923,
-    "biography": "An early mentor and ceremonial magician whose influence helped shape Crowley's A.'.A.'. training structure."
+    "biography": "An early mentor in ceremonial magic and Buddhism whose influence helped shape Crowley's A.'.A.'. training structure."
   },
   {
     "id": "PRS_006",
@@ -69,7 +69,7 @@
     "role_category": "Rival",
     "birth_year": 1865,
     "death_year": 1939,
-    "biography": "Poet, Golden Dawn member, and a major literary and occult interlocutor in Crowley's early career."
+    "biography": "Poet, Golden Dawn member, and a major literary and occult interlocutor in Crowley's early career and temple disputes."
   },
   {
     "id": "PRS_008",
@@ -78,7 +78,7 @@
     "role_category": "Disciple",
     "birth_year": 1875,
     "death_year": 1958,
-    "biography": "American actress and disciple who gives the portal a clear line into the Abbey of Thelema and later reception of Crowley's work."
+    "biography": "American actress turned disciple who gives the portal a clear line into the Abbey of Thelema and the later preservation of Crowley's work."
   },
   {
     "id": "PRS_009",
@@ -87,7 +87,7 @@
     "role_category": "Disciple",
     "birth_year": 1914,
     "death_year": 1952,
-    "biography": "Scientist, occultist, and a key American follower whose story helps bridge Crowley studies and postwar occult culture."
+    "biography": "Rocket engineer and occultist whose story links Crowley studies to mid-century American esotericism."
   },
   {
     "id": "PRS_010",
@@ -96,7 +96,7 @@
     "role_category": "Disciple",
     "birth_year": 1924,
     "death_year": 2011,
-    "biography": "A later occult interpreter whose writings extended Crowley's influence into a highly idiosyncratic post-Crowley current."
+    "biography": "A later occult interpreter whose writings extended Crowley's influence into the Typhonian stream and a highly idiosyncratic post-Crowley current."
   },
   {
     "id": "PRS_011",
@@ -123,7 +123,7 @@
     "role_category": "Scholar",
     "birth_year": 1950,
     "death_year": null,
-    "biography": "Author of one of the most important modern biographies of Crowley and a major scholarly source for the portal."
+    "biography": "Author of one of the most important modern biographies of Crowley and a major archival source for the portal."
   },
   {
     "id": "PRS_014",
@@ -159,7 +159,7 @@
     "role_category": "Thelemic Saint",
     "birth_year": 1568,
     "death_year": 1622,
-    "biography": "A German physician, counselor to Rudolf II Habsburg, and a learned alchemist and Rosicrucian apologist."
+    "biography": "A German physician, counselor to Rudolf II, and a learned alchemist and Rosicrucian apologist."
   },
   {
     "id": "PRS_S002",
@@ -168,7 +168,7 @@
     "role_category": "Thelemic Saint",
     "birth_year": 1243,
     "death_year": 1314,
-    "biography": "The 23rd and last Grand Master of the Knights Templar."
+    "biography": "The 23rd and last Grand Master of the Knights Templar and a central martyr figure in later occult myth."
   },
   {
     "id": "PRS_S003",
@@ -177,7 +177,7 @@
     "role_category": "Thelemic Saint",
     "birth_year": 1378,
     "death_year": 1484,
-    "biography": "Legendary founder of the Rosicrucian Order."
+    "biography": "Legendary founder of the Rosicrucian Order and a symbolic ancestor for later occult fraternities."
   },
   {
     "id": "PRS_S004",
@@ -195,6 +195,6 @@
     "role_category": "Thelemic Saint",
     "birth_year": 15,
     "death_year": 100,
-    "biography": "Greek Neopythagorean philosopher."
+    "biography": "Greek Neopythagorean philosopher and wonder-worker often invoked as an exemplar of sacred wisdom."
   }
 ]

@@ -17,48 +17,44 @@ const Grades = () => {
   const filteredGrades = grades.filter(g => g.system === selectedSystem);
 
   return (
-    <div style={{ padding: '2rem' }}>
-      <h1>Magical Grades & Initiations</h1>
-      <p>Initiatory systems mapped onto the Tree of Life.</p>
+    <div className="page-shell">
+      <section className="glass-panel page-hero">
+        <div>
+          <p className="page-kicker">Grades</p>
+          <h1>Magical Grades &amp; Initiations</h1>
+          <p className="page-intro">Initiatory systems mapped onto the Tree of Life.</p>
+        </div>
+        <div className="page-stat">
+          <span>Systems</span>
+          <strong>{systems.length}</strong>
+        </div>
+      </section>
 
-      <div style={{ marginBottom: '2rem', display: 'flex', gap: '1rem' }}>
+      <div style={{ marginBottom: '0.25rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
         {systems.map(system => (
           <button 
             key={system}
             onClick={() => setSelectedSystem(system)} 
-            style={{ 
-              padding: '0.5rem 1rem', 
-              background: selectedSystem === system ? 'var(--accent-gold)' : 'var(--bg-obsidian)', 
-              color: selectedSystem === system ? '#000' : 'var(--text-parchment)', 
-              cursor: 'pointer',
-              border: '1px solid var(--accent-gold)'
-            }}
+            className={selectedSystem === system ? 'tree-chip is-active' : 'tree-chip'}
           >
             {system}
           </button>
         ))}
       </div>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+      <div className="timeline-stack">
         {filteredGrades.map(grade => (
-          <div key={grade.id} className="glass-panel" style={{ display: 'flex', alignItems: 'flex-start', gap: '2rem' }}>
-            <div style={{ 
-              width: '100px', 
-              textAlign: 'center', 
-              background: 'var(--bg-obsidian)', 
-              padding: '1rem', 
-              border: '1px solid var(--accent-gold)', 
-              borderRadius: '8px' 
-            }}>
-              <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Path</div>
-              <div style={{ fontSize: '2rem', color: 'var(--accent-gold)' }}>{grade.tree_path_number}</div>
+          <article key={grade.id} className="glass-panel timeline-card">
+            <div className="page-stat" style={{ minWidth: '120px' }}>
+              <span>Path</span>
+              <strong>{grade.tree_path_number}</strong>
             </div>
             
             <div>
-              <h2 style={{ margin: '0 0 0.5rem 0' }}>{grade.name}</h2>
-              <p style={{ margin: 0, fontSize: '1.1rem', lineHeight: 1.6 }}>{grade.description}</p>
+              <h3>{grade.name}</h3>
+              <p style={{ fontSize: '1.05rem', lineHeight: 1.6 }}>{grade.description}</p>
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </div>

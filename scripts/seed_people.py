@@ -10,7 +10,7 @@ PEOPLE = [
         "Self",
         1875,
         1947,
-        "The central figure of the portal: poet, occultist, magician, controversial public writer, and the architect of the Thelemic system.",
+        "Poet, occultist, mountaineer, and polemical writer whose self-authored mythos and ritual corpus define the portal's core subject.",
     ),
     (
         "PRS_001",
@@ -19,7 +19,7 @@ PEOPLE = [
         "Major Associate",
         1874,
         1932,
-        "Crowley's first wife and an important figure in the Cairo Working narrative. Her life after the early Thelemic years is often flattened in hostile accounts, so the portal keeps her biography explicit.",
+        "Crowley's first wife and an important figure in the Cairo Working narrative. Her later life is often flattened by hostile or sensational accounts, so the portal keeps her biography explicit.",
     ),
     (
         "PRS_002",
@@ -28,7 +28,7 @@ PEOPLE = [
         "Major Associate",
         1883,
         1940,
-        "Poet and magical partner who worked with Crowley in the desert Aethyr work and appears throughout the early Thelemic orbit.",
+        "Poet and magical collaborator who worked with Crowley in the desert Aethyr work and appears throughout the early Thelemic orbit.",
     ),
     (
         "PRS_003",
@@ -37,7 +37,7 @@ PEOPLE = [
         "Major Associate",
         1883,
         1975,
-        "Crowley's 'scarlet woman' during the Abbey of Thelema years and one of the most important figures in his middle period.",
+        "Crowley's major partner during the Abbey of Thelema years and one of the most important figures in his middle period.",
     ),
     (
         "PRS_004",
@@ -46,7 +46,7 @@ PEOPLE = [
         "Major Associate",
         1871,
         1931,
-        "A close companion and collaborator whose presence helps anchor the Paris and New York phases of Crowley's life.",
+        "A close companion and collaborator whose presence helps anchor the Paris and New York phases of Crowley's American years.",
     ),
     (
         "PRS_005",
@@ -55,7 +55,7 @@ PEOPLE = [
         "Major Associate",
         1872,
         1923,
-        "An early mentor and ceremonial magician whose influence helped shape Crowley's A.'.A.'. training structure.",
+        "An early mentor in ceremonial magic and Buddhism whose influence helped shape Crowley's A.'.A.'. training structure.",
     ),
     (
         "PRS_006",
@@ -73,7 +73,7 @@ PEOPLE = [
         "Rival",
         1865,
         1939,
-        "Poet, Golden Dawn member, and a major literary and occult interlocutor in Crowley's early career.",
+        "Poet, Golden Dawn member, and a major literary and occult interlocutor in Crowley's early career and temple disputes.",
     ),
     (
         "PRS_008",
@@ -82,7 +82,7 @@ PEOPLE = [
         "Disciple",
         1875,
         1958,
-        "American actress and disciple who gives the portal a clear line into the Abbey of Thelema and later reception of Crowley's work.",
+        "American actress turned disciple who gives the portal a clear line into the Abbey of Thelema and the later preservation of Crowley's work.",
     ),
     (
         "PRS_009",
@@ -91,7 +91,7 @@ PEOPLE = [
         "Disciple",
         1914,
         1952,
-        "Scientist, occultist, and a key American follower whose story helps bridge Crowley studies and postwar occult culture.",
+        "Rocket engineer and occultist whose story links Crowley studies to mid-century American esotericism.",
     ),
     (
         "PRS_010",
@@ -100,7 +100,7 @@ PEOPLE = [
         "Disciple",
         1924,
         2011,
-        "A later occult interpreter whose writings extended Crowley's influence into a highly idiosyncratic post-Crowley current.",
+        "A later occult interpreter whose writings extended Crowley's influence into the Typhonian stream and a highly idiosyncratic post-Crowley current.",
     ),
     (
         "PRS_011",
@@ -127,7 +127,7 @@ PEOPLE = [
         "Scholar",
         1950,
         None,
-        "Author of one of the most important modern biographies of Crowley and a major scholarly source for the portal.",
+        "Author of one of the most important modern biographies of Crowley and a major archival source for the portal.",
     ),
     (
         "PRS_014",
@@ -163,7 +163,7 @@ PEOPLE = [
         "Thelemic Saint",
         1568,
         1622,
-        "A German physician, counselor to Rudolf II Habsburg, and a learned alchemist and Rosicrucian apologist.",
+        "A German physician, counselor to Rudolf II, and a learned alchemist and Rosicrucian apologist.",
     ),
     (
         "PRS_S002",
@@ -172,7 +172,7 @@ PEOPLE = [
         "Thelemic Saint",
         1243,
         1314,
-        "The 23rd and last Grand Master of the Knights Templar.",
+        "The 23rd and last Grand Master of the Knights Templar and a central martyr figure in later occult myth.",
     ),
     (
         "PRS_S003",
@@ -181,7 +181,7 @@ PEOPLE = [
         "Thelemic Saint",
         1378,
         1484,
-        "Legendary founder of the Rosicrucian Order.",
+        "Legendary founder of the Rosicrucian Order and a symbolic ancestor for later occult fraternities.",
     ),
     (
         "PRS_S004",
@@ -199,7 +199,7 @@ PEOPLE = [
         "Thelemic Saint",
         15,
         100,
-        "Greek Neopythagorean philosopher.",
+        "Greek Neopythagorean philosopher and wonder-worker often invoked as an exemplar of sacred wisdom.",
     ),
 ]
 
