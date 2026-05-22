@@ -36,6 +36,7 @@ This style guide dictates the tone, structure, and formatting for all human-auth
 * **Brevity**: Maximum 100 words per popup.
 * **Fact-Forward**: State the event, the date, and the location.
 * **Magical Significance**: A brief note on why this location/event matters to the Thelemic current.
+* **Hover Text**: Add a shorter mouseover line for quick scanning; keep the popup itself for fuller context and linked records.
 
 ### 2.5 People Profiles
 * **Role Header**: Identify the person as a self, associate, scholar, disciple, rival, or saint.

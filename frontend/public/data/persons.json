@@ -42,7 +42,7 @@
     "role_category": "Major Associate",
     "birth_year": 1871,
     "death_year": 1931,
-    "biography": "A close companion and collaborator whose presence helps anchor the Paris and New York phases of Crowley's American years."
+    "biography": "Singer, traveler, and social connector whose role in Paris and New York helps anchor Crowley's American years and the Paris Working milieu."
   },
   {
     "id": "PRS_005",
@@ -114,7 +114,7 @@
     "role_category": "Disciple",
     "birth_year": 1945,
     "death_year": null,
-    "biography": "A later Thelemic writer and organizer who helps represent the order's modern interpretive afterlife."
+    "biography": "A later Thelemic writer and organizer whose work emphasizes practical order structure, formal training, and the modern afterlife of Crowley's initiatory system."
   },
   {
     "id": "PRS_013",
@@ -123,7 +123,7 @@
     "role_category": "Scholar",
     "birth_year": 1950,
     "death_year": null,
-    "biography": "Author of one of the most important modern biographies of Crowley and a major archival source for the portal."
+    "biography": "Author of a major modern biography of Crowley whose archival approach helps separate documentary record from self-mythology."
   },
   {
     "id": "PRS_014",
@@ -132,7 +132,7 @@
     "role_category": "Scholar",
     "birth_year": 1948,
     "death_year": null,
-    "biography": "Biographer and historian whose work on Crowley and esoteric history is central to contemporary study."
+    "biography": "Biographer and historian whose work emphasizes art, sex, occult culture, and the social worlds surrounding Crowley."
   },
   {
     "id": "PRS_015",
@@ -141,7 +141,7 @@
     "role_category": "Scholar",
     "birth_year": 1970,
     "death_year": null,
-    "biography": "Academic historian of Western esotericism whose work helps situate Crowley within broader intellectual history."
+    "biography": "Academic historian of Western esotericism whose work situates Crowley inside larger histories of modern religion and occultism."
   },
   {
     "id": "PRS_016",
@@ -150,7 +150,7 @@
     "role_category": "Scholar",
     "birth_year": null,
     "death_year": null,
-    "biography": "Editor and scholar whose work on Crowley's correspondence and historical documents is useful for archival research."
+    "biography": "Editor and scholar whose documentary work on Crowley correspondence and ephemera has made later archival study much easier."
   },
   {
     "id": "PRS_S001",
@@ -159,7 +159,7 @@
     "role_category": "Thelemic Saint",
     "birth_year": 1568,
     "death_year": 1622,
-    "biography": "A German physician, counselor to Rudolf II, and a learned alchemist and Rosicrucian apologist."
+    "biography": "German physician, court counselor, and learned alchemist whose Rosicrucian writings made him a natural ancestor for later occult lineages."
   },
   {
     "id": "PRS_S002",
@@ -168,7 +168,7 @@
     "role_category": "Thelemic Saint",
     "birth_year": 1243,
     "death_year": 1314,
-    "biography": "The 23rd and last Grand Master of the Knights Templar and a central martyr figure in later occult myth."
+    "biography": "The last Grand Master of the Knights Templar and a martyr figure whose symbolic afterlife far exceeds the historical record."
   },
   {
     "id": "PRS_S003",
@@ -177,7 +177,7 @@
     "role_category": "Thelemic Saint",
     "birth_year": 1378,
     "death_year": 1484,
-    "biography": "Legendary founder of the Rosicrucian Order and a symbolic ancestor for later occult fraternities."
+    "biography": "Legendary Rosicrucian founder and literary cipher, invoked less as a person than as a mythic origin for initiatory fraternities."
   },
   {
     "id": "PRS_S004",
@@ -186,7 +186,7 @@
     "role_category": "Thelemic Saint",
     "birth_year": 1493,
     "death_year": 1541,
-    "biography": "Swiss physician, alchemist, and astrologer of the German Renaissance."
+    "biography": "Swiss physician, alchemist, and astrologer whose medicine and cosmology fed later esoteric and Thelemic admiration alike."
   },
   {
     "id": "PRS_S005",
@@ -195,6 +195,6 @@
     "role_category": "Thelemic Saint",
     "birth_year": 15,
     "death_year": 100,
-    "biography": "Greek Neopythagorean philosopher and wonder-worker often invoked as an exemplar of sacred wisdom."
+    "biography": "Greek Neopythagorean philosopher and wonder-worker often invoked as an exemplar of sacred wisdom, ascent, and holy charisma."
   }
 ]

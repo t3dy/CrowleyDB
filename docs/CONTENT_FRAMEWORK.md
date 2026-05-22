@@ -123,6 +123,8 @@ Use for place cards on the interactive map.
 - Date or date range
 - What happened there
 - Why the site matters
+- A short hover line for mouseover browsing
+- Any directly linked events or works
 - Source tone label, if needed
 
 Recommended length: 30 to 90 words.

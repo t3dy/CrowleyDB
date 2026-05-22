@@ -46,7 +46,7 @@ PEOPLE = [
         "Major Associate",
         1871,
         1931,
-        "A close companion and collaborator whose presence helps anchor the Paris and New York phases of Crowley's American years.",
+        "Singer, traveler, and social connector whose role in Paris and New York helps anchor Crowley's American years and the Paris Working milieu.",
     ),
     (
         "PRS_005",
@@ -118,7 +118,7 @@ PEOPLE = [
         "Disciple",
         1945,
         None,
-        "A later Thelemic writer and organizer who helps represent the order's modern interpretive afterlife.",
+        "A later Thelemic writer and organizer whose work emphasizes practical order structure, formal training, and the modern afterlife of Crowley's initiatory system.",
     ),
     (
         "PRS_013",
@@ -127,7 +127,7 @@ PEOPLE = [
         "Scholar",
         1950,
         None,
-        "Author of one of the most important modern biographies of Crowley and a major archival source for the portal.",
+        "Author of a major modern biography of Crowley whose archival approach helps separate documentary record from self-mythology.",
     ),
     (
         "PRS_014",
@@ -136,7 +136,7 @@ PEOPLE = [
         "Scholar",
         1948,
         None,
-        "Biographer and historian whose work on Crowley and esoteric history is central to contemporary study.",
+        "Biographer and historian whose work emphasizes art, sex, occult culture, and the social worlds surrounding Crowley.",
     ),
     (
         "PRS_015",
@@ -145,7 +145,7 @@ PEOPLE = [
         "Scholar",
         1970,
         None,
-        "Academic historian of Western esotericism whose work helps situate Crowley within broader intellectual history.",
+        "Academic historian of Western esotericism whose work situates Crowley inside larger histories of modern religion and occultism.",
     ),
     (
         "PRS_016",
@@ -154,7 +154,7 @@ PEOPLE = [
         "Scholar",
         None,
         None,
-        "Editor and scholar whose work on Crowley's correspondence and historical documents is useful for archival research.",
+        "Editor and scholar whose documentary work on Crowley correspondence and ephemera has made later archival study much easier.",
     ),
     (
         "PRS_S001",
@@ -163,7 +163,7 @@ PEOPLE = [
         "Thelemic Saint",
         1568,
         1622,
-        "A German physician, counselor to Rudolf II, and a learned alchemist and Rosicrucian apologist.",
+        "German physician, court counselor, and learned alchemist whose Rosicrucian writings made him a natural ancestor for later occult lineages.",
     ),
     (
         "PRS_S002",
@@ -172,7 +172,7 @@ PEOPLE = [
         "Thelemic Saint",
         1243,
         1314,
-        "The 23rd and last Grand Master of the Knights Templar and a central martyr figure in later occult myth.",
+        "The last Grand Master of the Knights Templar and a martyr figure whose symbolic afterlife far exceeds the historical record.",
     ),
     (
         "PRS_S003",
@@ -181,7 +181,7 @@ PEOPLE = [
         "Thelemic Saint",
         1378,
         1484,
-        "Legendary founder of the Rosicrucian Order and a symbolic ancestor for later occult fraternities.",
+        "Legendary Rosicrucian founder and literary cipher, invoked less as a person than as a mythic origin for initiatory fraternities.",
     ),
     (
         "PRS_S004",
@@ -190,7 +190,7 @@ PEOPLE = [
         "Thelemic Saint",
         1493,
         1541,
-        "Swiss physician, alchemist, and astrologer of the German Renaissance.",
+        "Swiss physician, alchemist, and astrologer whose medicine and cosmology fed later esoteric and Thelemic admiration alike.",
     ),
     (
         "PRS_S005",
@@ -199,7 +199,7 @@ PEOPLE = [
         "Thelemic Saint",
         15,
         100,
-        "Greek Neopythagorean philosopher and wonder-worker often invoked as an exemplar of sacred wisdom.",
+        "Greek Neopythagorean philosopher and wonder-worker often invoked as an exemplar of sacred wisdom, ascent, and holy charisma.",
     ),
 ]
 

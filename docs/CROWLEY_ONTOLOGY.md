@@ -1,6 +1,6 @@
 # Crowley Knowledge Portal: Data Ontology
 
-This document defines the knowledge domains and editorial boundaries for the Aleister Crowley digital humanities resource. It is designed to serve both the rigorous academic scholar and the ceremonial magick practitioner, acting as a "contested archive" where claims are meticulously sourced and evidentiary lanes are preserved.
+This document defines the knowledge domains and editorial boundaries for the Aleister Crowley digital humanities resource. It is built to support both scholarly browsing and practitioner reading, while keeping the project framed as a contested archive where claims stay sourced and evidentiary lanes remain visible.
 
 ## 1. Evidentiary Lanes
 
@@ -110,6 +110,6 @@ When documenting the following events, the database must **never flatten the nar
 
 ## 4. Frontend Requirements
 The frontend must support relational browsing:
-* **Thelemic Tree of Life Map**: Interactive D3/Canvas map showing the 10 Sephiroth and 22 Paths, explicitly using the Thoth Tarot swaps (Tzaddi/Heh).
+* **Thelemic Tree of Life Map**: Interactive map of the 10 Sephiroth and 22 Paths, with hover text, popups, and the Thoth Tarot swaps (Tzaddi/Heh) clearly surfaced.
 * **Gematria Search**: Ability to type "93" and see all related terms, works, and events.
-* **Lane Filtering**: A toggle to filter the timeline or biographies to only show "Scholarly Consensus" or "Crowley's Self-Report".
+* **Lane Filtering**: A toggle to filter the timeline or biographies to show only "Scholarly Consensus", "Crowley's Self-Report", or other evidentiary lanes as needed.
