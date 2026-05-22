@@ -25,7 +25,7 @@ Crowley's bibliography is vast. Every work must be classified by its A.'.A.'. Cl
 * **Class E**: Manifestos, broadsheets, epistles.
 
 ### 2.2 Tarot and Qabalah (The Thelemic System)
-The portal explicitly maps Crowley's idiosyncratic Qabalistic system, most notably from *The Book of Thoth* and *Liber 777*. 
+The portal explicitly maps Crowley's idiosyncratic Qabalistic system, most notably from *The Book of Thoth* and *Liber 777*.
 **Crucial Deviations from Golden Dawn:**
 * **Tzaddi is not the Star**: Crowley swapped the attributions of Tzaddi and Heh. In the Thelemic system, Tzaddi = The Emperor (Aries) and Heh = The Star (Aquarius).
 * **Strength / Lust**: Strength becomes Lust (Leo / Teth).
@@ -48,9 +48,58 @@ The network of people around Crowley is vast.
 * **Later Disciples**: Jack Parsons, Kenneth Grant, Jane Wolfe.
 
 ### 2.5 Initiations, Grades, and Workings
-Crowley’s life is structured by his initiatory grades (A.'.A.'. and O.T.O.) and specific magical workings.
+Crowley's life is structured by his initiatory grades (A.'.A.'. and O.T.O.) and specific magical workings.
 * **Grades**: Probationer (0=0), Neophyte (1=10) ... up to Ipsissimus (10=1).
 * **Workings**: The Paris Working (1914), The Abuldiz Working (1911), The Amalantrah Working (1918), The Cairo Working (1904).
+
+### 2.6 Topic Taxonomy for Event Browsing
+Events are tagged with a controlled vocabulary so users can filter the biography by theme without relying on free-text labels.
+
+**Normalized structure**
+* `topics` is the controlled vocabulary table.
+* `event_topics` is the many-to-many join table between `events` and `topics`.
+* A single event may carry multiple topic tags.
+* Topic slugs are stable identifiers for filtering, URL state, and export pipelines.
+
+**Canonical seed metadata**
+* `database/topic_taxonomy.json` is the source file for the topic list and ordering.
+* Keep the schema, docs, and seed metadata aligned instead of inventing ad hoc labels in event text.
+
+**Required topic set**
+
+| Slug | Label | Editorial scope |
+|---|---|---|
+| `magick` | Magick | Operative ceremonial magic, workings, techniques, and practical magical method. |
+| `initiation` | Initiation | Grades, oaths, ordeals, admissions, and threshold crossings in orders or systems. |
+| `drugs` | Drugs | Intoxication, addiction, treatment, experimentation, and drug use as a historical fact. |
+| `sex` | Sex | Sexual conduct, erotic practice, scandal, and sexual relationships when they shape an event. |
+| `rivalry` | Rivalry | Conflict, dispute, polemic, competition, or antagonism with a person or group. |
+| `legal_trouble` | Legal Trouble | Arrests, trials, prosecutions, police attention, censorship, or legal consequences. |
+| `publication` | Publication | Writing, printing, publishing, editing, serialization, and the release of texts. |
+| `travel` | Travel | Journeys, relocation, expeditions, border crossings, and movement that matters biographically. |
+| `followers` | Followers | Students, disciples, patrons, acolytes, and other people who attach themselves to his current. |
+| `wife` | Wife | Events involving a spouse or wife, including marriage, separation, conflict, and collaboration. |
+| `children` | Children | Events involving children, parenting, custody, family life, loss, or inheritance. |
+| `lovers` | Lovers | Romantic or sexual partners, affairs, household arrangements, and intimate entanglements. |
+| `golden_dawn` | Golden Dawn | The Hermetic Order of the Golden Dawn, its members, schism, rituals, and afterlife in his career. |
+| `oto` | O.T.O. | Ordo Templi Orientis membership, administration, doctrine, disputes, and institutional history. |
+| `aa` | A.'.A.'. | The A.'.A.'. system, its grades, offices, aspirants, and instructional literature. |
+| `politics` | Politics | Political affiliations, propaganda, state power, war, nationalism, espionage, and ideology. |
+| `ritual` | Ritual | Ceremonies, invocations, liturgies, working sequences, and formal magical acts. |
+| `correspondence` | Correspondence | Letters, telegrams, notes, and epistolary exchanges that reveal developments or relationships. |
+| `occult_study` | Occult Study | Reading, research, translation, lecturing, library work, and study of esoteric systems. |
+| `finance` | Finance | Money, debts, patronage, earnings, bequests, bankruptcy, accounts, and material support. |
+| `health` | Health | Illness, injury, exhaustion, treatment, addiction, convalescence, and bodily decline or recovery. |
+
+**Extended facet layer**
+* The canonical topic file may also include narrower biographical facets used by the timeline seed, such as `birth`, `family`, `education`, `rebellion`, `mountaineering`, `art`, `war`, `exile`, `reception`, and other high-signal life-course markers.
+* Keep those facets normalized in `topics` and `event_topics`; do not collapse them into free-text prose.
+
+**Tagging guidance**
+* Tag the event, not the person.
+* Prefer the most specific topic or topics that are directly visible in the event record.
+* Avoid over-tagging; two or three topics are usually enough.
+* Use the controlled vocabulary only. If a new theme appears repeatedly, add it to the taxonomy rather than improvising a label.
 
 ## 3. Disputed Zones
 When documenting the following events, the database must **never flatten the narrative**. It must surface the contradictions between lanes:

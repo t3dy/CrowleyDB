@@ -3,27 +3,180 @@
     "id": "TRM_001",
     "term": "Thelema",
     "gematria_value": 93,
-    "etymology": "From Greek θέλημα (will).",
-    "definition": "The central philosophy of Aleister Crowley, dictating that one must discover and accomplish their True Will.",
-    "thelemic_significance": "It is the Word of the Law, equating to Agape (Love) in Gematria.",
+    "etymology": "Greek thelema, meaning will.",
+    "definition": "The central principle of Crowley's system: discovering and carrying out True Will.",
+    "thelemic_significance": "Crowley presents it as the Word of the Law and the governing idea of the Aeon of Horus.",
     "evidentiary_lane": "A"
   },
   {
     "id": "TRM_002",
-    "term": "Aiwass",
+    "term": "Agape",
     "gematria_value": 93,
-    "etymology": "Unknown origin, possibly dictated.",
-    "definition": "The praeterhuman intelligence that dictated the Book of the Law to Crowley.",
-    "thelemic_significance": "Considered by Crowley as his Holy Guardian Angel and the minister of Hoor-Paar-Kraat.",
+    "etymology": "Greek agape, meaning love.",
+    "definition": "A Thelemic key term for love, devotion, and spiritual generosity.",
+    "thelemic_significance": "Crowley pairs Agape with Thelema through gematria, making the two 93 words a recurring formula.",
     "evidentiary_lane": "A"
   },
   {
     "id": "TRM_003",
+    "term": "Aiwass",
+    "gematria_value": 93,
+    "etymology": "Name recorded by Crowley; etymology is uncertain.",
+    "definition": "The voice or intelligence who dictated Liber AL vel Legis to Crowley in Cairo.",
+    "thelemic_significance": "Aiwass anchors the Cairo Working and Crowley's account of the opening of the new Aeon.",
+    "evidentiary_lane": "A"
+  },
+  {
+    "id": "TRM_004",
+    "term": "Babalon",
+    "gematria_value": 156,
+    "etymology": "Thelemic spelling of Babylon, reframed through Crowley's symbolic system.",
+    "definition": "The Scarlet Woman, the mystical city, and a central feminine principle in Thelema.",
+    "thelemic_significance": "Babalon appears throughout Crowley's mystical writings as a key figure of liberation, transformation, and initiation.",
+    "evidentiary_lane": "A"
+  },
+  {
+    "id": "TRM_005",
+    "term": "Nuit",
+    "gematria_value": null,
+    "etymology": "Egyptian sky goddess spelling used in Liber AL.",
+    "definition": "The infinite expanse, surrounding space, and cosmic mother in Liber AL.",
+    "thelemic_significance": "Nuit is paired with Hadit to form the opening cosmology of The Book of the Law.",
+    "evidentiary_lane": "A"
+  },
+  {
+    "id": "TRM_006",
+    "term": "Hadit",
+    "gematria_value": null,
+    "etymology": "Egyptian solar-point spelling used in Liber AL.",
+    "definition": "The infinitely small point at the center of consciousness in Liber AL.",
+    "thelemic_significance": "Hadit complements Nuit as the inward, singular pole of the Thelemic cosmos.",
+    "evidentiary_lane": "A"
+  },
+  {
+    "id": "TRM_007",
+    "term": "Hoor-paar-kraat",
+    "gematria_value": null,
+    "etymology": "Greek transliteration of Harpocrates.",
+    "definition": "The silent and hidden child-form of Horus.",
+    "thelemic_significance": "Crowley uses the figure to frame silence, concealment, and the secret center of the self.",
+    "evidentiary_lane": "A"
+  },
+  {
+    "id": "TRM_008",
+    "term": "Magick",
+    "gematria_value": null,
+    "etymology": "Crowley's preferred spelling for ritual and spiritual practice.",
+    "definition": "The science and art of causing change in conformity with Will.",
+    "thelemic_significance": "The spelling distinguishes ceremonial and initiatory practice from stage magic or trickery.",
+    "evidentiary_lane": "A"
+  },
+  {
+    "id": "TRM_009",
     "term": "Abramelin",
     "gematria_value": null,
-    "etymology": "From the Book of Abramelin.",
-    "definition": "A rigorous magical operation lasting 6 to 18 months to contact one's Holy Guardian Angel.",
-    "thelemic_significance": "Crowley attempted this at Boleskine but abandoned it midway, leading to supposed magical blowback.",
+    "etymology": "From the Book of Abramelin the Mage.",
+    "definition": "A demanding magical operation aimed at contacting the Holy Guardian Angel.",
+    "thelemic_significance": "Crowley's early attempts to work the system at Boleskine shaped much of his later magical self-understanding.",
     "evidentiary_lane": "A"
+  },
+  {
+    "id": "TRM_010",
+    "term": "True Will",
+    "gematria_value": null,
+    "etymology": "Crowley's philosophical phrase for the authentic course of a life.",
+    "definition": "The unique purpose or vector each person is meant to discover and fulfill.",
+    "thelemic_significance": "The phrase sits at the center of Crowley's ethics: Do what thou wilt shall be the whole of the Law.",
+    "evidentiary_lane": "A"
+  },
+  {
+    "id": "TRM_011",
+    "term": "93",
+    "gematria_value": 93,
+    "etymology": "A Thelemic number associated with Thelema and Agape.",
+    "definition": "A shorthand used as both greeting and symbol.",
+    "thelemic_significance": "The number appears in letters, signatures, rituals, and modern Thelemic identity.",
+    "evidentiary_lane": "A"
+  },
+  {
+    "id": "TRM_012",
+    "term": "156",
+    "gematria_value": 156,
+    "etymology": "A Thelemic number associated with Babalon.",
+    "definition": "A shorthand for the Scarlet Woman and related symbolic work.",
+    "thelemic_significance": "The number is often used as a compact marker of the Babalon current.",
+    "evidentiary_lane": "A"
+  },
+  {
+    "id": "TRM_013",
+    "term": "A.'.A.'.",
+    "gematria_value": null,
+    "etymology": "Argentum Astrum, the Silver Star order.",
+    "definition": "Crowley's initiatory order for magical training and advancement.",
+    "thelemic_significance": "The portal uses the A.'.A.'. grade system to organize the Tree of Life and several biographies.",
+    "evidentiary_lane": "A"
+  },
+  {
+    "id": "TRM_014",
+    "term": "O.T.O.",
+    "gematria_value": null,
+    "etymology": "Ordo Templi Orientis.",
+    "definition": "An initiatory order tied to ritual, law, and the public spread of Thelema.",
+    "thelemic_significance": "The O.T.O. becomes one of the most visible institutional afterlives of Crowley's work.",
+    "evidentiary_lane": "E"
+  },
+  {
+    "id": "TRM_015",
+    "term": "Aeon of Horus",
+    "gematria_value": null,
+    "etymology": "Crowley's historical-spiritual frame for the current age.",
+    "definition": "The era inaugurated in The Book of the Law and centered on self-discovery and True Will.",
+    "thelemic_significance": "The portal treats the phrase as the broad interpretive frame for Crowley's later work.",
+    "evidentiary_lane": "A"
+  },
+  {
+    "id": "TRM_016",
+    "term": "Holy Guardian Angel",
+    "gematria_value": null,
+    "etymology": "Common Western esoteric term, central in Crowley's writing.",
+    "definition": "The guiding intelligence or inward spiritual presence sought in initiatory work.",
+    "thelemic_significance": "The aim of the Abramelin operation and much of Crowley's practical magic is to attain this contact.",
+    "evidentiary_lane": "A"
+  },
+  {
+    "id": "TRM_017",
+    "term": "Scarlet Woman",
+    "gematria_value": null,
+    "etymology": "Crowley's title for a feminine magical partner and cosmic principle.",
+    "definition": "A role tied to Babalon, magical partnership, and the drama of the Aeon.",
+    "thelemic_significance": "The portal uses the term both for specific historical women and for the larger symbolic current.",
+    "evidentiary_lane": "A"
+  },
+  {
+    "id": "TRM_018",
+    "term": "Stele of Revealing",
+    "gematria_value": null,
+    "etymology": "Egyptian funerary stele that Crowley interpreted as a ritual key.",
+    "definition": "The artifact used to frame the Cairo Working and the reception of Liber AL.",
+    "thelemic_significance": "The stele links the museum object, the ritual narrative, and Crowley's new aeon claims.",
+    "evidentiary_lane": "E"
+  },
+  {
+    "id": "TRM_019",
+    "term": "Book 4",
+    "gematria_value": null,
+    "etymology": "Crowley's major instructional work, also known as Liber ABA.",
+    "definition": "A systematic manual of yoga, mysticism, and ceremonial practice.",
+    "thelemic_significance": "It remains one of the portal's key works because it translates theory into practice.",
+    "evidentiary_lane": "A"
+  },
+  {
+    "id": "TRM_020",
+    "term": "The Book of Thoth",
+    "gematria_value": null,
+    "etymology": "Crowley's tarot manual on the Thoth deck.",
+    "definition": "A detailed account of Crowley's tarot attributions and symbolic system.",
+    "thelemic_significance": "It is one of the best sources for Crowley's Tree of Life revisions and tarot correspondences.",
+    "evidentiary_lane": "B"
   }
 ]

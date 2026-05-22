@@ -1,0 +1,1058 @@
+[
+  {
+    "event_id": "EVT_001",
+    "topic_id": "topic_birth"
+  },
+  {
+    "event_id": "EVT_001",
+    "topic_id": "topic_family"
+  },
+  {
+    "event_id": "EVT_001",
+    "topic_id": "topic_childhood"
+  },
+  {
+    "event_id": "EVT_001",
+    "topic_id": "topic_religion"
+  },
+  {
+    "event_id": "EVT_002",
+    "topic_id": "topic_family"
+  },
+  {
+    "event_id": "EVT_002",
+    "topic_id": "topic_death"
+  },
+  {
+    "event_id": "EVT_002",
+    "topic_id": "topic_childhood"
+  },
+  {
+    "event_id": "EVT_002",
+    "topic_id": "topic_religion"
+  },
+  {
+    "event_id": "EVT_003",
+    "topic_id": "topic_education"
+  },
+  {
+    "event_id": "EVT_003",
+    "topic_id": "topic_rebellion"
+  },
+  {
+    "event_id": "EVT_003",
+    "topic_id": "topic_religion"
+  },
+  {
+    "event_id": "EVT_003",
+    "topic_id": "topic_literary_formation"
+  },
+  {
+    "event_id": "EVT_004",
+    "topic_id": "topic_education"
+  },
+  {
+    "event_id": "EVT_004",
+    "topic_id": "topic_poetry"
+  },
+  {
+    "event_id": "EVT_004",
+    "topic_id": "topic_rebellion"
+  },
+  {
+    "event_id": "EVT_004",
+    "topic_id": "topic_social_formation"
+  },
+  {
+    "event_id": "EVT_005",
+    "topic_id": "topic_education"
+  },
+  {
+    "event_id": "EVT_005",
+    "topic_id": "topic_literary_formation"
+  },
+  {
+    "event_id": "EVT_005",
+    "topic_id": "topic_mountaineering"
+  },
+  {
+    "event_id": "EVT_005",
+    "topic_id": "topic_travel"
+  },
+  {
+    "event_id": "EVT_006",
+    "topic_id": "topic_mountaineering"
+  },
+  {
+    "event_id": "EVT_006",
+    "topic_id": "topic_travel"
+  },
+  {
+    "event_id": "EVT_006",
+    "topic_id": "topic_self_fashioning"
+  },
+  {
+    "event_id": "EVT_007",
+    "topic_id": "topic_poetry"
+  },
+  {
+    "event_id": "EVT_007",
+    "topic_id": "topic_publication"
+  },
+  {
+    "event_id": "EVT_007",
+    "topic_id": "topic_self_fashioning"
+  },
+  {
+    "event_id": "EVT_007",
+    "topic_id": "topic_literary_formation"
+  },
+  {
+    "event_id": "EVT_008",
+    "topic_id": "topic_golden_dawn"
+  },
+  {
+    "event_id": "EVT_008",
+    "topic_id": "topic_initiation"
+  },
+  {
+    "event_id": "EVT_008",
+    "topic_id": "topic_ritual"
+  },
+  {
+    "event_id": "EVT_008",
+    "topic_id": "topic_magick"
+  },
+  {
+    "event_id": "EVT_009",
+    "topic_id": "topic_golden_dawn"
+  },
+  {
+    "event_id": "EVT_009",
+    "topic_id": "topic_initiation"
+  },
+  {
+    "event_id": "EVT_009",
+    "topic_id": "topic_ritual"
+  },
+  {
+    "event_id": "EVT_009",
+    "topic_id": "topic_magick"
+  },
+  {
+    "event_id": "EVT_010",
+    "topic_id": "topic_abramelin"
+  },
+  {
+    "event_id": "EVT_010",
+    "topic_id": "topic_magick"
+  },
+  {
+    "event_id": "EVT_010",
+    "topic_id": "topic_ritual"
+  },
+  {
+    "event_id": "EVT_010",
+    "topic_id": "topic_holy_guardian_angel"
+  },
+  {
+    "event_id": "EVT_010",
+    "topic_id": "topic_travel"
+  },
+  {
+    "event_id": "EVT_011",
+    "topic_id": "topic_golden_dawn"
+  },
+  {
+    "event_id": "EVT_011",
+    "topic_id": "topic_rivalry"
+  },
+  {
+    "event_id": "EVT_011",
+    "topic_id": "topic_organization"
+  },
+  {
+    "event_id": "EVT_011",
+    "topic_id": "topic_conflict"
+  },
+  {
+    "event_id": "EVT_012",
+    "topic_id": "topic_travel"
+  },
+  {
+    "event_id": "EVT_012",
+    "topic_id": "topic_mountaineering"
+  },
+  {
+    "event_id": "EVT_012",
+    "topic_id": "topic_exploration"
+  },
+  {
+    "event_id": "EVT_012",
+    "topic_id": "topic_literary_formation"
+  },
+  {
+    "event_id": "EVT_013",
+    "topic_id": "topic_mountaineering"
+  },
+  {
+    "event_id": "EVT_013",
+    "topic_id": "topic_travel"
+  },
+  {
+    "event_id": "EVT_013",
+    "topic_id": "topic_will"
+  },
+  {
+    "event_id": "EVT_013",
+    "topic_id": "topic_self_fashioning"
+  },
+  {
+    "event_id": "EVT_014",
+    "topic_id": "topic_publication"
+  },
+  {
+    "event_id": "EVT_014",
+    "topic_id": "topic_literary_formation"
+  },
+  {
+    "event_id": "EVT_014",
+    "topic_id": "topic_self_fashioning"
+  },
+  {
+    "event_id": "EVT_014",
+    "topic_id": "topic_travel"
+  },
+  {
+    "event_id": "EVT_015",
+    "topic_id": "topic_relationship"
+  },
+  {
+    "event_id": "EVT_015",
+    "topic_id": "topic_marriage"
+  },
+  {
+    "event_id": "EVT_015",
+    "topic_id": "topic_family"
+  },
+  {
+    "event_id": "EVT_015",
+    "topic_id": "topic_sexuality"
+  },
+  {
+    "event_id": "EVT_016",
+    "topic_id": "topic_family"
+  },
+  {
+    "event_id": "EVT_016",
+    "topic_id": "topic_relationship"
+  },
+  {
+    "event_id": "EVT_016",
+    "topic_id": "topic_childbirth"
+  },
+  {
+    "event_id": "EVT_016",
+    "topic_id": "topic_domestic_life"
+  },
+  {
+    "event_id": "EVT_017",
+    "topic_id": "topic_cairo_working"
+  },
+  {
+    "event_id": "EVT_017",
+    "topic_id": "topic_magick"
+  },
+  {
+    "event_id": "EVT_017",
+    "topic_id": "topic_revelation"
+  },
+  {
+    "event_id": "EVT_017",
+    "topic_id": "topic_thelema"
+  },
+  {
+    "event_id": "EVT_017",
+    "topic_id": "topic_holy_guardian_angel"
+  },
+  {
+    "event_id": "EVT_018",
+    "topic_id": "topic_cairo_working"
+  },
+  {
+    "event_id": "EVT_018",
+    "topic_id": "topic_thelema"
+  },
+  {
+    "event_id": "EVT_018",
+    "topic_id": "topic_publication"
+  },
+  {
+    "event_id": "EVT_018",
+    "topic_id": "topic_revelation"
+  },
+  {
+    "event_id": "EVT_019",
+    "topic_id": "topic_travel"
+  },
+  {
+    "event_id": "EVT_019",
+    "topic_id": "topic_mountaineering"
+  },
+  {
+    "event_id": "EVT_019",
+    "topic_id": "topic_exploration"
+  },
+  {
+    "event_id": "EVT_019",
+    "topic_id": "topic_religion"
+  },
+  {
+    "event_id": "EVT_020",
+    "topic_id": "topic_aa"
+  },
+  {
+    "event_id": "EVT_020",
+    "topic_id": "topic_initiation"
+  },
+  {
+    "event_id": "EVT_020",
+    "topic_id": "topic_organization"
+  },
+  {
+    "event_id": "EVT_020",
+    "topic_id": "topic_magick"
+  },
+  {
+    "event_id": "EVT_021",
+    "topic_id": "topic_aa"
+  },
+  {
+    "event_id": "EVT_021",
+    "topic_id": "topic_initiation"
+  },
+  {
+    "event_id": "EVT_021",
+    "topic_id": "topic_curriculum"
+  },
+  {
+    "event_id": "EVT_021",
+    "topic_id": "topic_magick"
+  },
+  {
+    "event_id": "EVT_022",
+    "topic_id": "topic_publication"
+  },
+  {
+    "event_id": "EVT_022",
+    "topic_id": "topic_magazine"
+  },
+  {
+    "event_id": "EVT_022",
+    "topic_id": "topic_magick"
+  },
+  {
+    "event_id": "EVT_022",
+    "topic_id": "topic_propaganda"
+  },
+  {
+    "event_id": "EVT_023",
+    "topic_id": "topic_publication"
+  },
+  {
+    "event_id": "EVT_023",
+    "topic_id": "topic_qabalah"
+  },
+  {
+    "event_id": "EVT_023",
+    "topic_id": "topic_reference_work"
+  },
+  {
+    "event_id": "EVT_023",
+    "topic_id": "topic_magick"
+  },
+  {
+    "event_id": "EVT_024",
+    "topic_id": "topic_visionary_work"
+  },
+  {
+    "event_id": "EVT_024",
+    "topic_id": "topic_enochian"
+  },
+  {
+    "event_id": "EVT_024",
+    "topic_id": "topic_magick"
+  },
+  {
+    "event_id": "EVT_024",
+    "topic_id": "topic_travel"
+  },
+  {
+    "event_id": "EVT_025",
+    "topic_id": "topic_performance"
+  },
+  {
+    "event_id": "EVT_025",
+    "topic_id": "topic_ritual"
+  },
+  {
+    "event_id": "EVT_025",
+    "topic_id": "topic_theater"
+  },
+  {
+    "event_id": "EVT_025",
+    "topic_id": "topic_public_magic"
+  },
+  {
+    "event_id": "EVT_026",
+    "topic_id": "topic_publication"
+  },
+  {
+    "event_id": "EVT_026",
+    "topic_id": "topic_instruction"
+  },
+  {
+    "event_id": "EVT_026",
+    "topic_id": "topic_magick"
+  },
+  {
+    "event_id": "EVT_026",
+    "topic_id": "topic_correspondence"
+  },
+  {
+    "event_id": "EVT_027",
+    "topic_id": "topic_oto"
+  },
+  {
+    "event_id": "EVT_027",
+    "topic_id": "topic_initiation"
+  },
+  {
+    "event_id": "EVT_027",
+    "topic_id": "topic_organization"
+  },
+  {
+    "event_id": "EVT_027",
+    "topic_id": "topic_institutional_history"
+  },
+  {
+    "event_id": "EVT_028",
+    "topic_id": "topic_publication"
+  },
+  {
+    "event_id": "EVT_028",
+    "topic_id": "topic_aphorism"
+  },
+  {
+    "event_id": "EVT_028",
+    "topic_id": "topic_magick"
+  },
+  {
+    "event_id": "EVT_028",
+    "topic_id": "topic_qabalah"
+  },
+  {
+    "event_id": "EVT_029",
+    "topic_id": "topic_sex_magick"
+  },
+  {
+    "event_id": "EVT_029",
+    "topic_id": "topic_relationship"
+  },
+  {
+    "event_id": "EVT_029",
+    "topic_id": "topic_ritual"
+  },
+  {
+    "event_id": "EVT_029",
+    "topic_id": "topic_magick"
+  },
+  {
+    "event_id": "EVT_029",
+    "topic_id": "topic_travel"
+  },
+  {
+    "event_id": "EVT_030",
+    "topic_id": "topic_exile"
+  },
+  {
+    "event_id": "EVT_030",
+    "topic_id": "topic_war"
+  },
+  {
+    "event_id": "EVT_030",
+    "topic_id": "topic_correspondence"
+  },
+  {
+    "event_id": "EVT_030",
+    "topic_id": "topic_politics"
+  },
+  {
+    "event_id": "EVT_030",
+    "topic_id": "topic_travel"
+  },
+  {
+    "event_id": "EVT_031",
+    "topic_id": "topic_relationship"
+  },
+  {
+    "event_id": "EVT_031",
+    "topic_id": "topic_occult_circle"
+  },
+  {
+    "event_id": "EVT_031",
+    "topic_id": "topic_social_network"
+  },
+  {
+    "event_id": "EVT_031",
+    "topic_id": "topic_travel"
+  },
+  {
+    "event_id": "EVT_032",
+    "topic_id": "topic_sex_magick"
+  },
+  {
+    "event_id": "EVT_032",
+    "topic_id": "topic_visionary_work"
+  },
+  {
+    "event_id": "EVT_032",
+    "topic_id": "topic_relationship"
+  },
+  {
+    "event_id": "EVT_032",
+    "topic_id": "topic_magick"
+  },
+  {
+    "event_id": "EVT_033",
+    "topic_id": "topic_publication"
+  },
+  {
+    "event_id": "EVT_033",
+    "topic_id": "topic_magazine"
+  },
+  {
+    "event_id": "EVT_033",
+    "topic_id": "topic_doctrine"
+  },
+  {
+    "event_id": "EVT_033",
+    "topic_id": "topic_postwar"
+  },
+  {
+    "event_id": "EVT_034",
+    "topic_id": "topic_abbey_of_thelema"
+  },
+  {
+    "event_id": "EVT_034",
+    "topic_id": "topic_community"
+  },
+  {
+    "event_id": "EVT_034",
+    "topic_id": "topic_travel"
+  },
+  {
+    "event_id": "EVT_034",
+    "topic_id": "topic_magick"
+  },
+  {
+    "event_id": "EVT_034",
+    "topic_id": "topic_sex_magick"
+  },
+  {
+    "event_id": "EVT_035",
+    "topic_id": "topic_relationship"
+  },
+  {
+    "event_id": "EVT_035",
+    "topic_id": "topic_scarlet_woman"
+  },
+  {
+    "event_id": "EVT_035",
+    "topic_id": "topic_sex_magick"
+  },
+  {
+    "event_id": "EVT_035",
+    "topic_id": "topic_abbey_of_thelema"
+  },
+  {
+    "event_id": "EVT_036",
+    "topic_id": "topic_disciples"
+  },
+  {
+    "event_id": "EVT_036",
+    "topic_id": "topic_abbey_of_thelema"
+  },
+  {
+    "event_id": "EVT_036",
+    "topic_id": "topic_initiation"
+  },
+  {
+    "event_id": "EVT_036",
+    "topic_id": "topic_testimony"
+  },
+  {
+    "event_id": "EVT_037",
+    "topic_id": "topic_sex"
+  },
+  {
+    "event_id": "EVT_037",
+    "topic_id": "topic_drugs"
+  },
+  {
+    "event_id": "EVT_037",
+    "topic_id": "topic_discipline"
+  },
+  {
+    "event_id": "EVT_037",
+    "topic_id": "topic_abbey_of_thelema"
+  },
+  {
+    "event_id": "EVT_037",
+    "topic_id": "topic_magick"
+  },
+  {
+    "event_id": "EVT_038",
+    "topic_id": "topic_publication"
+  },
+  {
+    "event_id": "EVT_038",
+    "topic_id": "topic_drugs"
+  },
+  {
+    "event_id": "EVT_038",
+    "topic_id": "topic_fiction"
+  },
+  {
+    "event_id": "EVT_038",
+    "topic_id": "topic_discipline"
+  },
+  {
+    "event_id": "EVT_039",
+    "topic_id": "topic_scandal"
+  },
+  {
+    "event_id": "EVT_039",
+    "topic_id": "topic_drugs"
+  },
+  {
+    "event_id": "EVT_039",
+    "topic_id": "topic_death"
+  },
+  {
+    "event_id": "EVT_039",
+    "topic_id": "topic_abbey_of_thelema"
+  },
+  {
+    "event_id": "EVT_039",
+    "topic_id": "topic_press"
+  },
+  {
+    "event_id": "EVT_040",
+    "topic_id": "topic_legal_trouble"
+  },
+  {
+    "event_id": "EVT_040",
+    "topic_id": "topic_expulsion"
+  },
+  {
+    "event_id": "EVT_040",
+    "topic_id": "topic_abbey_of_thelema"
+  },
+  {
+    "event_id": "EVT_040",
+    "topic_id": "topic_politics"
+  },
+  {
+    "event_id": "EVT_041",
+    "topic_id": "topic_exile"
+  },
+  {
+    "event_id": "EVT_041",
+    "topic_id": "topic_travel"
+  },
+  {
+    "event_id": "EVT_041",
+    "topic_id": "topic_finance"
+  },
+  {
+    "event_id": "EVT_041",
+    "topic_id": "topic_writing"
+  },
+  {
+    "event_id": "EVT_042",
+    "topic_id": "topic_relationship"
+  },
+  {
+    "event_id": "EVT_042",
+    "topic_id": "topic_sex"
+  },
+  {
+    "event_id": "EVT_042",
+    "topic_id": "topic_travel"
+  },
+  {
+    "event_id": "EVT_042",
+    "topic_id": "topic_art"
+  },
+  {
+    "event_id": "EVT_042",
+    "topic_id": "topic_exile"
+  },
+  {
+    "event_id": "EVT_043",
+    "topic_id": "topic_drugs"
+  },
+  {
+    "event_id": "EVT_043",
+    "topic_id": "topic_finance"
+  },
+  {
+    "event_id": "EVT_043",
+    "topic_id": "topic_correspondence"
+  },
+  {
+    "event_id": "EVT_043",
+    "topic_id": "topic_decline"
+  },
+  {
+    "event_id": "EVT_044",
+    "topic_id": "topic_publication"
+  },
+  {
+    "event_id": "EVT_044",
+    "topic_id": "topic_magick"
+  },
+  {
+    "event_id": "EVT_044",
+    "topic_id": "topic_manual"
+  },
+  {
+    "event_id": "EVT_044",
+    "topic_id": "topic_theory"
+  },
+  {
+    "event_id": "EVT_045",
+    "topic_id": "topic_publication"
+  },
+  {
+    "event_id": "EVT_045",
+    "topic_id": "topic_autobiography"
+  },
+  {
+    "event_id": "EVT_045",
+    "topic_id": "topic_self_report"
+  },
+  {
+    "event_id": "EVT_045",
+    "topic_id": "topic_literary_formation"
+  },
+  {
+    "event_id": "EVT_046",
+    "topic_id": "topic_art"
+  },
+  {
+    "event_id": "EVT_046",
+    "topic_id": "topic_travel"
+  },
+  {
+    "event_id": "EVT_046",
+    "topic_id": "topic_performance"
+  },
+  {
+    "event_id": "EVT_046",
+    "topic_id": "topic_sexuality"
+  },
+  {
+    "event_id": "EVT_047",
+    "topic_id": "topic_art"
+  },
+  {
+    "event_id": "EVT_047",
+    "topic_id": "topic_reception"
+  },
+  {
+    "event_id": "EVT_047",
+    "topic_id": "topic_public_image"
+  },
+  {
+    "event_id": "EVT_047",
+    "topic_id": "topic_berlin"
+  },
+  {
+    "event_id": "EVT_048",
+    "topic_id": "topic_legal_trouble"
+  },
+  {
+    "event_id": "EVT_048",
+    "topic_id": "topic_press"
+  },
+  {
+    "event_id": "EVT_048",
+    "topic_id": "topic_libel"
+  },
+  {
+    "event_id": "EVT_048",
+    "topic_id": "topic_public_image"
+  },
+  {
+    "event_id": "EVT_049",
+    "topic_id": "topic_travel"
+  },
+  {
+    "event_id": "EVT_049",
+    "topic_id": "topic_home"
+  },
+  {
+    "event_id": "EVT_049",
+    "topic_id": "topic_decline"
+  },
+  {
+    "event_id": "EVT_049",
+    "topic_id": "topic_correspondence"
+  },
+  {
+    "event_id": "EVT_050",
+    "topic_id": "topic_correspondence"
+  },
+  {
+    "event_id": "EVT_050",
+    "topic_id": "topic_disciples"
+  },
+  {
+    "event_id": "EVT_050",
+    "topic_id": "topic_transmission"
+  },
+  {
+    "event_id": "EVT_050",
+    "topic_id": "topic_reception"
+  },
+  {
+    "event_id": "EVT_051",
+    "topic_id": "topic_war"
+  },
+  {
+    "event_id": "EVT_051",
+    "topic_id": "topic_manuscripts"
+  },
+  {
+    "event_id": "EVT_051",
+    "topic_id": "topic_correspondence"
+  },
+  {
+    "event_id": "EVT_051",
+    "topic_id": "topic_decline"
+  },
+  {
+    "event_id": "EVT_052",
+    "topic_id": "topic_publication"
+  },
+  {
+    "event_id": "EVT_052",
+    "topic_id": "topic_tarot"
+  },
+  {
+    "event_id": "EVT_052",
+    "topic_id": "topic_qabalah"
+  },
+  {
+    "event_id": "EVT_052",
+    "topic_id": "topic_magick"
+  },
+  {
+    "event_id": "EVT_053",
+    "topic_id": "topic_correspondence"
+  },
+  {
+    "event_id": "EVT_053",
+    "topic_id": "topic_disciples"
+  },
+  {
+    "event_id": "EVT_053",
+    "topic_id": "topic_oto"
+  },
+  {
+    "event_id": "EVT_053",
+    "topic_id": "topic_postwar_reception"
+  },
+  {
+    "event_id": "EVT_054",
+    "topic_id": "topic_correspondence"
+  },
+  {
+    "event_id": "EVT_054",
+    "topic_id": "topic_disciples"
+  },
+  {
+    "event_id": "EVT_054",
+    "topic_id": "topic_succession"
+  },
+  {
+    "event_id": "EVT_054",
+    "topic_id": "topic_reception"
+  },
+  {
+    "event_id": "EVT_055",
+    "topic_id": "topic_illness"
+  },
+  {
+    "event_id": "EVT_055",
+    "topic_id": "topic_decline"
+  },
+  {
+    "event_id": "EVT_055",
+    "topic_id": "topic_correspondence"
+  },
+  {
+    "event_id": "EVT_055",
+    "topic_id": "topic_home"
+  },
+  {
+    "event_id": "EVT_056",
+    "topic_id": "topic_death"
+  },
+  {
+    "event_id": "EVT_056",
+    "topic_id": "topic_legacy"
+  },
+  {
+    "event_id": "EVT_056",
+    "topic_id": "topic_biography"
+  },
+  {
+    "event_id": "EVT_057",
+    "topic_id": "topic_death"
+  },
+  {
+    "event_id": "EVT_057",
+    "topic_id": "topic_legacy"
+  },
+  {
+    "event_id": "EVT_057",
+    "topic_id": "topic_archive"
+  },
+  {
+    "event_id": "EVT_057",
+    "topic_id": "topic_reception"
+  },
+  {
+    "event_id": "EVT_058",
+    "topic_id": "topic_reception"
+  },
+  {
+    "event_id": "EVT_058",
+    "topic_id": "topic_archive"
+  },
+  {
+    "event_id": "EVT_058",
+    "topic_id": "topic_editing"
+  },
+  {
+    "event_id": "EVT_058",
+    "topic_id": "topic_transmission"
+  },
+  {
+    "event_id": "EVT_059",
+    "topic_id": "topic_reception"
+  },
+  {
+    "event_id": "EVT_059",
+    "topic_id": "topic_postwar"
+  },
+  {
+    "event_id": "EVT_059",
+    "topic_id": "topic_disciples"
+  },
+  {
+    "event_id": "EVT_059",
+    "topic_id": "topic_occult_culture"
+  },
+  {
+    "event_id": "EVT_060",
+    "topic_id": "topic_scholarship"
+  },
+  {
+    "event_id": "EVT_060",
+    "topic_id": "topic_biography"
+  },
+  {
+    "event_id": "EVT_060",
+    "topic_id": "topic_reception"
+  },
+  {
+    "event_id": "EVT_060",
+    "topic_id": "topic_crowley_studies"
+  },
+  {
+    "event_id": "EVT_061",
+    "topic_id": "topic_scholarship"
+  },
+  {
+    "event_id": "EVT_061",
+    "topic_id": "topic_biography"
+  },
+  {
+    "event_id": "EVT_061",
+    "topic_id": "topic_reception"
+  },
+  {
+    "event_id": "EVT_061",
+    "topic_id": "topic_crowley_studies"
+  },
+  {
+    "event_id": "EVT_062",
+    "topic_id": "topic_scholarship"
+  },
+  {
+    "event_id": "EVT_062",
+    "topic_id": "topic_biography"
+  },
+  {
+    "event_id": "EVT_062",
+    "topic_id": "topic_reception"
+  },
+  {
+    "event_id": "EVT_062",
+    "topic_id": "topic_art"
+  },
+  {
+    "event_id": "EVT_062",
+    "topic_id": "topic_weimar"
+  },
+  {
+    "event_id": "EVT_063",
+    "topic_id": "topic_scholarship"
+  },
+  {
+    "event_id": "EVT_063",
+    "topic_id": "topic_biography"
+  },
+  {
+    "event_id": "EVT_063",
+    "topic_id": "topic_reception"
+  },
+  {
+    "event_id": "EVT_063",
+    "topic_id": "topic_india"
+  },
+  {
+    "event_id": "EVT_063",
+    "topic_id": "topic_travel"
+  },
+  {
+    "event_id": "EVT_064",
+    "topic_id": "topic_scholarship"
+  },
+  {
+    "event_id": "EVT_064",
+    "topic_id": "topic_reception"
+  },
+  {
+    "event_id": "EVT_064",
+    "topic_id": "topic_pop_culture"
+  },
+  {
+    "event_id": "EVT_064",
+    "topic_id": "topic_archive"
+  }
+]

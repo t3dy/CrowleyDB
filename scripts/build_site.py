@@ -3,11 +3,12 @@ import json
 import os
 from pathlib import Path
 
-DB_PATH = Path("c:/Dev/CROWLEYDB/database/crowley_unified.sqlite")
 OUTPUT_DIR = Path("c:/Dev/CROWLEYDB/frontend/public/data")
 
+from db_utils import open_db
+
 def get_db_connection():
-    conn = sqlite3.connect(DB_PATH)
+    conn = open_db()
     conn.row_factory = sqlite3.Row
     return conn
 
@@ -36,6 +37,8 @@ def build_site():
         "persons",
         "terms",
         "thelemic_tree",
+        "topics",
+        "event_topics",
         "events",
         "locations",
         "workings",

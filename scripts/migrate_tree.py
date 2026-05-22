@@ -1,7 +1,7 @@
 import sqlite3
 from pathlib import Path
 
-DB_PATH = Path("c:/Dev/CROWLEYDB/database/crowley_unified.sqlite")
+DB_PATH = Path("c:/Dev/CROWLEYDB/.tmp/crowley_unified_rebuilt.sqlite")
 SCHEMA_PATH = Path("c:/Dev/CROWLEYDB/database/schema.sql")
 
 # Extensive data for the Tree of Life
@@ -70,6 +70,8 @@ SAINTS = [
 def migrate():
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
+    cursor.execute("PRAGMA journal_mode=OFF")
+    cursor.execute("PRAGMA synchronous=OFF")
     
     # Reload schema
     with open(SCHEMA_PATH, "r", encoding="utf-8") as f:

@@ -114,6 +114,27 @@ CREATE TABLE IF NOT EXISTS workings (
     description TEXT
 );
 
+-- 9. TOPIC TAXONOMY (CONTROLLED VOCABULARY)
+-- Canonical seed metadata lives in database/topic_taxonomy.json.
+-- Events are tagged through event_topics; do not add free-text topic fields.
+CREATE TABLE IF NOT EXISTS topics (
+    id TEXT PRIMARY KEY,
+    slug TEXT NOT NULL UNIQUE,
+    label TEXT NOT NULL,
+    description TEXT,
+    sort_order INTEGER NOT NULL DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS event_topics (
+    event_id TEXT NOT NULL REFERENCES events(id) ON DELETE CASCADE,
+    topic_id TEXT NOT NULL REFERENCES topics(id) ON DELETE CASCADE,
+    PRIMARY KEY (event_id, topic_id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_topics_sort_order ON topics(sort_order, label);
+CREATE INDEX IF NOT EXISTS idx_event_topics_event_id ON event_topics(event_id);
+CREATE INDEX IF NOT EXISTS idx_event_topics_topic_id ON event_topics(topic_id);
+
 -- JOIN TABLES
 CREATE TABLE IF NOT EXISTS term_works (
     term_id TEXT REFERENCES terms(id),

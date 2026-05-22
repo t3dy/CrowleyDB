@@ -1,245 +1,137 @@
 [
   {
-    "id": "DOC_572fe7b3",
-    "title": "Aleister Crowley Cocaine Magick Level Press",
-    "author": "Unknown",
-    "publication_year": null,
+    "id": "DOC_WKS_001",
+    "title": "Liber AL vel Legis",
+    "author": "Aleister Crowley",
+    "publication_year": 1904,
     "evidentiary_lane": "A",
-    "file_path": "E:\\pdf\\crowley\\Aleister Crowley Cocaine Magick Level Press.pdf",
-    "description": null
+    "file_path": null,
+    "description": "The received text that opens Crowley's Thelemic system."
   },
   {
-    "id": "DOC_760950bc",
-    "title": "aleister crowley in england the return of the grea",
-    "author": "Unknown",
-    "publication_year": null,
+    "id": "DOC_WKS_002",
+    "title": "Book 4 / Liber ABA",
+    "author": "Aleister Crowley",
+    "publication_year": 1909,
     "evidentiary_lane": "A",
-    "file_path": "E:\\pdf\\crowley\\aleister crowley in england the return of the grea.epub",
-    "description": null
+    "file_path": null,
+    "description": "Crowley's instructional manual on yoga, magick, and the training life."
   },
   {
-    "id": "DOC_49044d78",
-    "title": "aleister crowley in england the return of the grea",
-    "author": "Unknown",
-    "publication_year": null,
+    "id": "DOC_WKS_003",
+    "title": "The Vision and the Voice",
+    "author": "Aleister Crowley",
+    "publication_year": 1909,
     "evidentiary_lane": "A",
-    "file_path": "E:\\pdf\\crowley\\aleister crowley in england the return of the grea.pdf",
-    "description": null
+    "file_path": null,
+    "description": "Record of the thirty Enochian Aethyrs worked in Algeria."
   },
   {
-    "id": "DOC_afd6bc3e",
-    "title": "Aleister Crowley Magic Theory and Practice",
-    "author": "Unknown",
-    "publication_year": null,
+    "id": "DOC_WKS_004",
+    "title": "777 and Other Qabalistic Writings",
+    "author": "Aleister Crowley",
+    "publication_year": 1909,
     "evidentiary_lane": "A",
-    "file_path": "E:\\pdf\\crowley\\Aleister Crowley Magic Theory and Practice.pdf",
-    "description": null
+    "file_path": null,
+    "description": "Crowley's correspondence tables and Qabalistic reference work."
   },
   {
-    "id": "DOC_6b8a254d",
-    "title": "aleister crowley magick, rock and roll, and the wi",
-    "author": "Unknown",
-    "publication_year": null,
-    "evidentiary_lane": "A",
-    "file_path": "E:\\pdf\\crowley\\aleister crowley magick, rock and roll, and the wi.epub",
-    "description": null
+    "id": "DOC_WKS_005",
+    "title": "The Book of Thoth",
+    "author": "Aleister Crowley",
+    "publication_year": 1944,
+    "evidentiary_lane": "B",
+    "file_path": null,
+    "description": "Crowley's tarot manual for the Thoth deck."
   },
   {
-    "id": "DOC_e81f0dbe",
-    "title": "aleister crowley magick, rock and roll, and the wi",
-    "author": "Unknown",
-    "publication_year": null,
+    "id": "DOC_WKS_006",
+    "title": "The Equinox, Vol. I, No. 1",
+    "author": "Aleister Crowley",
+    "publication_year": 1909,
     "evidentiary_lane": "A",
-    "file_path": "E:\\pdf\\crowley\\aleister crowley magick, rock and roll, and the wi.pdf",
-    "description": null
+    "file_path": null,
+    "description": "The first issue of Crowley's magical journal."
   },
   {
-    "id": "DOC_dc2ac136",
-    "title": "Aleister Crowley The Confessions of Aleister Crowley_ An Autohagiography libgen li",
-    "author": "Unknown",
+    "id": "DOC_WKS_007",
+    "title": "The Book of Lies",
+    "author": "Aleister Crowley",
+    "publication_year": 1912,
+    "evidentiary_lane": "A",
+    "file_path": null,
+    "description": "Short symbolic chapters and aphorisms."
+  },
+  {
+    "id": "DOC_WKS_008",
+    "title": "Liber Aleph vel CXI",
+    "author": "Aleister Crowley",
+    "publication_year": 1911,
+    "evidentiary_lane": "A",
+    "file_path": null,
+    "description": "Crowley's letter-form work of magical instruction."
+  },
+  {
+    "id": "DOC_WKS_009",
+    "title": "The Blue Equinox",
+    "author": "Aleister Crowley",
+    "publication_year": 1919,
+    "evidentiary_lane": "A",
+    "file_path": null,
+    "description": "Later issue of The Equinox and a major manifesto volume."
+  },
+  {
+    "id": "DOC_WKS_010",
+    "title": "Magick in Theory and Practice",
+    "author": "Aleister Crowley",
+    "publication_year": 1929,
+    "evidentiary_lane": "A",
+    "file_path": null,
+    "description": "A major statement of Crowley's magical theory."
+  },
+  {
+    "id": "DOC_WKS_011",
+    "title": "The Confessions of Aleister Crowley",
+    "author": "Aleister Crowley",
+    "publication_year": 1929,
+    "evidentiary_lane": "B",
+    "file_path": null,
+    "description": "Crowley's autobiographical life story."
+  },
+  {
+    "id": "DOC_WKS_012",
+    "title": "Diary of a Drug Fiend",
+    "author": "Aleister Crowley",
+    "publication_year": 1922,
+    "evidentiary_lane": "B",
+    "file_path": null,
+    "description": "Crowley's famous novel of discipline, addiction, and transformation."
+  },
+  {
+    "id": "ARC_PERDURABO",
+    "title": "Perdurabo: The Life of Aleister Crowley",
+    "author": "Richard Kaczynski",
+    "publication_year": 2012,
+    "evidentiary_lane": "C",
+    "file_path": "C:\\Dev\\CROWLEYDB\\archive_markdown\\perdurabo.md",
+    "description": "Markdown companion extracted from the Kaczynski biography for archive browsing and event indexing."
+  },
+  {
+    "id": "ARC_BEAST_IN_BERLIN",
+    "title": "Aleister Crowley: The Beast in Berlin",
+    "author": "Tobias Churton",
+    "publication_year": null,
+    "evidentiary_lane": "C",
+    "file_path": "C:\\Dev\\CROWLEYDB\\archive_markdown\\beast_in_berlin.md",
+    "description": "Markdown companion extracted from the Berlin biography for archive browsing and event indexing."
+  },
+  {
+    "id": "ARC_CONFESSIONS",
+    "title": "The Confessions of Aleister Crowley",
+    "author": "Aleister Crowley",
     "publication_year": null,
     "evidentiary_lane": "B",
-    "file_path": "E:\\pdf\\crowley\\Aleister Crowley The Confessions of Aleister Crowley_ An Autohagiography libgen li.pdf",
-    "description": null
-  },
-  {
-    "id": "DOC_ac950a9b",
-    "title": "Aleister Crowley The Master Therion Frieda Harris The Book of Thoth_ A Short Essay on the Tarot of the Egyptians Being the Equinox Volume III No V Samuel Weiser Inc",
-    "author": "Unknown",
-    "publication_year": null,
-    "evidentiary_lane": "A",
-    "file_path": "E:\\pdf\\crowley\\Aleister Crowley The Master Therion Frieda Harris The Book of Thoth_ A Short Essay on the Tarot of the Egyptians Being the Equinox Volume III No V Samuel Weiser Inc.pdf",
-    "description": null
-  },
-  {
-    "id": "DOC_e43fbee1",
-    "title": "Aleister Crowley Victor B Neuburg Mary Desti The Vision and the Voice with Commentary and Other Papers Samuel Weiser",
-    "author": "Unknown",
-    "publication_year": null,
-    "evidentiary_lane": "A",
-    "file_path": "E:\\pdf\\crowley\\Aleister Crowley Victor B Neuburg Mary Desti The Vision and the Voice with Commentary and Other Papers Samuel Weiser.pdf",
-    "description": null
-  },
-  {
-    "id": "DOC_9ed56aef",
-    "title": "Frater Acher Holy Daimon libgen li",
-    "author": "Unknown",
-    "publication_year": null,
-    "evidentiary_lane": "E",
-    "file_path": "E:\\pdf\\crowley\\Frater Acher Holy Daimon libgen li.pdf",
-    "description": null
-  },
-  {
-    "id": "DOC_bf69bd63",
-    "title": "Jake Stratton Kent Aleister Crowley Liber Pyramidos Hadean Press",
-    "author": "Unknown",
-    "publication_year": null,
-    "evidentiary_lane": "A",
-    "file_path": "E:\\pdf\\crowley\\Jake Stratton Kent Aleister Crowley Liber Pyramidos Hadean Press.pdf",
-    "description": null
-  },
-  {
-    "id": "DOC_6dd0b96e",
-    "title": "James A Eshelman The Mystical and Magical System of the A A The Spiritual System of Aleister Crowley George Cecil Jones Step by Step",
-    "author": "Unknown",
-    "publication_year": null,
-    "evidentiary_lane": "D",
-    "file_path": "E:\\pdf\\crowley\\James A Eshelman The Mystical and Magical System of the A A The Spiritual System of Aleister Crowley George Cecil Jones Step by Step.pdf",
-    "description": null
-  },
-  {
-    "id": "DOC_171922f5",
-    "title": "Kaczynski Richard Perdurabo Revised and Expanded Edition_ The Life of Aleister Crowley libgen li",
-    "author": "Unknown",
-    "publication_year": null,
-    "evidentiary_lane": "C",
-    "file_path": "E:\\pdf\\crowley\\Kaczynski Richard Perdurabo Revised and Expanded Edition_ The Life of Aleister Crowley libgen li.pdf",
-    "description": null
-  },
-  {
-    "id": "DOC_8d1f52ff",
-    "title": "Perdurabo, Revised and Expanded Edition_ The Life of Aleister Crowley (2012, North Atlantic Books) - libgen.li",
-    "author": "Kaczynski, Richard",
-    "publication_year": null,
-    "evidentiary_lane": "C",
-    "file_path": "E:\\pdf\\crowley\\Kaczynski, Richard - Perdurabo, Revised and Expanded Edition_ The Life of Aleister Crowley (2012, North Atlantic Books) - libgen.li.epub",
-    "description": null
-  },
-  {
-    "id": "DOC_b2fe7912",
-    "title": "Perdurabo, Revised and Expanded Edition_ The Life of Aleister Crowley (2012, North Atlantic Books) - libgen.li",
-    "author": "Kaczynski, Richard",
-    "publication_year": null,
-    "evidentiary_lane": "C",
-    "file_path": "E:\\pdf\\crowley\\Kaczynski, Richard - Perdurabo, Revised and Expanded Edition_ The Life of Aleister Crowley (2012, North Atlantic Books) - libgen.li.pdf",
-    "description": null
-  },
-  {
-    "id": "DOC_d0b427ca",
-    "title": "Keith Readdy One Truth and One Spirit_ Aleister Crowley s Spiritual Legacy Ibis Press",
-    "author": "Unknown",
-    "publication_year": null,
-    "evidentiary_lane": "A",
-    "file_path": "E:\\pdf\\crowley\\Keith Readdy One Truth and One Spirit_ Aleister Crowley s Spiritual Legacy Ibis Press.pdf",
-    "description": null
-  },
-  {
-    "id": "DOC_efc9da8b",
-    "title": "Kenneth Grant Aleister Crowley the Hidden God Skoob Books",
-    "author": "Unknown",
-    "publication_year": null,
-    "evidentiary_lane": "D",
-    "file_path": "E:\\pdf\\crowley\\Kenneth Grant Aleister Crowley the Hidden God Skoob Books.pdf",
-    "description": null
-  },
-  {
-    "id": "DOC_0b1cf493",
-    "title": "Marco Pasi Aleister Crowley and the Temptation of Politics Routledge",
-    "author": "Unknown",
-    "publication_year": null,
-    "evidentiary_lane": "C",
-    "file_path": "E:\\pdf\\crowley\\Marco Pasi Aleister Crowley and the Temptation of Politics Routledge.pdf",
-    "description": null
-  },
-  {
-    "id": "DOC_8a10dc10",
-    "title": "City of the Beast_ The London of Aleister Crowley-Strange Attractor Press",
-    "author": "Phil Baker",
-    "publication_year": null,
-    "evidentiary_lane": "C",
-    "file_path": "E:\\pdf\\crowley\\Phil Baker - City of the Beast_ The London of Aleister Crowley-Strange Attractor Press.mobi",
-    "description": null
-  },
-  {
-    "id": "DOC_10e63660",
-    "title": "City of the Beast_ The London of Aleister Crowley-Strange Attractor Press",
-    "author": "Phil Baker",
-    "publication_year": null,
-    "evidentiary_lane": "C",
-    "file_path": "E:\\pdf\\crowley\\Phil Baker - City of the Beast_ The London of Aleister Crowley-Strange Attractor Press.pdf",
-    "description": null
-  },
-  {
-    "id": "DOC_a3c8cd95",
-    "title": "Rodney Orpheus Abrahadabra_ Understanding Aleister Crowley s Thelemic Magick Weiser Books",
-    "author": "Unknown",
-    "publication_year": null,
-    "evidentiary_lane": "D",
-    "file_path": "E:\\pdf\\crowley\\Rodney Orpheus Abrahadabra_ Understanding Aleister Crowley s Thelemic Magick Weiser Books.pdf",
-    "description": null
-  },
-  {
-    "id": "DOC_40d4f39c",
-    "title": "S L MacGregor Mathers_ Aleister Crowley_ Hymenaeus Beta The Goetia _ the lesser key of Solomon the King _ Lemegeton Book I Clavicula Salomonis Regis Samuel Weiser",
-    "author": "Unknown",
-    "publication_year": null,
-    "evidentiary_lane": "A",
-    "file_path": "E:\\pdf\\crowley\\S L MacGregor Mathers_ Aleister Crowley_ Hymenaeus Beta The Goetia _ the lesser key of Solomon the King _ Lemegeton Book I Clavicula Salomonis Regis Samuel Weiser.pdf",
-    "description": null
-  },
-  {
-    "id": "DOC_ee897869",
-    "title": "Stephen Skinner Aleister Crowley s Four Books of Magick_ Liber ABA libgen li",
-    "author": "Unknown",
-    "publication_year": null,
-    "evidentiary_lane": "A",
-    "file_path": "E:\\pdf\\crowley\\Stephen Skinner Aleister Crowley s Four Books of Magick_ Liber ABA libgen li.pdf",
-    "description": null
-  },
-  {
-    "id": "DOC_550d46bb",
-    "title": "Aleister Crowley_ The Beast in Berlin_ Art, Sex, and Magick in the Weimar Republic-Inner Traditions",
-    "author": "Tobias Churton",
-    "publication_year": null,
-    "evidentiary_lane": "C",
-    "file_path": "E:\\pdf\\crowley\\Tobias Churton - Aleister Crowley_ The Beast in Berlin_ Art, Sex, and Magick in the Weimar Republic-Inner Traditions.azw3",
-    "description": null
-  },
-  {
-    "id": "DOC_95899aec",
-    "title": "Aleister Crowley_ The Beast in Berlin_ Art, Sex, and Magick in the Weimar Republic-Inner Traditions",
-    "author": "Tobias Churton",
-    "publication_year": null,
-    "evidentiary_lane": "C",
-    "file_path": "E:\\pdf\\crowley\\Tobias Churton - Aleister Crowley_ The Beast in Berlin_ Art, Sex, and Magick in the Weimar Republic-Inner Traditions.pdf",
-    "description": null
-  },
-  {
-    "id": "DOC_b687ae5d",
-    "title": "Tobias Churton Aleister Crowley in India_ The Secret Influence of Eastern Mysticism on Magic and the Occult Inner Traditions",
-    "author": "Unknown",
-    "publication_year": null,
-    "evidentiary_lane": "C",
-    "file_path": "E:\\pdf\\crowley\\Tobias Churton Aleister Crowley in India_ The Secret Influence of Eastern Mysticism on Magic and the Occult Inner Traditions.pdf",
-    "description": null
-  },
-  {
-    "id": "DOC_8901ea67",
-    "title": "Tracey W Tupman Theatre Magick_ Aleister Crowley and the Rites of Eleusis The Ohio State University",
-    "author": "Unknown",
-    "publication_year": null,
-    "evidentiary_lane": "A",
-    "file_path": "E:\\pdf\\crowley\\Tracey W Tupman Theatre Magick_ Aleister Crowley and the Rites of Eleusis The Ohio State University.pdf",
-    "description": null
+    "file_path": "C:\\Dev\\CROWLEYDB\\archive_markdown\\confessions.md",
+    "description": "Markdown companion extracted from Crowley's autobiography for archive browsing and event indexing."
   }
 ]

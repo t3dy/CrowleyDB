@@ -1,7 +1,6 @@
 import sqlite3
-from pathlib import Path
 
-DB_PATH = Path("c:/Dev/CROWLEYDB/database/crowley_unified.sqlite")
+from db_utils import open_db
 
 # Qabalistic paths 11-32 (1-10 are the Sephiroth, 11-32 are the paths)
 # We will focus on paths 11-32 which correspond to the Hebrew alphabet.
@@ -31,7 +30,7 @@ PATHS = [
 ]
 
 def seed_tree():
-    conn = sqlite3.connect(DB_PATH)
+    conn = open_db()
     cursor = conn.cursor()
     
     cursor.execute("DELETE FROM thelemic_tree")

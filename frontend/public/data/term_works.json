@@ -1,1 +1,50 @@
-[]
+[
+  {
+    "term_id": "TRM_001",
+    "work_id": "WKS_001"
+  },
+  {
+    "term_id": "TRM_001",
+    "work_id": "WKS_002"
+  },
+  {
+    "term_id": "TRM_002",
+    "work_id": "WKS_001"
+  },
+  {
+    "term_id": "TRM_004",
+    "work_id": "WKS_003"
+  },
+  {
+    "term_id": "TRM_004",
+    "work_id": "WKS_005"
+  },
+  {
+    "term_id": "TRM_009",
+    "work_id": "WKS_002"
+  },
+  {
+    "term_id": "TRM_016",
+    "work_id": "WKS_002"
+  },
+  {
+    "term_id": "TRM_016",
+    "work_id": "WKS_008"
+  },
+  {
+    "term_id": "TRM_017",
+    "work_id": "WKS_003"
+  },
+  {
+    "term_id": "TRM_017",
+    "work_id": "WKS_005"
+  },
+  {
+    "term_id": "TRM_018",
+    "work_id": "WKS_001"
+  },
+  {
+    "term_id": "TRM_020",
+    "work_id": "WKS_005"
+  }
+]

@@ -39,6 +39,7 @@ import Grades from './pages/Grades';
 import Saints from './pages/Saints';
 import Home from './pages/Home';
 import Works from './pages/Works';
+import People from './pages/People';
 
 const Navbar = () => {
   const { currentLane, setLane } = useLane();
@@ -63,6 +64,7 @@ const Navbar = () => {
         <Link to="/tree">Tree of Life</Link>
         <Link to="/grades">Grades</Link>
         <Link to="/biography">Biography & Map</Link>
+        <Link to="/people">People</Link>
         <Link to="/saints">Saints</Link>
         <Link to="/dictionary">Dictionary</Link>
         
@@ -85,6 +87,9 @@ const Navbar = () => {
 const BiographyAndMap = () => {
   const [events, setEvents] = useState<any[]>([]);
   const [locations, setLocations] = useState<any[]>([]);
+  const [topics, setTopics] = useState<any[]>([]);
+  const [eventTopics, setEventTopics] = useState<any[]>([]);
+  const [selectedTopic, setSelectedTopic] = useState('All');
   const { currentLane } = useLane();
 
   useEffect(() => {
@@ -92,11 +97,23 @@ const BiographyAndMap = () => {
       setEvents(data.sort((a: any, b: any) => a.date_start.localeCompare(b.date_start)));
     });
     fetchJSON('locations').then(setLocations);
+    fetchJSON('topics').then(setTopics);
+    fetchJSON('event_topics').then(setEventTopics);
   }, []);
 
+  const topicById = Object.fromEntries(topics.map((topic: any) => [topic.id, topic]));
+  const topicsByEventId = eventTopics.reduce((acc: Record<string, string[]>, link: any) => {
+    const topic = topicById[link.topic_id];
+    if (!topic) return acc;
+    acc[link.event_id] = acc[link.event_id] || [];
+    acc[link.event_id].push(topic.label);
+    return acc;
+  }, {});
+
   const filteredEvents = events.filter(e => {
-    if (currentLane === 'All') return true;
-    return e.evidentiary_lane === currentLane;
+    if (currentLane !== 'All' && e.evidentiary_lane !== currentLane) return false;
+    if (selectedTopic === 'All') return true;
+    return (topicsByEventId[e.id] || []).includes(selectedTopic);
   });
 
   return (
@@ -104,6 +121,21 @@ const BiographyAndMap = () => {
       {/* Sidebar Timeline */}
       <div style={{ width: '400px', overflowY: 'auto', padding: '2rem', borderRight: '1px solid var(--accent-gold)' }}>
         <h1 style={{ marginTop: 0 }}>Timeline</h1>
+        <label style={{ display: 'grid', gap: '0.4rem', marginBottom: '1rem' }}>
+          Topic
+          <select
+            value={selectedTopic}
+            onChange={event => setSelectedTopic(event.target.value)}
+            style={{ background: 'var(--bg-obsidian)', color: 'var(--text-parchment)', padding: '0.5rem', border: '1px solid var(--accent-gold)', borderRadius: '4px' }}
+          >
+            <option value="All">All topics</option>
+            {topics.map((topic: any) => (
+              <option key={topic.id} value={topic.label}>
+                {topic.label}
+              </option>
+            ))}
+          </select>
+        </label>
         {filteredEvents.map(event => (
           <div key={event.id} className="glass-panel" style={{ marginBottom: '1rem' }}>
             <div style={{ fontSize: '0.8rem', color: 'var(--accent-gold)' }}>
@@ -111,6 +143,13 @@ const BiographyAndMap = () => {
             </div>
             <h3 style={{ margin: '0.5rem 0' }}>{event.title}</h3>
             <p style={{ fontSize: '0.9rem', lineHeight: 1.5, margin: 0 }}>{event.description}</p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginTop: '0.65rem' }}>
+              {(topicsByEventId[event.id] || []).slice(0, 5).map((topic: string) => (
+                <span key={topic} style={{ fontSize: '0.7rem', padding: '0.18rem 0.45rem', borderRadius: '999px', border: '1px solid rgba(212,175,55,0.35)', color: 'var(--text-parchment)' }}>
+                  {topic}
+                </span>
+              ))}
+            </div>
             <div style={{ marginTop: '0.5rem' }}>
               <span style={{ 
                 display: 'inline-block', 
@@ -209,6 +248,7 @@ function App() {
               <Route path="/tree" element={<TreeOfLife />} />
               <Route path="/grades" element={<Grades />} />
               <Route path="/biography" element={<BiographyAndMap />} />
+              <Route path="/people" element={<People />} />
               <Route path="/saints" element={<Saints />} />
               <Route path="/dictionary" element={<Dictionary />} />
             </Routes>

@@ -1,4 +1,11 @@
+import json
+from pathlib import Path
+
 from db_utils import open_db
+
+
+ROOT = Path(__file__).resolve().parents[1]
+TOPIC_TAXONOMY_PATH = ROOT / "database" / "topic_taxonomy.json"
 
 PERSON_LABELS = {
     "PRS_000": "Aleister Crowley",
@@ -944,6 +951,9 @@ def seed_timeline_map():
     conn = open_db()
     cursor = conn.cursor()
 
+    topic_taxonomy = json.loads(TOPIC_TAXONOMY_PATH.read_text(encoding="utf-8"))
+    topic_id_by_slug = {item["slug"]: item["id"] for item in topic_taxonomy["topics"]}
+
     cursor.execute("DELETE FROM locations")
     cursor.executemany(
         """
@@ -951,6 +961,25 @@ def seed_timeline_map():
         VALUES (?, ?, ?, ?, ?)
         """,
         LOCATIONS,
+    )
+
+    cursor.execute("DELETE FROM event_topics")
+    cursor.execute("DELETE FROM topics")
+    cursor.executemany(
+        """
+        INSERT INTO topics (id, slug, label, description, sort_order)
+        VALUES (?, ?, ?, ?, ?)
+        """,
+        [
+            (
+                item["id"],
+                item["slug"],
+                item["label"],
+                item.get("description"),
+                item.get("sort_order", 0),
+            )
+            for item in topic_taxonomy["topics"]
+        ],
     )
 
     cursor.execute("DELETE FROM person_events")
@@ -984,9 +1013,25 @@ def seed_timeline_map():
         PERSON_EVENTS,
     )
 
+    cursor.executemany(
+        """
+        INSERT INTO event_topics (event_id, topic_id)
+        VALUES (?, ?)
+        """,
+        [
+            (event["id"], topic_id_by_slug[topic])
+            for event in EVENTS
+            for topic in event["topics"]
+            if topic in topic_id_by_slug
+        ],
+    )
+
     conn.commit()
     conn.close()
-    print(f"Seeded {len(LOCATIONS)} locations, {len(EVENTS)} events, and {len(PERSON_EVENTS)} person-event links.")
+    print(
+        f"Seeded {len(LOCATIONS)} locations, {len(EVENTS)} events, {len(PERSON_EVENTS)} person-event links, "
+        f"and {len(topic_taxonomy['topics'])} topics."
+    )
 
 
 if __name__ == "__main__":
