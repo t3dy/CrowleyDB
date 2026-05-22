@@ -369,6 +369,81 @@ button {
   border: 1px solid rgba(212, 175, 55, 0.1);
 }
 
+.map-tooltip {
+  display: grid;
+  gap: 0.25rem;
+  max-width: 280px;
+  color: var(--text-parchment);
+}
+
+.map-tooltip strong {
+  font-size: 0.92rem;
+  color: var(--accent-gold);
+}
+
+.map-tooltip span {
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.map-popup {
+  min-width: 220px;
+  max-width: 320px;
+  display: grid;
+  gap: 0.7rem;
+  color: #231f16;
+}
+
+.map-popup strong {
+  font-size: 1rem;
+  color: #1a1711;
+}
+
+.map-popup p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.map-popup__section {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.map-popup__section span {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #5f5645;
+}
+
+.map-popup__section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.map-popup__section li {
+  display: grid;
+  gap: 0.12rem;
+  padding-top: 0.45rem;
+  border-top: 1px solid rgba(36, 30, 20, 0.12);
+}
+
+.map-popup__section li strong {
+  font-size: 0.78rem;
+  color: #6e5e35;
+}
+
+.map-popup__section li span {
+  text-transform: none;
+  letter-spacing: normal;
+  color: #2b2419;
+  font-size: 0.86rem;
+}
+
 .biography-layout__sidebar .stacked-field select {
   width: 100%;
 }

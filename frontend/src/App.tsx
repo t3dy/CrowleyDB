@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import type { ReactNode } from 'react';
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { fetchJSON } from './api';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Tooltip } from 'react-leaflet';
 import L from 'leaflet';
 import './index.css';
 
@@ -129,6 +129,15 @@ const BiographyAndMap = () => {
     return (topicsByEventId[event.id] || []).includes(selectedTopic);
   });
 
+  const eventsByLocationId = useMemo(() => {
+    return events.reduce((acc: Record<string, any[]>, event) => {
+      if (!event.location_id) return acc;
+      acc[event.location_id] = acc[event.location_id] || [];
+      acc[event.location_id].push(event);
+      return acc;
+    }, {});
+  }, [events]);
+
   return (
     <div className="page-shell page-shell--fullbleed biography-layout">
       <section className="glass-panel page-hero">
@@ -193,10 +202,31 @@ const BiographyAndMap = () => {
             />
             {locations.map(loc => (
               <Marker key={loc.id} position={[loc.latitude, loc.longitude]}>
+                <Tooltip direction="top" offset={[0, -10]} opacity={1} sticky>
+                  <div className="map-tooltip">
+                    <strong>{loc.name}</strong>
+                    <span>{loc.significance}</span>
+                  </div>
+                </Tooltip>
                 <Popup>
-                  <div style={{ color: '#333' }}>
-                    <strong style={{ display: 'block', fontSize: '1.1em', marginBottom: '4px' }}>{loc.name}</strong>
-                    <p style={{ margin: 0, fontSize: '0.9em' }}>{loc.significance}</p>
+                  <div className="map-popup">
+                    <strong>{loc.name}</strong>
+                    <p>{loc.significance}</p>
+                    <div className="map-popup__section">
+                      <span>Linked events</span>
+                      <ul>
+                        {(eventsByLocationId[loc.id] || [])
+                          .slice()
+                          .sort((left, right) => left.date_start.localeCompare(right.date_start))
+                          .slice(0, 4)
+                          .map((event: any) => (
+                            <li key={event.id}>
+                              <strong>{event.date_start}</strong>
+                              <span>{event.title}</span>
+                            </li>
+                          ))}
+                      </ul>
+                    </div>
                   </div>
                 </Popup>
               </Marker>
