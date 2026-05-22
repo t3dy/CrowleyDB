@@ -1,30 +1,142 @@
 [
   {
     "id": "LOC_001",
-    "name": "Boleskine House, Loch Ness",
-    "latitude": 57.266,
-    "longitude": -4.471,
-    "significance": "Site of the incomplete Abramelin working, considered the focal point of Crowley's magical system in the early 1900s."
+    "name": "Royal Leamington Spa, England",
+    "latitude": 52.2852,
+    "longitude": -1.5205,
+    "significance": "Crowley's birthplace and the opening setting of his family story."
   },
   {
     "id": "LOC_002",
-    "name": "Cairo, Egypt",
-    "latitude": 30.044,
-    "longitude": 31.235,
-    "significance": "The Boulaq Museum and the apartment where the Book of the Law was received in 1904."
+    "name": "Boleskine House, Loch Ness",
+    "latitude": 57.266,
+    "longitude": -4.471,
+    "significance": "Site of Crowley's Abramelin work and one of the signature places in his magical biography."
   },
   {
     "id": "LOC_003",
-    "name": "Abbey of Thelema, Cefalù",
-    "latitude": 38.033,
-    "longitude": 14.016,
-    "significance": "Crowley's magical commune in Sicily (1920-1923), infamous for the death of Raoul Loveday."
+    "name": "London, England",
+    "latitude": 51.5074,
+    "longitude": -0.1278,
+    "significance": "Base for the Golden Dawn, publishing, and much of Crowley's later public life."
   },
   {
     "id": "LOC_004",
-    "name": "Bou Saâda, Algeria",
-    "latitude": 35.212,
-    "longitude": 4.181,
-    "significance": "Where Crowley and Victor Neuburg scried the Enochian Aethyrs (The Vision and the Voice) in 1909."
+    "name": "Cairo, Egypt",
+    "latitude": 30.0444,
+    "longitude": 31.2357,
+    "significance": "Site of the Cairo Working and the reception narrative for Liber AL vel Legis."
+  },
+  {
+    "id": "LOC_005",
+    "name": "Bou Saada, Algeria",
+    "latitude": 35.2083,
+    "longitude": 4.1759,
+    "significance": "Desert location for the Enochian Aethyr work with Victor Neuburg."
+  },
+  {
+    "id": "LOC_006",
+    "name": "Paris, France",
+    "latitude": 48.8566,
+    "longitude": 2.3522,
+    "significance": "Recurring base for writing, exile, publishing, and the later French connection."
+  },
+  {
+    "id": "LOC_007",
+    "name": "Cefalu, Sicily",
+    "latitude": 38.0379,
+    "longitude": 14.0229,
+    "significance": "Location of the Abbey of Thelema and a major Thelemic experiment."
+  },
+  {
+    "id": "LOC_008",
+    "name": "New York City, USA",
+    "latitude": 40.7128,
+    "longitude": -74.006,
+    "significance": "Important for Crowley's American lectures, wartime exile, and occult circle."
+  },
+  {
+    "id": "LOC_009",
+    "name": "Hastings, England",
+    "latitude": 50.8543,
+    "longitude": 0.5729,
+    "significance": "Crowley's final home and place of death."
+  },
+  {
+    "id": "LOC_010",
+    "name": "Blythe Road, London",
+    "latitude": 51.5106,
+    "longitude": -0.2062,
+    "significance": "Associated with Golden Dawn administrative history and occult organizational conflict."
+  },
+  {
+    "id": "LOC_011",
+    "name": "Redhill, Surrey, England",
+    "latitude": 51.2395,
+    "longitude": -0.1707,
+    "significance": "Family home base after Crowley's childhood shift out of Leamington."
+  },
+  {
+    "id": "LOC_012",
+    "name": "Cambridge, England",
+    "latitude": 52.2053,
+    "longitude": 0.1218,
+    "significance": "Site of Trinity College and Crowley's undergraduate formation."
+  },
+  {
+    "id": "LOC_013",
+    "name": "Schonbuhl Glacier, Swiss Alps",
+    "latitude": 46.8625,
+    "longitude": 8.2369,
+    "significance": "Crowley's alpine climbing terrain and one of the symbolic sources of his self-making."
+  },
+  {
+    "id": "LOC_014",
+    "name": "Karakoram / K2",
+    "latitude": 35.8808,
+    "longitude": 76.5133,
+    "significance": "The mountain expedition zone Crowley used to test stamina, will, and fellowship."
+  },
+  {
+    "id": "LOC_015",
+    "name": "Darjeeling, India",
+    "latitude": 27.041,
+    "longitude": 88.2663,
+    "significance": "Base for Himalayan training and the eastern travel current in Crowley's life."
+  },
+  {
+    "id": "LOC_016",
+    "name": "Tunis, Tunisia",
+    "latitude": 36.8065,
+    "longitude": 10.1815,
+    "significance": "Crowley's North African exile after the Abbey collapsed."
+  },
+  {
+    "id": "LOC_017",
+    "name": "Berlin, Germany",
+    "latitude": 52.52,
+    "longitude": 13.405,
+    "significance": "Key site for the Weimar-era artistic and social network around Crowley."
+  },
+  {
+    "id": "LOC_018",
+    "name": "Oxford, England",
+    "latitude": 51.752,
+    "longitude": -1.2577,
+    "significance": "Site of key student, literary, and scandalous social encounters around Crowley's circle."
+  },
+  {
+    "id": "LOC_019",
+    "name": "Caxton Hall, London",
+    "latitude": 51.4975,
+    "longitude": -0.1375,
+    "significance": "Performance venue for the Rites of Eleusis."
+  },
+  {
+    "id": "LOC_020",
+    "name": "Pasadena, California",
+    "latitude": 34.1478,
+    "longitude": -118.1445,
+    "significance": "American occult afterlife territory connected to Jack Parsons and the Agape Lodge."
   }
 ]

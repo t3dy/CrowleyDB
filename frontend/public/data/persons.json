@@ -1,5 +1,158 @@
 [
   {
+    "id": "PRS_000",
+    "name": "Aleister Crowley",
+    "magical_motto": "Perdurabo",
+    "role_category": "Self",
+    "birth_year": 1875,
+    "death_year": 1947,
+    "biography": "The central figure of the portal: poet, occultist, magician, controversial public writer, and the architect of the Thelemic system."
+  },
+  {
+    "id": "PRS_001",
+    "name": "Rose Edith Kelly",
+    "magical_motto": "Rose Crowley",
+    "role_category": "Major Associate",
+    "birth_year": 1874,
+    "death_year": 1932,
+    "biography": "Crowley's first wife and an important figure in the Cairo Working narrative. Her life after the early Thelemic years is often flattened in hostile accounts, so the portal keeps her biography explicit."
+  },
+  {
+    "id": "PRS_002",
+    "name": "Victor Neuburg",
+    "magical_motto": "Frater Achad",
+    "role_category": "Major Associate",
+    "birth_year": 1883,
+    "death_year": 1940,
+    "biography": "Poet and magical partner who worked with Crowley in the desert Aethyr work and appears throughout the early Thelemic orbit."
+  },
+  {
+    "id": "PRS_003",
+    "name": "Leah Hirsig",
+    "magical_motto": "Alostrael",
+    "role_category": "Major Associate",
+    "birth_year": 1883,
+    "death_year": 1975,
+    "biography": "Crowley's 'scarlet woman' during the Abbey of Thelema years and one of the most important figures in his middle period."
+  },
+  {
+    "id": "PRS_004",
+    "name": "Mary Desti",
+    "magical_motto": "Unknown",
+    "role_category": "Major Associate",
+    "birth_year": 1871,
+    "death_year": 1931,
+    "biography": "A close companion and collaborator whose presence helps anchor the Paris and New York phases of Crowley's life."
+  },
+  {
+    "id": "PRS_005",
+    "name": "Allan Bennett",
+    "magical_motto": "Iehi Aour",
+    "role_category": "Major Associate",
+    "birth_year": 1872,
+    "death_year": 1923,
+    "biography": "An early mentor and ceremonial magician whose influence helped shape Crowley's A.'.A.'. training structure."
+  },
+  {
+    "id": "PRS_006",
+    "name": "MacGregor Mathers",
+    "magical_motto": "S. L. MacGregor Mathers",
+    "role_category": "Rival",
+    "birth_year": 1854,
+    "death_year": 1918,
+    "biography": "Founder of the Golden Dawn order and one of Crowley's major adversaries during the schism years."
+  },
+  {
+    "id": "PRS_007",
+    "name": "W. B. Yeats",
+    "magical_motto": "Demon est Deus Inversus",
+    "role_category": "Rival",
+    "birth_year": 1865,
+    "death_year": 1939,
+    "biography": "Poet, Golden Dawn member, and a major literary and occult interlocutor in Crowley's early career."
+  },
+  {
+    "id": "PRS_008",
+    "name": "Jane Wolfe",
+    "magical_motto": "Soror Estai",
+    "role_category": "Disciple",
+    "birth_year": 1875,
+    "death_year": 1958,
+    "biography": "American actress and disciple who gives the portal a clear line into the Abbey of Thelema and later reception of Crowley's work."
+  },
+  {
+    "id": "PRS_009",
+    "name": "Jack Parsons",
+    "magical_motto": "Thelema's Rocket Man",
+    "role_category": "Disciple",
+    "birth_year": 1914,
+    "death_year": 1952,
+    "biography": "Scientist, occultist, and a key American follower whose story helps bridge Crowley studies and postwar occult culture."
+  },
+  {
+    "id": "PRS_010",
+    "name": "Kenneth Grant",
+    "magical_motto": "Tao",
+    "role_category": "Disciple",
+    "birth_year": 1924,
+    "death_year": 2011,
+    "biography": "A later occult interpreter whose writings extended Crowley's influence into a highly idiosyncratic post-Crowley current."
+  },
+  {
+    "id": "PRS_011",
+    "name": "Israel Regardie",
+    "magical_motto": "Ad Maiorem Adonai Gloriam",
+    "role_category": "Disciple",
+    "birth_year": 1907,
+    "death_year": 1985,
+    "biography": "Editor, practitioner, and important transmitter of Crowley's ritual and psychological methods to later generations."
+  },
+  {
+    "id": "PRS_012",
+    "name": "James Eshelman",
+    "magical_motto": "Unknown",
+    "role_category": "Disciple",
+    "birth_year": 1945,
+    "death_year": null,
+    "biography": "A later Thelemic writer and organizer who helps represent the order's modern interpretive afterlife."
+  },
+  {
+    "id": "PRS_013",
+    "name": "Richard Kaczynski",
+    "magical_motto": "Unknown",
+    "role_category": "Scholar",
+    "birth_year": 1950,
+    "death_year": null,
+    "biography": "Author of one of the most important modern biographies of Crowley and a major scholarly source for the portal."
+  },
+  {
+    "id": "PRS_014",
+    "name": "Tobias Churton",
+    "magical_motto": "Unknown",
+    "role_category": "Scholar",
+    "birth_year": 1948,
+    "death_year": null,
+    "biography": "Biographer and historian whose work on Crowley and esoteric history is central to contemporary study."
+  },
+  {
+    "id": "PRS_015",
+    "name": "Marco Pasi",
+    "magical_motto": "Unknown",
+    "role_category": "Scholar",
+    "birth_year": 1970,
+    "death_year": null,
+    "biography": "Academic historian of Western esotericism whose work helps situate Crowley within broader intellectual history."
+  },
+  {
+    "id": "PRS_016",
+    "name": "Martin Starr",
+    "magical_motto": "Unknown",
+    "role_category": "Scholar",
+    "birth_year": null,
+    "death_year": null,
+    "biography": "Editor and scholar whose work on Crowley's correspondence and historical documents is useful for archival research."
+  },
+  {
     "id": "PRS_S001",
     "name": "Michael Maier",
     "magical_motto": "Unknown",
