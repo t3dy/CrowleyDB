@@ -215,6 +215,21 @@ function compact(text: string | null | undefined) {
   return text ? text.replace(/\s+/g, ' ').trim() : '';
 }
 
+function ordinal(value: number) {
+  const mod100 = value % 100;
+  if (mod100 >= 11 && mod100 <= 13) return `${value}th`;
+  switch (value % 10) {
+    case 1:
+      return `${value}st`;
+    case 2:
+      return `${value}nd`;
+    case 3:
+      return `${value}rd`;
+    default:
+      return `${value}th`;
+  }
+}
+
 function cardGlyphsForTree(entry: TreeEntry): string[] {
   if (entry.path_number <= 10) {
     return SEPHIROT_GLYPHS[entry.path_number] ?? [String(entry.path_number)];
@@ -235,7 +250,7 @@ function buildTreeParagraphs(entry: TreeEntry, grade?: GradeEntry) {
   if (entry.path_number <= 10) {
     paragraphs.push(
       sentence(
-        `${entry.name} is the ${entry.path_number}th station on Crowley’s Tree of Life, and in 777 it functions as a node rather than a bridge: a place where divine names, archangels, angelic orders, and color scales all stack on top of one another.`,
+        `${entry.name} is the ${ordinal(entry.path_number)} station on Crowley’s Tree of Life, and in 777 it functions as a node rather than a bridge: a place where divine names, archangels, angelic orders, and color scales all stack on top of one another.`,
       ) +
         ' ' +
         sentence(
@@ -487,10 +502,10 @@ export function buildNumberEntries(
         glyphs: cardGlyphsForTree(entry),
         summary: cardSummaryForTree(entry, grade),
         teaser: isSephirah
-          ? `${entry.name} is the ${entry.path_number}th station of the Tree, and Crowley makes it carry both a cosmological role and a training implication.`
+          ? `${entry.name} is the ${ordinal(entry.path_number)} station of the Tree, and Crowley makes it carry both a cosmological role and a training implication.`
           : `${entry.hebrew_letter || `Path ${entry.path_number}`} is one of the bridges where Crowley makes letter, planet, and tarot share the same rail.`,
         paragraphLead: entry.path_number <= 10
-          ? `${entry.name} is the ${entry.path_number}th station on the Tree.`
+          ? `${entry.name} is the ${ordinal(entry.path_number)} station on the Tree.`
           : `${entry.hebrew_letter || `Path ${entry.path_number}`} is the bridge numbered ${entry.path_number}.`,
         treeEntry: entry,
         grade,
