@@ -185,6 +185,9 @@ def expand_person_biography(person_id: str, name: str, motto: str, role: str, bi
         SAINT_NOTES.get(person_id),
         "The biography is written as a relation to the rest of the archive, so the person's significance stays visible through work, correspondence, ritual, or reception rather than through personality alone.",
         f"The portal keeps {name} in this role so the biography remains a readable node in the archive rather than a detached name.",
+        "The page also keeps linked events and companion texts close at hand, because that is often where the real historical texture of the figure becomes visible.",
+        "For major associates in particular, the biography has to do double duty as social history and symbolic map, since Crowley frequently turns relationships into part of the doctrine itself.",
+        "That means the entry is written to make room for witness, conflict, labor, and afterlife at the same time, instead of forcing the person into a single explanatory frame.",
     ]
     return _append(biography, *extras)
 
@@ -211,7 +214,9 @@ def expand_document_description(document_id: str, title: str, description: str) 
     fourth = "That makes the document part of the interpretive path: a reader can move from the source itself to the people, places, and works it helps explain."
     fifth = "The title is not just a filename here; it is the label that lets the archive decide which shelf the source belongs on and what conversation it should enter."
     sixth = "These records are written so they can be quoted as evidence, not just remembered as background, which is why the prose keeps their bibliographic function explicit."
-    return _append(description, note, detail, third, fourth, fifth, sixth)
+    seventh = "The companion text also gives the site a place to register how later readers, editors, and biographers use the source, which is important because reception is part of the document's afterlife."
+    eighth = "That extra context turns the document into a node of relation rather than a dead citation, and that is exactly what the portal wants the bibliography to feel like."
+    return _append(description, note, detail, third, fourth, fifth, sixth, seventh, eighth)
 
 
 def enrich_documents(rows):
@@ -247,6 +252,11 @@ def expand_work_summary(
     extras.append("The entry treats the work as both a historical object and a reading key for later events, so it remains useful beyond the bibliography.")
     extras.append("The title itself is part of the argument in Crowley, so the page keeps publication name, numbering, and doctrinal function in the same line of sight.")
     extras.append("That matters especially for his numbered and titled books, where the publication label can carry as much symbolic force as the content itself.")
+    extras.append("The work page also keeps related people, companion texts, and extracted claims nearby so the reader can see how the book behaves inside the larger archive.")
+    extras.append("That makes the summary more than a synopsis: it becomes a guide to the book's role in the symbolic system, the documentary record, and the afterlife of interpretation.")
+    extras.append("Crowley's books often work like junction boxes, so the prose keeps that networked quality visible instead of flattening the text into a one-sentence description.")
+    extras.append("The expanded prose also leaves room for later commentary, revision, and disagreement, which matters because Crowley's books are often read differently by practitioners, historians, and critics.")
+    extras.append("By keeping those layers visible, the page can support both a quick index-card glance and a longer encyclopedia read without changing the basic data model.")
     return _append(summary, *extras)
 
 
