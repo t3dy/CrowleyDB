@@ -43,6 +43,8 @@ import Home from './pages/Home';
 import Works from './pages/Works';
 import People from './pages/People';
 import TopicPage from './pages/Topic';
+import Numbers from './pages/Numbers';
+import NumberPage from './pages/Number';
 
 const Navbar = () => {
   const { currentLane, setLane } = useLane();
@@ -77,6 +79,7 @@ const Navbar = () => {
             <Link to="/biography">Biography &amp; Map</Link>
             <Link to="/people">People</Link>
             <Link to="/saints">Saints</Link>
+            <Link to="/numbers">Numbers</Link>
             <Link to="/dictionary">Dictionary</Link>
           </div>
 
@@ -317,6 +320,8 @@ function App() {
               <Route path="/biography" element={<BiographyAndMap />} />
               <Route path="/people" element={<People />} />
               <Route path="/saints" element={<Saints />} />
+              <Route path="/numbers" element={<Numbers />} />
+              <Route path="/numbers/:slug" element={<NumberPage />} />
               <Route path="/dictionary" element={<Dictionary />} />
               <Route path="/topic/:slug" element={<TopicPage />} />
             </Routes>

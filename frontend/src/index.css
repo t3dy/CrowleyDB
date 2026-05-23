@@ -387,6 +387,194 @@ button {
   margin-top: 0.25rem;
 }
 
+.numbers-page {
+  display: grid;
+  gap: 1rem;
+}
+
+.numbers-page__controls {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.numbers-page__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.numbers-grid {
+  align-items: stretch;
+}
+
+.number-card {
+  display: grid;
+  gap: 0.95rem;
+  min-height: 260px;
+  align-content: start;
+  padding: 1rem 1.05rem 1.1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.16);
+  background:
+    radial-gradient(circle at top right, rgba(212, 175, 55, 0.08), transparent 30%),
+    rgba(0, 0, 0, 0.16);
+}
+
+.number-card--link {
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.number-card--link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(212, 175, 55, 0.45);
+  background:
+    radial-gradient(circle at top right, rgba(212, 175, 55, 0.12), transparent 30%),
+    rgba(212, 175, 55, 0.06);
+  color: inherit;
+}
+
+.number-card__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.number-card__kicker {
+  display: inline-flex;
+  margin-bottom: 0.35rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.7rem;
+}
+
+.number-card__head h2 {
+  margin: 0;
+  font-size: clamp(1.35rem, 1.9vw, 1.95rem);
+  line-height: 1;
+}
+
+.number-card__badge {
+  min-width: 3.25rem;
+  padding: 0.45rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  color: var(--accent-gold);
+  font-family: var(--font-heading);
+  text-align: center;
+}
+
+.number-card__glyphs,
+.number-page__glyphs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
+}
+
+.number-card__glyphs span,
+.number-page__glyphs span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.25rem;
+  min-height: 2.25rem;
+  padding: 0.32rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  background: rgba(0, 0, 0, 0.18);
+  color: var(--text-parchment);
+  font-family: var(--font-hebrew), var(--font-body);
+  font-size: 1rem;
+}
+
+.number-card p {
+  margin: 0;
+  line-height: 1.62;
+}
+
+.number-card__meta {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.number-card__cta {
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.number-page {
+  display: grid;
+  gap: 1rem;
+}
+
+.number-page__entry {
+  display: grid;
+  gap: 1rem;
+  padding: 1.1rem 1.15rem;
+  line-height: 1.7;
+  font-size: 1.03rem;
+}
+
+.number-page__entry p {
+  margin: 0;
+}
+
+.number-page__sidebar {
+  display: grid;
+  gap: 1rem;
+}
+
+.number-page__mini {
+  display: grid;
+  gap: 0.35rem;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.16);
+  border: 1px solid rgba(212, 175, 55, 0.12);
+}
+
+.number-page__mini span {
+  color: var(--text-muted);
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.number-page__mini p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.number-related-card {
+  display: grid;
+  gap: 0.55rem;
+  padding: 1rem 1.05rem;
+}
+
+.number-related-card h3 {
+  margin: 0;
+}
+
+.number-related-card__meta {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.number-related-card p:last-child {
+  margin: 0;
+  line-height: 1.55;
+}
+
 .stacked-field {
   display: grid;
   gap: 0.4rem;
