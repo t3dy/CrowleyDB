@@ -733,6 +733,7 @@ This catalog ranks the key Crowley texts and companion sources for ingesting gra
 - golden_dawn_revision: 10
 - gematria: 6
 - title_number: 5
+- title_number_meaning: 5
 - liber_number: 4
 - title_numerology: 3
 - passage_grade: 3
@@ -744,6 +745,7 @@ This catalog ranks the key Crowley texts and companion sources for ingesting gra
 - tarot_revision: 1
 - pip_symbolism: 1
 - publication_structure: 1
+- publication_number_meaning: 1
 - compressed_symbolism: 1
 - epistolary_instruction: 1
 - postwar_manifesto: 1

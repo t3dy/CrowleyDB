@@ -71,6 +71,20 @@
   },
   {
     "id": "CLM_00006",
+    "source_id": "SRC_WORK_WKS_001",
+    "claim_type": "title_number_meaning",
+    "symbol": "220",
+    "symbol_value": "220",
+    "related_symbol": null,
+    "claim_text": "The number 220 matters here because the title does not merely label the work; it presents revelation as a numbered entity that can be indexed alongside other sacred numbers in the corpus.",
+    "evidence_locator": "works.json:WKS_001",
+    "evidence_excerpt": "The summary treats the text as the central revealed source of Thelema.",
+    "confidence": 0.96,
+    "priority_score": 88,
+    "notes": null
+  },
+  {
+    "id": "CLM_00007",
     "source_id": "SRC_WORK_WKS_002",
     "claim_type": "title_number",
     "symbol": "4",
@@ -84,7 +98,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00007",
+    "id": "CLM_00008",
     "source_id": "SRC_WORK_WKS_002",
     "claim_type": "training_method",
     "symbol": "discipline",
@@ -98,7 +112,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00008",
+    "id": "CLM_00009",
     "source_id": "SRC_WORK_WKS_002",
     "claim_type": "liber_number",
     "symbol": "4",
@@ -112,7 +126,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00009",
+    "id": "CLM_00010",
     "source_id": "SRC_WORK_WKS_002",
     "claim_type": "title_symbolism",
     "symbol": "dual title",
@@ -126,7 +140,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00010",
+    "id": "CLM_00011",
     "source_id": "SRC_WORK_WKS_002",
     "claim_type": "work_symbolic_role",
     "symbol": "curricular manual",
@@ -140,7 +154,21 @@
     "notes": null
   },
   {
-    "id": "CLM_00011",
+    "id": "CLM_00012",
+    "source_id": "SRC_WORK_WKS_002",
+    "claim_type": "title_number_meaning",
+    "symbol": "4",
+    "symbol_value": "4",
+    "related_symbol": null,
+    "claim_text": "The 4 in Book 4 / Liber ABA signals structure, method, and the practical division of the work into teachable parts, which is why the title reads like an instructional diagram.",
+    "evidence_locator": "works.json:WKS_002",
+    "evidence_excerpt": "The summary identifies the book as a core initiatory training manual.",
+    "confidence": 0.94,
+    "priority_score": 84,
+    "notes": null
+  },
+  {
+    "id": "CLM_00013",
     "source_id": "SRC_WORK_WKS_002",
     "claim_type": "title_numerology",
     "symbol": "4",
@@ -154,7 +182,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00012",
+    "id": "CLM_00014",
     "source_id": "SRC_WORK_WKS_003",
     "claim_type": "title_number",
     "symbol": "418",
@@ -168,7 +196,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00013",
+    "id": "CLM_00015",
     "source_id": "SRC_WORK_WKS_003",
     "claim_type": "visionary_sequence",
     "symbol": "30 Aethyrs",
@@ -182,7 +210,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00014",
+    "id": "CLM_00016",
     "source_id": "SRC_WORK_WKS_003",
     "claim_type": "liber_number",
     "symbol": "418",
@@ -196,7 +224,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00015",
+    "id": "CLM_00017",
     "source_id": "SRC_WORK_WKS_003",
     "claim_type": "title_symbolism",
     "symbol": "visionary title",
@@ -210,7 +238,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00016",
+    "id": "CLM_00018",
     "source_id": "SRC_WORK_WKS_003",
     "claim_type": "work_symbolic_role",
     "symbol": "visionary record",
@@ -224,7 +252,21 @@
     "notes": null
   },
   {
-    "id": "CLM_00017",
+    "id": "CLM_00019",
+    "source_id": "SRC_WORK_WKS_003",
+    "claim_type": "title_number_meaning",
+    "symbol": "418",
+    "symbol_value": "418",
+    "related_symbol": null,
+    "claim_text": "The number 418 keeps the visionary record inside a wider abyssal numerology, so the title and the aethyr sequence reinforce one another as a symbolic whole.",
+    "evidence_locator": "works.json:WKS_003",
+    "evidence_excerpt": "The work is central to the abyssal and visionary record.",
+    "confidence": 0.94,
+    "priority_score": 86,
+    "notes": null
+  },
+  {
+    "id": "CLM_00020",
     "source_id": "SRC_WORK_WKS_004",
     "claim_type": "title_number",
     "symbol": "777",
@@ -238,7 +280,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00018",
+    "id": "CLM_00021",
     "source_id": "SRC_WORK_WKS_004",
     "claim_type": "correspondence_engine",
     "symbol": "qabalah",
@@ -252,7 +294,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00019",
+    "id": "CLM_00022",
     "source_id": "SRC_WORK_WKS_004",
     "claim_type": "liber_number",
     "symbol": "777",
@@ -266,7 +308,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00020",
+    "id": "CLM_00023",
     "source_id": "SRC_WORK_WKS_004",
     "claim_type": "title_symbolism",
     "symbol": "correspondence title",
@@ -280,7 +322,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00021",
+    "id": "CLM_00024",
     "source_id": "SRC_WORK_WKS_004",
     "claim_type": "work_symbolic_role",
     "symbol": "correspondence atlas",
@@ -294,7 +336,21 @@
     "notes": null
   },
   {
-    "id": "CLM_00022",
+    "id": "CLM_00025",
+    "source_id": "SRC_WORK_WKS_004",
+    "claim_type": "title_number_meaning",
+    "symbol": "777",
+    "symbol_value": "777",
+    "related_symbol": null,
+    "claim_text": "The 777 in the title is itself a signal that the book should be read as a numerical temple of correspondences, not as a plain reference manual.",
+    "evidence_locator": "works.json:WKS_004",
+    "evidence_excerpt": "The summary presents the book as a reference compendium of correspondences.",
+    "confidence": 0.98,
+    "priority_score": 92,
+    "notes": null
+  },
+  {
+    "id": "CLM_00026",
     "source_id": "SRC_WORK_WKS_004",
     "claim_type": "title_numerology",
     "symbol": "777",
@@ -308,7 +364,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00023",
+    "id": "CLM_00027",
     "source_id": "SRC_WORK_WKS_005",
     "claim_type": "tarot_revision",
     "symbol": "Thoth",
@@ -322,7 +378,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00024",
+    "id": "CLM_00028",
     "source_id": "SRC_WORK_WKS_005",
     "claim_type": "pip_symbolism",
     "symbol": "numbered minors",
@@ -336,7 +392,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00025",
+    "id": "CLM_00029",
     "source_id": "SRC_WORK_WKS_005",
     "claim_type": "title_symbolism",
     "symbol": "thoth title",
@@ -350,7 +406,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00026",
+    "id": "CLM_00030",
     "source_id": "SRC_WORK_WKS_005",
     "claim_type": "work_symbolic_role",
     "symbol": "tarot revision",
@@ -364,7 +420,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00027",
+    "id": "CLM_00031",
     "source_id": "SRC_WORK_WKS_006",
     "claim_type": "publication_structure",
     "symbol": "serial form",
@@ -378,7 +434,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00028",
+    "id": "CLM_00032",
     "source_id": "SRC_WORK_WKS_006",
     "claim_type": "title_symbolism",
     "symbol": "serial title",
@@ -392,7 +448,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00029",
+    "id": "CLM_00033",
     "source_id": "SRC_WORK_WKS_006",
     "claim_type": "work_symbolic_role",
     "symbol": "periodical teaching",
@@ -406,7 +462,21 @@
     "notes": null
   },
   {
-    "id": "CLM_00030",
+    "id": "CLM_00034",
+    "source_id": "SRC_WORK_WKS_006",
+    "claim_type": "publication_number_meaning",
+    "symbol": "1",
+    "symbol_value": "1",
+    "related_symbol": null,
+    "claim_text": "Volume I, No. 1 makes the first issue of The Equinox feel programmatic, as if Crowley were numbering the beginning of the movement into existence.",
+    "evidence_locator": "works.json:WKS_006",
+    "evidence_excerpt": "The summary emphasizes doctrine, ritual, and polemic sharing the same print space.",
+    "confidence": 0.9,
+    "priority_score": 82,
+    "notes": null
+  },
+  {
+    "id": "CLM_00035",
     "source_id": "SRC_WORK_WKS_006",
     "claim_type": "title_numerology",
     "symbol": "1",
@@ -420,7 +490,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00031",
+    "id": "CLM_00036",
     "source_id": "SRC_WORK_WKS_007",
     "claim_type": "compressed_symbolism",
     "symbol": "paradox",
@@ -434,7 +504,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00032",
+    "id": "CLM_00037",
     "source_id": "SRC_WORK_WKS_007",
     "claim_type": "title_symbolism",
     "symbol": "paradox title",
@@ -448,7 +518,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00033",
+    "id": "CLM_00038",
     "source_id": "SRC_WORK_WKS_007",
     "claim_type": "work_symbolic_role",
     "symbol": "aphoristic method",
@@ -462,7 +532,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00034",
+    "id": "CLM_00039",
     "source_id": "SRC_WORK_WKS_008",
     "claim_type": "title_number",
     "symbol": "111",
@@ -476,7 +546,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00035",
+    "id": "CLM_00040",
     "source_id": "SRC_WORK_WKS_008",
     "claim_type": "epistolary_instruction",
     "symbol": "magical son",
@@ -490,7 +560,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00036",
+    "id": "CLM_00041",
     "source_id": "SRC_WORK_WKS_008",
     "claim_type": "title_symbolism",
     "symbol": "letter-number title",
@@ -504,7 +574,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00037",
+    "id": "CLM_00042",
     "source_id": "SRC_WORK_WKS_008",
     "claim_type": "work_symbolic_role",
     "symbol": "instructional letter",
@@ -518,7 +588,21 @@
     "notes": null
   },
   {
-    "id": "CLM_00038",
+    "id": "CLM_00043",
+    "source_id": "SRC_WORK_WKS_008",
+    "claim_type": "title_number_meaning",
+    "symbol": "111",
+    "symbol_value": "111",
+    "related_symbol": null,
+    "claim_text": "The 111 in Liber Aleph vel CXI lets the book speak as a number-form as well as a letter-form, which is why the title feels both private and doctrinal.",
+    "evidence_locator": "works.json:WKS_008",
+    "evidence_excerpt": "The title carries a Roman-numeral signal in the book record.",
+    "confidence": 0.95,
+    "priority_score": 88,
+    "notes": null
+  },
+  {
+    "id": "CLM_00044",
     "source_id": "SRC_WORK_WKS_009",
     "claim_type": "postwar_manifesto",
     "symbol": "Blue Equinox",
@@ -532,7 +616,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00039",
+    "id": "CLM_00045",
     "source_id": "SRC_WORK_WKS_009",
     "claim_type": "title_symbolism",
     "symbol": "seasonal title",
@@ -546,7 +630,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00040",
+    "id": "CLM_00046",
     "source_id": "SRC_WORK_WKS_009",
     "claim_type": "work_symbolic_role",
     "symbol": "manifesto phase",
@@ -560,7 +644,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00041",
+    "id": "CLM_00047",
     "source_id": "SRC_WORK_WKS_010",
     "claim_type": "method_statement",
     "symbol": "practice",
@@ -574,7 +658,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00042",
+    "id": "CLM_00048",
     "source_id": "SRC_WORK_WKS_010",
     "claim_type": "title_symbolism",
     "symbol": "method title",
@@ -588,7 +672,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00043",
+    "id": "CLM_00049",
     "source_id": "SRC_WORK_WKS_010",
     "claim_type": "work_symbolic_role",
     "symbol": "method synthesis",
@@ -602,7 +686,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00044",
+    "id": "CLM_00050",
     "source_id": "SRC_WORK_WKS_011",
     "claim_type": "self_fashioning",
     "symbol": "autobiography",
@@ -616,7 +700,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00045",
+    "id": "CLM_00051",
     "source_id": "SRC_WORK_WKS_011",
     "claim_type": "title_symbolism",
     "symbol": "autobiographical title",
@@ -630,7 +714,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00046",
+    "id": "CLM_00052",
     "source_id": "SRC_WORK_WKS_011",
     "claim_type": "work_symbolic_role",
     "symbol": "mythic autobiography",
@@ -644,7 +728,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00047",
+    "id": "CLM_00053",
     "source_id": "SRC_WORK_WKS_012",
     "claim_type": "fictional_discipline",
     "symbol": "addiction",
@@ -658,7 +742,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00048",
+    "id": "CLM_00054",
     "source_id": "SRC_WORK_WKS_012",
     "claim_type": "title_symbolism",
     "symbol": "fiction title",
@@ -672,7 +756,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00049",
+    "id": "CLM_00055",
     "source_id": "SRC_WORK_WKS_012",
     "claim_type": "work_symbolic_role",
     "symbol": "fictional initiation",
@@ -686,7 +770,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00050",
+    "id": "CLM_00056",
     "source_id": "SRC_DOCUMENT_DOC_WKS_001",
     "claim_type": "documentary_role",
     "symbol": "Liber AL vel Legis",
@@ -700,7 +784,7 @@
     "notes": "Author: Aleister Crowley"
   },
   {
-    "id": "CLM_00051",
+    "id": "CLM_00057",
     "source_id": "SRC_DOCUMENT_DOC_WKS_002",
     "claim_type": "documentary_role",
     "symbol": "Book 4 / Liber ABA",
@@ -714,7 +798,7 @@
     "notes": "Author: Aleister Crowley"
   },
   {
-    "id": "CLM_00052",
+    "id": "CLM_00058",
     "source_id": "SRC_DOCUMENT_DOC_WKS_003",
     "claim_type": "documentary_role",
     "symbol": "The Vision and the Voice",
@@ -728,7 +812,7 @@
     "notes": "Author: Aleister Crowley"
   },
   {
-    "id": "CLM_00053",
+    "id": "CLM_00059",
     "source_id": "SRC_DOCUMENT_DOC_WKS_004",
     "claim_type": "documentary_role",
     "symbol": "777 and Other Qabalistic Writings",
@@ -742,7 +826,7 @@
     "notes": "Author: Aleister Crowley"
   },
   {
-    "id": "CLM_00054",
+    "id": "CLM_00060",
     "source_id": "SRC_DOCUMENT_DOC_WKS_005",
     "claim_type": "documentary_role",
     "symbol": "The Book of Thoth",
@@ -756,7 +840,7 @@
     "notes": "Author: Aleister Crowley"
   },
   {
-    "id": "CLM_00055",
+    "id": "CLM_00061",
     "source_id": "SRC_DOCUMENT_DOC_WKS_006",
     "claim_type": "documentary_role",
     "symbol": "The Equinox, Vol. I, No. 1",
@@ -770,7 +854,7 @@
     "notes": "Author: Aleister Crowley"
   },
   {
-    "id": "CLM_00056",
+    "id": "CLM_00062",
     "source_id": "SRC_DOCUMENT_DOC_WKS_007",
     "claim_type": "documentary_role",
     "symbol": "The Book of Lies",
@@ -784,7 +868,7 @@
     "notes": "Author: Aleister Crowley"
   },
   {
-    "id": "CLM_00057",
+    "id": "CLM_00063",
     "source_id": "SRC_DOCUMENT_DOC_WKS_008",
     "claim_type": "documentary_role",
     "symbol": "Liber Aleph vel CXI",
@@ -798,7 +882,7 @@
     "notes": "Author: Aleister Crowley"
   },
   {
-    "id": "CLM_00058",
+    "id": "CLM_00064",
     "source_id": "SRC_DOCUMENT_DOC_WKS_009",
     "claim_type": "documentary_role",
     "symbol": "The Blue Equinox",
@@ -812,7 +896,7 @@
     "notes": "Author: Aleister Crowley"
   },
   {
-    "id": "CLM_00059",
+    "id": "CLM_00065",
     "source_id": "SRC_DOCUMENT_DOC_WKS_010",
     "claim_type": "documentary_role",
     "symbol": "Magick in Theory and Practice",
@@ -826,7 +910,7 @@
     "notes": "Author: Aleister Crowley"
   },
   {
-    "id": "CLM_00060",
+    "id": "CLM_00066",
     "source_id": "SRC_DOCUMENT_DOC_WKS_011",
     "claim_type": "documentary_role",
     "symbol": "The Confessions of Aleister Crowley",
@@ -840,7 +924,7 @@
     "notes": "Author: Aleister Crowley"
   },
   {
-    "id": "CLM_00061",
+    "id": "CLM_00067",
     "source_id": "SRC_DOCUMENT_DOC_WKS_012",
     "claim_type": "documentary_role",
     "symbol": "Diary of a Drug Fiend",
@@ -854,7 +938,7 @@
     "notes": "Author: Aleister Crowley"
   },
   {
-    "id": "CLM_00062",
+    "id": "CLM_00068",
     "source_id": "SRC_DOCUMENT_ARC_PERDURABO",
     "claim_type": "documentary_role",
     "symbol": "Perdurabo: The Life of Aleister Crowley",
@@ -868,7 +952,7 @@
     "notes": "Author: Richard Kaczynski"
   },
   {
-    "id": "CLM_00063",
+    "id": "CLM_00069",
     "source_id": "SRC_DOCUMENT_ARC_BEAST_IN_BERLIN",
     "claim_type": "documentary_role",
     "symbol": "Aleister Crowley: The Beast in Berlin",
@@ -882,7 +966,7 @@
     "notes": "Author: Tobias Churton"
   },
   {
-    "id": "CLM_00064",
+    "id": "CLM_00070",
     "source_id": "SRC_DOCUMENT_ARC_CONFESSIONS",
     "claim_type": "documentary_role",
     "symbol": "The Confessions of Aleister Crowley",
@@ -896,7 +980,7 @@
     "notes": "Author: Aleister Crowley"
   },
   {
-    "id": "CLM_00065",
+    "id": "CLM_00071",
     "source_id": "SRC_GRADE_GRD_001",
     "claim_type": "grade_meaning",
     "symbol": "Neophyte (1=10)",
@@ -910,7 +994,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00066",
+    "id": "CLM_00072",
     "source_id": "SRC_GRADE_GRD_001",
     "claim_type": "sefirah_attribution",
     "symbol": "10",
@@ -924,7 +1008,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00067",
+    "id": "CLM_00073",
     "source_id": "SRC_GRADE_GRD_001",
     "claim_type": "grade_commentary",
     "symbol": "Neophyte (1=10)",
@@ -938,7 +1022,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00068",
+    "id": "CLM_00074",
     "source_id": "SRC_GRADE_GRD_002",
     "claim_type": "grade_meaning",
     "symbol": "Zelator (2=9)",
@@ -952,7 +1036,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00069",
+    "id": "CLM_00075",
     "source_id": "SRC_GRADE_GRD_002",
     "claim_type": "sefirah_attribution",
     "symbol": "9",
@@ -966,7 +1050,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00070",
+    "id": "CLM_00076",
     "source_id": "SRC_GRADE_GRD_002",
     "claim_type": "grade_commentary",
     "symbol": "Zelator (2=9)",
@@ -980,7 +1064,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00071",
+    "id": "CLM_00077",
     "source_id": "SRC_GRADE_GRD_003",
     "claim_type": "grade_meaning",
     "symbol": "Practicus (3=8)",
@@ -994,7 +1078,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00072",
+    "id": "CLM_00078",
     "source_id": "SRC_GRADE_GRD_003",
     "claim_type": "sefirah_attribution",
     "symbol": "8",
@@ -1008,7 +1092,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00073",
+    "id": "CLM_00079",
     "source_id": "SRC_GRADE_GRD_003",
     "claim_type": "grade_commentary",
     "symbol": "Practicus (3=8)",
@@ -1022,7 +1106,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00074",
+    "id": "CLM_00080",
     "source_id": "SRC_GRADE_GRD_004",
     "claim_type": "grade_meaning",
     "symbol": "Philosophus (4=7)",
@@ -1036,7 +1120,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00075",
+    "id": "CLM_00081",
     "source_id": "SRC_GRADE_GRD_004",
     "claim_type": "sefirah_attribution",
     "symbol": "7",
@@ -1050,7 +1134,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00076",
+    "id": "CLM_00082",
     "source_id": "SRC_GRADE_GRD_004",
     "claim_type": "grade_commentary",
     "symbol": "Philosophus (4=7)",
@@ -1064,7 +1148,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00077",
+    "id": "CLM_00083",
     "source_id": "SRC_GRADE_GRD_005",
     "claim_type": "grade_meaning",
     "symbol": "Adeptus Minor (5=6)",
@@ -1078,7 +1162,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00078",
+    "id": "CLM_00084",
     "source_id": "SRC_GRADE_GRD_005",
     "claim_type": "sefirah_attribution",
     "symbol": "6",
@@ -1092,7 +1176,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00079",
+    "id": "CLM_00085",
     "source_id": "SRC_GRADE_GRD_005",
     "claim_type": "grade_commentary",
     "symbol": "Adeptus Minor (5=6)",
@@ -1106,7 +1190,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00080",
+    "id": "CLM_00086",
     "source_id": "SRC_GRADE_GRD_006",
     "claim_type": "grade_meaning",
     "symbol": "Adeptus Major (6=5)",
@@ -1120,7 +1204,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00081",
+    "id": "CLM_00087",
     "source_id": "SRC_GRADE_GRD_006",
     "claim_type": "sefirah_attribution",
     "symbol": "5",
@@ -1134,7 +1218,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00082",
+    "id": "CLM_00088",
     "source_id": "SRC_GRADE_GRD_006",
     "claim_type": "grade_commentary",
     "symbol": "Adeptus Major (6=5)",
@@ -1148,7 +1232,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00083",
+    "id": "CLM_00089",
     "source_id": "SRC_GRADE_GRD_007",
     "claim_type": "grade_meaning",
     "symbol": "Adeptus Exemptus (7=4)",
@@ -1162,7 +1246,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00084",
+    "id": "CLM_00090",
     "source_id": "SRC_GRADE_GRD_007",
     "claim_type": "sefirah_attribution",
     "symbol": "4",
@@ -1176,7 +1260,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00085",
+    "id": "CLM_00091",
     "source_id": "SRC_GRADE_GRD_007",
     "claim_type": "grade_commentary",
     "symbol": "Adeptus Exemptus (7=4)",
@@ -1190,7 +1274,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00086",
+    "id": "CLM_00092",
     "source_id": "SRC_GRADE_GRD_008",
     "claim_type": "grade_meaning",
     "symbol": "Magister Templi (8=3)",
@@ -1204,7 +1288,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00087",
+    "id": "CLM_00093",
     "source_id": "SRC_GRADE_GRD_008",
     "claim_type": "sefirah_attribution",
     "symbol": "3",
@@ -1218,7 +1302,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00088",
+    "id": "CLM_00094",
     "source_id": "SRC_GRADE_GRD_008",
     "claim_type": "grade_commentary",
     "symbol": "Magister Templi (8=3)",
@@ -1232,7 +1316,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00089",
+    "id": "CLM_00095",
     "source_id": "SRC_GRADE_GRD_009",
     "claim_type": "grade_meaning",
     "symbol": "Magus (9=2)",
@@ -1246,7 +1330,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00090",
+    "id": "CLM_00096",
     "source_id": "SRC_GRADE_GRD_009",
     "claim_type": "sefirah_attribution",
     "symbol": "2",
@@ -1260,7 +1344,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00091",
+    "id": "CLM_00097",
     "source_id": "SRC_GRADE_GRD_009",
     "claim_type": "grade_commentary",
     "symbol": "Magus (9=2)",
@@ -1274,7 +1358,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00092",
+    "id": "CLM_00098",
     "source_id": "SRC_GRADE_GRD_010",
     "claim_type": "grade_meaning",
     "symbol": "Ipsissimus (10=1)",
@@ -1288,7 +1372,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00093",
+    "id": "CLM_00099",
     "source_id": "SRC_GRADE_GRD_010",
     "claim_type": "sefirah_attribution",
     "symbol": "1",
@@ -1302,7 +1386,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00094",
+    "id": "CLM_00100",
     "source_id": "SRC_GRADE_GRD_010",
     "claim_type": "grade_commentary",
     "symbol": "Ipsissimus (10=1)",
@@ -1316,7 +1400,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00095",
+    "id": "CLM_00101",
     "source_id": "SRC_GRADE_GRD_011",
     "claim_type": "grade_meaning",
     "symbol": "Zelator (1=10)",
@@ -1330,7 +1414,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00096",
+    "id": "CLM_00102",
     "source_id": "SRC_GRADE_GRD_011",
     "claim_type": "sefirah_attribution",
     "symbol": "10",
@@ -1344,7 +1428,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00097",
+    "id": "CLM_00103",
     "source_id": "SRC_GRADE_GRD_011",
     "claim_type": "grade_commentary",
     "symbol": "Zelator (1=10)",
@@ -1358,7 +1442,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00098",
+    "id": "CLM_00104",
     "source_id": "SRC_GRADE_GRD_012",
     "claim_type": "grade_meaning",
     "symbol": "Theoricus (2=9)",
@@ -1372,7 +1456,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00099",
+    "id": "CLM_00105",
     "source_id": "SRC_GRADE_GRD_012",
     "claim_type": "sefirah_attribution",
     "symbol": "9",
@@ -1386,7 +1470,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00100",
+    "id": "CLM_00106",
     "source_id": "SRC_GRADE_GRD_012",
     "claim_type": "grade_commentary",
     "symbol": "Theoricus (2=9)",
@@ -1400,7 +1484,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00101",
+    "id": "CLM_00107",
     "source_id": "SRC_TREE_1",
     "claim_type": "path_attribution",
     "symbol": "1",
@@ -1414,7 +1498,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00102",
+    "id": "CLM_00108",
     "source_id": "SRC_TREE_2",
     "claim_type": "path_attribution",
     "symbol": "2",
@@ -1428,7 +1512,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00103",
+    "id": "CLM_00109",
     "source_id": "SRC_TREE_3",
     "claim_type": "path_attribution",
     "symbol": "3",
@@ -1442,7 +1526,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00104",
+    "id": "CLM_00110",
     "source_id": "SRC_TREE_4",
     "claim_type": "path_attribution",
     "symbol": "4",
@@ -1456,7 +1540,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00105",
+    "id": "CLM_00111",
     "source_id": "SRC_TREE_5",
     "claim_type": "path_attribution",
     "symbol": "5",
@@ -1470,7 +1554,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00106",
+    "id": "CLM_00112",
     "source_id": "SRC_TREE_6",
     "claim_type": "path_attribution",
     "symbol": "6",
@@ -1484,7 +1568,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00107",
+    "id": "CLM_00113",
     "source_id": "SRC_TREE_7",
     "claim_type": "path_attribution",
     "symbol": "7",
@@ -1498,7 +1582,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00108",
+    "id": "CLM_00114",
     "source_id": "SRC_TREE_8",
     "claim_type": "path_attribution",
     "symbol": "8",
@@ -1512,7 +1596,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00109",
+    "id": "CLM_00115",
     "source_id": "SRC_TREE_9",
     "claim_type": "path_attribution",
     "symbol": "9",
@@ -1526,7 +1610,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00110",
+    "id": "CLM_00116",
     "source_id": "SRC_TREE_10",
     "claim_type": "path_attribution",
     "symbol": "10",
@@ -1540,7 +1624,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00111",
+    "id": "CLM_00117",
     "source_id": "SRC_TREE_11",
     "claim_type": "path_attribution",
     "symbol": "11",
@@ -1554,7 +1638,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00112",
+    "id": "CLM_00118",
     "source_id": "SRC_TREE_11",
     "claim_type": "hebrew_letter",
     "symbol": "Aleph",
@@ -1568,7 +1652,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00113",
+    "id": "CLM_00119",
     "source_id": "SRC_TREE_11",
     "claim_type": "astrological_attribution",
     "symbol": "Air",
@@ -1582,7 +1666,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00114",
+    "id": "CLM_00120",
     "source_id": "SRC_TREE_11",
     "claim_type": "tarot_attribution",
     "symbol": "The Fool",
@@ -1596,7 +1680,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00115",
+    "id": "CLM_00121",
     "source_id": "SRC_TREE_12",
     "claim_type": "path_attribution",
     "symbol": "12",
@@ -1610,7 +1694,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00116",
+    "id": "CLM_00122",
     "source_id": "SRC_TREE_12",
     "claim_type": "hebrew_letter",
     "symbol": "Beth",
@@ -1624,7 +1708,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00117",
+    "id": "CLM_00123",
     "source_id": "SRC_TREE_12",
     "claim_type": "astrological_attribution",
     "symbol": "Mercury",
@@ -1638,7 +1722,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00118",
+    "id": "CLM_00124",
     "source_id": "SRC_TREE_12",
     "claim_type": "tarot_attribution",
     "symbol": "The Magus",
@@ -1652,7 +1736,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00119",
+    "id": "CLM_00125",
     "source_id": "SRC_TREE_12",
     "claim_type": "golden_dawn_revision",
     "symbol": "The Magician",
@@ -1666,7 +1750,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00120",
+    "id": "CLM_00126",
     "source_id": "SRC_TREE_13",
     "claim_type": "path_attribution",
     "symbol": "13",
@@ -1680,7 +1764,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00121",
+    "id": "CLM_00127",
     "source_id": "SRC_TREE_13",
     "claim_type": "hebrew_letter",
     "symbol": "Gimel",
@@ -1694,7 +1778,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00122",
+    "id": "CLM_00128",
     "source_id": "SRC_TREE_13",
     "claim_type": "astrological_attribution",
     "symbol": "Moon",
@@ -1708,7 +1792,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00123",
+    "id": "CLM_00129",
     "source_id": "SRC_TREE_13",
     "claim_type": "tarot_attribution",
     "symbol": "The Priestess",
@@ -1722,7 +1806,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00124",
+    "id": "CLM_00130",
     "source_id": "SRC_TREE_13",
     "claim_type": "golden_dawn_revision",
     "symbol": "The High Priestess",
@@ -1736,7 +1820,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00125",
+    "id": "CLM_00131",
     "source_id": "SRC_TREE_14",
     "claim_type": "path_attribution",
     "symbol": "14",
@@ -1750,7 +1834,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00126",
+    "id": "CLM_00132",
     "source_id": "SRC_TREE_14",
     "claim_type": "hebrew_letter",
     "symbol": "Daleth",
@@ -1764,7 +1848,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00127",
+    "id": "CLM_00133",
     "source_id": "SRC_TREE_14",
     "claim_type": "astrological_attribution",
     "symbol": "Venus",
@@ -1778,7 +1862,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00128",
+    "id": "CLM_00134",
     "source_id": "SRC_TREE_14",
     "claim_type": "tarot_attribution",
     "symbol": "The Empress",
@@ -1792,7 +1876,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00129",
+    "id": "CLM_00135",
     "source_id": "SRC_TREE_15",
     "claim_type": "path_attribution",
     "symbol": "15",
@@ -1806,7 +1890,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00130",
+    "id": "CLM_00136",
     "source_id": "SRC_TREE_15",
     "claim_type": "hebrew_letter",
     "symbol": "Heh",
@@ -1820,7 +1904,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00131",
+    "id": "CLM_00137",
     "source_id": "SRC_TREE_15",
     "claim_type": "astrological_attribution",
     "symbol": "Aquarius",
@@ -1834,7 +1918,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00132",
+    "id": "CLM_00138",
     "source_id": "SRC_TREE_15",
     "claim_type": "tarot_attribution",
     "symbol": "The Star",
@@ -1848,7 +1932,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00133",
+    "id": "CLM_00139",
     "source_id": "SRC_TREE_15",
     "claim_type": "golden_dawn_revision",
     "symbol": "The Emperor",
@@ -1862,7 +1946,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00134",
+    "id": "CLM_00140",
     "source_id": "SRC_TREE_16",
     "claim_type": "path_attribution",
     "symbol": "16",
@@ -1876,7 +1960,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00135",
+    "id": "CLM_00141",
     "source_id": "SRC_TREE_16",
     "claim_type": "hebrew_letter",
     "symbol": "Vau",
@@ -1890,7 +1974,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00136",
+    "id": "CLM_00142",
     "source_id": "SRC_TREE_16",
     "claim_type": "astrological_attribution",
     "symbol": "Taurus",
@@ -1904,7 +1988,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00137",
+    "id": "CLM_00143",
     "source_id": "SRC_TREE_16",
     "claim_type": "tarot_attribution",
     "symbol": "The Hierophant",
@@ -1918,7 +2002,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00138",
+    "id": "CLM_00144",
     "source_id": "SRC_TREE_17",
     "claim_type": "path_attribution",
     "symbol": "17",
@@ -1932,7 +2016,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00139",
+    "id": "CLM_00145",
     "source_id": "SRC_TREE_17",
     "claim_type": "hebrew_letter",
     "symbol": "Zayin",
@@ -1946,7 +2030,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00140",
+    "id": "CLM_00146",
     "source_id": "SRC_TREE_17",
     "claim_type": "astrological_attribution",
     "symbol": "Gemini",
@@ -1960,7 +2044,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00141",
+    "id": "CLM_00147",
     "source_id": "SRC_TREE_17",
     "claim_type": "tarot_attribution",
     "symbol": "The Lovers",
@@ -1974,7 +2058,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00142",
+    "id": "CLM_00148",
     "source_id": "SRC_TREE_18",
     "claim_type": "path_attribution",
     "symbol": "18",
@@ -1988,7 +2072,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00143",
+    "id": "CLM_00149",
     "source_id": "SRC_TREE_18",
     "claim_type": "hebrew_letter",
     "symbol": "Cheth",
@@ -2002,7 +2086,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00144",
+    "id": "CLM_00150",
     "source_id": "SRC_TREE_18",
     "claim_type": "astrological_attribution",
     "symbol": "Cancer",
@@ -2016,7 +2100,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00145",
+    "id": "CLM_00151",
     "source_id": "SRC_TREE_18",
     "claim_type": "tarot_attribution",
     "symbol": "The Chariot",
@@ -2030,7 +2114,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00146",
+    "id": "CLM_00152",
     "source_id": "SRC_TREE_19",
     "claim_type": "path_attribution",
     "symbol": "19",
@@ -2044,7 +2128,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00147",
+    "id": "CLM_00153",
     "source_id": "SRC_TREE_19",
     "claim_type": "hebrew_letter",
     "symbol": "Teth",
@@ -2058,7 +2142,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00148",
+    "id": "CLM_00154",
     "source_id": "SRC_TREE_19",
     "claim_type": "astrological_attribution",
     "symbol": "Leo",
@@ -2072,7 +2156,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00149",
+    "id": "CLM_00155",
     "source_id": "SRC_TREE_19",
     "claim_type": "tarot_attribution",
     "symbol": "Lust",
@@ -2086,7 +2170,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00150",
+    "id": "CLM_00156",
     "source_id": "SRC_TREE_19",
     "claim_type": "golden_dawn_revision",
     "symbol": "Strength",
@@ -2100,7 +2184,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00151",
+    "id": "CLM_00157",
     "source_id": "SRC_TREE_20",
     "claim_type": "path_attribution",
     "symbol": "20",
@@ -2114,7 +2198,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00152",
+    "id": "CLM_00158",
     "source_id": "SRC_TREE_20",
     "claim_type": "hebrew_letter",
     "symbol": "Yod",
@@ -2128,7 +2212,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00153",
+    "id": "CLM_00159",
     "source_id": "SRC_TREE_20",
     "claim_type": "astrological_attribution",
     "symbol": "Virgo",
@@ -2142,7 +2226,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00154",
+    "id": "CLM_00160",
     "source_id": "SRC_TREE_20",
     "claim_type": "tarot_attribution",
     "symbol": "The Hermit",
@@ -2156,7 +2240,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00155",
+    "id": "CLM_00161",
     "source_id": "SRC_TREE_21",
     "claim_type": "path_attribution",
     "symbol": "21",
@@ -2170,7 +2254,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00156",
+    "id": "CLM_00162",
     "source_id": "SRC_TREE_21",
     "claim_type": "hebrew_letter",
     "symbol": "Kaph",
@@ -2184,7 +2268,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00157",
+    "id": "CLM_00163",
     "source_id": "SRC_TREE_21",
     "claim_type": "astrological_attribution",
     "symbol": "Jupiter",
@@ -2198,7 +2282,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00158",
+    "id": "CLM_00164",
     "source_id": "SRC_TREE_21",
     "claim_type": "tarot_attribution",
     "symbol": "Fortune",
@@ -2212,7 +2296,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00159",
+    "id": "CLM_00165",
     "source_id": "SRC_TREE_21",
     "claim_type": "golden_dawn_revision",
     "symbol": "Wheel of Fortune",
@@ -2226,7 +2310,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00160",
+    "id": "CLM_00166",
     "source_id": "SRC_TREE_22",
     "claim_type": "path_attribution",
     "symbol": "22",
@@ -2240,7 +2324,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00161",
+    "id": "CLM_00167",
     "source_id": "SRC_TREE_22",
     "claim_type": "hebrew_letter",
     "symbol": "Lamed",
@@ -2254,7 +2338,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00162",
+    "id": "CLM_00168",
     "source_id": "SRC_TREE_22",
     "claim_type": "astrological_attribution",
     "symbol": "Libra",
@@ -2268,7 +2352,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00163",
+    "id": "CLM_00169",
     "source_id": "SRC_TREE_22",
     "claim_type": "tarot_attribution",
     "symbol": "Adjustment",
@@ -2282,7 +2366,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00164",
+    "id": "CLM_00170",
     "source_id": "SRC_TREE_22",
     "claim_type": "golden_dawn_revision",
     "symbol": "Justice",
@@ -2296,7 +2380,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00165",
+    "id": "CLM_00171",
     "source_id": "SRC_TREE_23",
     "claim_type": "path_attribution",
     "symbol": "23",
@@ -2310,7 +2394,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00166",
+    "id": "CLM_00172",
     "source_id": "SRC_TREE_23",
     "claim_type": "hebrew_letter",
     "symbol": "Mem",
@@ -2324,7 +2408,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00167",
+    "id": "CLM_00173",
     "source_id": "SRC_TREE_23",
     "claim_type": "astrological_attribution",
     "symbol": "Water",
@@ -2338,7 +2422,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00168",
+    "id": "CLM_00174",
     "source_id": "SRC_TREE_23",
     "claim_type": "tarot_attribution",
     "symbol": "The Hanged Man",
@@ -2352,7 +2436,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00169",
+    "id": "CLM_00175",
     "source_id": "SRC_TREE_24",
     "claim_type": "path_attribution",
     "symbol": "24",
@@ -2366,7 +2450,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00170",
+    "id": "CLM_00176",
     "source_id": "SRC_TREE_24",
     "claim_type": "hebrew_letter",
     "symbol": "Nun",
@@ -2380,7 +2464,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00171",
+    "id": "CLM_00177",
     "source_id": "SRC_TREE_24",
     "claim_type": "astrological_attribution",
     "symbol": "Scorpio",
@@ -2394,7 +2478,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00172",
+    "id": "CLM_00178",
     "source_id": "SRC_TREE_24",
     "claim_type": "tarot_attribution",
     "symbol": "Death",
@@ -2408,7 +2492,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00173",
+    "id": "CLM_00179",
     "source_id": "SRC_TREE_25",
     "claim_type": "path_attribution",
     "symbol": "25",
@@ -2422,7 +2506,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00174",
+    "id": "CLM_00180",
     "source_id": "SRC_TREE_25",
     "claim_type": "hebrew_letter",
     "symbol": "Samekh",
@@ -2436,7 +2520,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00175",
+    "id": "CLM_00181",
     "source_id": "SRC_TREE_25",
     "claim_type": "astrological_attribution",
     "symbol": "Sagittarius",
@@ -2450,7 +2534,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00176",
+    "id": "CLM_00182",
     "source_id": "SRC_TREE_25",
     "claim_type": "tarot_attribution",
     "symbol": "Art",
@@ -2464,7 +2548,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00177",
+    "id": "CLM_00183",
     "source_id": "SRC_TREE_25",
     "claim_type": "golden_dawn_revision",
     "symbol": "Temperance",
@@ -2478,7 +2562,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00178",
+    "id": "CLM_00184",
     "source_id": "SRC_TREE_26",
     "claim_type": "path_attribution",
     "symbol": "26",
@@ -2492,7 +2576,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00179",
+    "id": "CLM_00185",
     "source_id": "SRC_TREE_26",
     "claim_type": "hebrew_letter",
     "symbol": "Ayin",
@@ -2506,7 +2590,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00180",
+    "id": "CLM_00186",
     "source_id": "SRC_TREE_26",
     "claim_type": "astrological_attribution",
     "symbol": "Capricorn",
@@ -2520,7 +2604,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00181",
+    "id": "CLM_00187",
     "source_id": "SRC_TREE_26",
     "claim_type": "tarot_attribution",
     "symbol": "The Devil",
@@ -2534,7 +2618,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00182",
+    "id": "CLM_00188",
     "source_id": "SRC_TREE_27",
     "claim_type": "path_attribution",
     "symbol": "27",
@@ -2548,7 +2632,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00183",
+    "id": "CLM_00189",
     "source_id": "SRC_TREE_27",
     "claim_type": "hebrew_letter",
     "symbol": "Pe",
@@ -2562,7 +2646,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00184",
+    "id": "CLM_00190",
     "source_id": "SRC_TREE_27",
     "claim_type": "astrological_attribution",
     "symbol": "Mars",
@@ -2576,7 +2660,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00185",
+    "id": "CLM_00191",
     "source_id": "SRC_TREE_27",
     "claim_type": "tarot_attribution",
     "symbol": "The Tower",
@@ -2590,7 +2674,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00186",
+    "id": "CLM_00192",
     "source_id": "SRC_TREE_28",
     "claim_type": "path_attribution",
     "symbol": "28",
@@ -2604,7 +2688,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00187",
+    "id": "CLM_00193",
     "source_id": "SRC_TREE_28",
     "claim_type": "hebrew_letter",
     "symbol": "Tzaddi",
@@ -2618,7 +2702,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00188",
+    "id": "CLM_00194",
     "source_id": "SRC_TREE_28",
     "claim_type": "astrological_attribution",
     "symbol": "Aries",
@@ -2632,7 +2716,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00189",
+    "id": "CLM_00195",
     "source_id": "SRC_TREE_28",
     "claim_type": "tarot_attribution",
     "symbol": "The Emperor",
@@ -2646,7 +2730,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00190",
+    "id": "CLM_00196",
     "source_id": "SRC_TREE_28",
     "claim_type": "golden_dawn_revision",
     "symbol": "The Star",
@@ -2660,7 +2744,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00191",
+    "id": "CLM_00197",
     "source_id": "SRC_TREE_29",
     "claim_type": "path_attribution",
     "symbol": "29",
@@ -2674,7 +2758,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00192",
+    "id": "CLM_00198",
     "source_id": "SRC_TREE_29",
     "claim_type": "hebrew_letter",
     "symbol": "Qoph",
@@ -2688,7 +2772,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00193",
+    "id": "CLM_00199",
     "source_id": "SRC_TREE_29",
     "claim_type": "astrological_attribution",
     "symbol": "Pisces",
@@ -2702,7 +2786,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00194",
+    "id": "CLM_00200",
     "source_id": "SRC_TREE_29",
     "claim_type": "tarot_attribution",
     "symbol": "The Moon",
@@ -2716,7 +2800,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00195",
+    "id": "CLM_00201",
     "source_id": "SRC_TREE_30",
     "claim_type": "path_attribution",
     "symbol": "30",
@@ -2730,7 +2814,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00196",
+    "id": "CLM_00202",
     "source_id": "SRC_TREE_30",
     "claim_type": "hebrew_letter",
     "symbol": "Resh",
@@ -2744,7 +2828,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00197",
+    "id": "CLM_00203",
     "source_id": "SRC_TREE_30",
     "claim_type": "astrological_attribution",
     "symbol": "Sun",
@@ -2758,7 +2842,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00198",
+    "id": "CLM_00204",
     "source_id": "SRC_TREE_30",
     "claim_type": "tarot_attribution",
     "symbol": "The Sun",
@@ -2772,7 +2856,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00199",
+    "id": "CLM_00205",
     "source_id": "SRC_TREE_31",
     "claim_type": "path_attribution",
     "symbol": "31",
@@ -2786,7 +2870,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00200",
+    "id": "CLM_00206",
     "source_id": "SRC_TREE_31",
     "claim_type": "hebrew_letter",
     "symbol": "Shin",
@@ -2800,7 +2884,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00201",
+    "id": "CLM_00207",
     "source_id": "SRC_TREE_31",
     "claim_type": "astrological_attribution",
     "symbol": "Fire",
@@ -2814,7 +2898,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00202",
+    "id": "CLM_00208",
     "source_id": "SRC_TREE_31",
     "claim_type": "tarot_attribution",
     "symbol": "The Aeon",
@@ -2828,7 +2912,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00203",
+    "id": "CLM_00209",
     "source_id": "SRC_TREE_31",
     "claim_type": "golden_dawn_revision",
     "symbol": "Judgement",
@@ -2842,7 +2926,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00204",
+    "id": "CLM_00210",
     "source_id": "SRC_TREE_32",
     "claim_type": "path_attribution",
     "symbol": "32",
@@ -2856,7 +2940,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00205",
+    "id": "CLM_00211",
     "source_id": "SRC_TREE_32",
     "claim_type": "hebrew_letter",
     "symbol": "Tau",
@@ -2870,7 +2954,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00206",
+    "id": "CLM_00212",
     "source_id": "SRC_TREE_32",
     "claim_type": "astrological_attribution",
     "symbol": "Saturn",
@@ -2884,7 +2968,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00207",
+    "id": "CLM_00213",
     "source_id": "SRC_TREE_32",
     "claim_type": "tarot_attribution",
     "symbol": "The Universe",
@@ -2898,7 +2982,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00208",
+    "id": "CLM_00214",
     "source_id": "SRC_TREE_32",
     "claim_type": "golden_dawn_revision",
     "symbol": "The World",
@@ -2912,7 +2996,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00209",
+    "id": "CLM_00215",
     "source_id": "SRC_TERM_TRM_001",
     "claim_type": "term_definition",
     "symbol": "Thelema",
@@ -2926,7 +3010,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00210",
+    "id": "CLM_00216",
     "source_id": "SRC_TERM_TRM_001",
     "claim_type": "gematria",
     "symbol": "93",
@@ -2940,7 +3024,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00211",
+    "id": "CLM_00217",
     "source_id": "SRC_TERM_TRM_002",
     "claim_type": "term_definition",
     "symbol": "Agape",
@@ -2954,7 +3038,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00212",
+    "id": "CLM_00218",
     "source_id": "SRC_TERM_TRM_002",
     "claim_type": "gematria",
     "symbol": "93",
@@ -2968,7 +3052,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00213",
+    "id": "CLM_00219",
     "source_id": "SRC_TERM_TRM_003",
     "claim_type": "term_definition",
     "symbol": "Aiwass",
@@ -2982,7 +3066,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00214",
+    "id": "CLM_00220",
     "source_id": "SRC_TERM_TRM_003",
     "claim_type": "gematria",
     "symbol": "93",
@@ -2996,7 +3080,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00215",
+    "id": "CLM_00221",
     "source_id": "SRC_TERM_TRM_004",
     "claim_type": "term_definition",
     "symbol": "Babalon",
@@ -3010,7 +3094,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00216",
+    "id": "CLM_00222",
     "source_id": "SRC_TERM_TRM_004",
     "claim_type": "gematria",
     "symbol": "156",
@@ -3024,7 +3108,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00217",
+    "id": "CLM_00223",
     "source_id": "SRC_TERM_TRM_005",
     "claim_type": "term_definition",
     "symbol": "Nuit",
@@ -3038,7 +3122,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00218",
+    "id": "CLM_00224",
     "source_id": "SRC_TERM_TRM_006",
     "claim_type": "term_definition",
     "symbol": "Hadit",
@@ -3052,7 +3136,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00219",
+    "id": "CLM_00225",
     "source_id": "SRC_TERM_TRM_007",
     "claim_type": "term_definition",
     "symbol": "Hoor-paar-kraat",
@@ -3066,7 +3150,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00220",
+    "id": "CLM_00226",
     "source_id": "SRC_TERM_TRM_008",
     "claim_type": "term_definition",
     "symbol": "Magick",
@@ -3080,7 +3164,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00221",
+    "id": "CLM_00227",
     "source_id": "SRC_TERM_TRM_009",
     "claim_type": "term_definition",
     "symbol": "Abramelin",
@@ -3094,7 +3178,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00222",
+    "id": "CLM_00228",
     "source_id": "SRC_TERM_TRM_010",
     "claim_type": "term_definition",
     "symbol": "True Will",
@@ -3108,7 +3192,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00223",
+    "id": "CLM_00229",
     "source_id": "SRC_TERM_TRM_011",
     "claim_type": "term_definition",
     "symbol": "93",
@@ -3122,7 +3206,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00224",
+    "id": "CLM_00230",
     "source_id": "SRC_TERM_TRM_011",
     "claim_type": "gematria",
     "symbol": "93",
@@ -3136,7 +3220,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00225",
+    "id": "CLM_00231",
     "source_id": "SRC_TERM_TRM_012",
     "claim_type": "term_definition",
     "symbol": "156",
@@ -3150,7 +3234,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00226",
+    "id": "CLM_00232",
     "source_id": "SRC_TERM_TRM_012",
     "claim_type": "gematria",
     "symbol": "156",
@@ -3164,7 +3248,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00227",
+    "id": "CLM_00233",
     "source_id": "SRC_TERM_TRM_013",
     "claim_type": "term_definition",
     "symbol": "A.'.A.'.",
@@ -3178,7 +3262,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00228",
+    "id": "CLM_00234",
     "source_id": "SRC_TERM_TRM_014",
     "claim_type": "term_definition",
     "symbol": "O.T.O.",
@@ -3192,7 +3276,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00229",
+    "id": "CLM_00235",
     "source_id": "SRC_TERM_TRM_015",
     "claim_type": "term_definition",
     "symbol": "Aeon of Horus",
@@ -3206,7 +3290,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00230",
+    "id": "CLM_00236",
     "source_id": "SRC_TERM_TRM_016",
     "claim_type": "term_definition",
     "symbol": "Holy Guardian Angel",
@@ -3220,7 +3304,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00231",
+    "id": "CLM_00237",
     "source_id": "SRC_TERM_TRM_017",
     "claim_type": "term_definition",
     "symbol": "Scarlet Woman",
@@ -3234,7 +3318,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00232",
+    "id": "CLM_00238",
     "source_id": "SRC_TERM_TRM_018",
     "claim_type": "term_definition",
     "symbol": "Stele of Revealing",
@@ -3248,7 +3332,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00233",
+    "id": "CLM_00239",
     "source_id": "SRC_TERM_TRM_019",
     "claim_type": "term_definition",
     "symbol": "Book 4",
@@ -3262,7 +3346,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00234",
+    "id": "CLM_00240",
     "source_id": "SRC_TERM_TRM_020",
     "claim_type": "term_definition",
     "symbol": "The Book of Thoth",
@@ -3276,7 +3360,7 @@
     "notes": null
   },
   {
-    "id": "CLM_00235",
+    "id": "CLM_00241",
     "source_id": "SRC_DOCUMENT_ARC_BEAST_IN_BERLIN",
     "claim_type": "passage_tarot",
     "symbol": "art",
@@ -3290,7 +3374,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00236",
+    "id": "CLM_00242",
     "source_id": "SRC_DOCUMENT_ARC_BEAST_IN_BERLIN",
     "claim_type": "passage_tarot",
     "symbol": "art",
@@ -3304,7 +3388,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00237",
+    "id": "CLM_00243",
     "source_id": "SRC_DOCUMENT_ARC_BEAST_IN_BERLIN",
     "claim_type": "passage_tarot",
     "symbol": "art",
@@ -3318,7 +3402,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00238",
+    "id": "CLM_00244",
     "source_id": "SRC_DOCUMENT_ARC_BEAST_IN_BERLIN",
     "claim_type": "passage_tarot",
     "symbol": "art",
@@ -3332,7 +3416,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00239",
+    "id": "CLM_00245",
     "source_id": "SRC_DOCUMENT_ARC_BEAST_IN_BERLIN",
     "claim_type": "passage_tarot",
     "symbol": "lust",
@@ -3346,7 +3430,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00240",
+    "id": "CLM_00246",
     "source_id": "SRC_DOCUMENT_ARC_BEAST_IN_BERLIN",
     "claim_type": "passage_grade",
     "symbol": "magus",
@@ -3360,7 +3444,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00241",
+    "id": "CLM_00247",
     "source_id": "SRC_DOCUMENT_ARC_BEAST_IN_BERLIN",
     "claim_type": "passage_number",
     "symbol": "93",
@@ -3374,7 +3458,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00242",
+    "id": "CLM_00248",
     "source_id": "SRC_DOCUMENT_ARC_BEAST_IN_BERLIN",
     "claim_type": "passage_grade",
     "symbol": "magus",
@@ -3388,7 +3472,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00243",
+    "id": "CLM_00249",
     "source_id": "SRC_DOCUMENT_ARC_BEAST_IN_BERLIN",
     "claim_type": "passage_number",
     "symbol": "93",
@@ -3402,7 +3486,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00244",
+    "id": "CLM_00250",
     "source_id": "SRC_DOCUMENT_ARC_BEAST_IN_BERLIN",
     "claim_type": "passage_number",
     "symbol": "111",
@@ -3416,7 +3500,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00245",
+    "id": "CLM_00251",
     "source_id": "SRC_DOCUMENT_ARC_BEAST_IN_BERLIN",
     "claim_type": "passage_tarot",
     "symbol": "art",
@@ -3430,7 +3514,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00246",
+    "id": "CLM_00252",
     "source_id": "SRC_DOCUMENT_ARC_BEAST_IN_BERLIN",
     "claim_type": "passage_order",
     "symbol": "golden dawn",
@@ -3444,7 +3528,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00247",
+    "id": "CLM_00253",
     "source_id": "SRC_DOCUMENT_ARC_CONFESSIONS",
     "claim_type": "passage_tarot",
     "symbol": "art",
@@ -3458,7 +3542,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00248",
+    "id": "CLM_00254",
     "source_id": "SRC_DOCUMENT_ARC_CONFESSIONS",
     "claim_type": "passage_tarot",
     "symbol": "lust",
@@ -3472,7 +3556,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00249",
+    "id": "CLM_00255",
     "source_id": "SRC_DOCUMENT_ARC_CONFESSIONS",
     "claim_type": "passage_grade",
     "symbol": "magus",
@@ -3486,7 +3570,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00250",
+    "id": "CLM_00256",
     "source_id": "SRC_DOCUMENT_ARC_CONFESSIONS",
     "claim_type": "passage_number",
     "symbol": "93",
@@ -3500,7 +3584,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00251",
+    "id": "CLM_00257",
     "source_id": "SRC_DOCUMENT_ARC_CONFESSIONS",
     "claim_type": "passage_number",
     "symbol": "93",
@@ -3514,7 +3598,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00252",
+    "id": "CLM_00258",
     "source_id": "SRC_DOCUMENT_ARC_CONFESSIONS",
     "claim_type": "passage_number",
     "symbol": "111",
@@ -3528,7 +3612,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00253",
+    "id": "CLM_00259",
     "source_id": "SRC_DOCUMENT_ARC_CONFESSIONS",
     "claim_type": "passage_number",
     "symbol": "220",
@@ -3542,7 +3626,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00254",
+    "id": "CLM_00260",
     "source_id": "SRC_DOCUMENT_ARC_CONFESSIONS",
     "claim_type": "passage_tarot",
     "symbol": "art",
@@ -3556,7 +3640,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00255",
+    "id": "CLM_00261",
     "source_id": "SRC_DOCUMENT_ARC_CONFESSIONS",
     "claim_type": "passage_order",
     "symbol": "golden dawn",
@@ -3570,7 +3654,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00256",
+    "id": "CLM_00262",
     "source_id": "SRC_DOCUMENT_ARC_HANDOVER",
     "claim_type": "passage_tarot",
     "symbol": "art",
@@ -3584,7 +3668,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00257",
+    "id": "CLM_00263",
     "source_id": "SRC_DOCUMENT_ARC_PERDURABO",
     "claim_type": "passage_tarot",
     "symbol": "art",
@@ -3598,7 +3682,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00258",
+    "id": "CLM_00264",
     "source_id": "SRC_DOCUMENT_ARC_PERDURABO",
     "claim_type": "passage_tarot",
     "symbol": "lust",
@@ -3612,7 +3696,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00259",
+    "id": "CLM_00265",
     "source_id": "SRC_DOCUMENT_ARC_PERDURABO",
     "claim_type": "passage_number",
     "symbol": "93",
@@ -3626,7 +3710,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00260",
+    "id": "CLM_00266",
     "source_id": "SRC_DOCUMENT_ARC_PERDURABO",
     "claim_type": "passage_tarot",
     "symbol": "star",
@@ -3640,7 +3724,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00261",
+    "id": "CLM_00267",
     "source_id": "SRC_DOCUMENT_ARC_PERDURABO",
     "claim_type": "passage_tarot",
     "symbol": "art",
@@ -3654,7 +3738,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00262",
+    "id": "CLM_00268",
     "source_id": "SRC_DOCUMENT_ARC_PERDURABO",
     "claim_type": "passage_number",
     "symbol": "93",
@@ -3668,7 +3752,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00263",
+    "id": "CLM_00269",
     "source_id": "SRC_DOCUMENT_ARC_PERDURABO",
     "claim_type": "passage_number",
     "symbol": "111",
@@ -3682,7 +3766,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00264",
+    "id": "CLM_00270",
     "source_id": "SRC_DOCUMENT_ARC_PERDURABO",
     "claim_type": "passage_number",
     "symbol": "156",
@@ -3696,7 +3780,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00265",
+    "id": "CLM_00271",
     "source_id": "SRC_DOCUMENT_ARC_PERDURABO",
     "claim_type": "passage_tarot",
     "symbol": "star",
@@ -3710,7 +3794,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00266",
+    "id": "CLM_00272",
     "source_id": "SRC_DOCUMENT_ARC_PERDURABO",
     "claim_type": "passage_tarot",
     "symbol": "art",
@@ -3724,7 +3808,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00267",
+    "id": "CLM_00273",
     "source_id": "SRC_DOCUMENT_ARC_PERDURABO",
     "claim_type": "passage_tarot",
     "symbol": "art",
@@ -3738,7 +3822,7 @@
     "notes": "Archive markdown passage hit."
   },
   {
-    "id": "CLM_00268",
+    "id": "CLM_00274",
     "source_id": "SRC_DOCUMENT_ARC_PERDURABO",
     "claim_type": "passage_order",
     "symbol": "golden dawn",

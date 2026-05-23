@@ -633,6 +633,64 @@ WORK_CONTEXT_NOTES = {
 }
 
 
+WORK_NUMBER_NOTES = {
+    "WKS_001": (
+        "title_number_meaning",
+        "220",
+        "The number 220 matters here because the title does not merely label the work; it presents revelation as a numbered entity that can be indexed alongside other sacred numbers in the corpus.",
+        "works.json:WKS_001",
+        "The summary treats the text as the central revealed source of Thelema.",
+        0.96,
+        88,
+    ),
+    "WKS_002": (
+        "title_number_meaning",
+        "4",
+        "The 4 in Book 4 / Liber ABA signals structure, method, and the practical division of the work into teachable parts, which is why the title reads like an instructional diagram.",
+        "works.json:WKS_002",
+        "The summary identifies the book as a core initiatory training manual.",
+        0.94,
+        84,
+    ),
+    "WKS_003": (
+        "title_number_meaning",
+        "418",
+        "The number 418 keeps the visionary record inside a wider abyssal numerology, so the title and the aethyr sequence reinforce one another as a symbolic whole.",
+        "works.json:WKS_003",
+        "The work is central to the abyssal and visionary record.",
+        0.94,
+        86,
+    ),
+    "WKS_004": (
+        "title_number_meaning",
+        "777",
+        "The 777 in the title is itself a signal that the book should be read as a numerical temple of correspondences, not as a plain reference manual.",
+        "works.json:WKS_004",
+        "The summary presents the book as a reference compendium of correspondences.",
+        0.98,
+        92,
+    ),
+    "WKS_006": (
+        "publication_number_meaning",
+        "1",
+        "Volume I, No. 1 makes the first issue of The Equinox feel programmatic, as if Crowley were numbering the beginning of the movement into existence.",
+        "works.json:WKS_006",
+        "The summary emphasizes doctrine, ritual, and polemic sharing the same print space.",
+        0.9,
+        82,
+    ),
+    "WKS_008": (
+        "title_number_meaning",
+        "111",
+        "The 111 in Liber Aleph vel CXI lets the book speak as a number-form as well as a letter-form, which is why the title feels both private and doctrinal.",
+        "works.json:WKS_008",
+        "The title carries a Roman-numeral signal in the book record.",
+        0.95,
+        88,
+    ),
+}
+
+
 GRADE_CLAIM_NOTES = {
     "GRD_001": "Neophyte marks the first contact with the elemental ground of the work, so the page keeps the task and the sefirah together.",
     "GRD_002": "Zelator organizes bodily discipline around Yesod, which makes the grade a foundational training stage rather than a title.",
@@ -869,6 +927,20 @@ def build_work_claims(works: list[dict], claims: list[dict]) -> None:
                 excerpt,
                 confidence,
                 priority,
+            )
+        if work["id"] in WORK_NUMBER_NOTES:
+            claim_type, symbol, text, locator, excerpt, confidence, priority = WORK_NUMBER_NOTES[work["id"]]
+            add_claim(
+                claims,
+                source_id,
+                claim_type,
+                symbol,
+                text,
+                locator,
+                excerpt,
+                confidence,
+                priority,
+                symbol_value=symbol,
             )
         if any(char.isdigit() for char in work["title"]):
             numbers = sorted(set(int(token) for token in re.findall(r"\b\d+\b", work["title"])))

@@ -752,6 +752,12 @@ This file summarizes the structured claims extracted from the source catalog, th
   - The Blue Equinox gathers manifestos, rituals, and doctrinal material from Crowley's post-war American career.
   - Evidence: works.json:WKS_009
 
+## publication_number_meaning
+
+- **1** (SRC_WORK_WKS_006)
+  - Volume I, No. 1 makes the first issue of The Equinox feel programmatic, as if Crowley were numbering the beginning of the movement into existence.
+  - Evidence: works.json:WKS_006
+
 ## publication_structure
 
 - **serial form** (SRC_WORK_WKS_006)
@@ -1012,6 +1018,28 @@ This file summarizes the structured claims extracted from the source catalog, th
 
 - **4** (SRC_WORK_WKS_002)
   - Book 4 / Liber ABA makes the number 4 part of its symbolic title, which suits a work that turns doctrine into training and structure.
+  - Evidence: works.json:WKS_002
+
+## title_number_meaning
+
+- **777** (SRC_WORK_WKS_004)
+  - The 777 in the title is itself a signal that the book should be read as a numerical temple of correspondences, not as a plain reference manual.
+  - Evidence: works.json:WKS_004
+
+- **111** (SRC_WORK_WKS_008)
+  - The 111 in Liber Aleph vel CXI lets the book speak as a number-form as well as a letter-form, which is why the title feels both private and doctrinal.
+  - Evidence: works.json:WKS_008
+
+- **220** (SRC_WORK_WKS_001)
+  - The number 220 matters here because the title does not merely label the work; it presents revelation as a numbered entity that can be indexed alongside other sacred numbers in the corpus.
+  - Evidence: works.json:WKS_001
+
+- **418** (SRC_WORK_WKS_003)
+  - The number 418 keeps the visionary record inside a wider abyssal numerology, so the title and the aethyr sequence reinforce one another as a symbolic whole.
+  - Evidence: works.json:WKS_003
+
+- **4** (SRC_WORK_WKS_002)
+  - The 4 in Book 4 / Liber ABA signals structure, method, and the practical division of the work into teachable parts, which is why the title reads like an instructional diagram.
   - Evidence: works.json:WKS_002
 
 ## title_numerology
