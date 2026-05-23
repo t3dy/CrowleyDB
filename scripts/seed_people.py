@@ -1,6 +1,7 @@
 import sqlite3
 
 from db_utils import open_db
+from prose_enrichment import enrich_people
 
 PEOPLE = [
     (
@@ -202,6 +203,8 @@ PEOPLE = [
         "Greek Neopythagorean philosopher and wonder-worker often invoked as an exemplar of sacred wisdom, ascent, and holy charisma.",
     ),
 ]
+
+PEOPLE = enrich_people(PEOPLE)
 
 PERSON_EVENTS = [
     ("PRS_000", "EVT_002"),

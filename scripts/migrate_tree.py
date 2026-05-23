@@ -1,6 +1,8 @@
 import sqlite3
 from pathlib import Path
 
+from prose_enrichment import enrich_grades, enrich_tree_rows
+
 DB_PATH = Path("c:/Dev/CROWLEYDB/.tmp/crowley_unified_rebuilt.sqlite")
 SCHEMA_PATH = Path("c:/Dev/CROWLEYDB/database/schema.sql")
 
@@ -44,6 +46,8 @@ TREE_DATA = [
     (32, 'Path 32', 'Tau', 'Saturn', 'The Universe', 'The World', 0, 'Indigo', 'Black', 'Blue black', 'Black rayed blue', 'YHVH Elohim', 'Tzaphqiel', 'Aralim', 'Renamed from The World to The Universe.', 'Path from Yesod to Malkuth.')
 ]
 
+TREE_DATA = enrich_tree_rows(TREE_DATA)
+
 GRADES = [
     ('GRD_001', 'Neophyte (1=10)', 'A.\'.A.\'.', 10, 'The grade associated with Malkuth. The task is to obtain control of the astral plane.'),
     ('GRD_002', 'Zelator (2=9)', 'A.\'.A.\'.', 9, 'Associated with Yesod. The task is to master the foundations of yoga and the physical body.'),
@@ -58,6 +62,8 @@ GRADES = [
     ('GRD_011', 'Zelator (1=10)', 'Golden Dawn', 10, 'Golden Dawn grade in Malkuth.'),
     ('GRD_012', 'Theoricus (2=9)', 'Golden Dawn', 9, 'Golden Dawn grade in Yesod.')
 ]
+
+GRADES = enrich_grades(GRADES)
 
 SAINTS = [
     ('PRS_S001', 'Michael Maier', 'Unknown', 'Thelemic Saint', 1568, 1622, 'A German physician, counselor to Rudolf II Habsburg, and a learned alchemist and Rosicrucian apologist.'),

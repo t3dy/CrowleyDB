@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 
 from db_utils import open_db
+from prose_enrichment import enrich_locations, expand_event_summary
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -65,6 +66,8 @@ LOCATIONS = [
     ("LOC_020", "Pasadena, California", 34.1478, -118.1445, "A later American occult afterlife site linked to Jack Parsons and the Agape Lodge."),
 ]
 
+LOCATIONS = enrich_locations(LOCATIONS)
+
 
 def ev(
     event_id,
@@ -95,7 +98,7 @@ def ev(
 
 
 def build_description(summary, topics, people, works):
-    parts = [summary]
+    parts = [expand_event_summary(summary, topics, people, works, PERSON_LABELS, WORK_LABELS)]
     if topics:
         parts.append("Topics: " + ", ".join(topics))
     if people:

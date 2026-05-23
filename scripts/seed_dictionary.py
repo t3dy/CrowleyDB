@@ -1,6 +1,7 @@
 import sqlite3
 
 from db_utils import open_db
+from prose_enrichment import enrich_terms
 
 TERMS = [
     (
@@ -184,6 +185,8 @@ TERMS = [
         "B",
     ),
 ]
+
+TERMS = enrich_terms(TERMS)
 
 
 def seed_dictionary():

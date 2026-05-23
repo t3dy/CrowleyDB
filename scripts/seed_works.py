@@ -1,6 +1,7 @@
 import sqlite3
 
 from db_utils import open_db
+from prose_enrichment import enrich_documents, enrich_works
 
 DOCUMENTS = [
     ("DOC_WKS_001", "Liber AL vel Legis", "Aleister Crowley", 1904, "A", None, "The received text that opens Crowley's Thelemic system and frames the Cairo Working. It is the portal's primary doctrinal starting point and the source for Nuit, Hadit, Aiwass, and True Will."),
@@ -16,6 +17,8 @@ DOCUMENTS = [
     ("DOC_WKS_011", "The Confessions of Aleister Crowley", "Aleister Crowley", 1929, "B", None, "Crowley's autobiographical life story, written as a self-interpreting narrative. It is indispensable for the archive, but its value comes from the way it reveals how Crowley wanted the record of his life to look."),
     ("DOC_WKS_012", "Diary of a Drug Fiend", "Aleister Crowley", 1922, "B", None, "Crowley's famous novel of discipline, addiction, and transformation. It dramatizes the struggle between compulsion and structure in a way that makes the Abbey years and his therapeutic rhetoric easier to read."),
 ]
+
+DOCUMENTS = enrich_documents(DOCUMENTS)
 
 WORKS = [
     (
@@ -139,6 +142,8 @@ WORKS = [
         "DOC_WKS_012",
     ),
 ]
+
+WORKS = enrich_works(WORKS)
 
 TERM_WORKS = [
     ("TRM_001", "WKS_001"),

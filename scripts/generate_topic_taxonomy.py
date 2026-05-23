@@ -9,6 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_DIR = ROOT / "scripts"
 OUTPUT_PATH = ROOT / "database" / "topic_taxonomy.json"
+from prose_enrichment import expand_topic_description
 
 
 BASE_TOPICS = [
@@ -61,7 +62,7 @@ def slug_to_label(slug: str) -> str:
 
 def slug_to_description(slug: str, label: str) -> str:
     base = re.sub(r"[_-]+", " ", slug).strip()
-    return f"Controlled topic tag for events involving {base.lower()}."
+    return expand_topic_description(slug, label, f"Controlled topic tag for events involving {base.lower()}.")
 
 
 def main() -> None:
@@ -79,7 +80,7 @@ def main() -> None:
                     "id": f"topic_{slug}",
                     "slug": slug,
                     "label": label,
-                    "description": description,
+                    "description": expand_topic_description(slug, label, description),
                     "sort_order": len(ordered) * 10 + 10,
                 }
             )

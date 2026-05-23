@@ -1,6 +1,7 @@
 import sqlite3
 
 from db_utils import open_db
+from prose_enrichment import enrich_tree_rows
 
 # Qabalistic paths 11-32 (1-10 are the Sephiroth, 11-32 are the paths)
 # We will focus on paths 11-32 which correspond to the Hebrew alphabet.
@@ -28,6 +29,8 @@ PATHS = [
     (31, 'Shin', 'Fire', 'The Aeon', 0, 'Path from Hod to Malkuth. Often called Judgement in traditional Tarot.'),
     (32, 'Tau', 'Saturn', 'The Universe', 0, 'Path from Yesod to Malkuth. Often called The World in traditional Tarot.')
 ]
+
+PATHS = enrich_tree_rows(PATHS)
 
 def seed_tree():
     conn = open_db()

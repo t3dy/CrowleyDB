@@ -4,83 +4,83 @@
     "name": "Neophyte (1=10)",
     "system": "A.'.A.'.",
     "tree_path_number": 10,
-    "description": "The grade associated with Malkuth. The task is to obtain control of the astral plane."
+    "description": "The grade associated with Malkuth. The task is to obtain control of the astral plane. The grade is tied to embodiment, routine, and the discipline of ordinary life, which keeps the symbolic number connected to a concrete task. In the portal it is read as a training stage rather than a ceremonial title, so the practical work stays visible."
   },
   {
     "id": "GRD_002",
     "name": "Zelator (2=9)",
     "system": "A.'.A.'.",
     "tree_path_number": 9,
-    "description": "Associated with Yesod. The task is to master the foundations of yoga and the physical body."
+    "description": "Associated with Yesod. The task is to master the foundations of yoga and the physical body. The grade is tied to foundation, image, and the subtle ground of practice, which keeps the symbolic number connected to a concrete task. In the portal it is read as a training stage rather than a ceremonial title, so the practical work stays visible."
   },
   {
     "id": "GRD_003",
     "name": "Practicus (3=8)",
     "system": "A.'.A.'.",
     "tree_path_number": 8,
-    "description": "Associated with Hod. The task is to master the intellect and the Qabalah."
+    "description": "Associated with Hod. The task is to master the intellect and the Qabalah. The grade is tied to analysis, language, and the refinement of thought, which keeps the symbolic number connected to a concrete task. In the portal it is read as a training stage rather than a ceremonial title, so the practical work stays visible."
   },
   {
     "id": "GRD_004",
     "name": "Philosophus (4=7)",
     "system": "A.'.A.'.",
     "tree_path_number": 7,
-    "description": "Associated with Netzach. The task is to master the emotions and moral nature."
+    "description": "Associated with Netzach. The task is to master the emotions and moral nature. The grade is tied to the field of desire, victory, and relational force, which keeps the symbolic number connected to a concrete task. In the portal it is read as a training stage rather than a ceremonial title, so the practical work stays visible."
   },
   {
     "id": "GRD_005",
     "name": "Adeptus Minor (5=6)",
     "system": "A.'.A.'.",
     "tree_path_number": 6,
-    "description": "Associated with Tiphareth. The task is to attain the Knowledge and Conversation of the Holy Guardian Angel."
+    "description": "Associated with Tiphareth. The task is to attain the Knowledge and Conversation of the Holy Guardian Angel. The grade is tied to beauty, balance, and the work of integration, which keeps the symbolic number connected to a concrete task. In the portal it is read as a training stage rather than a ceremonial title, so the practical work stays visible."
   },
   {
     "id": "GRD_006",
     "name": "Adeptus Major (6=5)",
     "system": "A.'.A.'.",
     "tree_path_number": 5,
-    "description": "Associated with Geburah. The task is to learn the practical application of Magick."
+    "description": "Associated with Geburah. The task is to learn the practical application of Magick. The grade is tied to force, severity, and the practical use of will, which keeps the symbolic number connected to a concrete task. In the portal it is read as a training stage rather than a ceremonial title, so the practical work stays visible."
   },
   {
     "id": "GRD_007",
     "name": "Adeptus Exemptus (7=4)",
     "system": "A.'.A.'.",
     "tree_path_number": 4,
-    "description": "Associated with Chesed. The task is to write a thesis setting forth a complete system of the universe."
+    "description": "Associated with Chesed. The task is to write a thesis setting forth a complete system of the universe. The grade is tied to the stabilizing of order, law, and disciplined expansion, which keeps the symbolic number connected to a concrete task. In the portal it is read as a training stage rather than a ceremonial title, so the practical work stays visible."
   },
   {
     "id": "GRD_008",
     "name": "Magister Templi (8=3)",
     "system": "A.'.A.'.",
     "tree_path_number": 3,
-    "description": "Associated with Binah. The task is the crossing of the Abyss and the destruction of the ego."
+    "description": "Associated with Binah. The task is the crossing of the Abyss and the destruction of the ego. The grade is tied to the shaping of understanding into a coherent structure, which keeps the symbolic number connected to a concrete task. In the portal it is read as a training stage rather than a ceremonial title, so the practical work stays visible."
   },
   {
     "id": "GRD_009",
     "name": "Magus (9=2)",
     "system": "A.'.A.'.",
     "tree_path_number": 2,
-    "description": "Associated with Chokmah. The task is to declare a new Word (Logos) to humanity."
+    "description": "Associated with Chokmah. The task is to declare a new Word (Logos) to humanity. The grade is tied to the first stirrings of formative wisdom and duality, which keeps the symbolic number connected to a concrete task. In the portal it is read as a training stage rather than a ceremonial title, so the practical work stays visible."
   },
   {
     "id": "GRD_010",
     "name": "Ipsissimus (10=1)",
     "system": "A.'.A.'.",
     "tree_path_number": 1,
-    "description": "Associated with Kether. The highest grade, utterly beyond comprehension."
+    "description": "Associated with Kether. The highest grade, utterly beyond comprehension. The grade is tied to the crown as a point beyond ordinary distinction, which keeps the symbolic number connected to a concrete task. In the portal it is read as a training stage rather than a ceremonial title, so the practical work stays visible."
   },
   {
     "id": "GRD_011",
     "name": "Zelator (1=10)",
     "system": "Golden Dawn",
     "tree_path_number": 10,
-    "description": "Golden Dawn grade in Malkuth."
+    "description": "Golden Dawn grade in Malkuth. The grade is tied to embodiment, routine, and the discipline of ordinary life, which keeps the symbolic number connected to a concrete task. In the portal it is read as a training stage rather than a ceremonial title, so the practical work stays visible. The alternate system wording is preserved so the historical comparison remains clear."
   },
   {
     "id": "GRD_012",
     "name": "Theoricus (2=9)",
     "system": "Golden Dawn",
     "tree_path_number": 9,
-    "description": "Golden Dawn grade in Yesod."
+    "description": "Golden Dawn grade in Yesod. The grade is tied to foundation, image, and the subtle ground of practice, which keeps the symbolic number connected to a concrete task. In the portal it is read as a training stage rather than a ceremonial title, so the practical work stays visible. The alternate system wording is preserved so the historical comparison remains clear."
   }
 ]
