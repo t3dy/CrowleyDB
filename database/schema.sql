@@ -81,6 +81,42 @@ CREATE TABLE IF NOT EXISTS grades (
     description TEXT
 );
 
+-- 5c. CORPUS SOURCE CATALOG & SYMBOL CLAIMS
+CREATE TABLE IF NOT EXISTS corpus_sources (
+    id TEXT PRIMARY KEY,
+    source_kind TEXT NOT NULL,
+    source_ref TEXT NOT NULL,
+    title TEXT NOT NULL,
+    author TEXT,
+    priority_score INTEGER NOT NULL DEFAULT 0,
+    focus TEXT,
+    why_key TEXT,
+    evidence_lane TEXT,
+    file_path TEXT,
+    search_terms TEXT,
+    notes TEXT
+);
+
+CREATE TABLE IF NOT EXISTS symbol_claims (
+    id TEXT PRIMARY KEY,
+    source_id TEXT NOT NULL REFERENCES corpus_sources(id) ON DELETE CASCADE,
+    claim_type TEXT NOT NULL,
+    symbol TEXT NOT NULL,
+    symbol_value TEXT,
+    related_symbol TEXT,
+    claim_text TEXT NOT NULL,
+    evidence_locator TEXT,
+    evidence_excerpt TEXT,
+    confidence REAL NOT NULL DEFAULT 0.8,
+    priority_score INTEGER NOT NULL DEFAULT 0,
+    notes TEXT
+);
+
+CREATE INDEX IF NOT EXISTS idx_corpus_sources_priority ON corpus_sources(priority_score DESC, title);
+CREATE INDEX IF NOT EXISTS idx_symbol_claims_source_id ON symbol_claims(source_id);
+CREATE INDEX IF NOT EXISTS idx_symbol_claims_symbol ON symbol_claims(symbol);
+CREATE INDEX IF NOT EXISTS idx_symbol_claims_claim_type ON symbol_claims(claim_type);
+
 -- 6. EVENTS & TIMELINE
 CREATE TABLE IF NOT EXISTS events (
     id TEXT PRIMARY KEY,

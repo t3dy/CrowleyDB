@@ -45,7 +45,9 @@ def build_site():
         "term_works",
         "person_events",
         "person_workings",
-        "grades"
+        "grades",
+        "corpus_sources",
+        "symbol_claims",
     ]
     
     for table in tables:
