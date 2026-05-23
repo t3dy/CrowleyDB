@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { fetchJSON } from '../api';
 import { useLane } from '../App';
 import TopicShelf from '../components/TopicShelf';
@@ -70,9 +71,10 @@ const Works = () => {
 
       <div className="page-grid page-grid--cards">
         {filteredWorks.map((work, idx) => (
-          <article
-            key={idx}
-            className="glass-panel term-card"
+          <Link
+            key={work.id || idx}
+            to={`/works/${work.id}`}
+            className="entry-card-link"
             data-portal-track-hover="true"
             data-portal-track-click="true"
             data-portal-track-label={work.title}
@@ -82,24 +84,26 @@ const Works = () => {
             data-portal-tree-number={work.liber_number ? String(work.liber_number) : undefined}
             data-portal-tree-kind={work.liber_number ? (work.liber_number <= 10 ? 'sephirah' : 'signature') : undefined}
           >
-            <div className="timeline-card__meta">
-              <div>
-                <h3>{work.title}</h3>
-                <p style={{ color: 'var(--text-muted)', marginTop: '0.35rem' }}>
-                  {work.liber_number ? `Liber ${work.liber_number}` : 'No liber number'}
-                </p>
+            <article className="glass-panel term-card">
+              <div className="timeline-card__meta">
+                <div>
+                  <h3>{work.title}</h3>
+                  <p style={{ color: 'var(--text-muted)', marginTop: '0.35rem' }}>
+                    {work.liber_number ? `Liber ${work.liber_number}` : 'No liber number'}
+                  </p>
+                </div>
+                <span className={`lane-pill lane-pill--${getLaneForWork(work).toLowerCase()}`}>Lane {getLaneForWork(work)}</span>
               </div>
-              <span className={`lane-pill lane-pill--${getLaneForWork(work).toLowerCase()}`}>Lane {getLaneForWork(work)}</span>
-            </div>
 
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', fontSize: '0.85rem', color: 'var(--text-muted)' }}>
-              <span>Class {work.class}</span>
-              <span>{work.date_composed}</span>
-              <span>{work.location_composed}</span>
-            </div>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+                <span>Class {work.class}</span>
+                <span>{work.date_composed}</span>
+                <span>{work.location_composed}</span>
+              </div>
 
-            <p>{work.summary}</p>
-          </article>
+              <p>{work.summary}</p>
+            </article>
+          </Link>
         ))}
       </div>
 

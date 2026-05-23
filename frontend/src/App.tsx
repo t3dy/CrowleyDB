@@ -42,7 +42,11 @@ import Grades from './pages/Grades';
 import Saints from './pages/Saints';
 import Home from './pages/Home';
 import Works from './pages/Works';
+import DocumentsPage from './pages/Documents';
+import DocumentPage from './pages/Document';
 import People from './pages/People';
+import PersonPage from './pages/Person';
+import WorkPage from './pages/Work';
 import TopicPage from './pages/Topic';
 import Numbers from './pages/Numbers';
 import NumberPage from './pages/Number';
@@ -82,6 +86,7 @@ const Navbar = () => {
           <div className="site-nav__links">
             <Link to="/" data-portal-track-click="true" data-portal-track-hover="true" data-portal-track-label="Home" data-portal-track-source="Navbar">Home</Link>
             <Link to="/works" data-portal-track-click="true" data-portal-track-hover="true" data-portal-track-label="Works" data-portal-track-source="Navbar">Works</Link>
+            <Link to="/documents" data-portal-track-click="true" data-portal-track-hover="true" data-portal-track-label="Texts" data-portal-track-source="Navbar">Texts</Link>
             <Link to="/tree" data-portal-track-click="true" data-portal-track-hover="true" data-portal-track-label="Tree of Life" data-portal-track-source="Navbar">Tree of Life</Link>
             <Link to="/grades" data-portal-track-click="true" data-portal-track-hover="true" data-portal-track-label="Grades" data-portal-track-source="Navbar">Grades</Link>
             <Link to="/biography" data-portal-track-click="true" data-portal-track-hover="true" data-portal-track-label="Biography & Map" data-portal-track-source="Navbar">Biography &amp; Map</Link>
@@ -365,10 +370,14 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/works" element={<Works />} />
+                <Route path="/works/:id" element={<WorkPage />} />
+                <Route path="/documents" element={<DocumentsPage />} />
+                <Route path="/documents/:id" element={<DocumentPage />} />
                 <Route path="/tree" element={<TreeOfLife />} />
                 <Route path="/grades" element={<Grades />} />
                 <Route path="/biography" element={<BiographyAndMap />} />
                 <Route path="/people" element={<People />} />
+                <Route path="/people/:id" element={<PersonPage />} />
                 <Route path="/saints" element={<Saints />} />
                 <Route path="/numbers" element={<Numbers />} />
                 <Route path="/numbers/:slug" element={<NumberPage />} />

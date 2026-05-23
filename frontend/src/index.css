@@ -387,6 +387,92 @@ button {
   margin-top: 0.25rem;
 }
 
+.entry-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.entry-card-link:hover {
+  color: inherit;
+}
+
+.entry-page {
+  display: grid;
+  gap: 1rem;
+}
+
+.entry-page__entry {
+  display: grid;
+  gap: 1rem;
+  line-height: 1.75;
+  font-size: 1.03rem;
+}
+
+.entry-page__entry p {
+  margin: 0;
+}
+
+.entry-page__related {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.7fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.entry-page__rail {
+  display: grid;
+  gap: 1rem;
+}
+
+.entry-related-card {
+  display: grid;
+  gap: 0.55rem;
+  padding: 1rem 1.05rem;
+}
+
+.entry-related-card h3 {
+  margin: 0;
+}
+
+.entry-related-card__meta {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.entry-page__sidebar {
+  display: grid;
+  gap: 1rem;
+}
+
+.entry-page__mini {
+  display: grid;
+  gap: 0.4rem;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.16);
+  border: 1px solid rgba(212, 175, 55, 0.12);
+}
+
+.entry-page__mini span {
+  color: var(--text-muted);
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.entry-page__mini p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.entry-page__backlink {
+  margin-top: 0.25rem;
+}
+
 .numbers-page {
   display: grid;
   gap: 1rem;

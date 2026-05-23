@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { fetchJSON } from '../api';
 import TopicShelf from '../components/TopicShelf';
 import { TOPIC_GROUPS } from '../topicGroups';
@@ -123,9 +124,10 @@ const People = () => {
               : 'Dates unknown';
 
           return (
-            <article
+            <Link
               key={person.id}
-              className="glass-panel term-card"
+              to={`/people/${person.id}`}
+              className="entry-card-link"
               data-portal-track-hover="true"
               data-portal-track-click="true"
               data-portal-track-label={person.name}
@@ -133,25 +135,27 @@ const People = () => {
               data-portal-track-source="People"
               data-portal-track-domain="people"
             >
-              <div className="timeline-card__meta">
-                <div>
-                  <h3>{person.name}</h3>
-                  {person.magical_motto && person.magical_motto !== 'Unknown' && (
-                    <p className="term-card__etymology">{person.magical_motto}</p>
-                  )}
+              <article className="glass-panel term-card">
+                <div className="timeline-card__meta">
+                  <div>
+                    <h3>{person.name}</h3>
+                    {person.magical_motto && person.magical_motto !== 'Unknown' && (
+                      <p className="term-card__etymology">{person.magical_motto}</p>
+                    )}
+                  </div>
+                  <span className="lane-pill lane-pill--e" style={{ whiteSpace: 'nowrap' }}>
+                    {person.role_category || 'Uncategorized'}
+                  </span>
                 </div>
-                <span className="lane-pill lane-pill--e" style={{ whiteSpace: 'nowrap' }}>
-                  {person.role_category || 'Uncategorized'}
-                </span>
-              </div>
 
-              <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', color: 'var(--text-muted)', fontSize: '0.88rem' }}>
-                <span>{yearRange}</span>
-                <span>{eventCounts[person.id] || 0} linked events</span>
-              </div>
+                <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', color: 'var(--text-muted)', fontSize: '0.88rem' }}>
+                  <span>{yearRange}</span>
+                  <span>{eventCounts[person.id] || 0} linked events</span>
+                </div>
 
-              <p>{person.biography}</p>
-            </article>
+                <p>{person.biography}</p>
+              </article>
+            </Link>
           );
         })}
       </div>
