@@ -82,6 +82,13 @@ export type TarotReadingContext = {
   elementalCurrent: string | null;
 };
 
+type CrowleyNumberProfile = {
+  number: number;
+  title: string;
+  meaning: string;
+  qabalisticNote: string;
+};
+
 const EMPTY_READING_CONTEXT: TarotReadingContext = {
   majorCount: 0,
   minorCount: 0,
@@ -135,6 +142,69 @@ const rankProfiles: Record<string, { name: string; meaning: string }> = {
   Queen: { name: 'Queen', meaning: 'the inward mastery of the suit, holding and shaping it from within' },
   Prince: { name: 'Prince', meaning: 'the intellect or strategy of the suit, making the force articulate' },
   Princess: { name: 'Princess', meaning: 'the material seed of the suit, where the current gathers form' },
+};
+
+const crowleyNumberProfiles: Record<string, CrowleyNumberProfile> = {
+  Ace: {
+    number: 1,
+    title: 'Ace',
+    meaning: 'the root spark, the undivided seed of force before it has to become useful in the world',
+    qabalisticNote: 'In Crowley, the Ace behaves like a pure current rather than a finished event, so it often reads as an origin point or the pressure that starts the suit moving.',
+  },
+  Two: {
+    number: 2,
+    title: 'Two',
+    meaning: 'the first duality, where force has to encounter balance, polarity, or a second term that changes its meaning',
+    qabalisticNote: 'Crowley likes Twos because they expose the problem of relation: the force is no longer alone, so the reading becomes about tension, reflection, or adjustment.',
+  },
+  Three: {
+    number: 3,
+    title: 'Three',
+    meaning: 'growth, expression, and the first stable outward movement of the current',
+    qabalisticNote: 'Three usually reads as a line becoming a shape; in a pip, that means the power has begun to articulate itself rather than merely exist.',
+  },
+  Four: {
+    number: 4,
+    title: 'Four',
+    meaning: 'stability, structure, and the enclosure that lets the force persist',
+    qabalisticNote: 'Crowley treats Four as the number of form and endurance, so a Four often shows where the current has become fixed enough to govern conditions.',
+  },
+  Five: {
+    number: 5,
+    title: 'Five',
+    meaning: 'disruption, friction, and the pressure that makes the pattern admit it is not complete',
+    qabalisticNote: 'Five in Crowley is seldom comfortable; it tends to mark strain, the need to adapt, or a test that reveals what the suit can actually withstand.',
+  },
+  Six: {
+    number: 6,
+    title: 'Six',
+    meaning: 'harmony, coherence, and the moment the current begins to circulate successfully',
+    qabalisticNote: 'Six often brings a sense of arranged success or the first visible settling of the suit into a workable pattern.',
+  },
+  Seven: {
+    number: 7,
+    title: 'Seven',
+    meaning: 'challenge, testing, and the need to hold the line under pressure',
+    qabalisticNote: 'Crowley uses Seven as a trial number: the pattern is not broken, but it is definitely being asked to prove itself.',
+  },
+  Eight: {
+    number: 8,
+    title: 'Eight',
+    meaning: 'skill, movement, and the use of force with more precision',
+    qabalisticNote: 'Eight in the pip suits tends to show the current in motion, and Crowley often reads it as competence that has become active rather than merely latent.',
+  },
+  Nine: {
+    number: 9,
+    title: 'Nine',
+    meaning: 'ripening, concentration, and the near-completion of the suit’s argument',
+    qabalisticNote: 'Nine is often the last inward tightening before the suit tips into completion, so it can feel like fullness, pressure, or the final stage of gestation.',
+  },
+  Ten: {
+    number: 10,
+    title: 'Ten',
+    meaning: 'completion, burden, culmination, and the weight of the fully built pattern',
+    qabalisticNote: 'Ten is the suit made manifest all the way down, which is why Crowley can make it feel like both achievement and overload at once.',
+  },
 };
 
 const majorArcana: TarotCard[] = [
@@ -192,6 +262,25 @@ function buildMinorMeaning(suit: keyof typeof suitProfiles, rank: string) {
   const suitProfile = suitProfiles[suit];
   const rankProfile = rankProfiles[rank];
   return `${rankProfile.name} speaks to ${rankProfile.meaning}. Within ${suitProfile.name}, this card carries ${suitProfile.current}.`;
+}
+
+function getCrowleyNumberProfile(rank?: string) {
+  if (!rank) return null;
+  return crowleyNumberProfiles[rank] || null;
+}
+
+function buildNumberCurrentNote(card: TarotCard, context: TarotReadingContext) {
+  if (card.kind !== 'minor' || !card.rank) return null;
+  const profile = getCrowleyNumberProfile(card.rank);
+  if (!profile) return null;
+
+  const recurrence = context.dominantRank === card.rank
+    ? ` This number is one of the spread’s refrains, so the meaning is being emphasized rather than merely mentioned.`
+    : context.repeatedRanks.includes(card.rank)
+      ? ` This number repeats in the spread, so the reading should treat it as a structural motif.`
+      : '';
+
+  return `${profile.title} carries Crowley’s number logic here: ${profile.meaning}. ${profile.qabalisticNote}${recurrence}`;
 }
 
 function buildMinorKeywords(suit: keyof typeof suitProfiles, rank: string) {
@@ -359,6 +448,10 @@ function buildAreaNotes(card: TarotCard, spread: SpreadDefinition | undefined, p
   const sequenceNote = context.consecutiveRankRun
     ? `A visible number sequence appears in ${context.consecutiveRankRun}, so the reading carries a sense of development rather than a static tableau.`
     : 'No obvious number sequence dominates the spread, so the card should be read more by placement and attribution than by laddering.';
+  const pipNumberNote = card.kind === 'minor' && card.rank ? buildNumberCurrentNote(card, context) : null;
+  const numberBridge = pipNumberNote
+    ? ` Crowley’s number symbolism for pips adds a second layer: ${pipNumberNote}`
+    : '';
 
   const base =
     card.kind === 'major'
@@ -366,12 +459,12 @@ function buildAreaNotes(card: TarotCard, spread: SpreadDefinition | undefined, p
       : `${card.name} behaves as a situational expression${positionNote} in ${scope}, so`;
 
   return {
-    career: `${base} it points to the kind of work, rank, or public posture that needs to be claimed or revised. ${trumpNote} ${suitNote} ${rankNote} ${sequenceNote}`,
-    romance: `${base} it shows the emotional pattern that governs attraction, attachment, and what the reading will tolerate in intimacy. ${trumpNote} ${suitNote} ${rankNote} ${sequenceNote}`,
-    spirituality: `${base} it suggests the practice lesson, inner threshold, or ritual demand that sits closest to the card. ${trumpNote} ${suitNote} ${rankNote} ${sequenceNote}`,
-    adventure: `${base} it describes the risk appetite, movement, and sense of pursuit that will color the path forward. ${trumpNote} ${suitNote} ${rankNote} ${sequenceNote}`,
-    self_improvement: `${base} it indicates the habit, discipline, or correction that the querent may need to strengthen. ${trumpNote} ${suitNote} ${rankNote} ${sequenceNote}`,
-    academics: `${base} it favors the kind of study, reading, synthesis, or critical method that fits the card's mode of intelligence. ${trumpNote} ${suitNote} ${rankNote} ${sequenceNote}`,
+    career: `${base} it points to the kind of work, rank, or public posture that needs to be claimed or revised. ${trumpNote} ${suitNote} ${rankNote} ${sequenceNote}${numberBridge}`,
+    romance: `${base} it shows the emotional pattern that governs attraction, attachment, and what the reading will tolerate in intimacy. ${trumpNote} ${suitNote} ${rankNote} ${sequenceNote}${numberBridge}`,
+    spirituality: `${base} it suggests the practice lesson, inner threshold, or ritual demand that sits closest to the card. ${trumpNote} ${suitNote} ${rankNote} ${sequenceNote}${numberBridge}`,
+    adventure: `${base} it describes the risk appetite, movement, and sense of pursuit that will color the path forward. ${trumpNote} ${suitNote} ${rankNote} ${sequenceNote}${numberBridge}`,
+    self_improvement: `${base} it indicates the habit, discipline, or correction that the querent may need to strengthen. ${trumpNote} ${suitNote} ${rankNote} ${sequenceNote}${numberBridge}`,
+    academics: `${base} it favors the kind of study, reading, synthesis, or critical method that fits the card's mode of intelligence. ${trumpNote} ${suitNote} ${rankNote} ${sequenceNote}${numberBridge}`,
   } satisfies Record<TarotStudyArea['id'], string>;
 }
 
@@ -389,6 +482,7 @@ export function buildTarotCardStudy(card: TarotCard, spread?: SpreadDefinition, 
         : [
             `Suit: ${suitProfiles[card.suit || 'wands'].name}`,
             `Rank: ${card.rank || 'n/a'}`,
+            ...(getCrowleyNumberProfile(card.rank) ? [`Number: ${getCrowleyNumberProfile(card.rank)?.number}`] : []),
             `Attributions: ${card.keywords.join(', ')}`,
             context.dominantSuit && card.suit === context.dominantSuit ? `The reading is already leaning toward ${suitProfiles[card.suit].current}.` : 'The card brings its own elemental current into the spread.',
           ],
@@ -406,6 +500,7 @@ export function buildTarotCardStudy(card: TarotCard, spread?: SpreadDefinition, 
         : [
             `${card.meaning} The suit gives the card its elemental weather, while the rank tells you where the force is in its development.`,
             position ? `In ${position.label}, the card acts as ${position.role}, so its suit pressure is being translated into a specific reading function.` : 'On its own, the card is best studied as an instance of suit-energy working through rank.',
+            getCrowleyNumberProfile(card.rank)?.qabalisticNote || 'This rank can be read through Crowley’s numbering logic, where suit and number meet as a single symbolic event.',
             context.dominantRank === card.rank ? `The reading keeps returning to ${card.rank}, so this card speaks with the voice of a repeated number rather than an isolated instance.` : 'This card is not the main repeated number in the spread, so it should be read in relation to the larger pattern.',
         ],
     areaNotes: buildAreaNotes(card, spread, position, context),
