@@ -42,6 +42,7 @@ import Saints from './pages/Saints';
 import Home from './pages/Home';
 import Works from './pages/Works';
 import People from './pages/People';
+import TopicPage from './pages/Topic';
 
 const Navbar = () => {
   const { currentLane, setLane } = useLane();
@@ -317,6 +318,7 @@ function App() {
               <Route path="/people" element={<People />} />
               <Route path="/saints" element={<Saints />} />
               <Route path="/dictionary" element={<Dictionary />} />
+              <Route path="/topic/:slug" element={<TopicPage />} />
             </Routes>
           </main>
         </div>

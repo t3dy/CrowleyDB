@@ -265,11 +265,25 @@ button {
 
 .topic-shelf-card {
   display: grid;
-  gap: 0.45rem;
+  gap: 0.6rem;
+  min-height: 230px;
   padding: 1rem 1.05rem;
   border-radius: 12px;
   border: 1px solid rgba(212, 175, 55, 0.16);
   background: rgba(0, 0, 0, 0.16);
+}
+
+.topic-shelf-card--link {
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.topic-shelf-card--link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(212, 175, 55, 0.45);
+  background: rgba(212, 175, 55, 0.07);
+  color: inherit;
 }
 
 .topic-shelf-card h3 {
@@ -280,9 +294,97 @@ button {
 
 .topic-shelf-card p {
   margin: 0;
-  color: var(--text-muted);
-  line-height: 1.5;
+  color: var(--text-parchment);
+  line-height: 1.6;
   font-size: 0.9rem;
+}
+
+.topic-shelf-card__cta {
+  align-self: end;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.topic-page {
+  display: grid;
+  gap: 1rem;
+}
+
+.topic-page__entry {
+  display: grid;
+  gap: 1rem;
+  line-height: 1.75;
+  font-size: 1.03rem;
+}
+
+.topic-page__entry p {
+  margin: 0;
+}
+
+.topic-page__related {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.7fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.topic-page__rail {
+  display: grid;
+  gap: 1rem;
+}
+
+.topic-related-card {
+  display: grid;
+  gap: 0.55rem;
+  padding: 1rem 1.05rem;
+}
+
+.topic-related-card h3 {
+  margin: 0;
+}
+
+.topic-related-card__meta {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.topic-related-card p:last-child {
+  line-height: 1.55;
+}
+
+.topic-page__sidebar {
+  display: grid;
+  gap: 1rem;
+}
+
+.topic-page__mini {
+  display: grid;
+  gap: 0.4rem;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.16);
+  border: 1px solid rgba(212, 175, 55, 0.12);
+}
+
+.topic-page__mini span {
+  color: var(--text-muted);
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.topic-page__mini p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.topic-page__backlink {
+  margin-top: 0.25rem;
 }
 
 .stacked-field {
@@ -963,6 +1065,11 @@ button {
   .tree-mode-chips {
     justify-content: flex-start;
   }
+
+  .topic-shelf__header,
+  .topic-page__related {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 720px) {
@@ -976,5 +1083,10 @@ button {
 
   .tree-detail-grid {
     grid-template-columns: 1fr;
+  }
+
+  .topic-shelf-card,
+  .topic-related-card {
+    min-height: 0;
   }
 }

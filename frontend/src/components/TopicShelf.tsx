@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { fetchJSON } from '../api';
+import { buildTopicCardCopy, buildTopicSummary } from '../topicContent';
 
 type Topic = {
   id: string;
@@ -7,6 +9,22 @@ type Topic = {
   label: string;
   description: string;
   sort_order?: number;
+};
+
+type Event = {
+  id: string;
+  date_start: string;
+  date_end: string | null;
+  title: string;
+  description: string;
+  location_id: string | null;
+  evidentiary_lane: string;
+  document_id: string | null;
+};
+
+type EventTopic = {
+  event_id: string;
+  topic_id: string;
 };
 
 type TopicShelfProps = {
@@ -17,9 +35,13 @@ type TopicShelfProps = {
 
 const TopicShelf = ({ title, intro, slugs }: TopicShelfProps) => {
   const [topics, setTopics] = useState<Topic[]>([]);
+  const [events, setEvents] = useState<Event[]>([]);
+  const [eventTopics, setEventTopics] = useState<EventTopic[]>([]);
 
   useEffect(() => {
     fetchJSON('topics').then(setTopics);
+    fetchJSON('events').then(setEvents);
+    fetchJSON('event_topics').then(setEventTopics);
   }, []);
 
   const topicBySlug = useMemo(
@@ -30,6 +52,12 @@ const TopicShelf = ({ title, intro, slugs }: TopicShelfProps) => {
   const entries = slugs
     .map(slug => topicBySlug[slug])
     .filter((topic): topic is Topic => Boolean(topic));
+
+  const summaryBySlug = useMemo(() => {
+    return Object.fromEntries(
+      entries.map(topic => [topic.slug, buildTopicSummary(topic, events, eventTopics)]),
+    ) as Record<string, ReturnType<typeof buildTopicSummary>>;
+  }, [entries, events, eventTopics]);
 
   return (
     <section className="glass-panel topic-shelf">
@@ -47,10 +75,11 @@ const TopicShelf = ({ title, intro, slugs }: TopicShelfProps) => {
 
       <div className="topic-shelf__grid">
         {entries.map(topic => (
-          <article key={topic.id} className="topic-shelf-card">
+          <Link key={topic.id} to={`/topic/${topic.slug}`} className="topic-shelf-card topic-shelf-card--link">
             <h3>{topic.label}</h3>
-            <p>{topic.description}</p>
-          </article>
+            <p>{buildTopicCardCopy(topic, summaryBySlug[topic.slug])}</p>
+            <span className="topic-shelf-card__cta">Open encyclopedia entry</span>
+          </Link>
         ))}
       </div>
     </section>
