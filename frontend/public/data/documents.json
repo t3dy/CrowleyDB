@@ -1,5 +1,32 @@
 [
   {
+    "id": "ARC_PERDURABO",
+    "title": "Perdurabo: The Life of Aleister Crowley",
+    "author": "Richard Kaczynski",
+    "publication_year": 2012,
+    "evidentiary_lane": "C",
+    "file_path": "C:\\Dev\\CROWLEYDB\\archive_markdown\\perdurabo.md",
+    "description": "Markdown companion extracted from the Kaczynski biography for archive browsing and event indexing. The document anchors the bibliography for Perdurabo: The Life of Aleister Crowley, keeping the source lane visible alongside the works and events it supports. The portal treats documents as evidence-bearing companions rather than simple attachments, so the description explains why the text matters to the archive. The companion keeps the Kaczynski biography searchable as an indexable source text, which is useful because the archive uses it as a documentary baseline for the modern scholarly view. It also preserves a critical counterweight to Crowley's own self-authored myth, so the biography can be read as research rather than homage. That balance matters because the site wants documentary sequence, not just narrative momentum. It gives the reader a stable point of comparison whenever the archive turns from Crowley's voice to later interpretation, and that stability is one of the main jobs of the bibliography. That makes the document part of the interpretive path: a reader can move from the source itself to the people, places, and works it helps explain. The title is not just a filename here; it is the label that lets the archive decide which shelf the source belongs on and what conversation it should enter. These records are written so they can be quoted as evidence, not just remembered as background, which is why the prose keeps their bibliographic function explicit."
+  },
+  {
+    "id": "ARC_BEAST_IN_BERLIN",
+    "title": "Aleister Crowley: The Beast in Berlin",
+    "author": "Tobias Churton",
+    "publication_year": null,
+    "evidentiary_lane": "C",
+    "file_path": "C:\\Dev\\CROWLEYDB\\archive_markdown\\beast_in_berlin.md",
+    "description": "Markdown companion extracted from the Berlin biography for archive browsing and event indexing. The document anchors the bibliography for Aleister Crowley: The Beast in Berlin, keeping the source lane visible alongside the works and events it supports. The portal treats documents as evidence-bearing companions rather than simple attachments, so the description explains why the text matters to the archive. The companion preserves the Berlin biography as a readable source node, allowing the site to connect Weimar culture, sex, art, and postwar interpretation in one source lane. Its main value is that it keeps the biography legible as a crafted scholarly object, which helps the archive hold the personal, theatrical, and political Crowley together. The companion also marks the work as one of the site’s best entry points into the social worlds around him. It gives the reader a route into the modern reception history without losing sight of the biographical evidence that anchors that reception. That makes the document part of the interpretive path: a reader can move from the source itself to the people, places, and works it helps explain. The title is not just a filename here; it is the label that lets the archive decide which shelf the source belongs on and what conversation it should enter. These records are written so they can be quoted as evidence, not just remembered as background, which is why the prose keeps their bibliographic function explicit."
+  },
+  {
+    "id": "ARC_CONFESSIONS",
+    "title": "The Confessions of Aleister Crowley",
+    "author": "Aleister Crowley",
+    "publication_year": null,
+    "evidentiary_lane": "B",
+    "file_path": "C:\\Dev\\CROWLEYDB\\archive_markdown\\confessions.md",
+    "description": "Markdown companion extracted from Crowley's autobiography for archive browsing and event indexing. The document anchors the bibliography for The Confessions of Aleister Crowley, keeping the source lane visible alongside the works and events it supports. The portal treats documents as evidence-bearing companions rather than simple attachments, so the description explains why the text matters to the archive. The companion preserves Crowley's autobiography as a source with a clearly marked self-interpretive stance, which is essential because the archive reads it against later scholarship and correspondence. It lets the reader see how Crowley wanted his life to be framed, then compare that framing with the documentary record. That tension is part of the work’s meaning, not a defect to smooth away. The entry therefore functions as both source and warning, since the autobiography is most useful when the reader remembers that self-narration is always a form of occult performance. That makes the document part of the interpretive path: a reader can move from the source itself to the people, places, and works it helps explain. The title is not just a filename here; it is the label that lets the archive decide which shelf the source belongs on and what conversation it should enter. These records are written so they can be quoted as evidence, not just remembered as background, which is why the prose keeps their bibliographic function explicit."
+  },
+  {
     "id": "DOC_WKS_001",
     "title": "Liber AL vel Legis",
     "author": "Aleister Crowley",
@@ -106,32 +133,5 @@
     "evidentiary_lane": "B",
     "file_path": null,
     "description": "Crowley's famous novel of discipline, addiction, and transformation. It dramatizes the struggle between compulsion and structure in a way that makes the Abbey years and his therapeutic rhetoric easier to read. The document anchors the bibliography for Diary of a Drug Fiend, keeping the source lane visible alongside the works and events it supports. The portal treats documents as evidence-bearing companions rather than simple attachments, so the description explains why the text matters to the archive. It remains useful because the archive can cite it directly from the documentary shelf instead of hiding it inside a generic file list. That makes the document part of the interpretive path: a reader can move from the source itself to the people, places, and works it helps explain. The title is not just a filename here; it is the label that lets the archive decide which shelf the source belongs on and what conversation it should enter. These records are written so they can be quoted as evidence, not just remembered as background, which is why the prose keeps their bibliographic function explicit."
-  },
-  {
-    "id": "ARC_PERDURABO",
-    "title": "Perdurabo: The Life of Aleister Crowley",
-    "author": "Richard Kaczynski",
-    "publication_year": 2012,
-    "evidentiary_lane": "C",
-    "file_path": "C:\\Dev\\CROWLEYDB\\archive_markdown\\perdurabo.md",
-    "description": "Markdown companion extracted from the Kaczynski biography for archive browsing and event indexing. The document anchors the bibliography for Perdurabo: The Life of Aleister Crowley, keeping the source lane visible alongside the works and events it supports. The portal treats documents as evidence-bearing companions rather than simple attachments, so the description explains why the text matters to the archive. The companion keeps the Kaczynski biography searchable as an indexable source text, which is useful because the archive uses it as a documentary baseline for the modern scholarly view. It also preserves a critical counterweight to Crowley's own self-authored myth, so the biography can be read as research rather than homage. That balance matters because the site wants documentary sequence, not just narrative momentum. It gives the reader a stable point of comparison whenever the archive turns from Crowley's voice to later interpretation, and that stability is one of the main jobs of the bibliography. That makes the document part of the interpretive path: a reader can move from the source itself to the people, places, and works it helps explain. The title is not just a filename here; it is the label that lets the archive decide which shelf the source belongs on and what conversation it should enter. These records are written so they can be quoted as evidence, not just remembered as background, which is why the prose keeps their bibliographic function explicit."
-  },
-  {
-    "id": "ARC_BEAST_IN_BERLIN",
-    "title": "Aleister Crowley: The Beast in Berlin",
-    "author": "Tobias Churton",
-    "publication_year": null,
-    "evidentiary_lane": "C",
-    "file_path": "C:\\Dev\\CROWLEYDB\\archive_markdown\\beast_in_berlin.md",
-    "description": "Markdown companion extracted from the Berlin biography for archive browsing and event indexing. The document anchors the bibliography for Aleister Crowley: The Beast in Berlin, keeping the source lane visible alongside the works and events it supports. The portal treats documents as evidence-bearing companions rather than simple attachments, so the description explains why the text matters to the archive. The companion preserves the Berlin biography as a readable source node, allowing the site to connect Weimar culture, sex, art, and postwar interpretation in one source lane. Its main value is that it keeps the biography legible as a crafted scholarly object, which helps the archive hold the personal, theatrical, and political Crowley together. The companion also marks the work as one of the site’s best entry points into the social worlds around him. It gives the reader a route into the modern reception history without losing sight of the biographical evidence that anchors that reception. That makes the document part of the interpretive path: a reader can move from the source itself to the people, places, and works it helps explain. The title is not just a filename here; it is the label that lets the archive decide which shelf the source belongs on and what conversation it should enter. These records are written so they can be quoted as evidence, not just remembered as background, which is why the prose keeps their bibliographic function explicit."
-  },
-  {
-    "id": "ARC_CONFESSIONS",
-    "title": "The Confessions of Aleister Crowley",
-    "author": "Aleister Crowley",
-    "publication_year": null,
-    "evidentiary_lane": "B",
-    "file_path": "C:\\Dev\\CROWLEYDB\\archive_markdown\\confessions.md",
-    "description": "Markdown companion extracted from Crowley's autobiography for archive browsing and event indexing. The document anchors the bibliography for The Confessions of Aleister Crowley, keeping the source lane visible alongside the works and events it supports. The portal treats documents as evidence-bearing companions rather than simple attachments, so the description explains why the text matters to the archive. The companion preserves Crowley's autobiography as a source with a clearly marked self-interpretive stance, which is essential because the archive reads it against later scholarship and correspondence. It lets the reader see how Crowley wanted his life to be framed, then compare that framing with the documentary record. That tension is part of the work’s meaning, not a defect to smooth away. The entry therefore functions as both source and warning, since the autobiography is most useful when the reader remembers that self-narration is always a form of occult performance. That makes the document part of the interpretive path: a reader can move from the source itself to the people, places, and works it helps explain. The title is not just a filename here; it is the label that lets the archive decide which shelf the source belongs on and what conversation it should enter. These records are written so they can be quoted as evidence, not just remembered as background, which is why the prose keeps their bibliographic function explicit."
   }
 ]
