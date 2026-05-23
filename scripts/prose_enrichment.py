@@ -141,9 +141,9 @@ LOCATION_NOTES = {
 }
 
 DOCUMENT_NOTES = {
-    "ARC_PERDURABO": "The companion keeps the Kaczynski biography searchable as an indexable source text, which is useful because the archive uses it as a documentary baseline for the modern scholarly view.",
-    "ARC_BEAST_IN_BERLIN": "The companion preserves the Berlin biography as a readable source node, allowing the site to connect Weimar culture, sex, art, and postwar interpretation in one source lane.",
-    "ARC_CONFESSIONS": "The companion preserves Crowley's autobiography as a source with a clearly marked self-interpretive stance, which is essential because the archive reads it against later scholarship and correspondence.",
+    "ARC_PERDURABO": "The companion keeps the Kaczynski biography searchable as an indexable source text, which is useful because the archive uses it as a documentary baseline for the modern scholarly view. It also preserves a critical counterweight to Crowley's own self-authored myth, so the biography can be read as research rather than homage. That balance matters because the site wants documentary sequence, not just narrative momentum. It gives the reader a stable point of comparison whenever the archive turns from Crowley's voice to later interpretation, and that stability is one of the main jobs of the bibliography.",
+    "ARC_BEAST_IN_BERLIN": "The companion preserves the Berlin biography as a readable source node, allowing the site to connect Weimar culture, sex, art, and postwar interpretation in one source lane. Its main value is that it keeps the biography legible as a crafted scholarly object, which helps the archive hold the personal, theatrical, and political Crowley together. The companion also marks the work as one of the site’s best entry points into the social worlds around him. It gives the reader a route into the modern reception history without losing sight of the biographical evidence that anchors that reception.",
+    "ARC_CONFESSIONS": "The companion preserves Crowley's autobiography as a source with a clearly marked self-interpretive stance, which is essential because the archive reads it against later scholarship and correspondence. It lets the reader see how Crowley wanted his life to be framed, then compare that framing with the documentary record. That tension is part of the work’s meaning, not a defect to smooth away. The entry therefore functions as both source and warning, since the autobiography is most useful when the reader remembers that self-narration is always a form of occult performance.",
 }
 
 TREE_NOTES = {
@@ -204,7 +204,8 @@ def expand_document_description(document_id: str, title: str, description: str) 
     third = DOCUMENT_NOTES.get(document_id, "It remains useful because the archive can cite it directly from the documentary shelf instead of hiding it inside a generic file list.")
     fourth = "That makes the document part of the interpretive path: a reader can move from the source itself to the people, places, and works it helps explain."
     fifth = "The title is not just a filename here; it is the label that lets the archive decide which shelf the source belongs on and what conversation it should enter."
-    return _append(description, note, detail, third, fourth, fifth)
+    sixth = "These records are written so they can be quoted as evidence, not just remembered as background, which is why the prose keeps their bibliographic function explicit."
+    return _append(description, note, detail, third, fourth, fifth, sixth)
 
 
 def enrich_documents(rows):
