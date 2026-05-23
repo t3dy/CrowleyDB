@@ -76,19 +76,19 @@ const Navbar = () => {
 
         <div className="site-nav">
           <div className="site-nav__links">
-            <Link to="/" data-portal-track-click="true" data-portal-track-label="Home" data-portal-track-source="Navbar">Home</Link>
-            <Link to="/works" data-portal-track-click="true" data-portal-track-label="Works" data-portal-track-source="Navbar">Works</Link>
-            <Link to="/tree" data-portal-track-click="true" data-portal-track-label="Tree of Life" data-portal-track-source="Navbar">Tree of Life</Link>
-            <Link to="/grades" data-portal-track-click="true" data-portal-track-label="Grades" data-portal-track-source="Navbar">Grades</Link>
-            <Link to="/biography" data-portal-track-click="true" data-portal-track-label="Biography & Map" data-portal-track-source="Navbar">Biography &amp; Map</Link>
-            <Link to="/people" data-portal-track-click="true" data-portal-track-label="People" data-portal-track-source="Navbar">People</Link>
-            <Link to="/saints" data-portal-track-click="true" data-portal-track-label="Saints" data-portal-track-source="Navbar">Saints</Link>
-            <Link to="/numbers" data-portal-track-click="true" data-portal-track-label="Numbers" data-portal-track-source="Navbar">Numbers</Link>
-            <Link to="/dictionary" data-portal-track-click="true" data-portal-track-label="Dictionary" data-portal-track-source="Navbar">Dictionary</Link>
-            <Link to="/initiation" data-portal-track-click="true" data-portal-track-label="Initiation" data-portal-track-source="Navbar">
+            <Link to="/" data-portal-track-click="true" data-portal-track-hover="true" data-portal-track-label="Home" data-portal-track-source="Navbar">Home</Link>
+            <Link to="/works" data-portal-track-click="true" data-portal-track-hover="true" data-portal-track-label="Works" data-portal-track-source="Navbar">Works</Link>
+            <Link to="/tree" data-portal-track-click="true" data-portal-track-hover="true" data-portal-track-label="Tree of Life" data-portal-track-source="Navbar">Tree of Life</Link>
+            <Link to="/grades" data-portal-track-click="true" data-portal-track-hover="true" data-portal-track-label="Grades" data-portal-track-source="Navbar">Grades</Link>
+            <Link to="/biography" data-portal-track-click="true" data-portal-track-hover="true" data-portal-track-label="Biography & Map" data-portal-track-source="Navbar">Biography &amp; Map</Link>
+            <Link to="/people" data-portal-track-click="true" data-portal-track-hover="true" data-portal-track-label="People" data-portal-track-source="Navbar">People</Link>
+            <Link to="/saints" data-portal-track-click="true" data-portal-track-hover="true" data-portal-track-label="Saints" data-portal-track-source="Navbar">Saints</Link>
+            <Link to="/numbers" data-portal-track-click="true" data-portal-track-hover="true" data-portal-track-label="Numbers" data-portal-track-source="Navbar">Numbers</Link>
+            <Link to="/dictionary" data-portal-track-click="true" data-portal-track-hover="true" data-portal-track-label="Dictionary" data-portal-track-source="Navbar">Dictionary</Link>
+            <Link to="/initiation" data-portal-track-click="true" data-portal-track-hover="true" data-portal-track-label="Initiation" data-portal-track-source="Navbar">
               Initiation
             </Link>
-            <Link to="/character" data-portal-track-click="true" data-portal-track-label="Character Sheet" data-portal-track-source="Navbar">
+            <Link to="/character" data-portal-track-click="true" data-portal-track-hover="true" data-portal-track-label="Character Sheet" data-portal-track-source="Navbar">
               Character
             </Link>
           </div>
@@ -98,6 +98,7 @@ const Navbar = () => {
               to={profile ? '/character' : '/initiation'}
               className="site-nav__profile-chip"
               data-portal-track-click="true"
+              data-portal-track-hover="true"
               data-portal-track-label={profile ? profile.initiatoryName : 'Enter the lodge'}
               data-portal-track-source="Navbar"
             >
