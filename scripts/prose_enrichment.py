@@ -465,4 +465,7 @@ def expand_topic_description(slug: str, label: str, description: str) -> str:
     archive_note = (
         "In the archive the topic functions as a small editorial hinge, joining biography, publication, ritual, and reception without flattening the differences between them."
     )
-    return _append(description, note, bridge, archive_note)
+    use_note = (
+        "Because the database is built from events, works, people, and places, the topic is what lets the same material be read from several directions without losing coherence."
+    )
+    return _append(description, note, bridge, archive_note, use_note)
