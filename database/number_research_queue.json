@@ -1,0 +1,939 @@
+{
+  "version": 1,
+  "title_first_work_inventory": [
+    {
+      "work_id": "WKS_004",
+      "title": "777 and Other Qabalistic Writings",
+      "liber_number": 777,
+      "class": "Unclassified",
+      "date_composed": "1909",
+      "location_composed": "London",
+      "priority_score": 270,
+      "priority_reasons": [
+        "Liber number 777 in the work record.",
+        "Title signal(s): 777.",
+        "The title is itself a symbolic number and the book is the clearest correspondence engine in the archive."
+      ],
+      "title_numbers": [
+        777
+      ]
+    },
+    {
+      "work_id": "WKS_001",
+      "title": "Liber AL vel Legis",
+      "liber_number": 220,
+      "class": "A",
+      "date_composed": "1904-04-08 to 1904-04-10",
+      "location_composed": "Cairo, Egypt",
+      "priority_score": 220,
+      "priority_reasons": [
+        "Liber number 220 in the work record.",
+        "The revealed source text anchors the whole system, so its title number is the first thing to read.",
+        "Liber titles deserve first-pass reading because Crowley uses the title as part of the number system."
+      ],
+      "title_numbers": [
+        220
+      ]
+    },
+    {
+      "work_id": "WKS_002",
+      "title": "Book 4 / Liber ABA",
+      "liber_number": 4,
+      "class": "B",
+      "date_composed": "1909-1912",
+      "location_composed": "London and Paris",
+      "priority_score": 190,
+      "priority_reasons": [
+        "Liber number 4 in the work record.",
+        "Title signal(s): 4.",
+        "The title carries an explicit liber number and the work explains method as training."
+      ],
+      "title_numbers": [
+        4
+      ]
+    },
+    {
+      "work_id": "WKS_008",
+      "title": "Liber Aleph vel CXI",
+      "liber_number": null,
+      "class": "B",
+      "date_composed": "1911",
+      "location_composed": "London",
+      "priority_score": 170,
+      "priority_reasons": [
+        "Title signal(s): 111.",
+        "The title carries a Roman-numeral signal that should be read as part of the work's symbolic identity.",
+        "Liber titles deserve first-pass reading because Crowley uses the title as part of the number system."
+      ],
+      "title_numbers": [
+        111
+      ]
+    },
+    {
+      "work_id": "WKS_003",
+      "title": "The Vision and the Voice",
+      "liber_number": 418,
+      "class": "A",
+      "date_composed": "1909-11 to 1909-12",
+      "location_composed": "Bou Saada, Algeria",
+      "priority_score": 150,
+      "priority_reasons": [
+        "Liber number 418 in the work record.",
+        "The work is one of the major visionary records and should stay high in the reading queue."
+      ],
+      "title_numbers": [
+        418
+      ]
+    },
+    {
+      "work_id": "WKS_005",
+      "title": "The Book of Thoth",
+      "liber_number": null,
+      "class": "Unclassified",
+      "date_composed": "1944",
+      "location_composed": "London",
+      "priority_score": 110,
+      "priority_reasons": [
+        "The tarot manual is the major late commentary on the revised symbolic system."
+      ],
+      "title_numbers": []
+    },
+    {
+      "work_id": "WKS_006",
+      "title": "The Equinox, Vol. I, No. 1",
+      "liber_number": null,
+      "class": "D",
+      "date_composed": "1909",
+      "location_composed": "London",
+      "priority_score": 100,
+      "priority_reasons": [
+        "Title signal(s): 1.",
+        "The serial title matters because Crowley uses publication structure as part of the doctrine."
+      ],
+      "title_numbers": [
+        1
+      ]
+    },
+    {
+      "work_id": "WKS_010",
+      "title": "Magick in Theory and Practice",
+      "liber_number": null,
+      "class": "B",
+      "date_composed": "1929",
+      "location_composed": "Paris",
+      "priority_score": 60,
+      "priority_reasons": [
+        "This is one of the clearest statements of Crowley's mature method and should be read alongside the number material."
+      ],
+      "title_numbers": []
+    },
+    {
+      "work_id": "WKS_007",
+      "title": "The Book of Lies",
+      "liber_number": null,
+      "class": "B",
+      "date_composed": "1912",
+      "location_composed": "London",
+      "priority_score": 60,
+      "priority_reasons": [
+        "The title has no explicit numeral, but the compressed form makes it a high-value symbolic text."
+      ],
+      "title_numbers": []
+    },
+    {
+      "work_id": "WKS_012",
+      "title": "Diary of a Drug Fiend",
+      "liber_number": null,
+      "class": "C",
+      "date_composed": "1922",
+      "location_composed": "Cefalu, Sicily",
+      "priority_score": 0,
+      "priority_reasons": [],
+      "title_numbers": []
+    },
+    {
+      "work_id": "WKS_009",
+      "title": "The Blue Equinox",
+      "liber_number": null,
+      "class": "E",
+      "date_composed": "1919",
+      "location_composed": "New York City",
+      "priority_score": 0,
+      "priority_reasons": [],
+      "title_numbers": []
+    },
+    {
+      "work_id": "WKS_011",
+      "title": "The Confessions of Aleister Crowley",
+      "liber_number": null,
+      "class": "B",
+      "date_composed": "1929",
+      "location_composed": "Paris",
+      "priority_score": 0,
+      "priority_reasons": [],
+      "title_numbers": []
+    }
+  ],
+  "number_dossiers": [
+    {
+      "number": 93,
+      "label": "93",
+      "priority_score": 386,
+      "priority_reasons": [
+        "93 is the core Thelemic number for Thelema and Agape.",
+        "Gematria term: 93.",
+        "Gematria term: Agape.",
+        "Gematria term: Aiwass.",
+        "Gematria term: Thelema."
+      ],
+      "title_sources": [
+        {
+          "term_id": "TRM_001",
+          "term": "Thelema",
+          "reason": "Gematria value in dictionary term."
+        },
+        {
+          "term_id": "TRM_002",
+          "term": "Agape",
+          "reason": "Gematria value in dictionary term."
+        },
+        {
+          "term_id": "TRM_003",
+          "term": "Aiwass",
+          "reason": "Gematria value in dictionary term."
+        },
+        {
+          "term_id": "TRM_011",
+          "term": "93",
+          "reason": "Gematria value in dictionary term."
+        }
+      ],
+      "source_snippets": [
+        {
+          "source": "confessions.md",
+          "line": 45,
+          "text": "- Starts from part five: the magus (chapter 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79). - **Part Six: At the Abbey of Thelema (Chapter 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96)** `book refs. 789+` | people: none detected | places: none detected | topics: none detected | years: none detected - Starts from part six: at the abbey of thelema (chapter 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96)."
+        },
+        {
+          "source": "confessions.md",
+          "line": 46,
+          "text": "- **Part Six: At the Abbey of Thelema (Chapter 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96)** `book refs. 789+` | people: none detected | places: none detected | topics: none detected | years: none detected - Starts from part six: at the abbey of thelema (chapter 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96)."
+        }
+      ],
+      "llm_prompt": "Read the source snippets for Crowley number 93 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 156,
+      "label": "156",
+      "priority_score": 240,
+      "priority_reasons": [
+        "156 is the Babalon number and a recurring title-level shorthand in Crowley.",
+        "Gematria term: 156.",
+        "Gematria term: Babalon."
+      ],
+      "title_sources": [
+        {
+          "term_id": "TRM_004",
+          "term": "Babalon",
+          "reason": "Gematria value in dictionary term."
+        },
+        {
+          "term_id": "TRM_012",
+          "term": "156",
+          "reason": "Gematria value in dictionary term."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 156 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 4,
+      "label": "4",
+      "priority_score": 220,
+      "priority_reasons": [
+        "Liber 4 is explicit in the title of Book 4 / Liber ABA.",
+        "Title signal in Book 4 / Liber ABA.",
+        "Tree entry: Chesed.",
+        "Work title anchor: Book 4 / Liber ABA."
+      ],
+      "title_sources": [
+        {
+          "work_id": "WKS_002",
+          "title": "Book 4 / Liber ABA",
+          "reason": "Liber number in works table."
+        },
+        {
+          "work_id": "WKS_002",
+          "title": "Book 4 / Liber ABA",
+          "reason": "Title numeral or Roman numeral signal."
+        }
+      ],
+      "source_snippets": [],
+      "tree_sources": [
+        {
+          "path_number": 4,
+          "name": "Chesed",
+          "reason": "Mercy. As Chesed, it defines a station of the Tree rather than a transit line, and the colors, names, and angelic attributions turn it into a structural node in the map. In the portal it reads as a place where doctrine, embodiment, and function meet. The entry keeps the sephirah visible as an active principle, not just a diagram label, so the reader can read it as part of the system's working anatomy."
+        }
+      ],
+      "llm_prompt": "Read the source snippets for Crowley number 4 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 777,
+      "label": "777",
+      "priority_score": 180,
+      "priority_reasons": [
+        "777 is the correspondence table that Crowley treats like a symbolic filing cabinet.",
+        "Title signal in 777 and Other Qabalistic Writings.",
+        "Work title anchor: 777 and Other Qabalistic Writings."
+      ],
+      "title_sources": [
+        {
+          "work_id": "WKS_004",
+          "title": "777 and Other Qabalistic Writings",
+          "reason": "Liber number in works table."
+        },
+        {
+          "work_id": "WKS_004",
+          "title": "777 and Other Qabalistic Writings",
+          "reason": "Title numeral or Roman numeral signal."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 777 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 220,
+      "label": "220",
+      "priority_score": 160,
+      "priority_reasons": [
+        "Liber AL vel Legis is Liber 220.",
+        "Work title anchor: Liber AL vel Legis."
+      ],
+      "title_sources": [
+        {
+          "work_id": "WKS_001",
+          "title": "Liber AL vel Legis",
+          "reason": "Liber number in works table."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 220 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 418,
+      "label": "418",
+      "priority_score": 160,
+      "priority_reasons": [
+        "The Vision and the Voice and the Great Work tradition keep 418 central.",
+        "Work title anchor: The Vision and the Voice."
+      ],
+      "title_sources": [
+        {
+          "work_id": "WKS_003",
+          "title": "The Vision and the Voice",
+          "reason": "Liber number in works table."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 418 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 11,
+      "label": "11",
+      "priority_score": 140,
+      "priority_reasons": [
+        "Liber Aleph vel CXI contains a Roman-numeral title signal that points to 111.",
+        "Tree entry: Path 11."
+      ],
+      "title_sources": [],
+      "source_snippets": [],
+      "tree_sources": [
+        {
+          "path_number": 11,
+          "name": "Path 11",
+          "reason": "Path from Kether to Chokmah. The path binds Aleph to Air and The Fool, making the tarot attribution part of the explanation rather than a hidden assumption. The portal keeps the path as a working symbol of transition, relation, and symbolic progression. In the portal it functions as a route across the diagram, not just a line on a chart. That makes each path read as a practical bridge between states, symbols, and initiatory movement."
+        }
+      ],
+      "llm_prompt": "Read the source snippets for Crowley number 11 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 22,
+      "label": "22",
+      "priority_score": 140,
+      "priority_reasons": [
+        "The number belongs to the ladder of symbolic sequence and is worth preserving as a known occult target.",
+        "Tree entry: Path 22."
+      ],
+      "title_sources": [],
+      "source_snippets": [],
+      "tree_sources": [
+        {
+          "path_number": 22,
+          "name": "Path 22",
+          "reason": "Path from Geburah to Tiphareth. The path binds Lamed to Libra and Adjustment, making the tarot attribution part of the explanation rather than a hidden assumption. Adjustment is a balancing path, and the note preserves Crowley's emphasis on measured correction rather than simple moral judgment. In the portal it functions as a route across the diagram, not just a line on a chart. That makes each path read as a practical bridge between states, symbols, and initiatory movement."
+        }
+      ],
+      "llm_prompt": "Read the source snippets for Crowley number 22 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 30,
+      "label": "30",
+      "priority_score": 140,
+      "priority_reasons": [
+        "The Vision and the Voice is built around thirty Aethyrs, so the number is one of its structural keys.",
+        "Tree entry: Path 30."
+      ],
+      "title_sources": [],
+      "source_snippets": [],
+      "tree_sources": [
+        {
+          "path_number": 30,
+          "name": "Path 30",
+          "reason": "Path from Hod to Yesod. The path binds Resh to Sun and The Sun, making the tarot attribution part of the explanation rather than a hidden assumption. The portal keeps the path as a working symbol of transition, relation, and symbolic progression. In the portal it functions as a route across the diagram, not just a line on a chart. That makes each path read as a practical bridge between states, symbols, and initiatory movement."
+        }
+      ],
+      "llm_prompt": "Read the source snippets for Crowley number 30 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 111,
+      "label": "111",
+      "priority_score": 120,
+      "priority_reasons": [
+        "Liber Aleph vel CXI points directly at 111.",
+        "Title signal in Liber Aleph vel CXI."
+      ],
+      "title_sources": [
+        {
+          "work_id": "WKS_008",
+          "title": "Liber Aleph vel CXI",
+          "reason": "Title numeral or Roman numeral signal."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 111 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 666,
+      "label": "666",
+      "priority_score": 100,
+      "priority_reasons": [
+        "Crowley uses 666 as a public persona, a provocation, and a symbolic signature."
+      ],
+      "title_sources": [],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 666 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 1,
+      "label": "1",
+      "priority_score": 60,
+      "priority_reasons": [
+        "Title signal in The Equinox, Vol. I, No. 1.",
+        "Tree entry: Kether."
+      ],
+      "title_sources": [
+        {
+          "work_id": "WKS_006",
+          "title": "The Equinox, Vol. I, No. 1",
+          "reason": "Title numeral or Roman numeral signal."
+        }
+      ],
+      "source_snippets": [],
+      "tree_sources": [
+        {
+          "path_number": 1,
+          "name": "Kether",
+          "reason": "The Crown, the source of all. As Kether, it defines a station of the Tree rather than a transit line, and the colors, names, and angelic attributions turn it into a structural node in the map. In the portal it reads as a place where doctrine, embodiment, and function meet. The entry keeps the sephirah visible as an active principle, not just a diagram label, so the reader can read it as part of the system's working anatomy."
+        }
+      ],
+      "llm_prompt": "Read the source snippets for Crowley number 1 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 2,
+      "label": "2",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Chokmah."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 2,
+          "name": "Chokmah",
+          "reason": "Wisdom. As Chokmah, it defines a station of the Tree rather than a transit line, and the colors, names, and angelic attributions turn it into a structural node in the map. In the portal it reads as a place where doctrine, embodiment, and function meet. The entry keeps the sephirah visible as an active principle, not just a diagram label, so the reader can read it as part of the system's working anatomy."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 2 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 3,
+      "label": "3",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Binah."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 3,
+          "name": "Binah",
+          "reason": "Understanding. As Binah, it defines a station of the Tree rather than a transit line, and the colors, names, and angelic attributions turn it into a structural node in the map. In the portal it reads as a place where doctrine, embodiment, and function meet. The entry keeps the sephirah visible as an active principle, not just a diagram label, so the reader can read it as part of the system's working anatomy."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 3 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 5,
+      "label": "5",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Geburah."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 5,
+          "name": "Geburah",
+          "reason": "Severity. As Geburah, it defines a station of the Tree rather than a transit line, and the colors, names, and angelic attributions turn it into a structural node in the map. In the portal it reads as a place where doctrine, embodiment, and function meet. The entry keeps the sephirah visible as an active principle, not just a diagram label, so the reader can read it as part of the system's working anatomy."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 5 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 6,
+      "label": "6",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Tiphareth."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 6,
+          "name": "Tiphareth",
+          "reason": "Beauty. As Tiphareth, it defines a station of the Tree rather than a transit line, and the colors, names, and angelic attributions turn it into a structural node in the map. In the portal it reads as a place where doctrine, embodiment, and function meet. The entry keeps the sephirah visible as an active principle, not just a diagram label, so the reader can read it as part of the system's working anatomy."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 6 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 7,
+      "label": "7",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Netzach."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 7,
+          "name": "Netzach",
+          "reason": "Victory. As Netzach, it defines a station of the Tree rather than a transit line, and the colors, names, and angelic attributions turn it into a structural node in the map. In the portal it reads as a place where doctrine, embodiment, and function meet. The entry keeps the sephirah visible as an active principle, not just a diagram label, so the reader can read it as part of the system's working anatomy."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 7 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 8,
+      "label": "8",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Hod."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 8,
+          "name": "Hod",
+          "reason": "Splendour. As Hod, it defines a station of the Tree rather than a transit line, and the colors, names, and angelic attributions turn it into a structural node in the map. In the portal it reads as a place where doctrine, embodiment, and function meet. The entry keeps the sephirah visible as an active principle, not just a diagram label, so the reader can read it as part of the system's working anatomy."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 8 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 9,
+      "label": "9",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Yesod."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 9,
+          "name": "Yesod",
+          "reason": "Foundation. As Yesod, it defines a station of the Tree rather than a transit line, and the colors, names, and angelic attributions turn it into a structural node in the map. In the portal it reads as a place where doctrine, embodiment, and function meet. The entry keeps the sephirah visible as an active principle, not just a diagram label, so the reader can read it as part of the system's working anatomy."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 9 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 10,
+      "label": "10",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Malkuth."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 10,
+          "name": "Malkuth",
+          "reason": "The Kingdom. As Malkuth, it defines a station of the Tree rather than a transit line, and the colors, names, and angelic attributions turn it into a structural node in the map. In the portal it reads as a place where doctrine, embodiment, and function meet. The entry keeps the sephirah visible as an active principle, not just a diagram label, so the reader can read it as part of the system's working anatomy."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 10 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 12,
+      "label": "12",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Path 12."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 12,
+          "name": "Path 12",
+          "reason": "Path from Kether to Binah. The path binds Beth to Mercury and The Magus, making the tarot attribution part of the explanation rather than a hidden assumption. The portal keeps the path as a working symbol of transition, relation, and symbolic progression. In the portal it functions as a route across the diagram, not just a line on a chart. That makes each path read as a practical bridge between states, symbols, and initiatory movement."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 12 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 13,
+      "label": "13",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Path 13."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 13,
+          "name": "Path 13",
+          "reason": "Path from Kether to Tiphareth. The path binds Gimel to Moon and The Priestess, making the tarot attribution part of the explanation rather than a hidden assumption. The portal keeps the path as a working symbol of transition, relation, and symbolic progression. In the portal it functions as a route across the diagram, not just a line on a chart. That makes each path read as a practical bridge between states, symbols, and initiatory movement."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 13 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 14,
+      "label": "14",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Path 14."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 14,
+          "name": "Path 14",
+          "reason": "Path from Chokmah to Binah. The path binds Daleth to Venus and The Empress, making the tarot attribution part of the explanation rather than a hidden assumption. The portal keeps the path as a working symbol of transition, relation, and symbolic progression. In the portal it functions as a route across the diagram, not just a line on a chart. That makes each path read as a practical bridge between states, symbols, and initiatory movement."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 14 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 15,
+      "label": "15",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Path 15."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 15,
+          "name": "Path 15",
+          "reason": "Path from Chokmah to Tiphareth. The path binds Heh to Aquarius and The Star, making the tarot attribution part of the explanation rather than a hidden assumption. Crowley's swap note is preserved here so the Thoth revision reads as an intentional editorial choice rather than a mistake. The portal keeps the path as a working symbol of transition, relation, and symbolic progression. In the portal it functions as a route across the diagram, not just a line on a chart. That makes each path read as a practical bridge between states, symbols, and initiatory movement."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 15 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 16,
+      "label": "16",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Path 16."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 16,
+          "name": "Path 16",
+          "reason": "Path from Chokmah to Chesed. The path binds Vau to Taurus and The Hierophant, making the tarot attribution part of the explanation rather than a hidden assumption. The portal keeps the path as a working symbol of transition, relation, and symbolic progression. In the portal it functions as a route across the diagram, not just a line on a chart. That makes each path read as a practical bridge between states, symbols, and initiatory movement."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 16 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 17,
+      "label": "17",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Path 17."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 17,
+          "name": "Path 17",
+          "reason": "Path from Binah to Tiphareth. The path binds Zayin to Gemini and The Lovers, making the tarot attribution part of the explanation rather than a hidden assumption. The portal keeps the path as a working symbol of transition, relation, and symbolic progression. In the portal it functions as a route across the diagram, not just a line on a chart. That makes each path read as a practical bridge between states, symbols, and initiatory movement."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 17 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 18,
+      "label": "18",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Path 18."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 18,
+          "name": "Path 18",
+          "reason": "Path from Binah to Geburah. The path binds Cheth to Cancer and The Chariot, making the tarot attribution part of the explanation rather than a hidden assumption. The portal keeps the path as a working symbol of transition, relation, and symbolic progression. In the portal it functions as a route across the diagram, not just a line on a chart. That makes each path read as a practical bridge between states, symbols, and initiatory movement."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 18 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 19,
+      "label": "19",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Path 19."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 19,
+          "name": "Path 19",
+          "reason": "Path from Chesed to Geburah. The path binds Teth to Leo and Lust, making the tarot attribution part of the explanation rather than a hidden assumption. Crowley's Lust revision matters because it shows how he turns a traditional virtue into a more forceful and relational emblem. In the portal it functions as a route across the diagram, not just a line on a chart. That makes each path read as a practical bridge between states, symbols, and initiatory movement."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 19 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 20,
+      "label": "20",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Path 20."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 20,
+          "name": "Path 20",
+          "reason": "Path from Chesed to Tiphareth. The path binds Yod to Virgo and The Hermit, making the tarot attribution part of the explanation rather than a hidden assumption. The portal keeps the path as a working symbol of transition, relation, and symbolic progression. In the portal it functions as a route across the diagram, not just a line on a chart. That makes each path read as a practical bridge between states, symbols, and initiatory movement."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 20 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 21,
+      "label": "21",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Path 21."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 21,
+          "name": "Path 21",
+          "reason": "Path from Chesed to Netzach. The path binds Kaph to Jupiter and Fortune, making the tarot attribution part of the explanation rather than a hidden assumption. Fortune keeps the wheel and cyclical change in play, giving the portal a path where movement and luck are read as structured forces rather than random events. In the portal it functions as a route across the diagram, not just a line on a chart. That makes each path read as a practical bridge between states, symbols, and initiatory movement."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 21 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 23,
+      "label": "23",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Path 23."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 23,
+          "name": "Path 23",
+          "reason": "Path from Geburah to Hod. The path binds Mem to Water and The Hanged Man, making the tarot attribution part of the explanation rather than a hidden assumption. The portal keeps the path as a working symbol of transition, relation, and symbolic progression. In the portal it functions as a route across the diagram, not just a line on a chart. That makes each path read as a practical bridge between states, symbols, and initiatory movement."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 23 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 24,
+      "label": "24",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Path 24."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 24,
+          "name": "Path 24",
+          "reason": "Path from Tiphareth to Netzach. The path binds Nun to Scorpio and Death, making the tarot attribution part of the explanation rather than a hidden assumption. Death here is transformation rather than merely ending, which is why the portal keeps the path as a symbolic bridge into renewal. In the portal it functions as a route across the diagram, not just a line on a chart. That makes each path read as a practical bridge between states, symbols, and initiatory movement."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 24 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 25,
+      "label": "25",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Path 25."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 25,
+          "name": "Path 25",
+          "reason": "Path from Tiphareth to Yesod. The path binds Samekh to Sagittarius and Art, making the tarot attribution part of the explanation rather than a hidden assumption. Art is one of the most overtly alchemical paths, so the entry keeps the work of mixture, reconciliation, and timing visible. In the portal it functions as a route across the diagram, not just a line on a chart. That makes each path read as a practical bridge between states, symbols, and initiatory movement."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 25 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 26,
+      "label": "26",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Path 26."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 26,
+          "name": "Path 26",
+          "reason": "Path from Tiphareth to Hod. The path binds Ayin to Capricorn and The Devil, making the tarot attribution part of the explanation rather than a hidden assumption. The portal keeps the path as a working symbol of transition, relation, and symbolic progression. In the portal it functions as a route across the diagram, not just a line on a chart. That makes each path read as a practical bridge between states, symbols, and initiatory movement."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 26 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 27,
+      "label": "27",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Path 27."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 27,
+          "name": "Path 27",
+          "reason": "Path from Netzach to Hod. The path binds Pe to Mars and The Tower, making the tarot attribution part of the explanation rather than a hidden assumption. The portal keeps the path as a working symbol of transition, relation, and symbolic progression. In the portal it functions as a route across the diagram, not just a line on a chart. That makes each path read as a practical bridge between states, symbols, and initiatory movement."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 27 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 28,
+      "label": "28",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Path 28."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 28,
+          "name": "Path 28",
+          "reason": "Path from Netzach to Yesod. The path binds Tzaddi to Aries and The Emperor, making the tarot attribution part of the explanation rather than a hidden assumption. Crowley's swap note is preserved here so the Thoth revision reads as an intentional editorial choice rather than a mistake. Crowley's swap is one of the best-known revisions in the Thoth scheme, and the note keeps that editorial decision explicit. In the portal it functions as a route across the diagram, not just a line on a chart. That makes each path read as a practical bridge between states, symbols, and initiatory movement."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 28 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 29,
+      "label": "29",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Path 29."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 29,
+          "name": "Path 29",
+          "reason": "Path from Netzach to Malkuth. The path binds Qoph to Pisces and The Moon, making the tarot attribution part of the explanation rather than a hidden assumption. The portal keeps the path as a working symbol of transition, relation, and symbolic progression. In the portal it functions as a route across the diagram, not just a line on a chart. That makes each path read as a practical bridge between states, symbols, and initiatory movement."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 29 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 31,
+      "label": "31",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Path 31."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 31,
+          "name": "Path 31",
+          "reason": "Path from Hod to Malkuth. The path binds Shin to Fire and The Aeon, making the tarot attribution part of the explanation rather than a hidden assumption. The Aeon path marks the shift in symbolic era, so the entry keeps the historical and ritual dimensions in the same line of sight. In the portal it functions as a route across the diagram, not just a line on a chart. That makes each path read as a practical bridge between states, symbols, and initiatory movement."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 31 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    },
+    {
+      "number": 32,
+      "label": "32",
+      "priority_score": 40,
+      "priority_reasons": [
+        "Tree entry: Path 32."
+      ],
+      "title_sources": [],
+      "tree_sources": [
+        {
+          "path_number": 32,
+          "name": "Path 32",
+          "reason": "Path from Yesod to Malkuth. The path binds Tau to Saturn and The Universe, making the tarot attribution part of the explanation rather than a hidden assumption. The Universe path closes the diagram in a way that feels structural rather than merely terminal, which makes it a useful place to preserve Crowley's revisionary logic. In the portal it functions as a route across the diagram, not just a line on a chart. That makes each path read as a practical bridge between states, symbols, and initiatory movement."
+        }
+      ],
+      "source_snippets": [],
+      "llm_prompt": "Read the source snippets for Crowley number 32 and write a paraphrased encyclopedia entry. Prioritize title symbolism, 777 correspondences, The Book of Thoth revisions, the Book of the Law, Golden Dawn inheritance, and any joking or mnemonic use that is actually supported by the source. Do not quote the source verbatim. Return a short index-card paragraph, then a longer encyclopedia paragraph."
+    }
+  ]
+}

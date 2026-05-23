@@ -39,6 +39,28 @@ Use when summarizing a Liber or other major work.
 
 Recommended length: 120 to 220 words.
 
+## Number Symbolism Entries
+
+Use when building the Crowley-on-numbers encyclopedia or revising a number dossier.
+
+- Start with the title signal first: liber number, Roman numeral, serial number, or other title-based number symbolism
+- Prioritize the number-bearing works Crowley keeps returning to, especially `Liber AL vel Legis`, `777 and Other Qabalistic Writings`, `The Book of Thoth`, `Book 4 / Liber ABA`, `Liber Aleph vel CXI`, and `The Vision and the Voice`
+- Pull source windows before writing prose, then read those windows with a targeted LLM pass
+- Keep the article in paraphrase mode rather than quotation mode
+- Surface how the number works in Qabalistic, tarot, initiatory, or title-symbolic logic
+- Note Golden Dawn inheritance and Crowley revision when the number is part of a swap or reinterpretation
+- Treat inside jokes, editorial habits, and mnemonic shorthand as part of the symbolic system when they are supported by the source
+
+Recommended length: 150 to 300 words for the index card version, 500+ words for the encyclopedia entry.
+
+Research workflow:
+
+1. Inventory number-bearing titles and liber numbers first.
+2. Pull source passages from the closest primary or documentary texts.
+3. Rank the source passages by symbolic density, not by raw length.
+4. Write a short index card paragraph.
+5. Expand that into the encyclopedia entry after the targeted reading pass.
+
 ## People Profiles
 
 Use for associates, scholars, disciples, rivals, and saints.
