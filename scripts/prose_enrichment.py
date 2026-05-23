@@ -165,16 +165,16 @@ TREE_NOTES = {
 
 
 GRADE_FOCUS = {
-    1: "the crown as a point beyond ordinary distinction",
-    2: "the first stirrings of formative wisdom and duality",
-    3: "the shaping of understanding into a coherent structure",
-    4: "the stabilizing of order, law, and disciplined expansion",
-    5: "force, severity, and the practical use of will",
-    6: "beauty, balance, and the work of integration",
-    7: "the field of desire, victory, and relational force",
-    8: "analysis, language, and the refinement of thought",
-    9: "foundation, image, and the subtle ground of practice",
-    10: "embodiment, routine, and the discipline of ordinary life",
+    1: "the crown as a point beyond ordinary distinction, where the ladder points back toward origin and the student is asked to imagine what lies before form",
+    2: "the first stirrings of formative wisdom and duality, where polarity becomes a deliberate subject of work rather than a confusion to escape",
+    3: "the shaping of understanding into a coherent structure, so intuition starts to harden into usable architecture",
+    4: "the stabilizing of order, law, and disciplined expansion, which makes the grade feel like a house built to hold pressure",
+    5: "force, severity, and the practical use of will, where energy is tested by friction and turned into method",
+    6: "beauty, balance, and the work of integration, so the grade reads as a crossing point between ambition and harmony",
+    7: "the field of desire, victory, and relational force, where achievement has to be understood in relation to others",
+    8: "analysis, language, and the refinement of thought, making the grade a place where structure becomes articulate",
+    9: "foundation, image, and the subtle ground of practice, where the unseen basis of the work is finally made legible",
+    10: "embodiment, routine, and the discipline of ordinary life, so the highest abstraction is tested against repetition and time",
 }
 
 
@@ -357,6 +357,7 @@ def expand_grade_description(name: str, system: str, tree_path_number: int, desc
         f"That keeps {name} from becoming a label without context and lets the reader see how {system} structures progression.",
         "The title is part of the pedagogy, so the wording itself helps explain how the ladder turns number into discipline.",
         "The page also treats the grade name as a symbolic instruction, because Crowley often expects the title itself to carry the tone of the lesson.",
+        "The numbered equation is therefore part of the meaning, not a decorative flourish, and the page keeps the arithmetic visible beside the ordeal.",
     ]
     if system != "A.'.A.'.":
         extras.append("The alternate system wording is preserved so the historical comparison remains clear.")
