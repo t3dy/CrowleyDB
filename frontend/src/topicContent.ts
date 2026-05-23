@@ -39,6 +39,7 @@ const sectionValue = (description: string, label: 'Topics' | 'People' | 'Works')
 
 const summaryText = (description: string) => description.split(' | ')[0].trim();
 const lowercaseFirst = (value: string) => value.charAt(0).toLowerCase() + value.slice(1);
+const cleanDescription = (value: string) => value.replace(/[.]\s*$/, '').trim();
 
 const parseNames = (description: string, label: 'People' | 'Works') =>
   sectionValue(description, label)
@@ -115,7 +116,7 @@ export function buildTopicSummary(
 }
 
 export function buildTopicCardCopy(topic: Topic, summary: TopicSummary) {
-  const intro = `${topic.label} is treated here as ${lowercaseFirst(topic.description)}`;
+  const intro = `${topic.label} is treated here as ${lowercaseFirst(cleanDescription(topic.description))}`;
   const recordLine =
     summary.eventCount > 0
       ? `It appears in ${summary.eventCount} indexed events, most visibly through ${sentenceJoin(
@@ -143,7 +144,7 @@ export function buildTopicArticleParagraphs(topic: Topic, summary: TopicSummary)
       : 'The current database has not yet attached it to a dated event trail.';
 
   paragraphs.push(
-    `${topic.label} is one of the portal's controlled topics, and its description is ${lowercaseFirst(topic.description)}. The point of the page is to keep the term visible as a real entry rather than a loose tag: the reader gets the definition, the scope, and the reason it matters inside the archive. ${eventSpan}`,
+    `${topic.label} is one of the portal's controlled topics, and its description is ${lowercaseFirst(cleanDescription(topic.description))}. The point of the page is to keep the term visible as a real entry rather than a loose tag: the reader gets the definition, the scope, and the reason it matters inside the archive. ${eventSpan}`,
   );
 
   if (summary.events.length) {
