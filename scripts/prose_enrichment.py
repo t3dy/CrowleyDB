@@ -69,10 +69,16 @@ SAINT_NOTES = {
 }
 
 TOPIC_NOTES = {
+    "art": "The archive treats art as more than decoration, because for Crowley it is often a vehicle for doctrine, self-fashioning, and ritual atmosphere. This keeps the page open to performance, illustration, music, and literary design as related parts of the same symbolic field.",
+    "birth": "Birth is handled as a threshold topic rather than a biographical fact alone, since the archive often uses it to mark not only chronology but the beginning of a new symbolic cycle. That allows the reader to see how natal events, public beginnings, and initiatory beginnings can echo one another.",
+    "death": "The topic preserves the tension between historical death and symbolic transformation, which is especially important in an archive that often treats endings as changes of form. That lets the reader read mortality, legacy, and transmutation together without flattening them into one meaning.",
+    "home": "Home matters because it is where ritual, publication, domestic strain, and private myth often collide. The archive keeps the topic alive so the reader can see how houses, lodgings, and temporary rooms become part of the magician's method and not merely the setting around it.",
     "magick": "The entry keeps practical ritual, method, and results in the same frame so the topic behaves like a living practice rather than an abstract keyword.",
     "initiation": "The portal uses the term to track thresholds, admissions, and ordeals, which makes it one of the cleanest ways to read the archive's training logic.",
     "publication": "This topic lets the reader follow texts from composition through print, edition, and circulation, which is essential to Crowley's afterlife on the page.",
+    "war": "War is not just a historical backdrop in the archive; it is also one of the pressures that reshapes ritual language, publication, and exile. The topic helps the reader notice how conflict changes the terms on which occult groups imagine discipline, survival, and authority.",
     "travel": "The archive uses travel to map how movement changes the shape of the biography, from ascent and exile to lecture tours and retreat.",
+    "will": "Will is one of the archive's most important organizing ideas because it links ethics, aspiration, and disciplined action without collapsing them into ordinary desire. The topic keeps the word available as a live problem, not merely a slogan, so the reader can follow how intention becomes practice.",
     "golden_dawn": "The label stands for more than a single order; it also marks the politics, rituals, and disputes that organized a generation of occult writers.",
     "oto": "The institutional line matters here because the O.T.O. shows how Crowley's ideas moved from private ritual into public membership and administration.",
     "aa": "The A.'.A.'. entry keeps the training ladder visible, making grades, instruction, and aspirant discipline readable as a coherent structure.",
