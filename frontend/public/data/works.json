@@ -6,7 +6,7 @@
     "class": "A",
     "date_composed": "1904-04-08 to 1904-04-10",
     "location_composed": "Cairo, Egypt",
-    "summary": "The central revealed text of Thelema. It records the Cairo Working and names the core figures of the Aeon of Horus: Nuit, Hadit, Aiwass, and the problem of True Will.",
+    "summary": "The central revealed text of Thelema. It records the Cairo Working and names the core figures of the Aeon of Horus: Nuit, Hadit, Aiwass, and the problem of True Will. The portal treats it as both origin story and doctrinal baseline.",
     "document_id": "DOC_WKS_001"
   },
   {
@@ -16,7 +16,7 @@
     "class": "B",
     "date_composed": "1909-1912",
     "location_composed": "London and Paris",
-    "summary": "Crowley's major instructional manual on yoga, magick, and the disciplined training life. It remains one of the portal's clearest bridges between doctrine and practice.",
+    "summary": "Crowley's major instructional manual on yoga, magick, and the disciplined training life. It remains one of the portal's clearest bridges between doctrine and practice, showing how a reader is supposed to train, not just believe.",
     "document_id": "DOC_WKS_002"
   },
   {
@@ -26,7 +26,7 @@
     "class": "A",
     "date_composed": "1909-11 to 1909-12",
     "location_composed": "Bou Saada, Algeria",
-    "summary": "The record of the thirty Enochian Aethyrs worked with Victor Neuburg. The text is central to Crowley's account of the Abyss, the Holy Guardian Angel, and the desert visionary current.",
+    "summary": "The record of the thirty Enochian Aethyrs worked with Victor Neuburg. The text is central to Crowley's account of the Abyss, the Holy Guardian Angel, and the desert visionary current, and it gives the portal one of its richest examples of visionary prose.",
     "document_id": "DOC_WKS_003"
   },
   {
@@ -36,7 +36,7 @@
     "class": "Unclassified",
     "date_composed": "1909",
     "location_composed": "London",
-    "summary": "A reference compendium of correspondences used to map Crowley's Qabalistic and ceremonial system. It is indispensable even though it is not itself a narrative work.",
+    "summary": "A reference compendium of correspondences used to map Crowley's Qabalistic and ceremonial system. It is indispensable even though it is not itself a narrative work, because so many other works depend on its table logic.",
     "document_id": "DOC_WKS_004"
   },
   {
@@ -46,7 +46,7 @@
     "class": "Unclassified",
     "date_composed": "1944",
     "location_composed": "London",
-    "summary": "Crowley's late tarot manual and commentary on the Thoth deck. It codifies major revisions in his tarot attributions and symbolic language.",
+    "summary": "Crowley's late tarot manual and commentary on the Thoth deck. It codifies major revisions in his tarot attributions and symbolic language and is one of the clearest places to see his symbolic system in finished form.",
     "document_id": "DOC_WKS_005"
   },
   {
@@ -56,7 +56,7 @@
     "class": "D",
     "date_composed": "1909",
     "location_composed": "London",
-    "summary": "The first issue of Crowley's periodical for instruction, ritual publication, and polemic. It is one of the chief print vehicles of his early system.",
+    "summary": "The first issue of Crowley's periodical for instruction, ritual publication, and polemic. It is one of the chief print vehicles of his early system and shows how he wanted doctrine, ritual, and publicity to share a single page.",
     "document_id": "DOC_WKS_006"
   },
   {
@@ -66,7 +66,7 @@
     "class": "B",
     "date_composed": "1912",
     "location_composed": "London",
-    "summary": "A dense collection of short chapters, jokes, aphorisms, and symbolic reversals. It rewards close reading and compresses doctrine into literary fragments.",
+    "summary": "A dense collection of short chapters, jokes, aphorisms, and symbolic reversals. It rewards close reading and compresses doctrine into literary fragments, making it a good example of Crowley's compressed teaching style.",
     "document_id": "DOC_WKS_007"
   },
   {
@@ -76,7 +76,7 @@
     "class": "B",
     "date_composed": "1911",
     "location_composed": "London",
-    "summary": "A letter-form work addressed to Crowley's magical son. It combines ethical counsel, spiritual instruction, and personal myth.",
+    "summary": "A letter-form work addressed to Crowley's magical son. It combines ethical counsel, spiritual instruction, and personal myth, so the page reads like an intimate manual for magical succession.",
     "document_id": "DOC_WKS_008"
   },
   {
@@ -86,7 +86,7 @@
     "class": "E",
     "date_composed": "1919",
     "location_composed": "New York City",
-    "summary": "A later issue of The Equinox that gathers manifestos, rituals, and doctrinal material from Crowley's post-war American career.",
+    "summary": "A later issue of The Equinox that gathers manifestos, rituals, and doctrinal material from Crowley's post-war American career. It helps bridge the New York material and the later organizational ambitions of his system.",
     "document_id": "DOC_WKS_009"
   },
   {
@@ -96,7 +96,7 @@
     "class": "B",
     "date_composed": "1929",
     "location_composed": "Paris",
-    "summary": "One of Crowley's clearest explanations of how his magical theory is meant to operate in practice. It remains a major source for modern readers.",
+    "summary": "One of Crowley's clearest explanations of how his magical theory is meant to operate in practice. It remains a major source for modern readers because it turns method, discipline, and symbolic theory into a readable training manual.",
     "document_id": "DOC_WKS_010"
   },
   {
@@ -106,7 +106,7 @@
     "class": "B",
     "date_composed": "1929",
     "location_composed": "Paris",
-    "summary": "Crowley's autobiography, written as a self-interpreting life story. It is essential, but it must be read with the caution due an unreliable narrator.",
+    "summary": "Crowley's autobiography, written as a self-interpreting life story. It is essential, but it must be read with the caution due an unreliable narrator because it is as much self-construction as recollection.",
     "document_id": "DOC_WKS_011"
   },
   {
@@ -116,7 +116,7 @@
     "class": "C",
     "date_composed": "1922",
     "location_composed": "Cefalu, Sicily",
-    "summary": "Crowley's best-known novel, written as a fictional argument for discipline, addiction, and transformation.",
+    "summary": "Crowley's best-known novel, written as a fictional argument for discipline, addiction, and transformation. The book matters here because it shows how he translated occult discipline into fiction for a wider audience.",
     "document_id": "DOC_WKS_012"
   }
 ]

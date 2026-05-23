@@ -19,7 +19,7 @@ PEOPLE = [
         "Major Associate",
         1874,
         1932,
-        "Crowley's first wife and an important figure in the Cairo Working narrative. Her later life is often flattened by hostile or sensational accounts, so the portal keeps her biography explicit.",
+        "Crowley's first wife and an important figure in the Cairo Working narrative. Her later life is often flattened by hostile or sensational accounts, so the portal keeps her biography explicit and keeps her role separate from Crowley's later mythmaking.",
     ),
     (
         "PRS_002",
@@ -28,7 +28,7 @@ PEOPLE = [
         "Major Associate",
         1883,
         1940,
-        "Poet and magical collaborator who worked with Crowley in the desert Aethyr work and appears throughout the early Thelemic orbit.",
+        "Poet and magical collaborator who worked with Crowley in the desert Aethyr work and appears throughout the early Thelemic orbit. Neuburg gives the portal a strong bridge between literary modernism and Crowley's visionary method.",
     ),
     (
         "PRS_003",
@@ -37,7 +37,7 @@ PEOPLE = [
         "Major Associate",
         1883,
         1975,
-        "Crowley's major partner during the Abbey of Thelema years and one of the most important figures in his middle period.",
+        "Crowley's major partner during the Abbey of Thelema years and one of the most important figures in his middle period. She was both a symbolic role-holder and a practical organizer inside the Abbey's daily life.",
     ),
     (
         "PRS_004",
@@ -46,7 +46,7 @@ PEOPLE = [
         "Major Associate",
         1871,
         1931,
-        "Singer, traveler, and social connector whose role in Paris and New York helps anchor Crowley's American years and the Paris Working milieu.",
+        "Singer, traveler, and social connector whose role in Paris and New York helps anchor Crowley's American years and the Paris Working milieu. Desti matters here because she sits at the junction of performance, occult society, and Crowley's social mobility.",
     ),
     (
         "PRS_005",
@@ -55,7 +55,7 @@ PEOPLE = [
         "Major Associate",
         1872,
         1923,
-        "An early mentor in ceremonial magic and Buddhism whose influence helped shape Crowley's A.'.A.'. training structure.",
+        "An early mentor in ceremonial magic and Buddhism whose influence helped shape Crowley's A.'.A.'. training structure. Bennett is one of the clearest examples of Crowley learning from another practitioner rather than merely inventing a system in isolation.",
     ),
     (
         "PRS_006",
@@ -64,7 +64,7 @@ PEOPLE = [
         "Rival",
         1854,
         1918,
-        "Founder of the Golden Dawn order and one of Crowley's major adversaries during the schism years.",
+        "Founder of the Golden Dawn order and one of Crowley's major adversaries during the schism years. He represents the hierarchical and combative side of the order Crowley both inherited and tried to outgrow.",
     ),
     (
         "PRS_007",
@@ -73,7 +73,7 @@ PEOPLE = [
         "Rival",
         1865,
         1939,
-        "Poet, Golden Dawn member, and a major literary and occult interlocutor in Crowley's early career and temple disputes.",
+        "Poet, Golden Dawn member, and a major literary and occult interlocutor in Crowley's early career and temple disputes. Yeats matters because he brings literary prestige, symbolic criticism, and a very public version of the occult debate.",
     ),
     (
         "PRS_008",
@@ -82,7 +82,7 @@ PEOPLE = [
         "Disciple",
         1875,
         1958,
-        "American actress turned disciple who gives the portal a clear line into the Abbey of Thelema and the later preservation of Crowley's work.",
+        "American actress turned disciple who gives the portal a clear line into the Abbey of Thelema and the later preservation of Crowley's work. Her testimony helps anchor the practical reality of the Abbey beyond Crowley's own account.",
     ),
     (
         "PRS_009",
@@ -91,7 +91,7 @@ PEOPLE = [
         "Disciple",
         1914,
         1952,
-        "Rocket engineer and occultist whose story links Crowley studies to mid-century American esotericism.",
+        "Rocket engineer and occultist whose story links Crowley studies to mid-century American esotericism. Parsons shows how Crowley's influence crossed from ritual circles into technical and countercultural American modernity.",
     ),
     (
         "PRS_010",
@@ -109,7 +109,7 @@ PEOPLE = [
         "Disciple",
         1907,
         1985,
-        "Editor, practitioner, and important transmitter of Crowley's ritual and psychological methods to later generations.",
+        "Editor, practitioner, and important transmitter of Crowley's ritual and psychological methods to later generations. Regardie is central to the survival of the ritual corpus because he helped turn private material into something later readers could actually study.",
     ),
     (
         "PRS_012",
@@ -118,7 +118,7 @@ PEOPLE = [
         "Disciple",
         1945,
         None,
-        "A later Thelemic writer and organizer whose work emphasizes practical order structure, formal training, and the modern afterlife of Crowley's initiatory system.",
+        "A later Thelemic writer and organizer whose work emphasizes practical order structure, formal training, and the modern afterlife of Crowley's initiatory system. He matters here as a representative of the later organizational reading of Crowley's legacy.",
     ),
     (
         "PRS_013",
@@ -127,7 +127,7 @@ PEOPLE = [
         "Scholar",
         1950,
         None,
-        "Author of a major modern biography of Crowley whose archival approach helps separate documentary record from self-mythology.",
+        "Author of a major modern biography of Crowley whose archival approach helps separate documentary record from self-mythology. Kaczynski is useful to the portal because his method is explicitly documentary and relational rather than devotional.",
     ),
     (
         "PRS_014",
@@ -136,7 +136,7 @@ PEOPLE = [
         "Scholar",
         1948,
         None,
-        "Biographer and historian whose work emphasizes art, sex, occult culture, and the social worlds surrounding Crowley.",
+        "Biographer and historian whose work emphasizes art, sex, occult culture, and the social worlds surrounding Crowley. Churton helps the portal keep the surrounding cultural scene visible instead of reducing Crowley to an isolated magician.",
     ),
     (
         "PRS_015",
@@ -145,7 +145,7 @@ PEOPLE = [
         "Scholar",
         1970,
         None,
-        "Academic historian of Western esotericism whose work situates Crowley inside larger histories of modern religion and occultism.",
+        "Academic historian of Western esotericism whose work situates Crowley inside larger histories of modern religion and occultism. Pasi is valuable for keeping Crowley inside the broader study of esotericism rather than treating him as a lone outlier.",
     ),
     (
         "PRS_016",
@@ -154,7 +154,7 @@ PEOPLE = [
         "Scholar",
         None,
         None,
-        "Editor and scholar whose documentary work on Crowley correspondence and ephemera has made later archival study much easier.",
+        "Editor and scholar whose documentary work on Crowley correspondence and ephemera has made later archival study much easier. Starr is the sort of editor whose labor makes the portal's own documentary browsing possible.",
     ),
     (
         "PRS_S001",
@@ -190,7 +190,7 @@ PEOPLE = [
         "Thelemic Saint",
         1493,
         1541,
-        "Swiss physician, alchemist, and astrologer whose medicine and cosmology fed later esoteric and Thelemic admiration alike.",
+        "Swiss physician, alchemist, and astrologer whose medicine and cosmology fed later esoteric and Thelemic admiration alike. Paracelsus appears as an ancestral figure because his blend of medicine, symbolism, and experimental thought fits Crowley's retrospective canon well.",
     ),
     (
         "PRS_S005",
