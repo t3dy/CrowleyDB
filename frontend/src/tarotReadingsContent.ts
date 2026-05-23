@@ -42,6 +42,20 @@ export type TarotReading = {
   closing: string;
 };
 
+export type TarotStudyArea = {
+  id: 'career' | 'romance' | 'spirituality' | 'adventure' | 'self_improvement' | 'academics';
+  label: string;
+  prompt: string;
+};
+
+export type TarotCardStudy = {
+  title: string;
+  attributions: string[];
+  overview: string;
+  studyNotes: string[];
+  areaNotes: Record<TarotStudyArea['id'], string>;
+};
+
 const suitProfiles = {
   wands: {
     emoji: '🔥',
@@ -107,81 +121,140 @@ const majorArcana: TarotCard[] = [
   { id: 'major-21', name: 'The Universe', kind: 'major', emoji: '🌍', keywords: ['Saturn', 'completion', 'wholeness'], meaning: 'The Universe closes the cycle by showing that completion is also a form of continuing order.' },
 ];
 
-const courtProfiles = {
-  Knight: { emoji: '🏇', current: 'The Knight carries the suit outward in motion and onset.' },
-  Queen: { emoji: '👑', current: 'The Queen holds the suit inward and makes it stable enough to use.' },
-  Prince: { emoji: '🤴', current: 'The Prince gives the suit intelligence, argument, and strategic direction.' },
-  Princess: { emoji: '🧒', current: 'The Princess is the seedbed where the suit gathers form and future.' },
-} as const;
-
 const minorRankOrder = ['Ace', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Knight', 'Queen', 'Prince', 'Princess'] as const;
-
 const minorSuitOrder = ['wands', 'cups', 'swords', 'disks'] as const;
 
 function buildMinorMeaning(suit: keyof typeof suitProfiles, rank: string) {
   const suitProfile = suitProfiles[suit];
   const rankProfile = rankProfiles[rank];
-  const suitSentence = `Within ${suitProfile.name}, this card carries ${suitProfile.current}.`;
-  const rankSentence = `As ${rankProfile.name}, it speaks to ${rankProfile.meaning}.`;
-  return `${rankSentence} ${suitSentence}`;
+  return `${rankProfile.name} speaks to ${rankProfile.meaning}. Within ${suitProfile.name}, this card carries ${suitProfile.current}.`;
 }
 
 function buildMinorKeywords(suit: keyof typeof suitProfiles, rank: string) {
-  const core = suit === 'wands'
-    ? ['will', 'initiative', 'heat']
-    : suit === 'cups'
-      ? ['emotion', 'relationship', 'receptivity']
-      : suit === 'swords'
-        ? ['thought', 'speech', 'conflict']
-        : ['matter', 'craft', 'resources'];
-  const rankKeywords = rank === 'Ace'
-    ? ['origin']
-    : rank === 'Two'
-      ? ['balance']
-      : rank === 'Three'
-        ? ['growth']
-        : rank === 'Four'
-          ? ['stability']
-          : rank === 'Five'
-            ? ['friction']
-            : rank === 'Six'
-              ? ['success']
-              : rank === 'Seven'
-                ? ['testing']
-                : rank === 'Eight'
-                  ? ['skill']
-                  : rank === 'Nine'
-                    ? ['ripening']
-                    : rank === 'Ten'
-                      ? ['completion']
-                      : rank.toLowerCase();
-  return [...core, ...rankKeywords];
+  const suitKeywords =
+    suit === 'wands' ? ['will', 'initiative', 'heat'] :
+    suit === 'cups' ? ['emotion', 'relationship', 'receptivity'] :
+    suit === 'swords' ? ['thought', 'speech', 'conflict'] :
+    ['matter', 'craft', 'resources'];
+
+  const rankKeyword =
+    rank === 'Ace' ? 'origin' :
+    rank === 'Two' ? 'balance' :
+    rank === 'Three' ? 'growth' :
+    rank === 'Four' ? 'stability' :
+    rank === 'Five' ? 'friction' :
+    rank === 'Six' ? 'success' :
+    rank === 'Seven' ? 'testing' :
+    rank === 'Eight' ? 'skill' :
+    rank === 'Nine' ? 'ripening' :
+    rank === 'Ten' ? 'completion' :
+    rank.toLowerCase();
+
+  return [...suitKeywords, rankKeyword];
 }
 
 function buildMinorCards() {
   const cards: TarotCard[] = [];
+
   for (const suit of minorSuitOrder) {
     const profile = suitProfiles[suit];
     for (const rank of minorRankOrder) {
       const rankKey = rank as keyof typeof rankProfiles;
-      const name = `${rank} of ${profile.name}`;
-      const courtProfile = rank in courtProfiles ? courtProfiles[rank as keyof typeof courtProfiles] : null;
       cards.push({
         id: `minor-${suit}-${rank.toLowerCase()}`,
-        name,
+        name: `${rank} of ${profile.name}`,
         kind: 'minor',
         suit,
         rank,
-        emoji: courtProfile?.emoji || profile.emoji,
+        emoji: profile.emoji,
         keywords: buildMinorKeywords(suit, rank),
-        meaning: courtProfile ? `${courtProfile.current} ${buildMinorMeaning(suit, rankKey)}` : buildMinorMeaning(suit, rankKey),
+        meaning: buildMinorMeaning(suit, rankKey),
       });
     }
   }
+
   return cards;
 }
 
 export const TAROT_DECK: TarotCard[] = [...majorArcana, ...buildMinorCards()];
+const TAROT_CARD_BY_ID = new Map(TAROT_DECK.map(card => [card.id, card]));
+
+export const TAROT_STUDY_AREAS: TarotStudyArea[] = [
+  { id: 'career', label: 'Career', prompt: 'work, status, leadership, and practical responsibility' },
+  { id: 'romance', label: 'Romance', prompt: 'attraction, attachment, and emotional exchange' },
+  { id: 'spirituality', label: 'Spirituality', prompt: 'practice, thresholds, and the inner demand of the card' },
+  { id: 'adventure', label: 'Adventure', prompt: 'risk, movement, travel, and the urge to explore' },
+  { id: 'self_improvement', label: 'Self Improvement', prompt: 'discipline, correction, and internal work' },
+  { id: 'academics', label: 'Academics', prompt: 'study, research, analysis, and the shaping of ideas' },
+];
+
+export function getTarotCardById(cardId: string | null | undefined) {
+  if (!cardId) return null;
+  return TAROT_CARD_BY_ID.get(cardId) ?? null;
+}
+
+function normalizeQuestion(question: string) {
+  const trimmed = question.trim();
+  return trimmed || 'the question that was asked';
+}
+
+function buildAreaNotes(card: TarotCard, spread: SpreadDefinition | undefined, position: SpreadPosition | undefined) {
+  const scope = spread ? `${spread.title}` : 'the reading';
+  const positionNote = position ? ` in ${position.label}` : '';
+
+  const base =
+    card.kind === 'major'
+      ? `${card.name} acts as a governing pattern${positionNote} in ${scope}, so`
+      : `${card.name} behaves as a situational expression${positionNote} in ${scope}, so`;
+
+  return {
+    career: `${base} it points to the kind of work, rank, or public posture that needs to be claimed or revised.`,
+    romance: `${base} it shows the emotional pattern that governs attraction, attachment, and what the reading will tolerate in intimacy.`,
+    spirituality: `${base} it suggests the practice lesson, inner threshold, or ritual demand that sits closest to the card.`,
+    adventure: `${base} it describes the risk appetite, movement, and sense of pursuit that will color the path forward.`,
+    self_improvement: `${base} it indicates the habit, discipline, or correction that the querent may need to strengthen.`,
+    academics: `${base} it favors the kind of study, reading, synthesis, or critical method that fits the card's mode of intelligence.`,
+  } satisfies Record<TarotStudyArea['id'], string>;
+}
+
+export function buildTarotCardStudy(card: TarotCard, spread?: SpreadDefinition, position?: SpreadPosition): TarotCardStudy {
+  return {
+    title: card.name,
+    attributions:
+      card.kind === 'major'
+        ? [`Major arcana`, `Keywords: ${card.keywords.join(', ')}`]
+        : [`Suit: ${suitProfiles[card.suit || 'wands'].name}`, `Rank: ${card.rank || 'n/a'}`, `Keywords: ${card.keywords.join(', ')}`],
+    overview:
+      card.kind === 'major'
+        ? `${card.name} works as a governing image in the portal: it is a symbolic principle rather than a local event.`
+        : `${card.name} belongs to the suit-and-rank machinery that Crowley inherited, revised, and used to tune specific conditions.`,
+    studyNotes:
+      card.kind === 'major'
+        ? [
+            `${card.meaning} In Crowley's system, major cards often read as the larger atmosphere of a situation.`,
+            position ? `In ${position.label}, the card behaves as ${position.role}, which gives the spread a strong directional note.` : 'When studied on its own, the card is best read as a symbolic principle rather than a prediction.',
+          ]
+        : [
+            `${card.meaning} The suit gives the card its elemental weather, while the rank tells you where the force is in its development.`,
+            position ? `In ${position.label}, the card acts as ${position.role}, so its suit pressure is being translated into a specific reading function.` : 'On its own, the card is best studied as an instance of suit-energy working through rank.',
+          ],
+    areaNotes: buildAreaNotes(card, spread, position),
+  };
+}
+
+function buildCardInterpretation(card: TarotCard, position: SpreadPosition, question: string, spread: SpreadDefinition) {
+  const study = buildTarotCardStudy(card, spread, position);
+  const spreadText =
+    spread.id === 'crowley-significator'
+      ? "Crowley's method turns the reading into a story rather than a mere list of symbols."
+      : spread.id === 'opening-by-key'
+        ? 'The Golden Dawn key opens the meaning by treating each card as a controlled step in the reading.'
+        : spread.id === 'gd-house-wheel'
+          ? 'The house wheel makes the spread feel astrological and situational at the same time.'
+          : 'The Celtic Cross works by staging the present matter against surrounding pressures.';
+
+  return `${card.name} lands in ${position.label}. ${study.overview} ${study.studyNotes[0]} ${position.label} asks about ${position.focus}. For ${normalizeQuestion(question)}, that makes the card read as ${position.role}. ${spreadText}`;
+}
 
 export const SPREADS: SpreadDefinition[] = [
   {
@@ -189,8 +262,7 @@ export const SPREADS: SpreadDefinition[] = [
     title: 'Celtic Cross',
     subtitle: 'Popular ten-card reading',
     sourceLabel: 'Popular tarot',
-    intro:
-      'The familiar ten-card structure is the easiest place to start: it places the present matter at the center and lets surrounding forces speak around it.',
+    intro: 'The familiar ten-card structure is the easiest place to start: it places the present matter at the center and lets surrounding forces speak around it.',
     positions: [
       { index: 1, label: 'Present', role: 'the core issue', focus: 'what is active now' },
       { index: 2, label: 'Crossing', role: 'the pressure or aid meeting the matter', focus: 'what presses from the side' },
@@ -209,8 +281,7 @@ export const SPREADS: SpreadDefinition[] = [
     title: 'Crowley Significator Method',
     subtitle: 'Crowley divination by signifier and story',
     sourceLabel: 'Aleister Crowley',
-    intro:
-      'Crowley’s *Book of Thoth* presents a divinatory method centered on the Significator, the story cards, and the pairing of adjacent cards to build a coherent narrative.',
+    intro: "Crowley's *Book of Thoth* presents a divinatory method centered on the Significator, the story cards, and the pairing of adjacent cards to build a coherent narrative.",
     positions: [
       { index: 1, label: 'Significator', role: 'the querent or central image', focus: 'who the reading is about' },
       { index: 2, label: 'What comes for', role: 'the question itself', focus: 'what the querent brought to the deck' },
@@ -226,8 +297,7 @@ export const SPREADS: SpreadDefinition[] = [
     title: 'Golden Dawn Opening by Key',
     subtitle: 'Golden Dawn divinatory method',
     sourceLabel: 'Golden Dawn',
-    intro:
-      'The Golden Dawn’s complex “Opening by Key” reading is represented here as a 12-part wheel so the portal can show the method as an intelligible, browsable layout.',
+    intro: 'The Golden Dawn’s complex “Opening by Key” reading is represented here as a 12-part wheel so the portal can show the method as an intelligible, browsable layout.',
     positions: [
       { index: 1, label: 'Key 1', role: 'opening the issue', focus: 'what unlocks the reading' },
       { index: 2, label: 'Key 2', role: 'supporting force', focus: 'what strengthens the opening' },
@@ -248,8 +318,7 @@ export const SPREADS: SpreadDefinition[] = [
     title: 'Golden Dawn House Wheel',
     subtitle: 'Astrological wheel inspired by Golden Dawn practice',
     sourceLabel: 'Golden Dawn-inspired reconstruction',
-    intro:
-      'This wheel uses the twelve zodiacal houses as a readable tarot map. It is a portal reconstruction inspired by Golden Dawn astrology rather than a single canonical historical diagram.',
+    intro: 'This wheel uses the twelve zodiacal houses as a readable tarot map. It is a portal reconstruction inspired by Golden Dawn astrology rather than a single canonical historical diagram.',
     positions: [
       { index: 1, label: 'Aries', role: 'self and initiation', focus: 'the first act of will' },
       { index: 2, label: 'Taurus', role: 'resources and embodiment', focus: 'what can be held and used' },
@@ -267,11 +336,6 @@ export const SPREADS: SpreadDefinition[] = [
   },
 ];
 
-function normalizeQuestion(question: string) {
-  const trimmed = question.trim();
-  return trimmed || 'the question that was asked';
-}
-
 function shuffle<T>(items: T[]) {
   const next = [...items];
   for (let index = next.length - 1; index > 0; index -= 1) {
@@ -279,25 +343,6 @@ function shuffle<T>(items: T[]) {
     [next[index], next[swapIndex]] = [next[swapIndex], next[index]];
   }
   return next;
-}
-
-function interpretCard(card: TarotCard, position: SpreadPosition, question: string, spread: SpreadDefinition) {
-  const questionText = normalizeQuestion(question);
-  const positionText = `${position.label} asks about ${position.focus}.`;
-  const spreadText = spread.id === 'crowley-significator'
-    ? 'Crowley’s method turns the reading into a story rather than a mere list of symbols.'
-    : spread.id === 'opening-by-key'
-      ? 'The Golden Dawn key opens the meaning by treating each card as a controlled step in the reading.'
-      : spread.id === 'gd-house-wheel'
-        ? 'The house wheel makes the spread feel astrological and situational at the same time.'
-        : 'The Celtic Cross works by staging the present matter against surrounding pressures.';
-
-  const cardText =
-    card.kind === 'major'
-      ? card.meaning
-      : `${card.meaning} The suit and rank together suggest ${card.keywords.slice(0, 2).join(' and ')}.`;
-
-  return `${card.name} lands in ${position.label}. ${cardText} ${positionText} For ${questionText}, that makes the card read as ${position.role}. ${spreadText}`;
 }
 
 export function dealTarotReading(spreadId: string, question: string) {
@@ -308,7 +353,7 @@ export function dealTarotReading(spreadId: string, question: string) {
     return {
       card,
       position,
-      interpretation: interpretCard(card, position, question, spread),
+      interpretation: buildCardInterpretation(card, position, question, spread),
     } satisfies TarotDraw;
   });
 
@@ -324,18 +369,16 @@ export function dealTarotReading(spreadId: string, question: string) {
       }, {} as Record<NonNullable<TarotCard['suit']>, number>)
     : null;
 
-  const topSuit = dominantSuit
-    ? Object.entries(dominantSuit).sort((left, right) => right[1] - left[1])[0]?.[0]
-    : null;
-
+  const topSuit = dominantSuit ? Object.entries(dominantSuit).sort((left, right) => right[1] - left[1])[0]?.[0] : null;
   const overview = `This ${spread.title} reading begins with ${cards[0].card.name} and closes with ${cards[cards.length - 1].card.name}. ${majors.length ? `The major arcana in the spread lean on ${majors.join(', ')}. ` : ''}${topSuit ? `The minor cards cluster around ${suitProfiles[topSuit as keyof typeof suitProfiles].name}, which colors the whole reading with that suit's current.` : 'The draw stays broadly distributed across the deck.'}`;
-  const closing = spread.id === 'crowley-significator'
-    ? 'Crowley’s method wants the reader to convert the cards into a coherent story, so the reading should be read as a sequence rather than a pile of isolated meanings.'
-    : spread.id === 'opening-by-key'
-      ? 'The Golden Dawn opening works best when the cards are read as a controlled sequence of openings and seals rather than as isolated predictions.'
-      : spread.id === 'gd-house-wheel'
-        ? 'The house wheel invites you to read the spread like a horoscope: each sector speaks in relation to the whole sky of the question.'
-        : 'The Celtic Cross closes by showing how the present matter, its cross, and its outcome belong to the same moving situation.';
+  const closing =
+    spread.id === 'crowley-significator'
+      ? "Crowley's method wants the reader to convert the cards into a coherent story, so the reading should be read as a sequence rather than a pile of isolated meanings."
+      : spread.id === 'opening-by-key'
+        ? 'The Golden Dawn opening works best when the cards are read as a controlled sequence of openings and seals rather than as isolated predictions.'
+        : spread.id === 'gd-house-wheel'
+          ? 'The house wheel invites you to read the spread like a horoscope: each sector speaks in relation to the whole sky of the question.'
+          : 'The Celtic Cross closes by showing how the present matter, its cross, and its outcome belong to the same moving situation.';
 
   return {
     id: `${spread.id}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
@@ -346,3 +389,46 @@ export function dealTarotReading(spreadId: string, question: string) {
     closing,
   } satisfies TarotReading;
 }
+
+export function buildManualReading(spreadId: string, question: string, cardIds: Array<string | null>) {
+  const spread = SPREADS.find(entry => entry.id === spreadId) ?? SPREADS[0];
+  const cards = spread.positions.map((position, index) => {
+    const card = getTarotCardById(cardIds[index]);
+    if (!card) {
+      return {
+        card: {
+          id: `empty-${index}`,
+          name: 'Choose a card',
+          kind: 'minor' as const,
+          suit: 'cups' as const,
+          rank: 'Ace',
+          emoji: '⬚',
+          keywords: ['awaiting selection'],
+          meaning: 'This position is still open, waiting for the player to choose a card for it.',
+        },
+        position,
+        interpretation: `Position ${position.index} is still empty. Use the deck panel to place a card here.`,
+      } satisfies TarotDraw;
+    }
+
+    return {
+      card,
+      position,
+      interpretation: buildCardInterpretation(card, position, question, spread),
+    } satisfies TarotDraw;
+  });
+
+  const filledCount = cards.filter(draw => !draw.card.id.startsWith('empty-')).length;
+
+  return {
+    id: `${spread.id}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+    spread,
+    question: normalizeQuestion(question),
+    cards,
+    overview: filledCount
+      ? `The manual layout currently has ${filledCount} chosen card${filledCount === 1 ? '' : 's'} in place.`
+      : 'No cards have been assigned yet, so the spread is waiting for the player to build it by hand.',
+    closing: 'Manual mode lets the reader stage the spread card by card, which is useful for study, comparison, and deliberate deck selection.',
+  } satisfies TarotReading;
+}
+
