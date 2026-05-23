@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import {
   buildManualReading,
   buildTarotCardStudy,
+  buildTarotRelationshipStudy,
   dealTarotReading,
   getTarotCardById,
   SPREADS,
@@ -64,6 +65,7 @@ const Readings = () => {
     selectedSpread.positions[0];
 
   const focusStudy = buildTarotCardStudy(focusCard, selectedSpread, focusPosition);
+  const relationStudy = buildTarotRelationshipStudy(reading, focusPosition.index - 1, focusCard, selectedSpread);
 
   const deckChoices = useMemo(() => {
     if (mode !== 'manual') return TAROT_DECK;
@@ -373,6 +375,15 @@ const Readings = () => {
               {focusStudy.studyNotes.map(note => (
                 <p key={note}>{note}</p>
               ))}
+            </div>
+
+            <div className="reading-study__relation">
+              <p className="page-kicker">Reading relationship</p>
+              <p>{relationStudy.overview}</p>
+              <p>{relationStudy.sequenceNote}</p>
+              <p>{relationStudy.dignityNote}</p>
+              <p>{relationStudy.neighborNote}</p>
+              <p>{relationStudy.trioNote}</p>
             </div>
           </div>
 

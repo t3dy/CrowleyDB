@@ -56,6 +56,16 @@ export type TarotCardStudy = {
   areaNotes: Record<TarotStudyArea['id'], string>;
 };
 
+export type TarotRelationshipStudy = {
+  title: string;
+  positionLabel: string;
+  overview: string;
+  sequenceNote: string;
+  dignityNote: string;
+  neighborNote: string;
+  trioNote: string;
+};
+
 const suitProfiles = {
   wands: {
     emoji: '🔥',
@@ -123,6 +133,29 @@ const majorArcana: TarotCard[] = [
 
 const minorRankOrder = ['Ace', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Knight', 'Queen', 'Prince', 'Princess'] as const;
 const minorSuitOrder = ['wands', 'cups', 'swords', 'disks'] as const;
+const suitElement: Record<NonNullable<TarotCard['suit']>, string> = {
+  wands: 'fire',
+  cups: 'water',
+  swords: 'air',
+  disks: 'earth',
+};
+
+const rankValue: Record<string, number> = {
+  Ace: 1,
+  Two: 2,
+  Three: 3,
+  Four: 4,
+  Five: 5,
+  Six: 6,
+  Seven: 7,
+  Eight: 8,
+  Nine: 9,
+  Ten: 10,
+  Knight: 11,
+  Queen: 12,
+  Prince: 13,
+  Princess: 14,
+};
 
 function buildMinorMeaning(suit: keyof typeof suitProfiles, rank: string) {
   const suitProfile = suitProfiles[suit];
@@ -239,6 +272,130 @@ export function buildTarotCardStudy(card: TarotCard, spread?: SpreadDefinition, 
             position ? `In ${position.label}, the card acts as ${position.role}, so its suit pressure is being translated into a specific reading function.` : 'On its own, the card is best studied as an instance of suit-energy working through rank.',
           ],
     areaNotes: buildAreaNotes(card, spread, position),
+  };
+}
+
+function cardNumericValue(card: TarotCard) {
+  if (card.kind === 'major') {
+    const majorIndex = Number(card.id.replace('major-', ''));
+    return Number.isFinite(majorIndex) ? majorIndex + 40 : 40;
+  }
+  if (!card.rank) return 20;
+  return rankValue[card.rank] || 20;
+}
+
+function describeCardDignity(left: TarotCard, right: TarotCard) {
+  if (left.id === right.id) {
+    return `${left.name} repeats itself across the pair, which makes the dignity feel self-reinforcing rather than mixed.`;
+  }
+
+  if (left.kind === 'major' && right.kind === 'major') {
+    const difference = Math.abs(cardNumericValue(left) - cardNumericValue(right));
+    if (difference === 1) {
+      return `The two major cards sit in sequence, so the reading feels like a threshold moving one step after another.`;
+    }
+    if (difference <= 3) {
+      return `The major cards are near enough to feel like a tonal cluster, with one card acting as a refinement of the other.`;
+    }
+    return `The major cards are farther apart, so the reading treats one as the governing atmosphere and the other as a later consequence.`;
+  }
+
+  if (left.kind === 'minor' && right.kind === 'minor') {
+    const leftSuit = left.suit || 'cups';
+    const rightSuit = right.suit || 'cups';
+    const leftRank = left.rank || 'Ace';
+    const rightRank = right.rank || 'Ace';
+    const leftValue = rankValue[leftRank] || 1;
+    const rightValue = rankValue[rightRank] || 1;
+
+    if (leftSuit === rightSuit) {
+      if (Math.abs(leftValue - rightValue) <= 1) {
+        return `The pair has strong suit dignity and a clear number sequence, so the same elemental current keeps building without interruption.`;
+      }
+      return `The pair shares a suit, which gives it strong dignity even before the number logic is read; the suit current holds the pair together.`;
+    }
+
+    if (leftRank === rightRank) {
+      return `The number repeats across different suits, which makes the spread read like a structural echo rather than a single-element statement.`;
+    }
+
+    const leftElement = suitElement[leftSuit];
+    const rightElement = suitElement[rightSuit];
+    if ((leftElement === 'fire' && rightElement === 'air') || (leftElement === 'air' && rightElement === 'fire')) {
+      return `Fire and air interact here as an active pair, so the reading leans toward motion, speech, and quickening rather than consolidation.`;
+    }
+    if ((leftElement === 'water' && rightElement === 'earth') || (leftElement === 'earth' && rightElement === 'water')) {
+      return `Water and earth interact here as a receptive pair, so the reading leans toward containment, embodiment, and practical follow-through.`;
+    }
+
+    const difference = Math.abs(leftValue - rightValue);
+    if (difference === 1) {
+      return `The number sequence is consecutive, so the pair feels like one step handing off to the next even though the suits differ.`;
+    }
+    if (difference <= 3) {
+      return `The numbers are close enough to feel like a development sequence, but the suit change keeps the meaning from becoming repetitive.`;
+    }
+    return `The suits and numbers diverge, so the reading treats the pair as contrast rather than reinforcement.`;
+  }
+
+  const major = left.kind === 'major' ? left : right;
+  const minor = left.kind === 'minor' ? left : right;
+  const majorValue = cardNumericValue(major);
+  const minorValue = cardNumericValue(minor);
+  if (Math.abs(majorValue - minorValue) <= 2) {
+    return `The major card and the minor card sit close in sequence, so the governing image and the local situation are speaking in a tight knot.`;
+  }
+  return `The major card governs the atmosphere while the minor card localizes it, so the pair reads as principle above and condition below.`;
+}
+
+export function buildTarotRelationshipStudy(reading: TarotReading, focusIndex: number, focusCard: TarotCard, spread?: SpreadDefinition): TarotRelationshipStudy {
+  const currentDraw = reading.cards[focusIndex] || reading.cards[0];
+  const currentCard = currentDraw?.card || focusCard;
+  const currentPosition = currentDraw?.position || spread?.positions[focusIndex] || reading.spread.positions[focusIndex] || reading.spread.positions[0];
+  const previousDraw = reading.cards[focusIndex - 1] || null;
+  const nextDraw = reading.cards[focusIndex + 1] || null;
+
+  const previousCard = previousDraw?.card || null;
+  const nextCard = nextDraw?.card || null;
+
+  const sequenceNote = previousCard && nextCard
+    ? `This position sits between ${previousCard.name} and ${nextCard.name}, so the spread reads like a hinge rather than a single isolated symbol.`
+    : previousCard
+      ? `This position follows ${previousCard.name}, so the card looks like the next step after an established condition.`
+      : nextCard
+        ? `This position opens into ${nextCard.name}, so the card behaves like an initial statement that hands off to what follows.`
+        : 'This position stands alone at the moment, so the card reads primarily through its own image and attributions.';
+
+  const dignityNote = previousCard
+    ? describeCardDignity(previousCard, currentCard)
+    : nextCard
+      ? describeCardDignity(currentCard, nextCard)
+      : `${currentCard.name} has no adjacent comparison in view, so its dignity is being read from its own suit, number, and major or minor status.`;
+
+  const neighborNote = previousCard && nextCard
+    ? `The surrounding cards make ${currentCard.name} part of a three-card sentence: ${previousCard.name} introduces the condition, ${currentCard.name} holds it, and ${nextCard.name} pushes it onward.`
+    : previousCard
+      ? `The earlier card colors the present one, so ${previousCard.name} acts as the prior statement that ${currentCard.name} answers.`
+      : nextCard
+        ? `The following card becomes the next clause in the sentence, so ${currentCard.name} should be read with ${nextCard.name} in mind.`
+        : `${currentCard.name} currently has no neighbors in the spread grid, so the card is being read more directly through its own symbolism.`;
+
+  const trioNote = currentPosition.index === 1
+    ? `${currentCard.name} opens the reading, which makes it feel more like an initiatory key than a response.`
+    : currentPosition.index === reading.cards.length
+      ? `${currentCard.name} closes the reading, so it often behaves like a summary, verdict, or seal.`
+      : `Because this card sits at position ${currentPosition.index}, it is translating the question into a midstream condition rather than a pure beginning or ending.`;
+
+  const overview = `${currentCard.name} is being read at ${currentPosition.label}. In the portal, the card is never only a symbol on its own; it is also a point in a sequence, and that sequence matters for the final interpretation.`;
+
+  return {
+    title: currentCard.name,
+    positionLabel: currentPosition.label,
+    overview,
+    sequenceNote,
+    dignityNote,
+    neighborNote,
+    trioNote,
   };
 }
 
@@ -431,4 +588,3 @@ export function buildManualReading(spreadId: string, question: string, cardIds: 
     closing: 'Manual mode lets the reader stage the spread card by card, which is useful for study, comparison, and deliberate deck selection.',
   } satisfies TarotReading;
 }
-

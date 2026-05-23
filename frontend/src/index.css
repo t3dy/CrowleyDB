@@ -1064,6 +1064,24 @@ button {
   line-height: 1.6;
 }
 
+.reading-study__relation {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.95rem 1rem;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.16);
+  border: 1px solid rgba(212, 175, 55, 0.12);
+}
+
+.reading-study__relation .page-kicker {
+  margin-bottom: 0;
+}
+
+.reading-study__relation p {
+  margin: 0;
+  line-height: 1.58;
+}
+
 .reading-areas {
   display: grid;
   gap: 0.65rem;
