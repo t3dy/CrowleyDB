@@ -418,6 +418,9 @@ def expand_grade_description(name: str, system: str, tree_path_number: int, desc
         "The title is part of the pedagogy, so the wording itself helps explain how the ladder turns number into discipline.",
         "The page also treats the grade name as a symbolic instruction, because Crowley often expects the title itself to carry the tone of the lesson.",
         "The numbered equation is therefore part of the meaning, not a decorative flourish, and the page keeps the arithmetic visible beside the ordeal.",
+        "The entry also keeps the grade in conversation with the other rungs of the ladder, because each station only becomes legible when the sequence around it stays visible.",
+        "That makes the grade useful both as a historical reference to initiatory structure and as a reading guide to Crowley's idea of spiritual labor.",
+        "The prose also leaves room for the fact that Crowley often turns a grade into a lesson about how a magician should think, act, and narrate progress, not just where they stand in a hierarchy.",
     ]
     if system != "A.'.A.'.":
         extras.append("The alternate system wording is preserved so the historical comparison remains clear.")
@@ -548,4 +551,10 @@ def expand_topic_description(slug: str, label: str, description: str) -> str:
     ontology_note = (
         "The label therefore works like a map key: it promises a route through the archive, but it does not exhaust the thing itself, so the prose keeps room for disagreement, overlap, and historical change."
     )
-    return _append(description, note, bridge, archive_note, use_note, ontology_note)
+    sequence_note = (
+        "The topic also helps the reader move from a single card to a longer chain of related material, which is why the browse surface can feel both compact and expansive at the same time."
+    )
+    title_note = (
+        "Where Crowley uses the same word in a title, a grade, or a ritual context, the topic keeps those repetitions visible so the archive can show how meanings accumulate instead of remaining fixed."
+    )
+    return _append(description, note, bridge, archive_note, use_note, ontology_note, sequence_note, title_note)
