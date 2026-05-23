@@ -38,7 +38,7 @@ PERSON_ROLE_NOTES = {
     "Disciple": "The disciple lane preserves the transmission history, showing how Crowley's methods were received, edited, preserved, or argued over by later readers.",
     "Scholar": "The scholar lane gives the archive a documentary counterweight, tying interpretation back to sources, editions, and criticism.",
     "Rival": "Rivals matter because conflict shaped both the organizations and the legend, and the archive keeps that friction visible.",
-    "Thelemic Saint": "The saint lane records the retrospective ancestors that later Thelemites recruited into the symbolic family tree.",
+    "Thelemic Saint": "The saint lane records the retrospective ancestors that later Thelemites recruited into the symbolic family tree. These figures are read less as fixed biographies than as useful lineages, so the entry keeps their symbolic afterlife and the historical record in dialogue.",
 }
 
 PERSON_SPECIAL_NOTES = {
@@ -61,11 +61,11 @@ PERSON_SPECIAL_NOTES = {
 }
 
 SAINT_NOTES = {
-    "PRS_S001": "Maier helps the portal keep Rosicrucianism, alchemy, and courtly erudition in the same historical lane.",
-    "PRS_S002": "De Molay survives in the archive less as a historical administrator than as a symbol of martyrdom and delayed revenge.",
-    "PRS_S003": "Rosenkreuz functions as a founding cipher, letting the archive point to mythic origin stories without pretending they are simple biography.",
-    "PRS_S004": "Paracelsus matters because his experimental medicine and symbolic cosmology give Thelemic retrospection a Renaissance ancestor it can actually use.",
-    "PRS_S005": "Apollonius supplies a model of holy charisma and philosophical wandering that later occult readers repeatedly recruit into their own lineages.",
+    "PRS_S001": "Maier helps the portal keep Rosicrucianism, alchemy, and courtly erudition in the same historical lane. His presence matters because Crowley and later readers could treat him as a disciplined scholar, a symbolic alchemist, and a model of learned synthesis all at once. That makes him one of the clearest bridges between Renaissance number lore and the later occult habit of reading texts as layered correspondences.",
+    "PRS_S002": "De Molay survives in the archive less as a historical administrator than as a symbol of martyrdom and delayed revenge. Crowleyan and Golden Dawn readers repeatedly make him into a figure of templar endurance, secret transmission, and vindication after destruction. The entry therefore keeps the execution history and the symbolic afterlife in the same frame, since the second is often more important to the occult literature than the first.",
+    "PRS_S003": "Rosenkreuz functions as a founding cipher, letting the archive point to mythic origin stories without pretending they are simple biography. His value lies in the way Rosicrucian literature turns hidden authorship into a teaching device, which later occult systems borrow whenever they need an origin that cannot be reduced to ordinary chronology. The portal keeps him as a name whose main force is generative rather than factual.",
+    "PRS_S004": "Paracelsus matters because his experimental medicine and symbolic cosmology give Thelemic retrospection a Renaissance ancestor it can actually use. Crowley and his successors could point to Paracelsus when they wanted precedent for a magician-physician who combined practical experiment with a theory of signatures, correspondences, and inner powers. That makes him useful not only as a historical person, but as a pattern for how knowledge can move between science, medicine, and magic.",
+    "PRS_S005": "Apollonius supplies a model of holy charisma and philosophical wandering that later occult readers repeatedly recruit into their own lineages. He functions in the archive as a philosophical traveler whose authority comes from encounter, discipline, and transformation rather than office or institution. The entry keeps that double life visible, since he is both a historical figure and a recurrent exemplar for magical self-fashioning.",
 }
 
 TOPIC_NOTES = {
