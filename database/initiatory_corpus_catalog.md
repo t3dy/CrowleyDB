@@ -725,6 +725,7 @@ This catalog ranks the key Crowley texts and companion sources for ingesting gra
 - passage_tarot: 17
 - documentary_role: 15
 - title_symbolism: 12
+- work_symbolic_role: 12
 - grade_meaning: 12
 - sefirah_attribution: 12
 - grade_commentary: 12

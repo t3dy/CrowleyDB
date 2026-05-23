@@ -1089,3 +1089,53 @@ This file summarizes the structured claims extracted from the source catalog, th
 - **30 Aethyrs** (SRC_WORK_WKS_003)
   - The thirty Aethyrs organize the book as a layered visionary ascent whose structure is as important as the text itself.
   - Evidence: works.json:WKS_003
+
+## work_symbolic_role
+
+- **correspondence atlas** (SRC_WORK_WKS_004)
+  - 777 and Other Qabalistic Writings acts as an atlas of correspondences, so later claims about number, tarot, and sephirot can be read as applications of its table logic.
+  - Evidence: works.json:WKS_004
+
+- **tarot revision** (SRC_WORK_WKS_005)
+  - The Book of Thoth is the place where Crowley's mature tarot logic becomes visible, especially where the pips, the trumps, and the newer attributions all have to fit together.
+  - Evidence: works.json:WKS_005
+
+- **doctrinal center** (SRC_WORK_WKS_001)
+  - Liber AL vel Legis functions as the doctrinal center of the archive, so every later number, grade, and attribution has to be read with its revelation frame in mind.
+  - Evidence: works.json:WKS_001
+
+- **method synthesis** (SRC_WORK_WKS_010)
+  - Magick in Theory and Practice synthesizes theory and training into one work, which is why it remains a core source for how the system should be used.
+  - Evidence: works.json:WKS_010
+
+- **curricular manual** (SRC_WORK_WKS_002)
+  - Book 4 / Liber ABA works like a curriculum, because it turns spiritual labor into a staged sequence of training tasks that can be tracked against the Tree of Life.
+  - Evidence: works.json:WKS_002
+
+- **instructional letter** (SRC_WORK_WKS_008)
+  - Liber Aleph vel CXI uses the shape of a letter to make initiation feel intimate, but the number and form keep the teaching tied to the larger symbolic order.
+  - Evidence: works.json:WKS_008
+
+- **mythic autobiography** (SRC_WORK_WKS_011)
+  - The Confessions of Aleister Crowley is valuable because its autobiography is also myth-making, so it reveals how Crowley wants his own life to function as evidence.
+  - Evidence: works.json:WKS_011
+
+- **visionary record** (SRC_WORK_WKS_003)
+  - The Vision and the Voice is more than an account of visions; it is a record of how Crowley uses serial ascent to make initiatory change legible.
+  - Evidence: works.json:WKS_003
+
+- **aphoristic method** (SRC_WORK_WKS_007)
+  - The Book of Lies uses contradiction as method, which means its jokes, reversals, and aphorisms should be read as deliberate symbolic instruction.
+  - Evidence: works.json:WKS_007
+
+- **periodical teaching** (SRC_WORK_WKS_006)
+  - The Equinox, Vol. I, No. 1 treats periodical publication as an initiatory medium, so the serial form belongs to the doctrine rather than sitting outside it.
+  - Evidence: works.json:WKS_006
+
+- **fictional initiation** (SRC_WORK_WKS_012)
+  - Diary of a Drug Fiend stages initiation through fiction, allowing Crowley's discipline language to be tested in a narrative form that reaches beyond the ritual books.
+  - Evidence: works.json:WKS_012
+
+- **manifesto phase** (SRC_WORK_WKS_009)
+  - The Blue Equinox marks a later phase of Crowley's public doctrine, so it matters as an index of how the movement shifted after the war.
+  - Evidence: works.json:WKS_009

@@ -521,6 +521,118 @@ WORK_TITLE_NOTES = {
 }
 
 
+WORK_CONTEXT_NOTES = {
+    "WKS_001": (
+        "work_symbolic_role",
+        "doctrinal center",
+        "Liber AL vel Legis functions as the doctrinal center of the archive, so every later number, grade, and attribution has to be read with its revelation frame in mind.",
+        "works.json:WKS_001",
+        "The summary treats the text as the central revealed source of Thelema.",
+        0.95,
+        86,
+    ),
+    "WKS_002": (
+        "work_symbolic_role",
+        "curricular manual",
+        "Book 4 / Liber ABA works like a curriculum, because it turns spiritual labor into a staged sequence of training tasks that can be tracked against the Tree of Life.",
+        "works.json:WKS_002",
+        "The summary identifies the book as a core initiatory training manual.",
+        0.94,
+        84,
+    ),
+    "WKS_003": (
+        "work_symbolic_role",
+        "visionary record",
+        "The Vision and the Voice is more than an account of visions; it is a record of how Crowley uses serial ascent to make initiatory change legible.",
+        "works.json:WKS_003",
+        "The work is central to the abyssal and visionary record.",
+        0.94,
+        84,
+    ),
+    "WKS_004": (
+        "work_symbolic_role",
+        "correspondence atlas",
+        "777 and Other Qabalistic Writings acts as an atlas of correspondences, so later claims about number, tarot, and sephirot can be read as applications of its table logic.",
+        "works.json:WKS_004",
+        "The summary presents the book as a reference compendium of correspondences.",
+        0.97,
+        90,
+    ),
+    "WKS_005": (
+        "work_symbolic_role",
+        "tarot revision",
+        "The Book of Thoth is the place where Crowley's mature tarot logic becomes visible, especially where the pips, the trumps, and the newer attributions all have to fit together.",
+        "works.json:WKS_005",
+        "The summary says the book codifies major revisions in his tarot attributions.",
+        0.96,
+        88,
+    ),
+    "WKS_006": (
+        "work_symbolic_role",
+        "periodical teaching",
+        "The Equinox, Vol. I, No. 1 treats periodical publication as an initiatory medium, so the serial form belongs to the doctrine rather than sitting outside it.",
+        "works.json:WKS_006",
+        "The summary emphasizes doctrine, ritual, and polemic sharing the same print space.",
+        0.92,
+        82,
+    ),
+    "WKS_007": (
+        "work_symbolic_role",
+        "aphoristic method",
+        "The Book of Lies uses contradiction as method, which means its jokes, reversals, and aphorisms should be read as deliberate symbolic instruction.",
+        "works.json:WKS_007",
+        "The summary notes aphorisms and symbolic reversals.",
+        0.92,
+        82,
+    ),
+    "WKS_008": (
+        "work_symbolic_role",
+        "instructional letter",
+        "Liber Aleph vel CXI uses the shape of a letter to make initiation feel intimate, but the number and form keep the teaching tied to the larger symbolic order.",
+        "works.json:WKS_008",
+        "The summary describes the work as a letter-form work of magical instruction.",
+        0.93,
+        84,
+    ),
+    "WKS_009": (
+        "work_symbolic_role",
+        "manifesto phase",
+        "The Blue Equinox marks a later phase of Crowley's public doctrine, so it matters as an index of how the movement shifted after the war.",
+        "works.json:WKS_009",
+        "The summary says it bridges the New York material and later organizational ambitions.",
+        0.9,
+        80,
+    ),
+    "WKS_010": (
+        "work_symbolic_role",
+        "method synthesis",
+        "Magick in Theory and Practice synthesizes theory and training into one work, which is why it remains a core source for how the system should be used.",
+        "works.json:WKS_010",
+        "The summary identifies the book as a major statement of mature magical theory and practice.",
+        0.94,
+        86,
+    ),
+    "WKS_011": (
+        "work_symbolic_role",
+        "mythic autobiography",
+        "The Confessions of Aleister Crowley is valuable because its autobiography is also myth-making, so it reveals how Crowley wants his own life to function as evidence.",
+        "works.json:WKS_011",
+        "The summary warns the reader to treat it as self-construction as well as recollection.",
+        0.93,
+        84,
+    ),
+    "WKS_012": (
+        "work_symbolic_role",
+        "fictional initiation",
+        "Diary of a Drug Fiend stages initiation through fiction, allowing Crowley's discipline language to be tested in a narrative form that reaches beyond the ritual books.",
+        "works.json:WKS_012",
+        "The summary calls it a fictional argument for discipline and transformation.",
+        0.9,
+        80,
+    ),
+}
+
+
 GRADE_CLAIM_NOTES = {
     "GRD_001": "Neophyte marks the first contact with the elemental ground of the work, so the page keeps the task and the sefirah together.",
     "GRD_002": "Zelator organizes bodily discipline around Yesod, which makes the grade a foundational training stage rather than a title.",
@@ -734,6 +846,19 @@ def build_work_claims(works: list[dict], claims: list[dict]) -> None:
             )
         if work["id"] in WORK_TITLE_NOTES:
             claim_type, symbol, text, locator, excerpt, confidence, priority = WORK_TITLE_NOTES[work["id"]]
+            add_claim(
+                claims,
+                source_id,
+                claim_type,
+                symbol,
+                text,
+                locator,
+                excerpt,
+                confidence,
+                priority,
+            )
+        if work["id"] in WORK_CONTEXT_NOTES:
+            claim_type, symbol, text, locator, excerpt, confidence, priority = WORK_CONTEXT_NOTES[work["id"]]
             add_claim(
                 claims,
                 source_id,
