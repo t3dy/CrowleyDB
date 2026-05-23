@@ -163,6 +163,44 @@ TREE_NOTES = {
     32: "The Universe path closes the diagram in a way that feels structural rather than merely terminal, which makes it a useful place to preserve Crowley's revisionary logic.",
 }
 
+TREE_SEPHIRAH_NOTES = {
+    1: "Crowley treats the crown as a point beyond ordinary separation, so Kether remains a symbol of origin, unification, and the pressure that precedes manifest form.",
+    2: "Chokmah carries the first burst of wisdom and force, which makes it feel like the initial motion of creation before any stable structure has settled.",
+    3: "Binah is the ordering womb of understanding, where Crowley's ladder turns limit, form, and time into the conditions that make meaning possible.",
+    4: "Chesed expands as beneficence and lawful largesse, so the sephirah reads as authority that can hold abundance without collapsing into chaos.",
+    5: "Geburah brings corrective force, severity, and disciplined cutting, which is why the portal keeps it visible as the active edge of the Tree's balancing work.",
+    6: "Tiphareth stands at the solar center, where integration, sacrifice, and the Holy Guardian Angel all converge into a single symbolic axis.",
+    7: "Netzach gathers desire, art, and victory into a field of instinctive power, so the entry keeps emotional momentum visible rather than flattened into abstraction.",
+    8: "Hod refines language, analysis, and symbolic arrangement, making it the place where the system learns to speak about itself with precision.",
+    9: "Yesod holds image, dream, mediation, and subtle structure, which gives the Tree a lunar foundation for the astral life of the work.",
+    10: "Malkuth is the manifest world where the whole diagram has to land, so the portal treats embodiment and ordinary life as the test of every higher claim.",
+}
+
+TREE_PATH_NOTES = {
+    11: "Aleph keeps the Fool in motion as air, breath, and ungraspable beginning, so the path feels like a doctrinal statement about openness before form.",
+    12: "Beth turns the Magus into a Mercury lesson about speech, mediation, and the first act of naming, which is why the path feels like intelligence becoming operative.",
+    13: "Gimel links the Priestess to the moon and the inner passage between levels, making this one of the Tree's clearest images of hidden transmission.",
+    14: "Daleth stages Venus as a door, so the Empress path reads as generative relation, attraction, and the opening that makes form possible.",
+    15: "Heh gives the Emperor an airy act of articulation, turning authority into structure, visibility, and the work of making order legible.",
+    16: "Vav joins the Hierophant to Taurus and the nail of fixation, which keeps the path grounded in law, sequence, and the binding of spiritual instruction to tradition.",
+    17: "Zain carries Gemini's split attention into the Lovers, where union and choice have to coexist instead of cancel one another out.",
+    18: "Cheth frames the Chariot as Cancerian enclosure, so victory is shown as containment, direction, and the handling of force within a protected vehicle.",
+    19: "Teth links Lust to Leo and keeps Crowley's revision obvious, so the path becomes a drama of strength, desire, and redirected vitality.",
+    20: "Yod gives the Hermit a Virgoan hand, making hidden skill, labor, and inward exactness the core of the path's motion.",
+    21: "Kaph binds Fortune to Jupiter and the wheel, so the path reads as expansion, turning, and a doctrine of cyclical movement rather than simple luck.",
+    22: "Lamed anchors Adjustment in Libra, where balance becomes a practiced art and not just a moral slogan.",
+    23: "Mem suspends the Hanged Man in watery mediation, so surrender, reversal, and a changed angle of perception remain central to the path.",
+    24: "Nun makes Death an initiatory Scorpio gate, keeping transformation, decay, and renewal in one symbolic current.",
+    25: "Samekh gives Art a Sagittarius arc, so the path becomes a disciplined synthesis rather than a vague ideal of harmony.",
+    26: "Ayin links the Devil to Capricorn and keeps material pressure, bondage, and ambition visible as initiatory tests rather than mere vices.",
+    27: "Peh turns the Tower into Mars in speech and impact, which makes rupture, liberation, and forceful correction part of the same lesson.",
+    28: "Tzaddi keeps the Star under Aquarius in Crowley's revised order, so the path stays open to inspiration, future orientation, and the corrective logic of revision itself.",
+    29: "Qoph gives the Moon to Pisces and makes the path one of images, thresholds, and unstable reflection, where imagination has to be read carefully.",
+    30: "Resh places the Sun at the center of visible order, so the path reads as clarity, life, and the illumination that makes the whole diagram intelligible.",
+    31: "Shin names the Aeon as transformative fire, which lets the path function as a doctrinal hinge between eras and symbolic regimes.",
+    32: "Tau closes the Tree as Saturnian completion, so the Universe path feels like the whole diagram bearing down into an achieved form.",
+}
+
 
 GRADE_FOCUS = {
     1: "the crown as a point beyond ordinary distinction, where the ladder points back toward origin and the student is asked to imagine what lies before form",
@@ -282,11 +320,19 @@ def expand_term_definition(term_id: str, term: str, gematria_value, etymology: s
         definition_extras.append(f"Its etymology keeps the term anchored in {etymology.lower()}.")
     if gematria_value is not None:
         definition_extras.append(f"The gematria value of {gematria_value} keeps the term connected to the numerical layer of the archive.")
+    definition_extras.append("The page also keeps the practical use of the word visible, because Crowley often treats a term as something a reader has to do, not just something a reader has to define.")
+    definition_extras.append("That means the dictionary entry stays close to ritual speech, commentary, and correspondence instead of drifting into a detached glossary note.")
+    definition_extras.append("The entry also keeps the term linked to neighboring works and grades, so a definition can lead outward into the archive instead of ending at a single sentence.")
+    definition_extras.append("That networked style matters because Crowley often defines a word by how it behaves in a ritual or in a specific text, not by dictionary abstraction alone.")
 
     significance_extras = [
         TERM_NOTES.get(term_id, "The portal uses the term as a cross-reference point rather than a loose keyword, so the entry stays tied to works, events, and people."),
         "The page also keeps the term connected to the wider network of names and texts, which is what turns it into an encyclopedia entry rather than a glossary stub.",
         "The writing treats the term as something that can shift between doctrine, ritual usage, and numerical association, because that flexibility is part of how Crowley's system works.",
+        "The entry also leaves room for contradictions and revisions, since Crowley's terms are often reused with slightly different emphases across the corpus.",
+        "That keeps the dictionary usable both as a quick reference and as an index into the longer archive of symbolic arguments.",
+        "The term also stays in conversation with the publication titles and grade system, because Crowley's vocabulary often reveals more when you see where it is repeated.",
+        "That means each definition can also serve as a doorway into title symbolism, correspondence tables, and the practical rhetoric of initiation.",
     ]
 
     return _append(definition, *definition_extras), _append(thelemic_significance, *significance_extras)
@@ -318,6 +364,8 @@ def expand_location_significance(location_id: str, name: str, significance: str)
         "That extra sentence keeps the location from reading like a map pin and lets it behave like a meaningful setting in the narrative network.",
         "The site matters because Crowley's life repeatedly turns geography into method: where he is changes what the work can become.",
         "The place also acts like a cue for atmosphere and phase, so the archive can read movement, publication, ritual, and conflict as spatially specific rather than generic.",
+        "The location entry also keeps the social environment visible, since many of Crowley's scenes depend on rooms, houses, lodgings, and temporary bases rather than famous monuments alone.",
+        "That makes the map layer useful as a biography aid, a publication guide, and a way to notice where the archive's most important scenes were actually staged.",
     )
 
 
@@ -356,6 +404,8 @@ def expand_event_summary(summary: str, topics: Sequence[str], people: Sequence[s
     parts.append("Read together, the prose gives the event a place in the portal's map of Crowley's life instead of leaving it as a bare calendar fact.")
     parts.append("The extra sentence keeps the event functioning as a hinge between biography, documentary source, and the larger pattern of the archive.")
     parts.append("The title of the event matters too, because Crowley-style history often turns a scene into a named threshold, not just a dated occurrence.")
+    parts.append("The event entry also keeps the afterlife of the scene visible, since later biographies, criticism, and mythmaking often attach more meaning to the episode than the participants knew at the time.")
+    parts.append("That is why the chronology keeps both the factual sequence and the interpretive load in view: the archive needs to know what happened, but it also needs to know what the event came to mean.")
     return " ".join(parts)
 
 
@@ -399,13 +449,16 @@ def expand_tree_description(
     if path_number <= 10:
         extras = [
             f"As {name}, it defines a station of the Tree rather than a transit line, and the colors, names, and angelic attributions turn it into a structural node in the map.",
+            TREE_SEPHIRAH_NOTES.get(path_number, "The sephirah is kept in view as an active principle rather than a passive label, so the entry can read as a working organ of the symbolic body."),
             "In the portal it reads as a place where doctrine, embodiment, and function meet.",
             "The entry keeps the sephirah visible as an active principle, not just a diagram label, so the reader can read it as part of the system's working anatomy.",
             "The number itself matters because Crowley reads sephirotic structure as a sequence of principles that can be compared, repeated, and revised across the rest of the archive.",
+            "The page also keeps the sephirah in relation to its neighboring stations, because Crowley usually understands the Tree as a set of tensions and transitions rather than as isolated boxes.",
         ]
     else:
         extras = [
             f"The path binds {hebrew_letter} to {astrological_attribution} and {thoth_tarot_card}, making the tarot attribution part of the explanation rather than a hidden assumption.",
+            TREE_PATH_NOTES.get(path_number, "The path is kept as a transition point where letter, planet, and card can be read together instead of as separate data points."),
         ]
         if is_swapped:
             extras.append("Crowley's swap note is preserved here so the Thoth revision reads as an intentional editorial choice rather than a mistake.")
@@ -415,6 +468,7 @@ def expand_tree_description(
         extras.append("In the portal it functions as a route across the diagram, not just a line on a chart.")
         extras.append("That makes each path read as a practical bridge between states, symbols, and initiatory movement.")
         extras.append("The number of the path is also part of the argument, since Crowley uses the sequence to make the Tree feel like a lived symbolic machine rather than a static chart.")
+        extras.append("The entry also preserves the older Golden Dawn memory of the path so readers can see where Crowley inherits and where he revises.")
     return _append(description, *extras)
 
 
