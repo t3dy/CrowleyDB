@@ -335,6 +335,7 @@ def expand_event_summary(summary: str, topics: Sequence[str], people: Sequence[s
 
     parts.append("Read together, the prose gives the event a place in the portal's map of Crowley's life instead of leaving it as a bare calendar fact.")
     parts.append("The extra sentence keeps the event functioning as a hinge between biography, documentary source, and the larger pattern of the archive.")
+    parts.append("The title of the event matters too, because Crowley-style history often turns a scene into a named threshold, not just a dated occurrence.")
     return " ".join(parts)
 
 
@@ -345,6 +346,7 @@ def expand_grade_description(name: str, system: str, tree_path_number: int, desc
         "In the portal it is read as a training stage rather than a ceremonial title, so the practical work stays visible.",
         f"That keeps {name} from becoming a label without context and lets the reader see how {system} structures progression.",
         "The title is part of the pedagogy, so the wording itself helps explain how the ladder turns number into discipline.",
+        "The page also treats the grade name as a symbolic instruction, because Crowley often expects the title itself to carry the tone of the lesson.",
     ]
     if system != "A.'.A.'.":
         extras.append("The alternate system wording is preserved so the historical comparison remains clear.")
