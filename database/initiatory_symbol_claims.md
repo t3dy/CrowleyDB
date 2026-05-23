@@ -1028,6 +1028,56 @@ This file summarizes the structured claims extracted from the source catalog, th
   - The title itself carries the number 777, so Crowley treats the title as a symbolic container rather than a neutral label.
   - Evidence: works.json:WKS_004
 
+## title_symbolism
+
+- **correspondence title** (SRC_WORK_WKS_004)
+  - 777 and Other Qabalistic Writings makes the number 777 part of the title identity, turning the book into a caption for the whole correspondence method.
+  - Evidence: works.json:WKS_004
+
+- **revelatory title** (SRC_WORK_WKS_001)
+  - Liber AL vel Legis treats the title as a doctrinal statement: revelation, law, and a numbered liber identity all occupy the same symbolic space.
+  - Evidence: works.json:WKS_001
+
+- **thoth title** (SRC_WORK_WKS_005)
+  - The Book of Thoth invokes the god of writing, measurement, and record, so the title itself frames the tarot book as a symbolic ledger.
+  - Evidence: works.json:WKS_005
+
+- **dual title** (SRC_WORK_WKS_002)
+  - Book 4 / Liber ABA makes the English title and the liber number work together, so the title itself already stages method, lineage, and training.
+  - Evidence: works.json:WKS_002
+
+- **letter-number title** (SRC_WORK_WKS_008)
+  - Liber Aleph vel CXI treats the title as both letter and number, which suits a work that presents instruction in epistolary and symbolic form.
+  - Evidence: works.json:WKS_008
+
+- **method title** (SRC_WORK_WKS_010)
+  - Magick in Theory and Practice announces its method at the level of the title, binding speculation and training into a single phrase.
+  - Evidence: works.json:WKS_010
+
+- **visionary title** (SRC_WORK_WKS_003)
+  - The Vision and the Voice names the work as both sight and utterance, which fits a text built around visionary ascent and recorded speech.
+  - Evidence: works.json:WKS_003
+
+- **serial title** (SRC_WORK_WKS_006)
+  - The Equinox, Vol. I, No. 1 makes publication sequence part of the teaching, so the issue number and volume are themselves symbolic coordinates.
+  - Evidence: works.json:WKS_006
+
+- **autobiographical title** (SRC_WORK_WKS_011)
+  - The Confessions of Aleister Crowley says from the title that the life is being offered as a self-interpreting record, not a neutral memoir.
+  - Evidence: works.json:WKS_011
+
+- **paradox title** (SRC_WORK_WKS_007)
+  - The Book of Lies turns the title into a paradoxical teaching device, since the book announces falsehood while using contradiction to deliver instruction.
+  - Evidence: works.json:WKS_007
+
+- **fiction title** (SRC_WORK_WKS_012)
+  - Diary of a Drug Fiend makes occult discipline enter the novel as lived example, so the title itself frames addiction, practice, and transformation as narrative material.
+  - Evidence: works.json:WKS_012
+
+- **seasonal title** (SRC_WORK_WKS_009)
+  - The Blue Equinox uses a colored season title to mark a phase of publication and doctrine, so the title reads like a symbolic weather report as much as an issue label.
+  - Evidence: works.json:WKS_009
+
 ## training_method
 
 - **discipline** (SRC_WORK_WKS_002)

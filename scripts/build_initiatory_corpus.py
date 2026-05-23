@@ -53,7 +53,7 @@ SOURCE_CATALOG = [
         "title": "The Book of Thoth",
         "author": "Aleister Crowley",
         "priority_score": 96,
-        "focus": "Tarot revisions, pip symbolism, major arcana attributions, and Crowley’s late symbolic synthesis.",
+        "focus": "Tarot revisions, pip symbolism, major arcana attributions, and Crowley's late symbolic synthesis.",
         "why_key": "The tarot manual is the major late commentary on the revised symbolic system.",
         "evidence_lane": "A",
         "file_path": None,
@@ -409,6 +409,118 @@ WORK_CLAIM_MAP = {
 }
 
 
+WORK_TITLE_NOTES = {
+    "WKS_001": (
+        "title_symbolism",
+        "revelatory title",
+        "Liber AL vel Legis treats the title as a doctrinal statement: revelation, law, and a numbered liber identity all occupy the same symbolic space.",
+        "works.json:WKS_001",
+        "The summary treats the text as the central revealed source of Thelema.",
+        0.97,
+        90,
+    ),
+    "WKS_002": (
+        "title_symbolism",
+        "dual title",
+        "Book 4 / Liber ABA makes the English title and the liber number work together, so the title itself already stages method, lineage, and training.",
+        "works.json:WKS_002",
+        "The summary identifies the book as a core initiatory training manual.",
+        0.96,
+        88,
+    ),
+    "WKS_003": (
+        "title_symbolism",
+        "visionary title",
+        "The Vision and the Voice names the work as both sight and utterance, which fits a text built around visionary ascent and recorded speech.",
+        "works.json:WKS_003",
+        "The work is central to the abyssal and visionary record.",
+        0.95,
+        88,
+    ),
+    "WKS_004": (
+        "title_symbolism",
+        "correspondence title",
+        "777 and Other Qabalistic Writings makes the number 777 part of the title identity, turning the book into a caption for the whole correspondence method.",
+        "works.json:WKS_004",
+        "The summary presents the book as a reference compendium of correspondences.",
+        0.98,
+        92,
+    ),
+    "WKS_005": (
+        "title_symbolism",
+        "thoth title",
+        "The Book of Thoth invokes the god of writing, measurement, and record, so the title itself frames the tarot book as a symbolic ledger.",
+        "works.json:WKS_005",
+        "The summary says the book codifies major revisions in his tarot attributions.",
+        0.96,
+        90,
+    ),
+    "WKS_006": (
+        "title_symbolism",
+        "serial title",
+        "The Equinox, Vol. I, No. 1 makes publication sequence part of the teaching, so the issue number and volume are themselves symbolic coordinates.",
+        "works.json:WKS_006",
+        "The summary emphasizes doctrine, ritual, and polemic sharing the same print space.",
+        0.93,
+        86,
+    ),
+    "WKS_007": (
+        "title_symbolism",
+        "paradox title",
+        "The Book of Lies turns the title into a paradoxical teaching device, since the book announces falsehood while using contradiction to deliver instruction.",
+        "works.json:WKS_007",
+        "The summary notes aphorisms and symbolic reversals.",
+        0.92,
+        84,
+    ),
+    "WKS_008": (
+        "title_symbolism",
+        "letter-number title",
+        "Liber Aleph vel CXI treats the title as both letter and number, which suits a work that presents instruction in epistolary and symbolic form.",
+        "works.json:WKS_008",
+        "The title carries a Roman-numeral signal in the book record.",
+        0.95,
+        88,
+    ),
+    "WKS_009": (
+        "title_symbolism",
+        "seasonal title",
+        "The Blue Equinox uses a colored season title to mark a phase of publication and doctrine, so the title reads like a symbolic weather report as much as an issue label.",
+        "works.json:WKS_009",
+        "The summary says it bridges the New York material and later organizational ambitions.",
+        0.9,
+        82,
+    ),
+    "WKS_010": (
+        "title_symbolism",
+        "method title",
+        "Magick in Theory and Practice announces its method at the level of the title, binding speculation and training into a single phrase.",
+        "works.json:WKS_010",
+        "The summary identifies the book as a major statement of mature magical theory and practice.",
+        0.95,
+        88,
+    ),
+    "WKS_011": (
+        "title_symbolism",
+        "autobiographical title",
+        "The Confessions of Aleister Crowley says from the title that the life is being offered as a self-interpreting record, not a neutral memoir.",
+        "works.json:WKS_011",
+        "The summary warns the reader to treat it as self-construction as well as recollection.",
+        0.93,
+        84,
+    ),
+    "WKS_012": (
+        "title_symbolism",
+        "fiction title",
+        "Diary of a Drug Fiend makes occult discipline enter the novel as lived example, so the title itself frames addiction, practice, and transformation as narrative material.",
+        "works.json:WKS_012",
+        "The summary calls it a fictional argument for discipline and transformation.",
+        0.9,
+        82,
+    ),
+}
+
+
 GRADE_CLAIM_NOTES = {
     "GRD_001": "Neophyte marks the first contact with the elemental ground of the work, so the page keeps the task and the sefirah together.",
     "GRD_002": "Zelator organizes bodily discipline around Yesod, which makes the grade a foundational training stage rather than a title.",
@@ -619,6 +731,19 @@ def build_work_claims(works: list[dict], claims: list[dict]) -> None:
                 0.95,
                 88,
                 symbol_value=str(liber_number),
+            )
+        if work["id"] in WORK_TITLE_NOTES:
+            claim_type, symbol, text, locator, excerpt, confidence, priority = WORK_TITLE_NOTES[work["id"]]
+            add_claim(
+                claims,
+                source_id,
+                claim_type,
+                symbol,
+                text,
+                locator,
+                excerpt,
+                confidence,
+                priority,
             )
         if any(char.isdigit() for char in work["title"]):
             numbers = sorted(set(int(token) for token in re.findall(r"\b\d+\b", work["title"])))

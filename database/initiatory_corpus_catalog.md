@@ -26,7 +26,7 @@ This catalog ranks the key Crowley texts and companion sources for ingesting gra
 
 - Kind: `work`
 - Priority: `96`
-- Focus: Tarot revisions, pip symbolism, major arcana attributions, and Crowley’s late symbolic synthesis.
+- Focus: Tarot revisions, pip symbolism, major arcana attributions, and Crowley's late symbolic synthesis.
 - Why: The tarot manual is the major late commentary on the revised symbolic system.
 - Search terms: tarot, thoth, emperor, star, tzaddi, heh, pip
 - Notes: Essential for tarot and number symbolism.
@@ -724,6 +724,7 @@ This catalog ranks the key Crowley texts and companion sources for ingesting gra
 - term_definition: 20
 - passage_tarot: 17
 - documentary_role: 15
+- title_symbolism: 12
 - grade_meaning: 12
 - sefirah_attribution: 12
 - grade_commentary: 12
