@@ -177,6 +177,7 @@ def expand_person_biography(person_id: str, name: str, motto: str, role: str, bi
         PERSON_ROLE_NOTES.get(role),
         PERSON_SPECIAL_NOTES.get(person_id),
         SAINT_NOTES.get(person_id),
+        "The biography is written as a relation to the rest of the archive, so the person's significance stays visible through work, correspondence, ritual, or reception rather than through personality alone.",
         f"The portal keeps {name} in this role so the biography remains a readable node in the archive rather than a detached name.",
     ]
     return _append(biography, *extras)
@@ -201,7 +202,8 @@ def expand_document_description(document_id: str, title: str, description: str) 
     note = f"The document anchors the bibliography for {title}, keeping the source lane visible alongside the works and events it supports."
     detail = "The portal treats documents as evidence-bearing companions rather than simple attachments, so the description explains why the text matters to the archive."
     third = DOCUMENT_NOTES.get(document_id, "It remains useful because the archive can cite it directly from the documentary shelf instead of hiding it inside a generic file list.")
-    return _append(description, note, detail, third)
+    fourth = "That makes the document part of the interpretive path: a reader can move from the source itself to the people, places, and works it helps explain."
+    return _append(description, note, detail, third, fourth)
 
 
 def enrich_documents(rows):
@@ -235,6 +237,7 @@ def expand_work_summary(
         extras.append(f"Composed around {date_composed} in {location_composed}, it ties the system to a specific historical moment and place.")
     extras.append(WORK_NOTES.get(work_id, f"The portal treats {title} as a core documentary node, keeping doctrine, method, and reception visible at once."))
     extras.append("The entry treats the work as both a historical object and a reading key for later events, so it remains useful beyond the bibliography.")
+    extras.append("The title itself is part of the argument in Crowley, so the page keeps publication name, numbering, and doctrinal function in the same line of sight.")
     return _append(summary, *extras)
 
 
@@ -264,6 +267,7 @@ def expand_term_definition(term_id: str, term: str, gematria_value, etymology: s
     significance_extras = [
         TERM_NOTES.get(term_id, "The portal uses the term as a cross-reference point rather than a loose keyword, so the entry stays tied to works, events, and people."),
         "The page also keeps the term connected to the wider network of names and texts, which is what turns it into an encyclopedia entry rather than a glossary stub.",
+        "The writing treats the term as something that can shift between doctrine, ritual usage, and numerical association, because that flexibility is part of how Crowley's system works.",
     ]
 
     return _append(definition, *definition_extras), _append(thelemic_significance, *significance_extras)
@@ -293,6 +297,7 @@ def expand_location_significance(location_id: str, name: str, significance: str)
         note,
         f"The portal keeps {name} visible here so the geography of the archive remains concrete rather than abstract.",
         "That extra sentence keeps the location from reading like a map pin and lets it behave like a meaningful setting in the narrative network.",
+        "The site matters because Crowley's life repeatedly turns geography into method: where he is changes what the work can become.",
     )
 
 
@@ -329,6 +334,7 @@ def expand_event_summary(summary: str, topics: Sequence[str], people: Sequence[s
         parts.append(f"The related texts are {_join(work_titles)}, which keeps the written afterlife of the event on the page.")
 
     parts.append("Read together, the prose gives the event a place in the portal's map of Crowley's life instead of leaving it as a bare calendar fact.")
+    parts.append("The extra sentence keeps the event functioning as a hinge between biography, documentary source, and the larger pattern of the archive.")
     return " ".join(parts)
 
 
@@ -338,6 +344,7 @@ def expand_grade_description(name: str, system: str, tree_path_number: int, desc
         f"The grade is tied to {focus}, which keeps the symbolic number connected to a concrete task.",
         "In the portal it is read as a training stage rather than a ceremonial title, so the practical work stays visible.",
         f"That keeps {name} from becoming a label without context and lets the reader see how {system} structures progression.",
+        "The title is part of the pedagogy, so the wording itself helps explain how the ladder turns number into discipline.",
     ]
     if system != "A.'.A.'.":
         extras.append("The alternate system wording is preserved so the historical comparison remains clear.")
@@ -371,6 +378,7 @@ def expand_tree_description(
             f"As {name}, it defines a station of the Tree rather than a transit line, and the colors, names, and angelic attributions turn it into a structural node in the map.",
             "In the portal it reads as a place where doctrine, embodiment, and function meet.",
             "The entry keeps the sephirah visible as an active principle, not just a diagram label, so the reader can read it as part of the system's working anatomy.",
+            "The number itself matters because Crowley reads sephirotic structure as a sequence of principles that can be compared, repeated, and revised across the rest of the archive.",
         ]
     else:
         extras = [
@@ -383,6 +391,7 @@ def expand_tree_description(
         extras.append(TREE_NOTES.get(path_number, "The portal keeps the path as a working symbol of transition, relation, and symbolic progression."))
         extras.append("In the portal it functions as a route across the diagram, not just a line on a chart.")
         extras.append("That makes each path read as a practical bridge between states, symbols, and initiatory movement.")
+        extras.append("The number of the path is also part of the argument, since Crowley uses the sequence to make the Tree feel like a lived symbolic machine rather than a static chart.")
     return _append(description, *extras)
 
 
