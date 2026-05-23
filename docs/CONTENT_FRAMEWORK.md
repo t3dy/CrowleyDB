@@ -61,6 +61,28 @@ Research workflow:
 4. Write a short index card paragraph.
 5. Expand that into the encyclopedia entry after the targeted reading pass.
 
+## Precursor Number Sections
+
+Use when building a separate website section for Agrippa, Pythagorean, Platonic, Neoplatonic, Hermetic, and Golden Dawn number symbolism.
+
+- Separate inheritance from revision: explain what Crowley got from the older tradition, what the Golden Dawn standardized, and what Crowley changed
+- Treat Agrippa as a major Renaissance bridge between medieval number magic and later occult tables
+- Keep the article Crowley-adjacent rather than Crowley-centric until the final paragraph
+- Prioritize the number properties themselves: unity, triad, tetrad, decad, planetary septenary, and correspondence logic
+- Show how number symbolism becomes a practical system for ritual, cosmology, and memory
+- Use the precursor section to explain why Crowley’s 777, title numbers, and tarot revisions make sense historically
+
+Recommended length: 150 to 250 words for the card copy, 500 to 800 words for the article page.
+
+Suggested card set:
+
+- Agrippa
+- Pythagorean Number
+- Platonic and Neoplatonic Ascent
+- Hermetic Correspondence
+- Golden Dawn Tables
+- Crowley Revision
+
 ## People Profiles
 
 Use for associates, scholars, disciples, rivals, and saints.

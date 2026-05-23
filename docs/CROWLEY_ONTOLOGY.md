@@ -101,6 +101,26 @@ Events are tagged with a controlled vocabulary so users can filter the biography
 * Avoid over-tagging; two or three topics are usually enough.
 * Use the controlled vocabulary only. If a new theme appears repeatedly, add it to the taxonomy rather than improvising a label.
 
+### 2.7 Number Symbolism Layers
+Crowley's number symbolism should not be treated as a single flat field. The portal separates the inheritance chain so the reader can see what comes from older magical and philosophical traditions, what comes from Golden Dawn synthesis, and what is distinctively Crowleyan.
+
+**Recommended layers**
+* **Precursor Number Theory**: Pythagorean number lore, Platonic and Neoplatonic ascent, Hermetic and Agrippan number magic, and Renaissance correspondence thinking.
+* **Golden Dawn Mediation**: The order's tables, tarot attributions, ritual grade architecture, and practical synthesis of existing number systems.
+* **Crowley Revision**: Thelemic title numbers, gematria slogans, tarot swaps, editorial jokes, and the title-symbolism of the Libri.
+
+**Core fields for number records**
+* `source_lineage`: precursor, Golden Dawn, Crowley, or post-Crowley reception.
+* `symbolic_mode`: gematria, ladder, sequence, ratio, correspondence, title-number, or mnemonic.
+* `inheritance_note`: one sentence on what Crowley inherited or changed.
+* `title_signal`: whether the number appears in a liber number, roman numeral, serial title, or publication label.
+* `cross_system_note`: how the number behaves across Qabalah, tarot, ritual grade, and doctrine.
+
+**Website placement**
+* The Numbers section should stay Crowley-centered.
+* A separate precursor section should house Agrippa, Pythagorean, Neoplatonic, and Hermetic material so those older systems are visible without being mistaken for Crowley's own claims.
+* Crowley number entries can then point back to the precursor section when a number is inherited rather than invented.
+
 ## 3. Disputed Zones
 When documenting the following events, the database must **never flatten the narrative**. It must surface the contradictions between lanes:
 1. **The Cairo Working (1904):** Did Aiwass physically dictate the book? (Lane A/B says yes; Lane C suggests psychological projection/subconscious).
@@ -113,3 +133,4 @@ The frontend must support relational browsing:
 * **Thelemic Tree of Life Map**: Interactive map of the 10 Sephiroth and 22 Paths, with hover text, popups, and the Thoth Tarot swaps (Tzaddi/Heh) clearly surfaced.
 * **Gematria Search**: Ability to type "93" and see all related terms, works, and events.
 * **Lane Filtering**: A toggle to filter the timeline or biographies to show only "Scholarly Consensus", "Crowley's Self-Report", or other evidentiary lanes as needed.
+* **Precursor Number Section**: A dedicated section for Agrippa, Pythagorean, Platonic, Neoplatonic, Hermetic, and Golden Dawn number symbolism so the archive can distinguish lineage from revision.

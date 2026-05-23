@@ -170,6 +170,12 @@ const NumberPage = () => {
             <span>People</span>
             <p>{relatedPeople.length ? relatedPeople.join(', ') : 'No direct people listed yet.'}</p>
           </div>
+          <div className="number-page__mini">
+            <span>Precursor layer</span>
+            <p>
+              For the older number philosophies behind Crowley&apos;s revision, see the <Link to="/precursors">Precursors</Link> section.
+            </p>
+          </div>
           <div className="number-page__backlink">
             <Link to="/numbers" className="tree-chip is-active">
               Back to numbers

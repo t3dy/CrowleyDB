@@ -46,6 +46,8 @@ import People from './pages/People';
 import TopicPage from './pages/Topic';
 import Numbers from './pages/Numbers';
 import NumberPage from './pages/Number';
+import Precursors from './pages/Precursors';
+import PrecursorPage from './pages/Precursor';
 import Initiation from './pages/Initiation';
 import Character from './pages/Character';
 
@@ -84,6 +86,7 @@ const Navbar = () => {
             <Link to="/people" data-portal-track-click="true" data-portal-track-hover="true" data-portal-track-label="People" data-portal-track-source="Navbar">People</Link>
             <Link to="/saints" data-portal-track-click="true" data-portal-track-hover="true" data-portal-track-label="Saints" data-portal-track-source="Navbar">Saints</Link>
             <Link to="/numbers" data-portal-track-click="true" data-portal-track-hover="true" data-portal-track-label="Numbers" data-portal-track-source="Navbar">Numbers</Link>
+            <Link to="/precursors" data-portal-track-click="true" data-portal-track-hover="true" data-portal-track-label="Precursors" data-portal-track-source="Navbar">Precursors</Link>
             <Link to="/dictionary" data-portal-track-click="true" data-portal-track-hover="true" data-portal-track-label="Dictionary" data-portal-track-source="Navbar">Dictionary</Link>
             <Link to="/initiation" data-portal-track-click="true" data-portal-track-hover="true" data-portal-track-label="Initiation" data-portal-track-source="Navbar">
               Initiation
@@ -365,6 +368,8 @@ function App() {
                 <Route path="/saints" element={<Saints />} />
                 <Route path="/numbers" element={<Numbers />} />
                 <Route path="/numbers/:slug" element={<NumberPage />} />
+                <Route path="/precursors" element={<Precursors />} />
+                <Route path="/precursors/:slug" element={<PrecursorPage />} />
                 <Route path="/dictionary" element={<Dictionary />} />
                 <Route path="/topic/:slug" element={<TopicPage />} />
                 <Route path="/initiation" element={<Initiation />} />

@@ -45,7 +45,8 @@ const Numbers = () => {
           <h1>Numbers</h1>
           <p className="page-intro">
             A browsable number index for Crowley&apos;s Qabalistic system: the Tree stations, the tarot paths,
-            and the signature numbers that keep turning up in the books, the rituals, and the legend.
+            and the signature numbers that keep turning up in the books, the rituals, and the legend. For the
+            older number philosophies behind this system, see the separate <Link to="/precursors">Precursors</Link> section.
           </p>
         </div>
         <div className="page-stat">
