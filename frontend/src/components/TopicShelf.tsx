@@ -75,7 +75,17 @@ const TopicShelf = ({ title, intro, slugs }: TopicShelfProps) => {
 
       <div className="topic-shelf__grid">
         {entries.map(topic => (
-          <Link key={topic.id} to={`/topic/${topic.slug}`} className="topic-shelf-card topic-shelf-card--link">
+          <Link
+            key={topic.id}
+            to={`/topic/${topic.slug}`}
+            className="topic-shelf-card topic-shelf-card--link"
+            data-portal-track-hover="true"
+            data-portal-track-click="true"
+            data-portal-track-label={topic.label}
+            data-portal-track-detail={topic.description}
+            data-portal-track-source="Topic shelf"
+            data-portal-track-domain="topic"
+          >
             <h3>{topic.label}</h3>
             <p>{buildTopicCardCopy(topic, summaryBySlug[topic.slug])}</p>
             <span className="topic-shelf-card__cta">Open encyclopedia entry</span>

@@ -30,7 +30,16 @@ const Saints = () => {
 
       <div className="page-grid page-grid--cards">
         {saints.map(saint => (
-          <article key={saint.id} className="glass-panel term-card">
+          <article
+            key={saint.id}
+            className="glass-panel term-card"
+            data-portal-track-hover="true"
+            data-portal-track-click="true"
+            data-portal-track-label={saint.name}
+            data-portal-track-detail={saint.biography || ''}
+            data-portal-track-source="Saints"
+            data-portal-track-domain="saints"
+          >
             <h3>{saint.name}</h3>
             {saint.magical_motto !== 'Unknown' && (
               <p className="term-card__etymology">

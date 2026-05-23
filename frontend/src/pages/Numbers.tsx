@@ -62,6 +62,11 @@ const Numbers = () => {
               type="button"
               className={`tree-chip ${viewMode === mode ? 'is-active' : ''}`}
               onClick={() => setViewMode(mode)}
+              data-portal-track-click="true"
+              data-portal-track-hover="true"
+              data-portal-track-label={mode === 'all' ? 'All numbers' : mode === 'tree' ? 'Tree numbers' : 'Signature numbers'}
+              data-portal-track-source="Numbers filter"
+              data-portal-track-domain="numbers"
             >
               {mode === 'all' ? 'All numbers' : mode === 'tree' ? 'Tree numbers' : 'Signature numbers'}
             </button>
@@ -75,7 +80,19 @@ const Numbers = () => {
 
       <div className="page-grid page-grid--cards numbers-grid">
         {filteredEntries.map(entry => (
-          <Link key={entry.slug} to={`/numbers/${entry.slug}`} className="glass-panel number-card number-card--link">
+          <Link
+            key={entry.slug}
+            to={`/numbers/${entry.slug}`}
+            className="glass-panel number-card number-card--link"
+            data-portal-track-hover="true"
+            data-portal-track-click="true"
+            data-portal-track-label={entry.title}
+            data-portal-track-detail={entry.summary}
+            data-portal-track-source="Numbers"
+            data-portal-track-domain="numbers"
+            data-portal-tree-number={String(entry.number)}
+            data-portal-tree-kind={entry.kind}
+          >
             <div className="number-card__head">
               <div>
                 <span className="number-card__kicker">{entry.kind === 'signature' ? 'Signature number' : entry.kind === 'sephirah' ? 'Sephirah' : 'Path'}</span>

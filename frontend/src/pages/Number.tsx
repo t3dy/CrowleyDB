@@ -116,7 +116,17 @@ const NumberPage = () => {
           </div>
 
           {tree ? (
-            <div className="glass-panel number-related-card">
+            <div
+              className="glass-panel number-related-card"
+              data-portal-track-hover="true"
+              data-portal-track-click="true"
+              data-portal-track-label={tree.name}
+              data-portal-track-detail={tree.description || tree.crowley_tweaks || ''}
+              data-portal-track-source="Number related tree"
+              data-portal-track-domain="number"
+              data-portal-tree-number={String(tree.path_number)}
+              data-portal-tree-kind={tree.path_number <= 10 ? 'sephirah' : 'path'}
+            >
               <h3>{tree.name}</h3>
               <p className="number-related-card__meta">
                 {tree.path_number <= 10
@@ -128,7 +138,17 @@ const NumberPage = () => {
           ) : null}
 
           {grade ? (
-            <div className="glass-panel number-related-card">
+            <div
+              className="glass-panel number-related-card"
+              data-portal-track-hover="true"
+              data-portal-track-click="true"
+              data-portal-track-label={grade.name}
+              data-portal-track-detail={grade.description}
+              data-portal-track-source="Number related grade"
+              data-portal-track-domain="number"
+              data-portal-tree-number={String(grade.tree_path_number)}
+              data-portal-tree-kind={grade.tree_path_number <= 10 ? 'sephirah' : 'path'}
+            >
               <h3>{grade.name}</h3>
               <p className="number-related-card__meta">{grade.system}</p>
               <p>{grade.description}</p>

@@ -565,12 +565,18 @@ const TreeOfLife = () => {
             Selected token: {selected ? `${selected.label} (${selected.detail})` : 'none'}
           </p>
           <div className="tree-bank">
-            {bank.map(item => (
-              <button
-                key={`${item.family}:${item.label}`}
-                className={`tree-token ${selected && selected.family === item.family && selected.label === item.label ? 'is-selected' : ''}`}
-                onClick={() => chooseToken(item)}
-              >
+              {bank.map(item => (
+                <button
+                  key={`${item.family}:${item.label}`}
+                  className={`tree-token ${selected && selected.family === item.family && selected.label === item.label ? 'is-selected' : ''}`}
+                  onClick={() => chooseToken(item)}
+                  data-portal-track-click="true"
+                  data-portal-track-hover="true"
+                  data-portal-track-label={item.label}
+                  data-portal-track-detail={item.detail}
+                  data-portal-track-source="Tree bank"
+                  data-portal-track-domain="tree"
+                >
                 <span>{item.label}</span>
                 <small>{item.detail}</small>
                 {item.badge && <em>{item.badge}</em>}
@@ -628,6 +634,14 @@ const TreeOfLife = () => {
                         onMouseEnter={() => setHovered(path)}
                         onMouseLeave={() => setHovered(null)}
                         onClick={() => handleRegionTap(path)}
+                        data-portal-track-hover="true"
+                        data-portal-track-click="true"
+                        data-portal-track-label={path.hebrew_letter || `Path ${path.path_number}`}
+                        data-portal-track-detail={path.crowley_tweaks || path.description || ''}
+                        data-portal-track-source="Tree board"
+                        data-portal-track-domain="tree"
+                        data-portal-tree-number={String(path.path_number)}
+                        data-portal-tree-kind="path"
                       />
                       <text className={`tree-path-label ${showMode === 'exam' ? 'is-muted' : ''}`} x={midpoint.x} y={midpoint.y}>
                         {pathLabel(path, attributionMode)}
@@ -652,6 +666,14 @@ const TreeOfLife = () => {
                         onMouseEnter={() => setHovered(node)}
                         onMouseLeave={() => setHovered(null)}
                         onClick={() => handleRegionTap(node)}
+                        data-portal-track-hover="true"
+                        data-portal-track-click="true"
+                        data-portal-track-label={node.name}
+                        data-portal-track-detail={node.description || ''}
+                        data-portal-track-source="Tree board"
+                        data-portal-track-domain="tree"
+                        data-portal-tree-number={String(node.path_number)}
+                        data-portal-tree-kind="sephirah"
                       />
                       <text className={`tree-node-number ${showMode === 'exam' ? 'is-muted' : ''}`} x={node.x} y={node.y - 7}>
                         {node.path_number}

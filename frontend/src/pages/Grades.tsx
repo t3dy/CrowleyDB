@@ -38,6 +38,11 @@ const Grades = () => {
             key={system}
             onClick={() => setSelectedSystem(system)} 
             className={selectedSystem === system ? 'tree-chip is-active' : 'tree-chip'}
+            data-portal-track-click="true"
+            data-portal-track-hover="true"
+            data-portal-track-label={system}
+            data-portal-track-source="Grades filter"
+            data-portal-track-domain="grades"
           >
             {system}
           </button>
@@ -46,7 +51,18 @@ const Grades = () => {
 
       <div className="timeline-stack">
         {filteredGrades.map(grade => (
-          <article key={grade.id} className="glass-panel timeline-card">
+          <article
+            key={grade.id}
+            className="glass-panel timeline-card"
+            data-portal-track-hover="true"
+            data-portal-track-click="true"
+            data-portal-track-label={grade.name}
+            data-portal-track-detail={grade.description}
+            data-portal-track-source="Grades"
+            data-portal-track-domain="grades"
+            data-portal-tree-number={String(grade.tree_path_number)}
+            data-portal-tree-kind={grade.tree_path_number <= 10 ? 'sephirah' : 'path'}
+          >
             <div className="page-stat" style={{ minWidth: '120px' }}>
               <span>Path</span>
               <strong>{grade.tree_path_number}</strong>

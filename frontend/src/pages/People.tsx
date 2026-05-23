@@ -102,6 +102,11 @@ const People = () => {
                 key={role}
                 onClick={() => setRoleFilter(role)}
                 className={roleFilter === role ? 'tree-chip is-active' : 'tree-chip'}
+                data-portal-track-click="true"
+                data-portal-track-hover="true"
+                data-portal-track-label={role}
+                data-portal-track-source="People filter"
+                data-portal-track-domain="people"
               >
                 {role}
               </button>
@@ -118,7 +123,16 @@ const People = () => {
               : 'Dates unknown';
 
           return (
-            <article key={person.id} className="glass-panel term-card">
+            <article
+              key={person.id}
+              className="glass-panel term-card"
+              data-portal-track-hover="true"
+              data-portal-track-click="true"
+              data-portal-track-label={person.name}
+              data-portal-track-detail={person.biography || ''}
+              data-portal-track-source="People"
+              data-portal-track-domain="people"
+            >
               <div className="timeline-card__meta">
                 <div>
                   <h3>{person.name}</h3>

@@ -7,6 +7,7 @@ import L from 'leaflet';
 import './index.css';
 import TopicShelf from './components/TopicShelf';
 import { TOPIC_GROUPS } from './topicGroups';
+import { PortalIdentityProvider, usePortalIdentity } from './portalIdentity';
 
 // Fix for default Leaflet icons
 delete (L.Icon.Default.prototype as any)._getIconUrl;
@@ -45,9 +46,12 @@ import People from './pages/People';
 import TopicPage from './pages/Topic';
 import Numbers from './pages/Numbers';
 import NumberPage from './pages/Number';
+import Initiation from './pages/Initiation';
+import Character from './pages/Character';
 
 const Navbar = () => {
   const { currentLane, setLane } = useLane();
+  const { profile, traces } = usePortalIdentity();
 
   const lanes: { id: Lane; label: string }[] = [
     { id: 'All', label: 'All Evidence' },
@@ -72,15 +76,34 @@ const Navbar = () => {
 
         <div className="site-nav">
           <div className="site-nav__links">
-            <Link to="/">Home</Link>
-            <Link to="/works">Works</Link>
-            <Link to="/tree">Tree of Life</Link>
-            <Link to="/grades">Grades</Link>
-            <Link to="/biography">Biography &amp; Map</Link>
-            <Link to="/people">People</Link>
-            <Link to="/saints">Saints</Link>
-            <Link to="/numbers">Numbers</Link>
-            <Link to="/dictionary">Dictionary</Link>
+            <Link to="/" data-portal-track-click="true" data-portal-track-label="Home" data-portal-track-source="Navbar">Home</Link>
+            <Link to="/works" data-portal-track-click="true" data-portal-track-label="Works" data-portal-track-source="Navbar">Works</Link>
+            <Link to="/tree" data-portal-track-click="true" data-portal-track-label="Tree of Life" data-portal-track-source="Navbar">Tree of Life</Link>
+            <Link to="/grades" data-portal-track-click="true" data-portal-track-label="Grades" data-portal-track-source="Navbar">Grades</Link>
+            <Link to="/biography" data-portal-track-click="true" data-portal-track-label="Biography & Map" data-portal-track-source="Navbar">Biography &amp; Map</Link>
+            <Link to="/people" data-portal-track-click="true" data-portal-track-label="People" data-portal-track-source="Navbar">People</Link>
+            <Link to="/saints" data-portal-track-click="true" data-portal-track-label="Saints" data-portal-track-source="Navbar">Saints</Link>
+            <Link to="/numbers" data-portal-track-click="true" data-portal-track-label="Numbers" data-portal-track-source="Navbar">Numbers</Link>
+            <Link to="/dictionary" data-portal-track-click="true" data-portal-track-label="Dictionary" data-portal-track-source="Navbar">Dictionary</Link>
+            <Link to="/initiation" data-portal-track-click="true" data-portal-track-label="Initiation" data-portal-track-source="Navbar">
+              Initiation
+            </Link>
+            <Link to="/character" data-portal-track-click="true" data-portal-track-label="Character Sheet" data-portal-track-source="Navbar">
+              Character
+            </Link>
+          </div>
+
+          <div className="site-nav__profile">
+            <Link
+              to={profile ? '/character' : '/initiation'}
+              className="site-nav__profile-chip"
+              data-portal-track-click="true"
+              data-portal-track-label={profile ? profile.initiatoryName : 'Enter the lodge'}
+              data-portal-track-source="Navbar"
+            >
+              <span>{profile ? profile.initiatoryName : 'Enter the lodge'}</span>
+              <small>{profile ? `${traces.length} traces` : 'Create an initiatory name'}</small>
+            </Link>
           </div>
 
           <label className="site-nav__lane">
@@ -177,7 +200,16 @@ const BiographyAndMap = () => {
 
           <div className="timeline-stack">
             {filteredEvents.map(event => (
-              <article key={event.id} className="glass-panel timeline-card">
+                <article
+                  key={event.id}
+                  className="glass-panel timeline-card"
+                  data-portal-track-hover="true"
+                  data-portal-track-click="true"
+                  data-portal-track-label={event.title}
+                  data-portal-track-detail={event.description}
+                  data-portal-track-source="Timeline"
+                  data-portal-track-domain="biography"
+                >
                 <div className="timeline-card__meta">
                   <span>
                     {event.date_start} {event.date_end ? `- ${event.date_end}` : ''}
@@ -279,7 +311,16 @@ const Dictionary = () => {
 
       <div className="page-grid page-grid--cards">
         {filteredTerms.map(term => (
-          <article key={term.id} className="glass-panel term-card">
+          <article
+            key={term.id}
+            className="glass-panel term-card"
+            data-portal-track-hover="true"
+            data-portal-track-click="true"
+            data-portal-track-label={term.term}
+            data-portal-track-detail={term.thelemic_significance}
+            data-portal-track-source="Dictionary"
+            data-portal-track-domain="dictionary"
+          >
             <h3 className="term-card__title">
               {term.term}
               {term.gematria_value && <span className="term-card__value">[{term.gematria_value}]</span>}
@@ -307,28 +348,32 @@ const Dictionary = () => {
 
 function App() {
   return (
-    <LaneProvider>
-      <Router>
-        <div className="app-shell">
-          <Navbar />
-          <main className="site-main">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/works" element={<Works />} />
-              <Route path="/tree" element={<TreeOfLife />} />
-              <Route path="/grades" element={<Grades />} />
-              <Route path="/biography" element={<BiographyAndMap />} />
-              <Route path="/people" element={<People />} />
-              <Route path="/saints" element={<Saints />} />
-              <Route path="/numbers" element={<Numbers />} />
-              <Route path="/numbers/:slug" element={<NumberPage />} />
-              <Route path="/dictionary" element={<Dictionary />} />
-              <Route path="/topic/:slug" element={<TopicPage />} />
-            </Routes>
-          </main>
-        </div>
-      </Router>
-    </LaneProvider>
+    <PortalIdentityProvider>
+      <LaneProvider>
+        <Router>
+          <div className="app-shell">
+            <Navbar />
+            <main className="site-main">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/works" element={<Works />} />
+                <Route path="/tree" element={<TreeOfLife />} />
+                <Route path="/grades" element={<Grades />} />
+                <Route path="/biography" element={<BiographyAndMap />} />
+                <Route path="/people" element={<People />} />
+                <Route path="/saints" element={<Saints />} />
+                <Route path="/numbers" element={<Numbers />} />
+                <Route path="/numbers/:slug" element={<NumberPage />} />
+                <Route path="/dictionary" element={<Dictionary />} />
+                <Route path="/topic/:slug" element={<TopicPage />} />
+                <Route path="/initiation" element={<Initiation />} />
+                <Route path="/character" element={<Character />} />
+              </Routes>
+            </main>
+          </div>
+        </Router>
+      </LaneProvider>
+    </PortalIdentityProvider>
   );
 }
 

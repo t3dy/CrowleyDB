@@ -70,7 +70,18 @@ const Works = () => {
 
       <div className="page-grid page-grid--cards">
         {filteredWorks.map((work, idx) => (
-          <article key={idx} className="glass-panel term-card">
+          <article
+            key={idx}
+            className="glass-panel term-card"
+            data-portal-track-hover="true"
+            data-portal-track-click="true"
+            data-portal-track-label={work.title}
+            data-portal-track-detail={work.summary}
+            data-portal-track-source="Works"
+            data-portal-track-domain="works"
+            data-portal-tree-number={work.liber_number ? String(work.liber_number) : undefined}
+            data-portal-tree-kind={work.liber_number ? (work.liber_number <= 10 ? 'sephirah' : 'signature') : undefined}
+          >
             <div className="timeline-card__meta">
               <div>
                 <h3>{work.title}</h3>
