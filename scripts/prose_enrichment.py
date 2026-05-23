@@ -474,4 +474,7 @@ def expand_topic_description(slug: str, label: str, description: str) -> str:
     use_note = (
         "Because the database is built from events, works, people, and places, the topic is what lets the same material be read from several directions without losing coherence."
     )
-    return _append(description, note, bridge, archive_note, use_note)
+    ontology_note = (
+        "The label therefore works like a map key: it promises a route through the archive, but it does not exhaust the thing itself, so the prose keeps room for disagreement, overlap, and historical change."
+    )
+    return _append(description, note, bridge, archive_note, use_note, ontology_note)
