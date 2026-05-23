@@ -203,7 +203,8 @@ def expand_document_description(document_id: str, title: str, description: str) 
     detail = "The portal treats documents as evidence-bearing companions rather than simple attachments, so the description explains why the text matters to the archive."
     third = DOCUMENT_NOTES.get(document_id, "It remains useful because the archive can cite it directly from the documentary shelf instead of hiding it inside a generic file list.")
     fourth = "That makes the document part of the interpretive path: a reader can move from the source itself to the people, places, and works it helps explain."
-    return _append(description, note, detail, third, fourth)
+    fifth = "The title is not just a filename here; it is the label that lets the archive decide which shelf the source belongs on and what conversation it should enter."
+    return _append(description, note, detail, third, fourth, fifth)
 
 
 def enrich_documents(rows):
@@ -238,6 +239,7 @@ def expand_work_summary(
     extras.append(WORK_NOTES.get(work_id, f"The portal treats {title} as a core documentary node, keeping doctrine, method, and reception visible at once."))
     extras.append("The entry treats the work as both a historical object and a reading key for later events, so it remains useful beyond the bibliography.")
     extras.append("The title itself is part of the argument in Crowley, so the page keeps publication name, numbering, and doctrinal function in the same line of sight.")
+    extras.append("That matters especially for his numbered and titled books, where the publication label can carry as much symbolic force as the content itself.")
     return _append(summary, *extras)
 
 
@@ -298,6 +300,7 @@ def expand_location_significance(location_id: str, name: str, significance: str)
         f"The portal keeps {name} visible here so the geography of the archive remains concrete rather than abstract.",
         "That extra sentence keeps the location from reading like a map pin and lets it behave like a meaningful setting in the narrative network.",
         "The site matters because Crowley's life repeatedly turns geography into method: where he is changes what the work can become.",
+        "The place also acts like a cue for atmosphere and phase, so the archive can read movement, publication, ritual, and conflict as spatially specific rather than generic.",
     )
 
 
