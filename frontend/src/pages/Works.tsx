@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { fetchJSON } from '../api';
 import { useLane } from '../App';
+import TopicShelf from '../components/TopicShelf';
+import { TOPIC_GROUPS } from '../topicGroups';
 
 const Works = () => {
   const [works, setWorks] = useState<any[]>([]);
@@ -89,6 +91,12 @@ const Works = () => {
           </article>
         ))}
       </div>
+
+      <TopicShelf
+        title="Key work topics"
+        intro="These topic cards capture the editorial frame for the library: publication, instruction, commentary, revision, and the forms of writing Crowley used to build the system."
+        slugs={TOPIC_GROUPS.works}
+      />
     </div>
   );
 };

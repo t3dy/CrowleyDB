@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { fetchJSON } from '../api';
+import TopicShelf from '../components/TopicShelf';
+import { TOPIC_GROUPS } from '../topicGroups';
 
 type Person = {
   id: string;
@@ -139,6 +141,12 @@ const People = () => {
           );
         })}
       </div>
+
+      <TopicShelf
+        title="Key people topics"
+        intro="These topics map the social world around Crowley: partners, rivals, disciples, scholars, testimony, and the afterlives of those relationships."
+        slugs={TOPIC_GROUPS.people}
+      />
     </div>
   );
 };

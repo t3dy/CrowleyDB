@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { fetchJSON } from '../api';
+import TopicShelf from '../components/TopicShelf';
+import { TOPIC_GROUPS } from '../topicGroups';
 
 const Grades = () => {
   const [grades, setGrades] = useState<any[]>([]);
@@ -57,6 +59,12 @@ const Grades = () => {
           </article>
         ))}
       </div>
+
+      <TopicShelf
+        title="Key grades topics"
+        intro="These topics explain the structural side of the initiatory system: grades, discipline, organization, curriculum, and the logic that links the orders to the Tree of Life."
+        slugs={TOPIC_GROUPS.grades}
+      />
     </div>
   );
 };

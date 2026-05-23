@@ -5,6 +5,8 @@ import { fetchJSON } from './api';
 import { MapContainer, TileLayer, Marker, Popup, Tooltip } from 'react-leaflet';
 import L from 'leaflet';
 import './index.css';
+import TopicShelf from './components/TopicShelf';
+import { TOPIC_GROUPS } from './topicGroups';
 
 // Fix for default Leaflet icons
 delete (L.Icon.Default.prototype as any)._getIconUrl;
@@ -234,6 +236,12 @@ const BiographyAndMap = () => {
           </MapContainer>
         </section>
       </div>
+
+      <TopicShelf
+        title="Key biography topics"
+        intro="These topics give the timeline and map their structure: origin, schooling, movement, exile, decline, and the public afterlife of the life story."
+        slugs={TOPIC_GROUPS.biography}
+      />
     </div>
   );
 };
@@ -283,6 +291,12 @@ const Dictionary = () => {
           </article>
         ))}
       </div>
+
+      <TopicShelf
+        title="Key dictionary topics"
+        intro="These topics anchor the lexicon page in the concepts that matter most to the portal: symbolism, correspondences, doctrine, instruction, and the reference logic that holds the system together."
+        slugs={TOPIC_GROUPS.dictionary}
+      />
     </div>
   );
 };

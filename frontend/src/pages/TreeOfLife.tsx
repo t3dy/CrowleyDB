@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { fetchJSON } from '../api';
+import TopicShelf from '../components/TopicShelf';
+import { TOPIC_GROUPS } from '../topicGroups';
 
 type NodeKey =
   | 'kether'
@@ -721,6 +723,12 @@ const TreeOfLife = () => {
           </div>
         </aside>
       </section>
+
+      <TopicShelf
+        title="Key Tree topics"
+        intro="These are the concepts a reader needs to navigate the Tree properly: the magical framework, the tarot layer, the curriculum, and the specific Crowley revisions that matter to the portal."
+        slugs={TOPIC_GROUPS.tree}
+      />
     </div>
   );
 };

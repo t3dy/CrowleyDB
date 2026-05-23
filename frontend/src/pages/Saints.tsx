@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { fetchJSON } from '../api';
+import TopicShelf from '../components/TopicShelf';
+import { TOPIC_GROUPS } from '../topicGroups';
 
 const Saints = () => {
   const [saints, setSaints] = useState<any[]>([]);
@@ -45,6 +47,12 @@ const Saints = () => {
           </article>
         ))}
       </div>
+
+      <TopicShelf
+        title="Key saint topics"
+        intro="These cards show why the saints remain in the portal: they connect Crowley to older magical lineages, later reception, and the broader culture that carried those names forward."
+        slugs={TOPIC_GROUPS.saints}
+      />
     </div>
   );
 };

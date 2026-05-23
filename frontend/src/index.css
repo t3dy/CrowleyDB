@@ -241,6 +241,50 @@ button {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
+.topic-shelf {
+  display: grid;
+  gap: 1rem;
+}
+
+.topic-shelf__header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem 2rem;
+  align-items: end;
+}
+
+.topic-shelf__header .page-intro {
+  max-width: 60rem;
+}
+
+.topic-shelf__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.8rem;
+}
+
+.topic-shelf-card {
+  display: grid;
+  gap: 0.45rem;
+  padding: 1rem 1.05rem;
+  border-radius: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.16);
+  background: rgba(0, 0, 0, 0.16);
+}
+
+.topic-shelf-card h3 {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.1;
+}
+
+.topic-shelf-card p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
 .stacked-field {
   display: grid;
   gap: 0.4rem;
