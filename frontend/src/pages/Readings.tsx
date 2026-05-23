@@ -64,7 +64,7 @@ const Readings = () => {
     selectedSpread.positions[hoveredPositionIndex ?? activePositionIndex] ||
     selectedSpread.positions[0];
 
-  const focusStudy = buildTarotCardStudy(focusCard, selectedSpread, focusPosition);
+  const focusStudy = buildTarotCardStudy(focusCard, selectedSpread, focusPosition, reading);
   const relationStudy = buildTarotRelationshipStudy(reading, focusPosition.index - 1, focusCard, selectedSpread);
 
   const deckChoices = useMemo(() => {
@@ -380,6 +380,7 @@ const Readings = () => {
             <div className="reading-study__relation">
               <p className="page-kicker">Reading relationship</p>
               <p>{relationStudy.overview}</p>
+              <p>{relationStudy.spreadPatternNote}</p>
               <p>{relationStudy.sequenceNote}</p>
               <p>{relationStudy.dignityNote}</p>
               <p>{relationStudy.neighborNote}</p>

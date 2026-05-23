@@ -60,10 +60,41 @@ export type TarotRelationshipStudy = {
   title: string;
   positionLabel: string;
   overview: string;
+  spreadPatternNote: string;
   sequenceNote: string;
   dignityNote: string;
   neighborNote: string;
   trioNote: string;
+};
+
+export type TarotReadingContext = {
+  majorCount: number;
+  minorCount: number;
+  majorRatio: number;
+  dominantSuit: (NonNullable<TarotCard['suit']> & string) | null;
+  dominantSuitCount: number;
+  dominantRank: string | null;
+  dominantRankCount: number;
+  repeatedRanks: string[];
+  repeatedCards: string[];
+  consecutiveRankRun: string | null;
+  trumpHeavy: boolean;
+  elementalCurrent: string | null;
+};
+
+const EMPTY_READING_CONTEXT: TarotReadingContext = {
+  majorCount: 0,
+  minorCount: 0,
+  majorRatio: 0,
+  dominantSuit: null,
+  dominantSuitCount: 0,
+  dominantRank: null,
+  dominantRankCount: 0,
+  repeatedRanks: [],
+  repeatedCards: [],
+  consecutiveRankRun: null,
+  trumpHeavy: false,
+  elementalCurrent: null,
 };
 
 const suitProfiles = {
@@ -226,14 +257,108 @@ export function getTarotCardById(cardId: string | null | undefined) {
   return TAROT_CARD_BY_ID.get(cardId) ?? null;
 }
 
+function analyzeTarotReading(reading: TarotReading): TarotReadingContext {
+  const majors = reading.cards.filter(draw => draw.card.kind === 'major').map(draw => draw.card);
+  const minors = reading.cards.filter(draw => draw.card.kind === 'minor').map(draw => draw.card);
+
+  const suitCounts = minors.reduce((acc, card) => {
+    if (!card.suit) return acc;
+    acc[card.suit] = (acc[card.suit] || 0) + 1;
+    return acc;
+  }, {} as Record<NonNullable<TarotCard['suit']>, number>);
+
+  const rankCounts = minors.reduce((acc, card) => {
+    if (!card.rank) return acc;
+    acc[card.rank] = (acc[card.rank] || 0) + 1;
+    return acc;
+  }, {} as Record<string, number>);
+
+  const cardCounts = reading.cards.reduce((acc, draw) => {
+    acc[draw.card.id] = (acc[draw.card.id] || 0) + 1;
+    return acc;
+  }, {} as Record<string, number>);
+
+  const repeatedCards = Object.entries(cardCounts)
+    .filter(([, count]) => count > 1)
+    .map(([cardId]) => TAROT_CARD_BY_ID.get(cardId)?.name || cardId);
+
+  const repeatedRanks = Object.entries(rankCounts)
+    .filter(([, count]) => count > 1)
+    .map(([rank]) => rank)
+    .sort((left, right) => rankValue[left] - rankValue[right]);
+
+  const dominantSuitEntry = Object.entries(suitCounts).sort((left, right) => right[1] - left[1])[0] || null;
+  const dominantRankEntry = Object.entries(rankCounts).sort((left, right) => right[1] - left[1])[0] || null;
+
+  const rankSequence = reading.cards
+    .map(draw => (draw.card.kind === 'minor' ? rankValue[draw.card.rank || ''] || null : null))
+    .filter((value): value is number => typeof value === 'number');
+
+  let consecutiveRankRun: string | null = null;
+  for (let index = 0; index < rankSequence.length - 1; index += 1) {
+    if (rankSequence[index + 1] === rankSequence[index] + 1) {
+      const left = reading.cards[index]?.card;
+      const right = reading.cards[index + 1]?.card;
+      if (left && right) {
+        consecutiveRankRun = `${left.name} and ${right.name}`;
+        break;
+      }
+    }
+  }
+
+  const majorRatio = reading.cards.length ? majors.length / reading.cards.length : 0;
+  const trumpHeavy = majorRatio >= 0.45;
+  const dominantSuit = dominantSuitEntry ? (dominantSuitEntry[0] as NonNullable<TarotCard['suit']>) : null;
+  const dominantSuitCount = dominantSuitEntry ? dominantSuitEntry[1] : 0;
+  const dominantRank = dominantRankEntry ? dominantRankEntry[0] : null;
+  const dominantRankCount = dominantRankEntry ? dominantRankEntry[1] : 0;
+  const elementalCurrent = dominantSuit
+    ? `${suitProfiles[dominantSuit].name} leads the spread, so the reading is weighted toward ${suitProfiles[dominantSuit].current}.`
+    : majors.length
+      ? 'The spread leans toward trumps rather than one element, so the deck is speaking in larger archetypal movements.'
+      : null;
+
+  return {
+    majorCount: majors.length,
+    minorCount: minors.length,
+    majorRatio,
+    dominantSuit,
+    dominantSuitCount,
+    dominantRank,
+    dominantRankCount,
+    repeatedRanks,
+    repeatedCards,
+    consecutiveRankRun,
+    trumpHeavy,
+    elementalCurrent,
+  };
+}
+
 function normalizeQuestion(question: string) {
   const trimmed = question.trim();
   return trimmed || 'the question that was asked';
 }
 
-function buildAreaNotes(card: TarotCard, spread: SpreadDefinition | undefined, position: SpreadPosition | undefined) {
+function buildAreaNotes(card: TarotCard, spread: SpreadDefinition | undefined, position: SpreadPosition | undefined, context: TarotReadingContext) {
   const scope = spread ? `${spread.title}` : 'the reading';
   const positionNote = position ? ` in ${position.label}` : '';
+  const trumpNote = context.trumpHeavy
+    ? 'The spread is trump-heavy, so the result behaves like forces beyond personal control moving through the question.'
+    : context.majorCount >= 3
+      ? 'The spread includes several trumps, which means larger patterns are active even when the query looks practical.'
+      : 'The spread is not dominated by trumps, so local choices and suit-level conditions remain important.';
+
+  const suitNote = context.dominantSuit
+    ? `${suitProfiles[context.dominantSuit].name} is the strongest elemental current, which means ${suitProfiles[context.dominantSuit].current}.`
+    : 'No single suit dominates, so the reading stays mixed and situational.';
+
+  const rankNote = context.dominantRank
+    ? `The number ${context.dominantRank} repeats often enough to act as a structural refrain rather than a one-off effect.`
+    : "No single number repeats strongly enough to become the spread's refrain.";
+
+  const sequenceNote = context.consecutiveRankRun
+    ? `A visible number sequence appears in ${context.consecutiveRankRun}, so the reading carries a sense of development rather than a static tableau.`
+    : 'No obvious number sequence dominates the spread, so the card should be read more by placement and attribution than by laddering.';
 
   const base =
     card.kind === 'major'
@@ -241,37 +366,49 @@ function buildAreaNotes(card: TarotCard, spread: SpreadDefinition | undefined, p
       : `${card.name} behaves as a situational expression${positionNote} in ${scope}, so`;
 
   return {
-    career: `${base} it points to the kind of work, rank, or public posture that needs to be claimed or revised.`,
-    romance: `${base} it shows the emotional pattern that governs attraction, attachment, and what the reading will tolerate in intimacy.`,
-    spirituality: `${base} it suggests the practice lesson, inner threshold, or ritual demand that sits closest to the card.`,
-    adventure: `${base} it describes the risk appetite, movement, and sense of pursuit that will color the path forward.`,
-    self_improvement: `${base} it indicates the habit, discipline, or correction that the querent may need to strengthen.`,
-    academics: `${base} it favors the kind of study, reading, synthesis, or critical method that fits the card's mode of intelligence.`,
+    career: `${base} it points to the kind of work, rank, or public posture that needs to be claimed or revised. ${trumpNote} ${suitNote} ${rankNote} ${sequenceNote}`,
+    romance: `${base} it shows the emotional pattern that governs attraction, attachment, and what the reading will tolerate in intimacy. ${trumpNote} ${suitNote} ${rankNote} ${sequenceNote}`,
+    spirituality: `${base} it suggests the practice lesson, inner threshold, or ritual demand that sits closest to the card. ${trumpNote} ${suitNote} ${rankNote} ${sequenceNote}`,
+    adventure: `${base} it describes the risk appetite, movement, and sense of pursuit that will color the path forward. ${trumpNote} ${suitNote} ${rankNote} ${sequenceNote}`,
+    self_improvement: `${base} it indicates the habit, discipline, or correction that the querent may need to strengthen. ${trumpNote} ${suitNote} ${rankNote} ${sequenceNote}`,
+    academics: `${base} it favors the kind of study, reading, synthesis, or critical method that fits the card's mode of intelligence. ${trumpNote} ${suitNote} ${rankNote} ${sequenceNote}`,
   } satisfies Record<TarotStudyArea['id'], string>;
 }
 
-export function buildTarotCardStudy(card: TarotCard, spread?: SpreadDefinition, position?: SpreadPosition): TarotCardStudy {
+export function buildTarotCardStudy(card: TarotCard, spread?: SpreadDefinition, position?: SpreadPosition, reading?: TarotReading): TarotCardStudy {
+  const context = reading ? analyzeTarotReading(reading) : EMPTY_READING_CONTEXT;
   return {
     title: card.name,
     attributions:
       card.kind === 'major'
-        ? [`Major arcana`, `Keywords: ${card.keywords.join(', ')}`]
-        : [`Suit: ${suitProfiles[card.suit || 'wands'].name}`, `Rank: ${card.rank || 'n/a'}`, `Keywords: ${card.keywords.join(', ')}`],
+        ? [
+            'Major arcana',
+            `Attributions: ${card.keywords.join(', ')}`,
+            context.trumpHeavy ? 'This reading is trump-heavy, so larger forces are emphasized.' : 'This reading is not trump-heavy, so placement and suit pressure stay important.',
+          ]
+        : [
+            `Suit: ${suitProfiles[card.suit || 'wands'].name}`,
+            `Rank: ${card.rank || 'n/a'}`,
+            `Attributions: ${card.keywords.join(', ')}`,
+            context.dominantSuit && card.suit === context.dominantSuit ? `The reading is already leaning toward ${suitProfiles[card.suit].current}.` : 'The card brings its own elemental current into the spread.',
+          ],
     overview:
       card.kind === 'major'
-        ? `${card.name} works as a governing image in the portal: it is a symbolic principle rather than a local event.`
-        : `${card.name} belongs to the suit-and-rank machinery that Crowley inherited, revised, and used to tune specific conditions.`,
+        ? `${card.name} works as a governing image in the portal: it is a symbolic principle rather than a local event. ${context.elementalCurrent || ''}`.trim()
+        : `${card.name} belongs to the suit-and-rank machinery that Crowley inherited, revised, and used to tune specific conditions. ${context.elementalCurrent || ''}`.trim(),
     studyNotes:
       card.kind === 'major'
         ? [
             `${card.meaning} In Crowley's system, major cards often read as the larger atmosphere of a situation.`,
             position ? `In ${position.label}, the card behaves as ${position.role}, which gives the spread a strong directional note.` : 'When studied on its own, the card is best read as a symbolic principle rather than a prediction.',
-          ]
+            context.repeatedCards.length ? `The spread repeats ${context.repeatedCards.join(', ')}, which reinforces this card as part of a recurring pattern rather than a one-off sign.` : 'No other card repeats closely enough to make this a refrain by itself.',
+        ]
         : [
             `${card.meaning} The suit gives the card its elemental weather, while the rank tells you where the force is in its development.`,
             position ? `In ${position.label}, the card acts as ${position.role}, so its suit pressure is being translated into a specific reading function.` : 'On its own, the card is best studied as an instance of suit-energy working through rank.',
-          ],
-    areaNotes: buildAreaNotes(card, spread, position),
+            context.dominantRank === card.rank ? `The reading keeps returning to ${card.rank}, so this card speaks with the voice of a repeated number rather than an isolated instance.` : 'This card is not the main repeated number in the spread, so it should be read in relation to the larger pattern.',
+        ],
+    areaNotes: buildAreaNotes(card, spread, position, context),
   };
 }
 
@@ -349,6 +486,7 @@ function describeCardDignity(left: TarotCard, right: TarotCard) {
 }
 
 export function buildTarotRelationshipStudy(reading: TarotReading, focusIndex: number, focusCard: TarotCard, spread?: SpreadDefinition): TarotRelationshipStudy {
+  const context = analyzeTarotReading(reading);
   const currentDraw = reading.cards[focusIndex] || reading.cards[0];
   const currentCard = currentDraw?.card || focusCard;
   const currentPosition = currentDraw?.position || spread?.positions[focusIndex] || reading.spread.positions[focusIndex] || reading.spread.positions[0];
@@ -387,11 +525,20 @@ export function buildTarotRelationshipStudy(reading: TarotReading, focusIndex: n
       : `Because this card sits at position ${currentPosition.index}, it is translating the question into a midstream condition rather than a pure beginning or ending.`;
 
   const overview = `${currentCard.name} is being read at ${currentPosition.label}. In the portal, the card is never only a symbol on its own; it is also a point in a sequence, and that sequence matters for the final interpretation.`;
+  const repeatedRankNote = context.repeatedRanks.length
+    ? `The spread keeps circling back to ${context.repeatedRanks.join(', ')}, so the reading has a number-refrain running beneath the cards.`
+    : 'No number-refrain is strong enough to override the card-by-card placement, so sequence matters more than repetition.';
+  const spreadPatternNote = context.trumpHeavy
+    ? `The spread is trump-heavy, so the reading keeps returning to forces beyond personal control, long arcs, and the large pattern that sits above the querent's immediate preference. ${repeatedRankNote}`
+    : context.dominantSuit
+      ? `${suitProfiles[context.dominantSuit].name} dominates the spread, so the relationship between cards should be read through ${suitProfiles[context.dominantSuit].current}. ${repeatedRankNote}`
+      : `No single archetypal current dominates the spread, so the relationship between cards stays balanced between suit, number, and placement. ${repeatedRankNote}`;
 
   return {
     title: currentCard.name,
     positionLabel: currentPosition.label,
     overview,
+    spreadPatternNote,
     sequenceNote,
     dignityNote,
     neighborNote,
