@@ -226,6 +226,8 @@ def expand_person_biography(person_id: str, name: str, motto: str, role: str, bi
         "The page also keeps linked events and companion texts close at hand, because that is often where the real historical texture of the figure becomes visible.",
         "For major associates in particular, the biography has to do double duty as social history and symbolic map, since Crowley frequently turns relationships into part of the doctrine itself.",
         "That means the entry is written to make room for witness, conflict, labor, and afterlife at the same time, instead of forcing the person into a single explanatory frame.",
+        "The magical motto is treated as part of the reading too, because Crowleyan identity often moves through chosen names, not just legal ones.",
+        "That keeps the biography close to the way the archive itself encounters the person: through signatures, letters, collaborations, disagreements, and the later editorial trail left behind.",
     ]
     return _append(biography, *extras)
 
@@ -254,7 +256,8 @@ def expand_document_description(document_id: str, title: str, description: str) 
     sixth = "These records are written so they can be quoted as evidence, not just remembered as background, which is why the prose keeps their bibliographic function explicit."
     seventh = "The companion text also gives the site a place to register how later readers, editors, and biographers use the source, which is important because reception is part of the document's afterlife."
     eighth = "That extra context turns the document into a node of relation rather than a dead citation, and that is exactly what the portal wants the bibliography to feel like."
-    return _append(description, note, detail, third, fourth, fifth, sixth, seventh, eighth)
+    ninth = "The page also keeps room for editorial uncertainty, because documents in this archive often sit between source text, printed form, and later index entry."
+    return _append(description, note, detail, third, fourth, fifth, sixth, seventh, eighth, ninth)
 
 
 def enrich_documents(rows):
@@ -295,6 +298,8 @@ def expand_work_summary(
     extras.append("Crowley's books often work like junction boxes, so the prose keeps that networked quality visible instead of flattening the text into a one-sentence description.")
     extras.append("The expanded prose also leaves room for later commentary, revision, and disagreement, which matters because Crowley's books are often read differently by practitioners, historians, and critics.")
     extras.append("By keeping those layers visible, the page can support both a quick index-card glance and a longer encyclopedia read without changing the basic data model.")
+    extras.append("The summary also preserves the work's place in Crowley's publishing sequence, because the order of the books often matters almost as much as their content.")
+    extras.append("That makes the page useful for readers who want to understand a text as an object, a doctrine, and a node in an evolving bibliographic system all at once.")
     return _append(summary, *extras)
 
 
