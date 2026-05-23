@@ -60,6 +60,26 @@ PERSON_SPECIAL_NOTES = {
     "PRS_016": "Starr matters because editorial labor and correspondence work make the archive itself possible, even when the labor is invisible in the source material.",
 }
 
+TOPIC_NOTES = {
+    "magick": "The entry keeps practical ritual, method, and results in the same frame so the topic behaves like a living practice rather than an abstract keyword.",
+    "initiation": "The portal uses the term to track thresholds, admissions, and ordeals, which makes it one of the cleanest ways to read the archive's training logic.",
+    "publication": "This topic lets the reader follow texts from composition through print, edition, and circulation, which is essential to Crowley's afterlife on the page.",
+    "travel": "The archive uses travel to map how movement changes the shape of the biography, from ascent and exile to lecture tours and retreat.",
+    "golden_dawn": "The label stands for more than a single order; it also marks the politics, rituals, and disputes that organized a generation of occult writers.",
+    "oto": "The institutional line matters here because the O.T.O. shows how Crowley's ideas moved from private ritual into public membership and administration.",
+    "aa": "The A.'.A.'. entry keeps the training ladder visible, making grades, instruction, and aspirant discipline readable as a coherent structure.",
+    "ritual": "The archive uses this topic to gather ceremonies, invocations, and formal acts into one search path, which keeps method from dissolving into narrative.",
+    "correspondence": "Letters and notes often carry the archive's most immediate evidence, so the topic helps the reader move from published doctrine to lived exchange.",
+    "occult_study": "Study is an active force in the archive, since reading, translation, and research often become the method by which the system is assembled.",
+    "self_fashioning": "This topic keeps the performance of identity visible, which is crucial because Crowley repeatedly turned his own life into a designed literary object.",
+    "public_image": "The archive uses this term to track the difference between lived record and staged persona, especially where fame or scandal distort the evidence.",
+    "postwar_reception": "The label lets the reader see how Crowley's work changed after death, when editors, musicians, and occult groups turned him into a usable predecessor.",
+    "abbey_of_thelema": "The Abbey topic collects the community, the experiment, and the collapse into one place, letting the reader see the domestic side of the system.",
+    "holy_guardian_angel": "The term stays central because it links the practical disciplines of the archive to the inward aim of initiatory work.",
+    "cairo_working": "The topic anchors the revelation narrative to a place, a date range, and a textual result, which makes it one of the archive's most important scenes.",
+    "sex_magick": "The label keeps the ritual, the scandal, and the doctrine of polarity visible together, which is necessary if the archive is going to stay honest about the subject.",
+}
+
 
 WORK_NOTES = {
     "WKS_001": "The text is treated as the source-note for the whole system, because it names the voices, the law, and the problem of interpretation in one place.",
@@ -153,7 +173,8 @@ def enrich_people(rows):
 
 def expand_document_description(document_id: str, title: str, description: str) -> str:
     note = f"The document anchors the bibliography for {title}, keeping the source lane visible alongside the works and events it supports."
-    return _append(description, note)
+    detail = "The portal treats documents as evidence-bearing companions rather than simple attachments, so the description explains why the text matters to the archive."
+    return _append(description, note, detail)
 
 
 def enrich_documents(rows):
@@ -263,7 +284,7 @@ def expand_event_summary(summary: str, topics: Sequence[str], people: Sequence[s
     if topic_labels:
         parts.append(f"It is indexed under {_join(topic_labels)}, which keeps the event visible as part of the archive's larger pattern instead of as a stray date.")
     else:
-        parts.append("The record is kept in the chronology as a concrete scene rather than a loose note, so it can be read beside biography, ritual, and publication.")
+        parts.append("The record is kept in the chronology as a concrete scene rather than a loose note, so it can be read beside biography, ritual, publication, and reception.")
 
     person_names = [person_labels.get(person_id) for person_id in people[:3] if person_labels.get(person_id)]
     if person_names:
@@ -273,6 +294,7 @@ def expand_event_summary(summary: str, topics: Sequence[str], people: Sequence[s
     if work_titles:
         parts.append(f"The related texts are {_join(work_titles)}, which keeps the written afterlife of the event on the page.")
 
+    parts.append("Read together, the prose gives the event a place in the portal's map of Crowley's life instead of leaving it as a bare calendar fact.")
     return " ".join(parts)
 
 
@@ -281,6 +303,7 @@ def expand_grade_description(name: str, system: str, tree_path_number: int, desc
     extras = [
         f"The grade is tied to {focus}, which keeps the symbolic number connected to a concrete task.",
         "In the portal it is read as a training stage rather than a ceremonial title, so the practical work stays visible.",
+        f"That keeps {name} from becoming a label without context and lets the reader see how {system} structures progression.",
     ]
     if system != "A.'.A.'.":
         extras.append("The alternate system wording is preserved so the historical comparison remains clear.")
@@ -313,6 +336,7 @@ def expand_tree_description(
         extras = [
             f"As {name}, it defines a station of the Tree rather than a transit line, and the colors, names, and angelic attributions turn it into a structural node in the map.",
             "In the portal it reads as a place where doctrine, embodiment, and function meet.",
+            "The entry keeps the sephirah visible as an active principle, not just a diagram label, so the reader can read it as part of the system's working anatomy.",
         ]
     else:
         extras = [
@@ -323,6 +347,7 @@ def expand_tree_description(
         if description and "Often called" in description:
             extras.append("The traditional card name is retained so the older Golden Dawn pattern remains legible beside Crowley's revision.")
         extras.append("In the portal it functions as a route across the diagram, not just a line on a chart.")
+        extras.append("That makes each path read as a practical bridge between states, symbols, and initiatory movement.")
     return _append(description, *extras)
 
 
@@ -386,11 +411,14 @@ def enrich_tree_rows(rows):
 
 
 def expand_topic_description(slug: str, label: str, description: str) -> str:
-    extras = [
+    note = TOPIC_NOTES.get(
+        slug,
         "The portal uses the topic as a controlled index term, which means it points to events, people, and works without pretending the idea has only one meaning.",
-    ]
-    if slug in {"aa", "oto", "golden_dawn"}:
-        extras.append("The label also helps the archive keep institutional history distinct from personal biography.")
-    elif slug in {"cairo_working", "holy_guardian_angel", "public_magic", "self_fashioning", "abbey_of_thelema"}:
-        extras.append("This makes the topic especially useful as a bridge between the biographical record and the documentary afterlife of the system.")
-    return _append(description, *extras)
+    )
+    bridge = (
+        "This keeps the term usable as an encyclopedia heading, because the reader can move from the label to the linked records and back again."
+    )
+    archive_note = (
+        "In the archive the topic functions as a small editorial hinge, joining biography, publication, ritual, and reception without flattening the differences between them."
+    )
+    return _append(description, note, bridge, archive_note)

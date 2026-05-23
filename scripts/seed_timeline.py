@@ -98,14 +98,7 @@ def ev(
 
 
 def build_description(summary, topics, people, works):
-    parts = [expand_event_summary(summary, topics, people, works, PERSON_LABELS, WORK_LABELS)]
-    if topics:
-        parts.append("Topics: " + ", ".join(topics))
-    if people:
-        parts.append("People: " + ", ".join(PERSON_LABELS[p] for p in people if p in PERSON_LABELS))
-    if works:
-        parts.append("Works: " + ", ".join(WORK_LABELS[w] for w in works if w in WORK_LABELS))
-    return " | ".join(parts)
+    return expand_event_summary(summary, topics, people, works, PERSON_LABELS, WORK_LABELS)
 
 
 EVENTS = [
