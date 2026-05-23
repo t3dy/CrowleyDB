@@ -3,6 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 
 from db_utils import open_db
+from prose_enrichment import expand_document_description
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -45,12 +46,13 @@ def ingest_archive_markdowns() -> None:
     cursor = conn.cursor()
 
     for doc_id, title, author, year, lane, file_path, description in ARCHIVE_DOCS:
+        enriched_description = expand_document_description(doc_id, title, description)
         cursor.execute(
             """
             INSERT OR REPLACE INTO documents (id, title, author, publication_year, evidentiary_lane, file_path, description)
             VALUES (?, ?, ?, ?, ?, ?, ?)
             """,
-            (doc_id, title, author, year, lane, str(file_path), description),
+            (doc_id, title, author, year, lane, str(file_path), enriched_description),
         )
 
     conn.commit()

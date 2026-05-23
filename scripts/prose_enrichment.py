@@ -60,6 +60,14 @@ PERSON_SPECIAL_NOTES = {
     "PRS_016": "Starr matters because editorial labor and correspondence work make the archive itself possible, even when the labor is invisible in the source material.",
 }
 
+SAINT_NOTES = {
+    "PRS_S001": "Maier helps the portal keep Rosicrucianism, alchemy, and courtly erudition in the same historical lane.",
+    "PRS_S002": "De Molay survives in the archive less as a historical administrator than as a symbol of martyrdom and delayed revenge.",
+    "PRS_S003": "Rosenkreuz functions as a founding cipher, letting the archive point to mythic origin stories without pretending they are simple biography.",
+    "PRS_S004": "Paracelsus matters because his experimental medicine and symbolic cosmology give Thelemic retrospection a Renaissance ancestor it can actually use.",
+    "PRS_S005": "Apollonius supplies a model of holy charisma and philosophical wandering that later occult readers repeatedly recruit into their own lineages.",
+}
+
 TOPIC_NOTES = {
     "magick": "The entry keeps practical ritual, method, and results in the same frame so the topic behaves like a living practice rather than an abstract keyword.",
     "initiation": "The portal uses the term to track thresholds, admissions, and ordeals, which makes it one of the cleanest ways to read the archive's training logic.",
@@ -123,13 +131,30 @@ TERM_NOTES = {
 
 LOCATION_NOTES = {
     "LOC_002": "The house matters because it turns an isolated site into a lasting node in the magical geography of the archive.",
-    "LOC_003": "London is the crowded center where publishing, temple politics, and public controversy repeatedly meet.",
-    "LOC_004": "Cairo is the revelation city, and the archive keeps it as the place where the Thelemic narrative takes on documentary form.",
-    "LOC_005": "Bou Saada anchors the desert visionary current, making the Algerian work feel rooted in an actual geography of ordeal.",
+    "LOC_003": "London is the crowded center where publishing, temple politics, and public controversy repeatedly meet. It remains the city where Crowley can be read as a writer, organizer, and nuisance all at once.",
+    "LOC_004": "Cairo is the revelation city, and the archive keeps it as the place where the Thelemic narrative takes on documentary form. The museum, the apartment, and the ritual memory all hang on the same coordinate.",
+    "LOC_005": "Bou Saada anchors the desert visionary current, making the Algerian work feel rooted in an actual geography of ordeal. The desert setting matters because it turns visionary work into a scene with weather, travel, and strain.",
     "LOC_007": "Cefalu is the place where Crowley tried to turn the system into a lived community, so it carries the weight of both experiment and collapse.",
-    "LOC_008": "New York links the archive to American lecture culture, exile, and the postwar afterlife of Crowley's influence.",
+    "LOC_008": "New York links the archive to American lecture culture, exile, and the postwar afterlife of Crowley's influence. It also keeps the public and the underground versions of the story in the same frame.",
     "LOC_009": "Hastings closes the biographical arc while opening the posthumous archive, which is why the place has such strong documentary weight.",
     "LOC_020": "Pasadena keeps the American occult afterlife visible, especially through the Parsons and Agape Lodge line of reception.",
+}
+
+DOCUMENT_NOTES = {
+    "ARC_PERDURABO": "The companion keeps the Kaczynski biography searchable as an indexable source text, which is useful because the archive uses it as a documentary baseline for the modern scholarly view.",
+    "ARC_BEAST_IN_BERLIN": "The companion preserves the Berlin biography as a readable source node, allowing the site to connect Weimar culture, sex, art, and postwar interpretation in one source lane.",
+    "ARC_CONFESSIONS": "The companion preserves Crowley's autobiography as a source with a clearly marked self-interpretive stance, which is essential because the archive reads it against later scholarship and correspondence.",
+}
+
+TREE_NOTES = {
+    19: "Crowley's Lust revision matters because it shows how he turns a traditional virtue into a more forceful and relational emblem.",
+    21: "Fortune keeps the wheel and cyclical change in play, giving the portal a path where movement and luck are read as structured forces rather than random events.",
+    22: "Adjustment is a balancing path, and the note preserves Crowley's emphasis on measured correction rather than simple moral judgment.",
+    24: "Death here is transformation rather than merely ending, which is why the portal keeps the path as a symbolic bridge into renewal.",
+    25: "Art is one of the most overtly alchemical paths, so the entry keeps the work of mixture, reconciliation, and timing visible.",
+    28: "Crowley's swap is one of the best-known revisions in the Thoth scheme, and the note keeps that editorial decision explicit.",
+    31: "The Aeon path marks the shift in symbolic era, so the entry keeps the historical and ritual dimensions in the same line of sight.",
+    32: "The Universe path closes the diagram in a way that feels structural rather than merely terminal, which makes it a useful place to preserve Crowley's revisionary logic.",
 }
 
 
@@ -151,6 +176,7 @@ def expand_person_biography(person_id: str, name: str, motto: str, role: str, bi
     extras = [
         PERSON_ROLE_NOTES.get(role),
         PERSON_SPECIAL_NOTES.get(person_id),
+        SAINT_NOTES.get(person_id),
         f"The portal keeps {name} in this role so the biography remains a readable node in the archive rather than a detached name.",
     ]
     return _append(biography, *extras)
@@ -174,7 +200,8 @@ def enrich_people(rows):
 def expand_document_description(document_id: str, title: str, description: str) -> str:
     note = f"The document anchors the bibliography for {title}, keeping the source lane visible alongside the works and events it supports."
     detail = "The portal treats documents as evidence-bearing companions rather than simple attachments, so the description explains why the text matters to the archive."
-    return _append(description, note, detail)
+    third = DOCUMENT_NOTES.get(document_id, "It remains useful because the archive can cite it directly from the documentary shelf instead of hiding it inside a generic file list.")
+    return _append(description, note, detail, third)
 
 
 def enrich_documents(rows):
@@ -207,6 +234,7 @@ def expand_work_summary(
     if date_composed:
         extras.append(f"Composed around {date_composed} in {location_composed}, it ties the system to a specific historical moment and place.")
     extras.append(WORK_NOTES.get(work_id, f"The portal treats {title} as a core documentary node, keeping doctrine, method, and reception visible at once."))
+    extras.append("The entry treats the work as both a historical object and a reading key for later events, so it remains useful beyond the bibliography.")
     return _append(summary, *extras)
 
 
@@ -235,6 +263,7 @@ def expand_term_definition(term_id: str, term: str, gematria_value, etymology: s
 
     significance_extras = [
         TERM_NOTES.get(term_id, "The portal uses the term as a cross-reference point rather than a loose keyword, so the entry stays tied to works, events, and people."),
+        "The page also keeps the term connected to the wider network of names and texts, which is what turns it into an encyclopedia entry rather than a glossary stub.",
     ]
 
     return _append(definition, *definition_extras), _append(thelemic_significance, *significance_extras)
@@ -259,7 +288,12 @@ def expand_location_significance(location_id: str, name: str, significance: str)
         location_id,
         "The place is treated as a fixed coordinate in the archive, which helps the reader connect movement, conflict, publication, and ritual to an actual geography.",
     )
-    return _append(significance, note, f"The portal keeps {name} visible here so the geography of the archive remains concrete rather than abstract.")
+    return _append(
+        significance,
+        note,
+        f"The portal keeps {name} visible here so the geography of the archive remains concrete rather than abstract.",
+        "That extra sentence keeps the location from reading like a map pin and lets it behave like a meaningful setting in the narrative network.",
+    )
 
 
 def enrich_locations(rows):
@@ -346,6 +380,7 @@ def expand_tree_description(
             extras.append("Crowley's swap note is preserved here so the Thoth revision reads as an intentional editorial choice rather than a mistake.")
         if description and "Often called" in description:
             extras.append("The traditional card name is retained so the older Golden Dawn pattern remains legible beside Crowley's revision.")
+        extras.append(TREE_NOTES.get(path_number, "The portal keeps the path as a working symbol of transition, relation, and symbolic progression."))
         extras.append("In the portal it functions as a route across the diagram, not just a line on a chart.")
         extras.append("That makes each path read as a practical bridge between states, symbols, and initiatory movement.")
     return _append(description, *extras)
