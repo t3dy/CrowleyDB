@@ -1,10 +1,20 @@
 # CrowleyDB
 
+Website: [https://t3dy.github.io/CrowleyDB/](https://t3dy.github.io/CrowleyDB/)
+
 [![Website Viewer](https://img.shields.io/badge/Website-Live_Viewer-blue?style=for-the-badge)](https://t3dy.github.io/CrowleyDB/)
 
 **Live database viewer:** [https://t3dy.github.io/CrowleyDB/](https://t3dy.github.io/CrowleyDB/)
 
 CrowleyDB is a digital humanities project for organizing, cross-referencing, and exploring the works, life, associates, travels, and symbolic system of Aleister Crowley. The goal is not just to collect information, but to make the material browsable, traceable, and transparent about what is documented versus what is interpretive.
+
+## Main Sections
+
+- Works, documents, and text companions
+- People, saints, and precursors
+- Tree of Life, grades, numbers, and correspondences
+- Timeline, locations, and biography/map browsing
+- Topic browsing, corpus catalog, tarot readings, initiation game, and character sheet
 
 ## Project Goals
 
