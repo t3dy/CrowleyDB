@@ -373,6 +373,7 @@ def expand_location_significance(location_id: str, name: str, significance: str)
         "The place also acts like a cue for atmosphere and phase, so the archive can read movement, publication, ritual, and conflict as spatially specific rather than generic.",
         "The location entry also keeps the social environment visible, since many of Crowley's scenes depend on rooms, houses, lodgings, and temporary bases rather than famous monuments alone.",
         "That makes the map layer useful as a biography aid, a publication guide, and a way to notice where the archive's most important scenes were actually staged.",
+        "It also helps the reader notice when Crowley is writing from a place and when he is only passing through, which can change the tone of the source itself.",
     )
 
 
@@ -413,6 +414,7 @@ def expand_event_summary(summary: str, topics: Sequence[str], people: Sequence[s
     parts.append("The title of the event matters too, because Crowley-style history often turns a scene into a named threshold, not just a dated occurrence.")
     parts.append("The event entry also keeps the afterlife of the scene visible, since later biographies, criticism, and mythmaking often attach more meaning to the episode than the participants knew at the time.")
     parts.append("That is why the chronology keeps both the factual sequence and the interpretive load in view: the archive needs to know what happened, but it also needs to know what the event came to mean.")
+    parts.append("The chronology also preserves the event as a hinge point in the archive, where a single scene can connect publication, relationship history, and later reception without collapsing them into one story.")
     return " ".join(parts)
 
 
@@ -478,6 +480,7 @@ def expand_tree_description(
         extras.append("In the portal it functions as a route across the diagram, not just a line on a chart.")
         extras.append("That makes each path read as a practical bridge between states, symbols, and initiatory movement.")
         extras.append("The number of the path is also part of the argument, since Crowley uses the sequence to make the Tree feel like a lived symbolic machine rather than a static chart.")
+        extras.append("The entry also keeps the older path logic visible so a reader can see how Crowley's revision reorders inheritance instead of erasing it.")
         extras.append("The entry also preserves the older Golden Dawn memory of the path so readers can see where Crowley inherits and where he revises.")
     return _append(description, *extras)
 

@@ -378,33 +378,5 @@
   {
     "person_id": "PRS_016",
     "event_id": "EVT_064"
-  },
-  {
-    "person_id": "PRS_001",
-    "event_id": "EVT_005"
-  },
-  {
-    "person_id": "PRS_002",
-    "event_id": "EVT_007"
-  },
-  {
-    "person_id": "PRS_003",
-    "event_id": "EVT_010"
-  },
-  {
-    "person_id": "PRS_004",
-    "event_id": "EVT_009"
-  },
-  {
-    "person_id": "PRS_005",
-    "event_id": "EVT_006"
-  },
-  {
-    "person_id": "PRS_006",
-    "event_id": "EVT_004"
-  },
-  {
-    "person_id": "PRS_007",
-    "event_id": "EVT_004"
   }
 ]
