@@ -75,11 +75,11 @@ const QUOTE_BY_TITLE: Record<string, QuoteBlock> = {
     'https://hermetic.com/crowley/book-4/defs',
   ),
   'the-vision-and-the-voice': makeQuote(
-    'That which is above is not like that which is below.',
+    'And the Voice of the Aethyr echoeth: It beams.',
     'The Vision and the Voice',
     'Cry of the 5th Aethyr (LIT)',
-    'A useful line for visionary and initiatory pages.',
-    'https://hermetic.com/crowley/the-vision-and-the-voice/index',
+    'A short direct line from the Aethyr record that suits the visionary pages.',
+    'https://hermetic.com/crowley/the-vision-and-the-voice/aethyr5',
   ),
   '777-and-other-qabalistic-writings': makeQuote(
     'The number 777 affords a good example.',
@@ -262,11 +262,11 @@ const NUMBER_QUOTE_BY_SLUG: Record<string, QuoteBlock> = {
   '220': QUOTE_BY_TITLE['liber-al-vel-legis'],
   '418': QUOTE_BY_TITLE['the-vision-and-the-voice'],
   '666': makeQuote(
-    '666 The great wild beast',
-    'Liber Aleph vel CXI',
-    'Opening epistle heading',
-    'Crowley’s self-signature is the cleanest short citation for the Beast number.',
-    'https://hermetic.com/crowley/libers/lib111',
+    'The Beast אהיה = 666 in full.',
+    'The Equinox of the Gods',
+    'Appendix on the Beast number',
+    'A direct number formula that keeps the Beast page tied to Crowley’s own numerological self-signature.',
+    'https://hermetic.com/_media/93beast.fea.st/files/section1/aba/book_4_part_iv_eotg.pdf',
   ),
   '777': QUOTE_BY_TITLE['777-and-other-qabalistic-writings'],
 };
