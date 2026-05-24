@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { fetchJSON } from '../api';
+import QuoteCallout from '../components/QuoteCallout';
+import { getNumberQuote } from '../crowleyQuotes';
 import {
   buildNumberArticleParagraphs,
   buildNumberEntries,
@@ -76,6 +78,7 @@ const NumberPage = () => {
   const relatedTerms = entry.relatedTerms;
   const relatedPeople = entry.relatedPeople;
   const grade = entry.grade;
+  const numberQuote = useMemo(() => getNumberQuote(entry, relatedWorks), [entry, relatedWorks]);
 
   return (
     <div className="page-shell number-page">
@@ -103,6 +106,8 @@ const NumberPage = () => {
           <p key={`${entry.slug}-${index}`}>{paragraph}</p>
         ))}
       </section>
+
+      <QuoteCallout quote={numberQuote} />
 
       <section className="topic-page__related">
         <div className="topic-page__rail">

@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { fetchJSON } from '../api';
+import QuoteCallout from '../components/QuoteCallout';
+import { getTopicQuote } from '../crowleyQuotes';
 import { buildTopicArticleParagraphs, buildTopicSummary, summaryText } from '../topicContent';
 
 type Topic = {
@@ -85,6 +87,7 @@ const TopicPage = () => {
   }
 
   const paragraphs = buildTopicArticleParagraphs(topic, summary);
+  const topicQuote = useMemo(() => getTopicQuote(topic.slug, summary.works), [topic.slug, summary.works]);
 
   return (
     <div className="page-shell topic-page">
@@ -105,6 +108,8 @@ const TopicPage = () => {
           <p key={`${topic.slug}-${index}`}>{paragraph}</p>
         ))}
       </section>
+
+      <QuoteCallout quote={topicQuote} />
 
       <section className="topic-page__related">
         <div className="topic-page__rail">

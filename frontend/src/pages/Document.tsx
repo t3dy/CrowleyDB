@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { fetchJSON } from '../api';
+import QuoteCallout from '../components/QuoteCallout';
+import { getDocumentQuote } from '../crowleyQuotes';
 
 type Document = {
   id: string;
@@ -40,6 +42,11 @@ const DocumentPage = () => {
       .filter(work => work.document_id === document.id)
       .sort((left, right) => (left.liber_number ?? Number.POSITIVE_INFINITY) - (right.liber_number ?? Number.POSITIVE_INFINITY));
   }, [document, works]);
+
+  const documentQuote = useMemo(
+    () => getDocumentQuote(document, relatedWorks.map(work => work.title)),
+    [document, relatedWorks],
+  );
 
   if (!document) {
     return (
@@ -96,6 +103,8 @@ const DocumentPage = () => {
           <strong>{document.evidentiary_lane}</strong>
         </div>
       </section>
+
+      <QuoteCallout quote={documentQuote} />
 
       <section className="glass-panel entry-page__entry">
         {paragraphs.map((paragraph, index) => (

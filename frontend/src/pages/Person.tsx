@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { fetchJSON } from '../api';
+import QuoteCallout from '../components/QuoteCallout';
+import { getPersonQuote } from '../crowleyQuotes';
 
 type Person = {
   id: string;
@@ -170,6 +172,8 @@ const PersonPage = () => {
     .slice(0, 4)
     .map(([label]) => label);
 
+  const personQuote = useMemo(() => getPersonQuote(person, relatedWorks), [person, relatedWorks]);
+
   const entryParagraphs = [
     person.biography || `${person.name} remains one of the archive's indexed figures.`,
     `The portal keeps ${person.name} in the ${person.role_category || 'uncategorized'} lane so the biography stays linked to the surrounding archive rather than isolated as a single name.`,
@@ -199,6 +203,8 @@ const PersonPage = () => {
           <strong>{yearRange}</strong>
         </div>
       </section>
+
+      <QuoteCallout quote={personQuote} />
 
       <section className="glass-panel entry-page__entry">
         {entryParagraphs.map((paragraph, index) => (

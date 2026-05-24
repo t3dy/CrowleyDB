@@ -1,4 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
+import QuoteCallout from '../components/QuoteCallout';
+import { getPrecursorQuote } from '../crowleyQuotes';
 import { buildPrecursorArticleParagraphs, buildPrecursorEntries, getPrecursorEntryBySlug } from '../precursorsContent';
 
 const PrecursorPage = () => {
@@ -38,6 +40,7 @@ const PrecursorPage = () => {
   }
 
   const paragraphs = buildPrecursorArticleParagraphs(entry);
+  const precursorQuote = getPrecursorQuote(entry);
 
   return (
     <div className="page-shell precursor-page">
@@ -63,6 +66,8 @@ const PrecursorPage = () => {
           <p key={`${entry.slug}-${index}`}>{paragraph}</p>
         ))}
       </section>
+
+      <QuoteCallout quote={precursorQuote} />
 
       <section className="topic-page__related">
         <div className="topic-page__rail">

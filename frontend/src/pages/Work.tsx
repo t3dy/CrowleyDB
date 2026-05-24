@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { fetchJSON } from '../api';
+import QuoteCallout from '../components/QuoteCallout';
+import { getWorkQuote } from '../crowleyQuotes';
 
 type Work = {
   id: string;
@@ -128,6 +130,8 @@ const WorkPage = () => {
       .slice(0, 8);
   }, [claims, work]);
 
+  const workQuote = useMemo(() => getWorkQuote(work), [work]);
+
   if (!work) {
     return (
       <div className="page-shell">
@@ -190,6 +194,8 @@ const WorkPage = () => {
           <strong>{work.class}</strong>
         </div>
       </section>
+
+      <QuoteCallout quote={workQuote} />
 
       <section className="glass-panel entry-page__entry">
         {mainParagraphs.map((paragraph, index) => (
