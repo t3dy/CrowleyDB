@@ -79,7 +79,10 @@ const DocumentPage = () => {
     );
   }
 
+  const quoteContext = `The citation block below keeps ${document.title} in Crowley's own wording, which is the quickest way to preserve a document page as evidence rather than metadata.`;
+
   const paragraphs = [
+    quoteContext,
     document.description || `${document.title} remains part of the archive's documentary shelf.`,
     `This source entry keeps the text visible as evidence, not merely as an attachment. That means the page records who authored it, when it appeared, and why the archive thinks it matters.`,
     relatedWorks.length

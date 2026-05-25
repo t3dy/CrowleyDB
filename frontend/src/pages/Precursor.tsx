@@ -41,6 +41,7 @@ const PrecursorPage = () => {
 
   const paragraphs = buildPrecursorArticleParagraphs(entry);
   const precursorQuote = getPrecursorQuote(entry);
+  const quoteContext = `The citation block below preserves the older grammar Crowley inherited before revising it into his own number system. That keeps the precursor layer distinct from the Crowley page that follows it.`;
 
   return (
     <div className="page-shell precursor-page">
@@ -62,6 +63,7 @@ const PrecursorPage = () => {
       </section>
 
       <section className="glass-panel precursor-page__entry">
+        <p>{quoteContext}</p>
         {paragraphs.map((paragraph, index) => (
           <p key={`${entry.slug}-${index}`}>{paragraph}</p>
         ))}

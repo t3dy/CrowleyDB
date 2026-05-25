@@ -88,6 +88,7 @@ const TopicPage = () => {
 
   const paragraphs = buildTopicArticleParagraphs(topic, summary);
   const topicQuote = useMemo(() => getTopicQuote(topic.slug, summary.works), [topic.slug, summary.works]);
+  const quoteContext = `The citation block below shows the topic in Crowley's own phrasing, so the page can read the term as a living use rather than only a database label.`;
 
   return (
     <div className="page-shell topic-page">
@@ -104,6 +105,7 @@ const TopicPage = () => {
       </section>
 
       <section className="glass-panel topic-page__entry">
+        <p>{quoteContext}</p>
         {paragraphs.map((paragraph, index) => (
           <p key={`${topic.slug}-${index}`}>{paragraph}</p>
         ))}

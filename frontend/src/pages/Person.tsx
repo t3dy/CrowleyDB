@@ -173,8 +173,10 @@ const PersonPage = () => {
     .map(([label]) => label);
 
   const personQuote = useMemo(() => getPersonQuote(person, relatedWorks), [person, relatedWorks]);
+  const quoteContext = `The citation block below is chosen to show how Crowley himself frames the role or relationship that ${person.name} occupies in the archive. For a biography page, the quotation is not a verdict so much as a lens.`;
 
   const entryParagraphs = [
+    quoteContext,
     person.biography || `${person.name} remains one of the archive's indexed figures.`,
     `The portal keeps ${person.name} in the ${person.role_category || 'uncategorized'} lane so the biography stays linked to the surrounding archive rather than isolated as a single name.`,
     relatedEvents.length

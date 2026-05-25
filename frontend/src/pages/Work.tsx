@@ -163,7 +163,10 @@ const WorkPage = () => {
     );
   }
 
+  const quoteContext = `The citation block below keeps ${work.title} anchored in Crowley's own phrasing before the longer archive prose expands it. That matters because the book's title, number, and doctrinal role all belong to the same symbolic sentence in this site.`;
+
   const mainParagraphs = [
+    quoteContext,
     work.summary || `${work.title} remains one of the archive's primary texts.`,
     document
       ? `The source companion is ${document.title}${document.publication_year ? ` (${document.publication_year})` : ''}, and its description keeps the documentary lane explicit: ${document.description || 'no description available yet'}.`

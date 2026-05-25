@@ -79,6 +79,7 @@ const NumberPage = () => {
   const relatedPeople = entry.relatedPeople;
   const grade = entry.grade;
   const numberQuote = useMemo(() => getNumberQuote(entry, relatedWorks), [entry, relatedWorks]);
+  const quoteContext = `The citation block below keeps ${entry.number} in view as a Crowley number-form before the page opens into Tree, tarot, and grade logic. That helps the reader distinguish literal numbering from symbolic number-work.`;
 
   return (
     <div className="page-shell number-page">
@@ -102,6 +103,7 @@ const NumberPage = () => {
       </section>
 
       <section className="glass-panel number-page__entry">
+        <p>{quoteContext}</p>
         {paragraphs.map((paragraph, index) => (
           <p key={`${entry.slug}-${index}`}>{paragraph}</p>
         ))}
