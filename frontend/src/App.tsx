@@ -6,6 +6,8 @@ import { MapContainer, TileLayer, Marker, Popup, Tooltip } from 'react-leaflet';
 import L from 'leaflet';
 import './index.css';
 import TopicShelf from './components/TopicShelf';
+import EmptyResults from './components/EmptyResults';
+import ResearchToolbar from './components/ResearchToolbar';
 import { TOPIC_GROUPS } from './topicGroups';
 import { PortalIdentityProvider, usePortalIdentity } from './portalIdentity';
 
@@ -141,6 +143,8 @@ const BiographyAndMap = () => {
   const [topics, setTopics] = useState<any[]>([]);
   const [eventTopics, setEventTopics] = useState<any[]>([]);
   const [selectedTopic, setSelectedTopic] = useState('All');
+  const [query, setQuery] = useState('');
+  const [sortMode, setSortMode] = useState('chronology');
   const { currentLane } = useLane();
 
   useEffect(() => {
@@ -165,20 +169,48 @@ const BiographyAndMap = () => {
     [eventTopics, topicById],
   );
 
-  const filteredEvents = events.filter(event => {
-    if (currentLane !== 'All' && event.evidentiary_lane !== currentLane) return false;
-    if (selectedTopic === 'All') return true;
-    return (topicsByEventId[event.id] || []).includes(selectedTopic);
-  });
+  const filteredEvents = useMemo(() => {
+    const search = query.trim().toLowerCase();
+    return [...events]
+      .filter(event => {
+        if (currentLane !== 'All' && event.evidentiary_lane !== currentLane) return false;
+        if (selectedTopic !== 'All' && !(topicsByEventId[event.id] || []).includes(selectedTopic)) return false;
+        if (!search) return true;
+        const location = locations.find(loc => loc.id === event.location_id);
+        return [
+          event.title,
+          event.description,
+          event.date_start,
+          event.date_end || '',
+          event.evidentiary_lane,
+          location?.name || '',
+          ...(topicsByEventId[event.id] || []),
+        ]
+          .join(' ')
+          .toLowerCase()
+          .includes(search);
+      })
+      .sort((left, right) => {
+        if (sortMode === 'reverse') return right.date_start.localeCompare(left.date_start);
+        if (sortMode === 'title') return left.title.localeCompare(right.title);
+        if (sortMode === 'lane') return String(left.evidentiary_lane).localeCompare(String(right.evidentiary_lane)) || left.date_start.localeCompare(right.date_start);
+        return left.date_start.localeCompare(right.date_start);
+      });
+  }, [events, currentLane, selectedTopic, topicsByEventId, query, locations, sortMode]);
 
   const eventsByLocationId = useMemo(() => {
-    return events.reduce((acc: Record<string, any[]>, event) => {
+    return filteredEvents.reduce((acc: Record<string, any[]>, event) => {
       if (!event.location_id) return acc;
       acc[event.location_id] = acc[event.location_id] || [];
       acc[event.location_id].push(event);
       return acc;
     }, {});
-  }, [events]);
+  }, [filteredEvents]);
+
+  const visibleLocations = useMemo(() => {
+    const locationIds = new Set(filteredEvents.map(event => event.location_id).filter(Boolean));
+    return locations.filter(loc => locationIds.has(loc.id));
+  }, [filteredEvents, locations]);
 
   return (
     <div className="page-shell page-shell--fullbleed biography-layout">
@@ -197,22 +229,50 @@ const BiographyAndMap = () => {
         </div>
       </section>
 
+      <ResearchToolbar
+        query={query}
+        onQueryChange={setQuery}
+        searchLabel="Search timeline"
+        searchPlaceholder="Event, person, work, place, topic, date, or lane"
+        countLabel="Events"
+        count={filteredEvents.length}
+        filters={[
+          {
+            id: 'topic',
+            label: 'Topic',
+            value: selectedTopic,
+            options: [
+              { value: 'All', label: 'All topics' },
+              ...topics.map((topic: any) => ({ value: topic.label, label: topic.label })),
+            ],
+            onChange: setSelectedTopic,
+          },
+        ]}
+        sort={{
+          label: 'Sort',
+          value: sortMode,
+          options: [
+            { value: 'chronology', label: 'Chronology' },
+            { value: 'reverse', label: 'Reverse chronology' },
+            { value: 'title', label: 'Title' },
+            { value: 'lane', label: 'Evidence lane' },
+          ],
+          onChange: setSortMode,
+        }}
+        onReset={() => {
+          setQuery('');
+          setSelectedTopic('All');
+          setSortMode('chronology');
+        }}
+      />
+
       <div className="biography-layout__split">
         <aside className="glass-panel biography-layout__sidebar">
-          <label className="stacked-field">
-            <span>Topic</span>
-            <select value={selectedTopic} onChange={event => setSelectedTopic(event.target.value)}>
-              <option value="All">All topics</option>
-              {topics.map((topic: any) => (
-                <option key={topic.id} value={topic.label}>
-                  {topic.label}
-                </option>
-              ))}
-            </select>
-          </label>
-
-          <div className="timeline-stack">
-            {filteredEvents.map(event => (
+          {filteredEvents.length === 0 ? (
+            <EmptyResults message="Try clearing the topic filter, changing the evidence lane, or searching for a broader date, place, or event phrase." />
+          ) : (
+            <div className="timeline-stack">
+              {filteredEvents.map(event => (
                 <article
                   key={event.id}
                   className="glass-panel timeline-card"
@@ -241,8 +301,9 @@ const BiographyAndMap = () => {
                   ))}
                 </div>
               </article>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </aside>
 
         <section className="biography-layout__map">
@@ -251,7 +312,7 @@ const BiographyAndMap = () => {
               attribution='&copy; <a href="https://carto.com/">Carto</a>'
               url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
             />
-            {locations.map(loc => (
+            {visibleLocations.map(loc => (
               <Marker key={loc.id} position={[loc.latitude, loc.longitude]}>
                 <Tooltip direction="top" offset={[0, -10]} opacity={1} sticky>
                   <div className="map-tooltip">
@@ -297,16 +358,40 @@ const BiographyAndMap = () => {
 
 const Dictionary = () => {
   const [terms, setTerms] = useState<any[]>([]);
+  const [query, setQuery] = useState('');
+  const [laneFilter, setLaneFilter] = useState('All');
+  const [sortMode, setSortMode] = useState('term');
   const { currentLane } = useLane();
 
   useEffect(() => {
     fetchJSON('terms').then(setTerms);
   }, []);
 
-  const filteredTerms = terms.filter(term => {
-    if (currentLane === 'All') return true;
-    return term.evidentiary_lane === currentLane;
-  });
+  const filteredTerms = useMemo(() => {
+    const search = query.trim().toLowerCase();
+    return [...terms]
+      .filter(term => {
+        const activeLane = laneFilter === 'All' ? currentLane : laneFilter;
+        if (activeLane !== 'All' && term.evidentiary_lane !== activeLane) return false;
+        if (!search) return true;
+        return [
+          term.term,
+          String(term.gematria_value || ''),
+          term.etymology || '',
+          term.definition || '',
+          term.thelemic_significance || '',
+          term.evidentiary_lane || '',
+        ]
+          .join(' ')
+          .toLowerCase()
+          .includes(search);
+      })
+      .sort((left, right) => {
+        if (sortMode === 'value') return (left.gematria_value ?? Number.POSITIVE_INFINITY) - (right.gematria_value ?? Number.POSITIVE_INFINITY) || left.term.localeCompare(right.term);
+        if (sortMode === 'lane') return left.evidentiary_lane.localeCompare(right.evidentiary_lane) || left.term.localeCompare(right.term);
+        return left.term.localeCompare(right.term);
+      });
+  }, [terms, query, laneFilter, sortMode, currentLane]);
 
   return (
     <div className="page-shell">
@@ -322,33 +407,70 @@ const Dictionary = () => {
         </div>
       </section>
 
-      <div className="page-grid page-grid--cards">
-        {filteredTerms.map(term => (
-          <article
-            key={term.id}
-            className="glass-panel term-card"
-            data-portal-track-hover="true"
-            data-portal-track-click="true"
-            data-portal-track-label={term.term}
-            data-portal-track-detail={term.thelemic_significance}
-            data-portal-track-source="Dictionary"
-            data-portal-track-domain="dictionary"
-          >
-            <h3 className="term-card__title">
-              {term.term}
-              {term.gematria_value && <span className="term-card__value">[{term.gematria_value}]</span>}
-            </h3>
-            <p className="term-card__etymology">{term.etymology}</p>
-            <p>
-              <strong>Definition:</strong> {term.definition}
-            </p>
-            <p>
-              <strong>Significance:</strong> {term.thelemic_significance}
-            </p>
-            <span className={`lane-pill lane-pill--${term.evidentiary_lane.toLowerCase()}`}>Lane {term.evidentiary_lane}</span>
-          </article>
-        ))}
-      </div>
+      <ResearchToolbar
+        query={query}
+        onQueryChange={setQuery}
+        searchLabel="Search terms"
+        searchPlaceholder="Term, gematria value, etymology, definition, or significance"
+        countLabel="Entries"
+        count={filteredTerms.length}
+        filters={[
+          {
+            id: 'lane',
+            label: 'Lane',
+            value: laneFilter,
+            options: ['All', 'A', 'B', 'C', 'D', 'E'].map(value => ({ value, label: value === 'All' ? 'Current lane' : `Lane ${value}` })),
+            onChange: setLaneFilter,
+          },
+        ]}
+        sort={{
+          label: 'Sort',
+          value: sortMode,
+          options: [
+            { value: 'term', label: 'Term' },
+            { value: 'value', label: 'Gematria value' },
+            { value: 'lane', label: 'Evidence lane' },
+          ],
+          onChange: setSortMode,
+        }}
+        onReset={() => {
+          setQuery('');
+          setLaneFilter('All');
+          setSortMode('term');
+        }}
+      />
+
+      {filteredTerms.length === 0 ? (
+        <EmptyResults message="Try clearing the lane filter, switching the global evidence lane, or searching by a root word, gematria value, or doctrinal phrase." />
+      ) : (
+        <div className="page-grid page-grid--cards">
+          {filteredTerms.map(term => (
+            <article
+              key={term.id}
+              className="glass-panel term-card"
+              data-portal-track-hover="true"
+              data-portal-track-click="true"
+              data-portal-track-label={term.term}
+              data-portal-track-detail={term.thelemic_significance}
+              data-portal-track-source="Dictionary"
+              data-portal-track-domain="dictionary"
+            >
+              <h3 className="term-card__title">
+                {term.term}
+                {term.gematria_value && <span className="term-card__value">[{term.gematria_value}]</span>}
+              </h3>
+              <p className="term-card__etymology">{term.etymology}</p>
+              <p>
+                <strong>Definition:</strong> {term.definition}
+              </p>
+              <p>
+                <strong>Significance:</strong> {term.thelemic_significance}
+              </p>
+              <span className={`lane-pill lane-pill--${term.evidentiary_lane.toLowerCase()}`}>Lane {term.evidentiary_lane}</span>
+            </article>
+          ))}
+        </div>
+      )}
 
       <TopicShelf
         title="Key dictionary topics"

@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchJSON } from '../api';
+import EmptyResults from '../components/EmptyResults';
+import ResearchToolbar from '../components/ResearchToolbar';
 import TopicShelf from '../components/TopicShelf';
 import { TOPIC_GROUPS } from '../topicGroups';
 
@@ -35,6 +37,7 @@ const People = () => {
   const [links, setLinks] = useState<PersonEvent[]>([]);
   const [query, setQuery] = useState('');
   const [roleFilter, setRoleFilter] = useState('All');
+  const [sortMode, setSortMode] = useState('role');
 
   useEffect(() => {
     fetchJSON('persons').then(setPeople);
@@ -65,10 +68,13 @@ const People = () => {
           .includes(search);
       })
       .sort((a, b) => {
+        if (sortMode === 'name') return a.name.localeCompare(b.name);
+        if (sortMode === 'events') return (eventCounts[b.id] || 0) - (eventCounts[a.id] || 0) || a.name.localeCompare(b.name);
+        if (sortMode === 'birth') return (a.birth_year ?? Number.POSITIVE_INFINITY) - (b.birth_year ?? Number.POSITIVE_INFINITY) || a.name.localeCompare(b.name);
         const roleCompare = (a.role_category || '').localeCompare(b.role_category || '');
         return roleCompare !== 0 ? roleCompare : a.name.localeCompare(b.name);
       });
-  }, [people, query, roleFilter]);
+  }, [people, query, roleFilter, sortMode, eventCounts]);
 
   return (
     <div className="page-shell">
@@ -87,78 +93,89 @@ const People = () => {
           <strong>{filteredPeople.length}</strong>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'minmax(240px, 1fr) auto', gap: '0.75rem', alignItems: 'end', gridColumn: '1 / -1' }}>
-          <label className="stacked-field">
-            <span>Search</span>
-            <input
-              value={query}
-              onChange={event => setQuery(event.target.value)}
-              placeholder="Search by name, motto, or biography"
-            />
-          </label>
+      </div>
 
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-            {ROLE_FILTERS.map(role => (
-              <button
-                key={role}
-                onClick={() => setRoleFilter(role)}
-                className={roleFilter === role ? 'tree-chip is-active' : 'tree-chip'}
-                data-portal-track-click="true"
+      <ResearchToolbar
+        query={query}
+        onQueryChange={setQuery}
+        searchLabel="Search people"
+        searchPlaceholder="Name, motto, role, or biography"
+        countLabel="Profiles"
+        count={filteredPeople.length}
+        filters={[
+          {
+            id: 'role',
+            label: 'Role',
+            value: roleFilter,
+            options: ROLE_FILTERS.map(value => ({ value, label: value === 'All' ? 'All roles' : value })),
+            onChange: setRoleFilter,
+          },
+        ]}
+        sort={{
+          label: 'Sort',
+          value: sortMode,
+          options: [
+            { value: 'role', label: 'Role' },
+            { value: 'name', label: 'Name' },
+            { value: 'events', label: 'Linked events' },
+            { value: 'birth', label: 'Birth year' },
+          ],
+          onChange: setSortMode,
+        }}
+        onReset={() => {
+          setQuery('');
+          setRoleFilter('All');
+          setSortMode('role');
+        }}
+      />
+
+      {filteredPeople.length === 0 ? (
+        <EmptyResults message="Try clearing the role filter or searching by another name, motto, relationship, or biographical phrase." />
+      ) : (
+        <div className="page-grid page-grid--cards">
+          {filteredPeople.map(person => {
+            const yearRange =
+              person.birth_year || person.death_year
+                ? `${person.birth_year || 'Unknown'} - ${person.death_year || 'Present'}`
+                : 'Dates unknown';
+
+            return (
+              <Link
+                key={person.id}
+                to={`/people/${person.id}`}
+                className="entry-card-link"
                 data-portal-track-hover="true"
-                data-portal-track-label={role}
-                data-portal-track-source="People filter"
+                data-portal-track-click="true"
+                data-portal-track-label={person.name}
+                data-portal-track-detail={person.biography || ''}
+                data-portal-track-source="People"
                 data-portal-track-domain="people"
               >
-                {role}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div className="page-grid page-grid--cards">
-        {filteredPeople.map(person => {
-          const yearRange =
-            person.birth_year || person.death_year
-              ? `${person.birth_year || 'Unknown'} - ${person.death_year || 'Present'}`
-              : 'Dates unknown';
-
-          return (
-            <Link
-              key={person.id}
-              to={`/people/${person.id}`}
-              className="entry-card-link"
-              data-portal-track-hover="true"
-              data-portal-track-click="true"
-              data-portal-track-label={person.name}
-              data-portal-track-detail={person.biography || ''}
-              data-portal-track-source="People"
-              data-portal-track-domain="people"
-            >
-              <article className="glass-panel term-card">
-                <div className="timeline-card__meta">
-                  <div>
-                    <h3>{person.name}</h3>
-                    {person.magical_motto && person.magical_motto !== 'Unknown' && (
-                      <p className="term-card__etymology">{person.magical_motto}</p>
-                    )}
+                <article className="glass-panel term-card">
+                  <div className="timeline-card__meta">
+                    <div>
+                      <h3>{person.name}</h3>
+                      {person.magical_motto && person.magical_motto !== 'Unknown' && (
+                        <p className="term-card__etymology">{person.magical_motto}</p>
+                      )}
+                    </div>
+                    <span className="lane-pill lane-pill--e" style={{ whiteSpace: 'nowrap' }}>
+                      {person.role_category || 'Uncategorized'}
+                    </span>
                   </div>
-                  <span className="lane-pill lane-pill--e" style={{ whiteSpace: 'nowrap' }}>
-                    {person.role_category || 'Uncategorized'}
-                  </span>
-                </div>
 
-                <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', color: 'var(--text-muted)', fontSize: '0.88rem' }}>
-                  <span>{yearRange}</span>
-                  <span>{eventCounts[person.id] || 0} linked events</span>
-                </div>
+                  <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', color: 'var(--text-muted)', fontSize: '0.88rem' }}>
+                    <span>{yearRange}</span>
+                    <span>{eventCounts[person.id] || 0} linked events</span>
+                  </div>
 
-                <p>{person.biography}</p>
-              </article>
-            </Link>
-          );
-        })}
-      </div>
+                  <p>{person.biography}</p>
+                </article>
+              </Link>
+            );
+          })}
+        </div>
+      )}
 
       <TopicShelf
         title="Key people topics"

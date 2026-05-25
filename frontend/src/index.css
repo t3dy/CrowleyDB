@@ -241,6 +241,64 @@ button {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
+.research-toolbar {
+  display: grid;
+  grid-template-columns: minmax(260px, 1.4fr) repeat(3, minmax(180px, 0.7fr)) auto;
+  gap: 0.8rem;
+  align-items: end;
+  padding: 1rem;
+  border-block: 1px solid rgba(212, 175, 55, 0.16);
+  background: rgba(0, 0, 0, 0.14);
+}
+
+.research-toolbar__search {
+  min-width: 0;
+}
+
+.research-toolbar__summary {
+  display: grid;
+  gap: 0.2rem;
+  min-width: 100px;
+  padding: 0.72rem 0.85rem;
+  border: 1px solid rgba(212, 175, 55, 0.16);
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.research-toolbar__summary span {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.research-toolbar__summary strong {
+  color: var(--text-parchment);
+  font-family: var(--font-heading);
+  line-height: 1;
+}
+
+.research-toolbar__reset {
+  min-height: 45px;
+  align-self: end;
+}
+
+.empty-results {
+  display: grid;
+  gap: 0.45rem;
+  padding: 1.25rem;
+}
+
+.empty-results h3 {
+  margin: 0;
+  color: var(--gold-soft);
+  font-family: var(--font-heading);
+}
+
+.empty-results p {
+  max-width: 42rem;
+  margin: 0;
+  color: var(--text-muted);
+}
+
 .topic-shelf {
   display: grid;
   gap: 1rem;
@@ -2385,6 +2443,14 @@ button {
 }
 
 @media (max-width: 1100px) {
+  .research-toolbar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .research-toolbar__search {
+    grid-column: 1 / -1;
+  }
+
   .tree-hero,
   .tree-controls,
   .tree-workbench {
@@ -2406,6 +2472,19 @@ button {
 }
 
 @media (max-width: 720px) {
+  .research-toolbar {
+    grid-template-columns: 1fr;
+    padding: 0.85rem;
+  }
+
+  .research-toolbar__search {
+    grid-column: auto;
+  }
+
+  .research-toolbar__reset {
+    width: 100%;
+  }
+
   .tree-of-life-page {
     padding: 1rem;
   }
